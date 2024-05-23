@@ -1,24 +1,16 @@
 .loading-timer {
 	position: relative;
-
-	// Фонові зображення та підкладки
-	&__mountains-bg {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		z-index: -5;
-	}
+	// Фонові зображення та підкладки для сторінки завантаження
 	&__black-bg {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #000;
+		background-color: #000000;
+		opacity: 1;
 		z-index: -4;
+		transition: all 0.3s ease 0s;
 	}
 	&__blur-bg {
 		position: absolute;
@@ -33,36 +25,86 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		z-index: -1;
 	}
 	&__left-top-ellipse {
 		position: absolute;
 		top: 0;
 		left: 0;
+		animation: firstEllipseAnimation 7s infinite;
 	}
 	&__left-bottom-ellipse {
 		position: absolute;
 		left: 0;
 		bottom: 0;
 		transform: rotate(180deg);
+		animation: secondEllipseAnimation 7s infinite;
 	}
 	&__right-top-ellipse {
 		position: absolute;
 		top: 0;
 		right: 0;
+		animation: thirdEllipseAnimation 9s infinite;
 	}
 	&__right-bottom-ellipse {
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		transform: rotate(180deg);
+		animation: fourEllipseAnimation 12s infinite;
+	}
+	// Фонові зображення та підкладки для сторінки з таймером
+	&__mountains-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: -5;
+	}
+	&__bg-effects {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	&__goblin {
+		position: absolute;
+		bottom: toRem(-100);
+		left: toRem(-210);
+		z-index: -3;
+		transform: rotate(30deg);
+		width: toRem(1070);
+		height: toRem(1070);
+		@media (max-width: 1920px){
+			width: 55.729vw;
+			height: 55.729vw;
+		}
+	}
+	&__first-leaf {
+		position: absolute;
+		bottom: toRem(-110);
+		left: toRem(-50);
+		z-index: -2;
+	}
+	&__second-leaf {
+		position: absolute;
+		bottom: toRem(-335);
+		left: toRem(-290);
+		z-index: -3;
+	}
+	&__third-leaf {
+		position: absolute;
+		bottom: toRem(-50);
+		right: toRem(-150);
+		z-index: -3;
 	}
 
 	// Контейнер для всього контенту
 	&__wrapper {
 		height: 100%;
-	}
-	// Шапка
-	&__header {
+		width: 100%;
 	}
 	// Контейнер з контентом (за виключенням шапки)
 	&__loading-timer-wrapper {
@@ -72,27 +114,36 @@
 		width: 100%;
 		height: 100%;
 		align-items: center;
+		perspective: 1000px;
 	}
 	&__loading {
 	}
 	&__timer {
 	}
 }
-.header {
-}
+
+// -------------------------------------------------------------- Стилі екрану завантаження
 .loading {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
-	gap: toRem(30);
+	gap: 12vh;
+	max-width: toRem(687);
+	max-height: toRem(687);
+	transition: transform 0.3s; /* Плавный переход */
+	transform: translateZ(0); /* Начальная позиция по оси Z */
+	//display: none; // Убираем содержимое блока с логотипом и загрузкой
 	&__big-logo {
-		max-width: toRem(500);
-		max-height: 30vw;
+
 	}
 	&__load-button-container {
 		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: toRem(80);
 	}
 	&__loading-container {
 		display: flex;
@@ -127,6 +178,47 @@
 	&__loading-line {
 	}
 	&__start-button {
+		width: 100%;
+		max-width: toRem(227);
+		height: toRem(80);
+		position: relative;
+		display: none;
+		@media (max-width:$pc){
+			max-width: 19.402vw;
+		}
+		&>* {
+			cursor: pointer;
+		}
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+			max-width: toRem(227);
+			@media (max-width:$pc){
+				max-width: 19.402vw;
+			}
+		}
+	}
+	&__button-text-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		& div {
+			font-family: Play, sans-serif;
+			font-size: toRem(34);
+			color: #FFFFFF;
+			@media (max-width: 900px){
+				font-size: 3.5vw;
+			}
+		}
 	}
 }
 .loading-line {
@@ -142,8 +234,8 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 30%;
-		background-color: red;
+		width: 100%;
+		animation: loadingLineAnimation 1.5s ease;
 	}
 	&__inner-line {
 		position: absolute;
@@ -165,5 +257,310 @@
 		width: 6vw;
 	}
 }
+
+// ------------------------------------------------------------ Стилі екрану таймера
 .timer {
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	&__container {
+	height: 100%;
+	width: 100%;
+	max-width: toRem(1440);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: end;
+	}
+	&__header {
+		position: relative;
+		display: flex;
+		align-items: start;
+		justify-content: center;
+		width: 100%;
+	}
+	&__logo {
+		@media (max-width: 1440px){
+			max-width: toRem(220);
+		}
+	}
+	&__buttons-block {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: toRem(25) 0 0 0;
+		display: flex;
+		gap: toRem(10);
+		&>* {
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	&__button {
+		position: relative;
+		& img {
+			width: toRem(72);
+			height: toRem(72);
+		}
+		& img {
+			@media (max-width: 1440px){
+				width: toRem(60);
+				height: toRem(60);
+			}
+		}
+
+	}
+	&__content {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: toRem(740);
+		margin-top: toRem(-50);
+	}
+}
+
+.lang-button {
+	&__image {
+	}
+}
+.menu-button {
+	&__image {
+	}
+}
+.volume-button {
+	&__image {
+	}
+}
+
+
+// ---------------------------------- Середній блок з контентом
+.timer {
+	&__content {
+	}
+	&__bottom {
+	}
+}
+.timer-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: toRem(30);
+	@media (max-width: 1800px){
+		gap: toRem(23);
+	}
+	@media (max-width: 1440px){
+		gap: toRem(15);
+	}
+	&__title {
+		font-family: $secondFont;
+		font-size: toRem(64);
+		text-align: center;
+		background: $goldTextGradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+		line-height: 130%;
+		@media (max-width: 1440px){
+			font-size: toRem(60);
+			line-height: 100%;
+		}
+	}
+	&__subtitle {
+		font-family: $thirdFont;
+		font-size: toRem(24);
+		font-weight: bold;
+		text-align: center;
+		line-height: 130%;
+		padding-bottom: toRem(10);
+		@media (max-width: 1440px){
+			padding-bottom: toRem(0);
+		}
+	}
+	&__timer {
+	}
+	&__call-to-action {
+	}
+	&__play-button {
+	}
+}
+
+.timer-counter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__wrapper {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		max-width: toRem(590);
+		width: 100%;
+		position: relative;
+		padding: toRem(15) toRem(40);
+		&>*:not(:first-child):not(:last-child) {
+			border-right: 2px solid #EBD46C;
+		}
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 9;
+		object-fit: fill;
+		height: 100%;
+		width: 100%;
+	}
+	&__section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: toRem(5);
+		z-index: 10;
+		padding: toRem(0) toRem(29) toRem(7) toRem(29);
+	}
+	&__numbers {
+		font-size: toRem(48);
+		font-family: $thirdFont;
+		font-weight: bold;
+	}
+	&__subtitle {
+		font-size: toRem(28);
+		font-family: $secondFont;
+	}
+}
+.days-section {
+}
+.hours-section {
+}
+.minutes-section {
+}
+.seconds-section {
+}
+
+.call-to-action {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	&__wrapper {
+		max-width: toRem(590);
+		width: 100%;
+		position: relative;
+		padding: toRem(15) toRem(15);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__top-egg {
+		position: absolute;
+		z-index: 9;
+		top: toRem(15);
+		left: toRem(15);
+	}
+	&__bottom-egg {
+		position: absolute;
+		z-index: 9;
+		bottom: toRem(15);
+		right: toRem(15);
+	}
+	&__bg {
+		position: absolute;
+		z-index: 9;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		z-index: 11;
+		font-weight: bold;
+		font-family: $thirdFont;
+		text-align: center;
+		position: relative;
+		max-width: toRem(486);
+	}
+	&__top-text {
+		font-size: toRem(28);
+		line-height: 150%;
+		& span {
+			background: $goldTextGradient;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			color: transparent;
+		}
+	}
+	&__bottom-text {
+		line-height: 130%;
+		font-size: toRem(40);
+		background: $goldTextGradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+	}
+}
+.play-button {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	&:hover {
+		cursor: pointer;
+	}
+	&__wrapper {
+		width: 100%;
+		max-width: toRem(228);
+		position: absolute;
+		height: toRem(80);
+	}
+	&__button-default {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&__button-hover {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	&__button-active {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	&__button-text-container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& div {
+			font-family: $thirdFont;
+			font-size: toRem(36);
+			font-weight: bold;
+			padding-bottom: toRem(3);
+		}
+	}
+}
+.loading {
+	&__button-text-container {
+	}
+}
+
+// ---------------------------------------------- Нижній блок
+.timer-bottom {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding-bottom: toRem(15);
 }

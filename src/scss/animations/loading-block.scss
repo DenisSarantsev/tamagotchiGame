@@ -1,0 +1,143 @@
+// Анимация эллипсов
+@keyframes firstEllipseAnimation {
+	0% {
+		width: 70%;
+		height: 70%;
+	}
+	30% {
+		width: 60%;
+		height: 60%;
+	}
+	100% {
+		width: 70%;
+		height: 70%;
+	}
+}
+
+@keyframes secondEllipseAnimation {
+	0% {
+		width: 90%;
+		height: 90%;
+	}
+	30% {
+		width: 90%;
+		height: 90%;
+	}
+	60% {
+		width: 50%;
+		height: 50%;
+	}
+	100% {
+		width: 90%;
+		height: 90%;
+	}
+}
+
+@keyframes thirdEllipseAnimation {
+	0% {
+		width: 60%;
+		height: 60%;
+	}
+	30% {
+		width: 90%;
+		height: 90%;
+	}
+	60% {
+		width: 50%;
+		height: 50%;
+	}
+	100% {
+		width: 60%;
+		height: 60%;
+	}
+}
+
+@keyframes fourEllipseAnimation {
+	0% {
+		width: 60%;
+		height: 60%;
+	}
+	30% {
+		width: 90%;
+		height: 90%;
+	}
+	100% {
+		width: 60%;
+		height: 60%;
+	}
+}
+
+// Анимация полосы загрузки
+@keyframes loadingLineAnimation {
+	0% {
+		width: 10%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+// Анимация исчезания блока загрузки
+@keyframes loadingLineHiddenAnimation {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+// Анимация появления кнопки
+@keyframes startButtonShowAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// Анімація зникнення еліпсів
+@keyframes hiddenLeftTopEllipse {
+	0% {
+		top: 0;
+		left: 0;
+	}
+	100% {
+		top: -1000px;
+		left: -1000px;
+	}
+}
+
+@keyframes hiddenRightTopEllipse {
+	0% {
+		top: 0;
+		right: 0;
+	}
+	100% {
+		top: -1000px;
+		right: -1000px;
+	}
+}
+
+@keyframes hiddenLeftBottomEllipse {
+	0% {
+		bottom: 0;
+		left: 0;
+	}
+	100% {
+		bottom: -1000px;
+		left: -1000px;
+	}
+}
+
+@keyframes hiddenRightBottomEllipse {
+	0% {
+		bottom: 0;
+		right: 0;
+	}
+	100% {
+		bottom: -1000px;
+		right: -1000px;
+	}
+}

@@ -1,0 +1,73 @@
+// Анімація появи елементів таймеру
+@keyframes showTimerElements {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// Анімація появи логотипу
+@keyframes showSmallLogoOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// Анімація появи листків
+@keyframes showFirstLeaf {
+	0% {
+		bottom: toRem(-250);
+		left: toRem(-500);
+	}
+	100% {
+		bottom: toRem(-110);
+		left: toRem(-50);
+	}
+}
+
+@keyframes showSecondLeaf {
+	0% {
+		bottom: toRem(-600);
+		left: toRem(-1000);
+	}
+	100% {
+		bottom: toRem(-335);
+		left: toRem(-290);
+	}
+}
+
+@keyframes showThirdLeaf {
+	0% {
+		bottom: toRem(-500);
+		right: toRem(-550);
+	}
+	100% {
+		bottom: toRem(-50);
+		right: toRem(-150);
+	}
+}
+
+// Анімація руху листків
+@keyframes leafsAnimation {
+	0% {
+		transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(10deg);
+	}
+	40% {
+		transform: rotate(0deg);
+	}
+	60% {
+		transform: rotate(-10deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+

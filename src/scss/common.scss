@@ -3,3 +3,38 @@
 ._hidden {
 	display: none;
 }
+
+// Стрілка прокрутки вниз
+.scroll-down-element {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: toRem(160);
+	width: 100%;
+	height: toRem(77);
+	position: relative;
+	&__text {
+		font-size: toRem(16);
+		font-weight: bold;
+		color: #FFFFFF;
+	}
+	& img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		animation: scrollButtonAnimation 1.5s infinite;
+	}
+}
+
+// Анімація руху кнопки скролу
+@keyframes scrollButtonAnimation {
+	0% {
+		bottom: 0px;
+	}
+	50% {
+		bottom: -7px;
+	}
+	100% {
+		bottom: 0px;
+	}
+}

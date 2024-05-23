@@ -1,6 +1,14 @@
 <div data-fp-section class="block__section loading-timer">
-	<!-- Шари з підкладками і фонами -->
-	<img src="img/mountains-bg.svg" alt="mountains background image" class="loading-timer__mountains-bg">
+	<!-- Шари з підкладками і фонами для екрану з таймером -->
+	<img src="img/loading-timer/mountains-bg.svg" alt="mountains background image" class="loading-timer__mountains-bg _hidden">
+	<div class="loading-timer__bg-effects _hidden">
+		<img src="img/loading-timer/goblin.png" alt="green goblin image" class="loading-timer__goblin">
+		<img src="img/loading-timer/leafs/leaf-one.png" alt="tropic leaf" class="loading-timer__first-leaf">
+		<img src="img/loading-timer/leafs/leaf-two.png" alt="tropic leaf" class="loading-timer__second-leaf">
+		<img src="img/loading-timer/leafs/leaf-three.png" alt="tropic leaf" class="loading-timer__third-leaf">
+	</div>
+
+	<!-- Шари з підкладками і фонами для екрану завантаження -->
 	<div class="loading-timer__black-bg"></div>
 	<div class="loading-timer__blur-bg"></div>
 	<div class="loading-timer__bg-elements-container">
@@ -12,10 +20,6 @@
 
 	<!-- Структура блоку -->
 	<div class="loading-timer__wrapper">
-		<!-- Елемент з шапкою блоку -->
-		<div class="loading-timer__header header">
-
-		</div>
 		<div class="loading-timer__loading-timer-wrapper">
 			<!-- Елемент з завантаженням -->
 			<div class="loading-timer__loading loading">
@@ -33,14 +37,92 @@
 							</div>
 						</div>
 					</div>
-					<button class="loading__start-button _hidden">
-						Start
-					</button>
+					<a class="loading__start-button">
+						<img src="img/common/button-default.svg" alt="start button" class="loading__button-default">
+						<img src="img/common/button-hover.svg" alt="start button" class="loading__button-hover _hidden">
+						<img src="img/common/button-active.svg" alt="start button" class="loading__button-active _hidden">
+						<div class="loading__button-text-container">
+							<div>Start</div>
+						</div>
+					</a>
 				</div>
 			</div>
 			<!-- Елемент з таймером -->
-			<div class="loading-timer__timer timer">
-
+			<div class="loading-timer__timer timer _hidden">
+				<div class="timer__container">
+					<div class="timer__header">
+						<img src="img/loading-timer/small-logo.svg" alt="" class="timer__logo">
+						<div class="timer__buttons-block">
+							<buttton class="timer__button lang-button">
+								<img src="img/loading-timer/button-lang.svg" alt="language button" class="lang-button__image">
+							</buttton>
+							<buttton class="timer__button menu-button">
+								<img src="img/loading-timer/button-menu.svg" alt="menu button" class="menu-button__image">
+							</buttton>
+							<buttton class="timer__button volume-button">
+								<img src="img/loading-timer/button-volume.svg" alt="volume button" class="volume-button__image">
+							</buttton>
+						</div>
+					</div>
+					<div class="timer__content timer-content">
+						<div class="timer-content__title">
+							Welcome to Tamagotchi Money!
+						</div>
+						<div class="timer-content__subtitle">
+							Успейте получить ваш стартовый капитал прямо сейчас и отправьтесь в увлекательное путешествие по миру экономических стратегий!
+						</div>
+						<div class="timer-content__timer timer-counter">
+							<div class="timer-counter__wrapper">
+								<img src="img/loading-timer/counter-bg.png" alt="" class="timer-counter__bg">
+								<div class="timer-counter__section days-section">
+									<div class="timer-counter__numbers">04</div>
+									<div class="timer-counter__subtitle">days</div>
+								</div>
+								<div class="timer-counter__section hours-section">
+									<div class="timer-counter__numbers">05</div>
+									<div class="timer-counter__subtitle">hours</div>
+								</div>
+								<div class="timer-counter__section minutes-section">
+									<div class="timer-counter__numbers">24</div>
+									<div class="timer-counter__subtitle">minutes</div>
+								</div>
+								<div class="timer-counter__section seconds-section">
+									<div class="timer-counter__numbers">36</div>
+									<div class="timer-counter__subtitle">seconds</div>
+								</div>
+							</div>
+						</div>
+						<div class="timer-content__call-to-action call-to-action">
+							<div class="call-to-action__wrapper">
+								<img src="img/loading-timer/call-to-action-bg.png" alt="background image" class="call-to-action__bg">
+								<img src="img/loading-timer/gold-egg.svg" alt="gold egg icon" class="call-to-action__top-egg">
+								<img src="img/loading-timer/gold-egg.svg" alt="gold egg icon" class="call-to-action__bottom-egg">
+								<div class="call-to-action__text">
+									<div class="call-to-action__top-text">Только <span>5 дней</span> регистрации с подарочной суммой </div>
+									<div class="call-to-action__bottom-text">50 долларов!</div>
+								</div>
+							</div>
+						</div>
+						<div class="timer-content__play-button play-button">
+							<a class="play-button__wrapper">
+								<img src="img/common/button-default.svg" alt="start button" class="play-button__button-default">
+								<img src="img/common/button-hover.svg" alt="start button" class="play-button__button-hover">
+								<img src="img/common/button-active.svg" alt="start button" class="play-button__button-active">
+								<div class="play-button__button-text-container">
+									<div>Играть</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="timer__bottom timer-bottom">
+						<button class="scroll-down-element">
+							<div class="scroll-down-element__text">
+								Scroll down
+							</div>
+							<img src="img/common/scroll-down-arrow.svg" alt="scroll down arrow">
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
