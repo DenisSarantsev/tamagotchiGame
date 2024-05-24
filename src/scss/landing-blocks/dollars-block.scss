@@ -1,0 +1,598 @@
+.dollars-block {
+	position: relative;
+	&__gradient-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $radialBackgroundGradient;
+		z-index: -5;
+	}
+	&__dark-background-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color: #011227, $alpha: 0.6);
+		z-index: -4;
+	}
+	&__bg-effects {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		&>* {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			&>* {
+				position: absolute;
+			}
+		}
+
+	}
+
+	// -------- Листки зліва зверху
+	&__top-left-effects {
+
+	}
+	&__top-left-leaf-one {
+		top: toRem(-60);
+		left: toRem(-50);
+		z-index: -4;
+		animation: leafsMovingAnimation 6s infinite 1s;
+	}
+	&__top-left-leaf-two {
+		top: toRem(-300);
+		left: toRem(-140);
+		z-index: -3;
+		animation: leafsMovingAnimation 8s infinite 0.5s;
+	}
+	&__top-left-leaf-three {
+		top: toRem(-190);
+		left: toRem(60);
+		z-index: -4;
+		animation: leafsMovingAnimation 10s infinite;
+	}
+	&__top-left-dark-leaf {
+		top: toRem(-40);
+		left: toRem(-50);
+		z-index: -5;
+	}
+
+	// -------- Листки зліва знизу
+	&__bottom-left-effects {
+
+	}
+	&__bottom-left-dark-leaf {
+		bottom: toRem(-70);
+		left: toRem(-120);
+		z-index: -5;
+		animation: leafsMovingAnimation 10s infinite;
+	}
+	&__bottom-left-gold-egg {
+		bottom: toRem(100);
+		left: toRem(50);
+		transform: rotate(30deg);
+		animation: eggsMovingAnimation 2s infinite 0.5s;
+		@media (max-width: 1440px){
+			bottom: toRem(80);
+			left: toRem(30);
+			width: toRem(80);
+			height: toRem(80);
+		}
+		@media (max-width: 1200px){
+			bottom: toRem(70);
+			left: toRem(20);
+			width: toRem(50);
+			height: toRem(50);
+		}
+		@media (max-width: 992px){
+			bottom: toRem(60);
+			left: toRem(10);
+			width: toRem(40);
+			height: toRem(40);
+		}
+	}
+
+	// -------- Листки справа зверху
+	&__top-right-effects {
+
+	}
+	&__top-right-dark-leaf {
+		top: toRem(-60);
+		right: toRem(-120);
+		z-index: -5;
+		animation: leafsMovingAnimation 6s infinite;
+	}
+
+	// -------- Листки справа знизу
+	&__bottom-right-effects {
+
+	}
+	&__bottom-right-leaf-one {
+		bottom: toRem(-40);
+		right: toRem(160);
+		z-index: -4;
+		animation: leafsMovingAnimation 8s infinite;
+	}
+	&__bottom-right-leaf-two {
+		bottom: toRem(-60);
+		right: toRem(50);
+		z-index: -2;
+		animation: leafsMovingAnimation 11s infinite;
+	}
+	&__bottom-right-leaf-three {
+		bottom: toRem(20);
+		right: toRem(20);
+		z-index: -4;
+		animation: leafsMovingAnimation 13s infinite;
+	}
+	&__bottom-right-leaf-four {
+		bottom: toRem(-30);
+		right: toRem(-60);
+		z-index: -3;
+		animation: leafsMovingAnimation 6s infinite;
+	}
+	&__bottom-right-leaf-five {
+		bottom: toRem(170);
+		right: toRem(-30);
+		z-index: -4;
+		animation: leafsMovingAnimation 9s infinite;
+	}
+	&__bottom-right-dark-leafs {
+		bottom: toRem(-30);
+		right: toRem(-30);
+		opacity: 0.5;
+		z-index: -5;
+	}
+	&__bottom-right-gold-egg-one {
+		bottom: toRem(450);
+		right: toRem(230);
+		animation: eggsMovingAnimation 2s infinite;
+		z-index: 1;
+		transform: rotate(-30deg);
+		@media (max-width: 1440px){
+			bottom: toRem(350);
+			right: toRem(180);
+			width: toRem(80);
+			height: toRem(80);
+		}
+		@media (max-width: 1200px){
+			bottom: toRem(300);
+			right: toRem(140);
+			width: toRem(50);
+			height: toRem(50);
+		}
+		@media (max-width: 992px){
+			bottom: toRem(270);
+			right: toRem(110);
+			width: toRem(40);
+			height: toRem(40);
+		}
+	}
+	&__bottom-right-gold-egg-two {
+		bottom: toRem(190);
+		right: toRem(390);
+		z-index: 1;
+		animation: eggsMovingAnimation 2s infinite 1s;
+		transform: rotate(-60deg);
+		@media (max-width: 1700px){
+			bottom: toRem(160);
+			right: toRem(300);
+		}
+		@media (max-width: 1440px){
+			bottom: toRem(110);
+			right: toRem(290);
+			width: toRem(80);
+			height: toRem(80);
+		}
+		@media (max-width: 1200px){
+			bottom: toRem(90);
+			right: toRem(250);
+			width: toRem(50);
+			height: toRem(50);
+		}
+		@media (max-width: 992px){
+			bottom: toRem(70);
+			right: toRem(210);
+			width: toRem(40);
+			height: toRem(40);
+		}
+	}
+
+
+
+	&__dollars-wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	// Верхній шар купюр
+	&__top-dollars-wrapper {
+		
+		& img {
+			z-index: -1;
+			position: absolute;
+			left: 25%;
+			animation: slideDownDollarsAnimation1 linear 60s infinite,
+								 swayTopDollarsAnimation ease 10s infinite;
+		}
+	}
+	&__center-dollars-wrapper {
+		
+		& img {
+			z-index: -2;
+			position: absolute;
+		}
+		&>* {
+			&:nth-child(1) {
+				left: 10%;
+				animation: slideDownDollarsAnimation1 linear 60s infinite,
+				swayTopDollarsAnimation ease 9.1s infinite;
+			}
+			&:nth-child(2) {
+				left: 57%;
+				animation: slideDownDollarsAnimation2 linear 65s infinite,
+				swayTopDollarsAnimation ease 6s infinite;
+			}
+			&:nth-child(3) {
+				left: 17%;
+				animation: slideDownDollarsAnimation3 linear 53s infinite,
+				swayTopDollarsAnimation ease 7s infinite;
+			}
+			&:nth-child(4) {
+				left: 28%;
+				animation: slideDownDollarsAnimation4 linear 74s infinite,
+				swayTopDollarsAnimation ease 8.2s infinite;
+			}
+			&:nth-child(5) {
+				left: 37%;
+				animation: slideDownDollarsAnimation5 linear 45s infinite,
+				swayTopDollarsAnimation ease 6.5s infinite;
+			}
+			&:nth-child(6) {
+				left: 45%;
+				animation: slideDownDollarsAnimation6 linear 49s infinite,
+				swayTopDollarsAnimation ease 5.5s infinite;
+			}
+			&:nth-child(7) {
+				left: 54%;
+				animation: slideDownDollarsAnimation7 linear 63s infinite,
+				swayTopDollarsAnimation ease 6.5s infinite;
+			}
+			&:nth-child(8) {
+				left: 69%;
+				animation: slideDownDollarsAnimation8 linear 53s infinite,
+				swayTopDollarsAnimation ease 7.2s infinite;
+			}
+			&:nth-child(9) {
+				left: 77%;
+				animation: slideDownDollarsAnimation9 linear 78s infinite,
+				swayTopDollarsAnimation ease 6.3s infinite;
+			}
+			&:nth-child(10) {
+				left: 84%;
+				animation: slideDownDollarsAnimation10 linear 72s infinite,
+				swayTopDollarsAnimation ease 5.7s infinite;
+			}
+			&:nth-child(11) {
+				left: 96%;
+				animation: slideDownDollarsAnimation11 linear 66s infinite,
+				swayTopDollarsAnimation ease 7.9s infinite;
+			}
+		}
+	}
+
+	&__bottom-dollars-wrapper {
+		
+		& img {
+			z-index: -3;
+			position: absolute;
+		}
+		&>* {
+			&:nth-child(1) {
+				left: 10%;
+				animation: swayBottomDollarsAnimation ease 9s infinite,
+				slideDownBottomDollarsAnimation1 linear 80s infinite;
+			}
+			&:nth-child(2) {
+				left: 17%;
+				animation: swayBottomDollarsAnimation ease 9.5s infinite,
+				slideDownBottomDollarsAnimation1 linear 94s infinite;
+			}
+			&:nth-child(3) {
+				left: 21%;
+				animation: swayBottomDollarsAnimation ease 8.9s infinite,
+				slideDownBottomDollarsAnimation1 linear 120s infinite;
+			}
+			&:nth-child(4) {
+				left: 24%;
+				animation: swayBottomDollarsAnimation ease 5.7s infinite,
+				slideDownBottomDollarsAnimation1 linear 87s infinite;
+			}
+			&:nth-child(5) {
+				left: 29%;
+				animation: swayBottomDollarsAnimation ease 4.2s infinite,
+				slideDownBottomDollarsAnimation1 linear 65s infinite;
+			}
+			&:nth-child(6) {
+				left: 32%;
+				animation: swayBottomDollarsAnimation ease 6.3s infinite,
+				slideDownBottomDollarsAnimation1 linear 77s infinite;
+			}
+			&:nth-child(7) {
+				left: 39%;
+				animation: swayBottomDollarsAnimation ease 5.1s infinite,
+				slideDownBottomDollarsAnimation1 linear 75s infinite;
+			}
+			&:nth-child(8) {
+				left: 45%;
+				animation: swayBottomDollarsAnimation ease 7.6s infinite,
+				slideDownBottomDollarsAnimation1 linear 89s infinite;
+			}
+			&:nth-child(9) {
+				left: 53%;
+				animation: swayBottomDollarsAnimation ease 6.2s infinite,
+				slideDownBottomDollarsAnimation1 linear 101s infinite;
+			}
+			&:nth-child(10) {
+				left: 57%;
+				animation: swayBottomDollarsAnimation ease 8.4s infinite,
+				slideDownBottomDollarsAnimation1 linear 94s infinite;
+			}
+			&:nth-child(11) {
+				left: 64%;
+				animation: swayBottomDollarsAnimation ease 6.6s infinite,
+				slideDownBottomDollarsAnimation1 linear 86s infinite;
+			}
+			&:nth-child(12) {
+				left: 69%;
+				animation: swayBottomDollarsAnimation ease 5.9s infinite,
+				slideDownBottomDollarsAnimation1 linear 89s infinite;
+			}
+			&:nth-child(13) {
+				left: 73%;
+				animation: swayBottomDollarsAnimation ease 6.1s infinite,
+				slideDownBottomDollarsAnimation1 linear 74s infinite;
+			}
+			&:nth-child(14) {
+				left: 78%;
+				animation: swayBottomDollarsAnimation ease 4.5s infinite,
+				slideDownBottomDollarsAnimation1 linear 120s infinite;
+			}
+			&:nth-child(15) {
+				left: 82%;
+				animation: swayBottomDollarsAnimation ease 4.8s infinite,
+				slideDownBottomDollarsAnimation1 linear 150s infinite;
+			}
+			&:nth-child(16) {
+				left: 88%;
+				animation: swayBottomDollarsAnimation ease 6.0s infinite,
+				slideDownBottomDollarsAnimation1 linear 69s infinite;
+			}
+			&:nth-child(17) {
+				left: 93%;
+				animation: swayBottomDollarsAnimation ease 5.3s infinite,
+				slideDownBottomDollarsAnimation1 linear 130s infinite;
+			}
+			&:nth-child(18) {
+				left: 98%;
+				animation: swayBottomDollarsAnimation ease 4.2s infinite,
+				slideDownBottomDollarsAnimation1 linear 77s infinite;
+			}
+		}
+	}
+
+
+
+
+
+	&__bottom-slide-arrow {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding-bottom: toRem(10);
+	}
+
+
+	&__container {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__content {
+		opacity: 0;
+		max-width: toRem(744);
+		width: 100%;
+		height: 70%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(30);
+		padding-bottom: toRem(40);
+		z-index: 10;
+		transition: all 0.7s ease 0s;
+		animation: showContentAnimation 2s ease;
+		@media (max-width: 1440px){
+			gap: toRem(10);
+		}
+		@media (max-width: 1200px){
+			max-width: toRem(600);
+		}
+	}
+	&__top-title-container {
+		display: flex;
+		gap: toRem(30);
+		@media (max-width: 1200px){
+			gap: toRem(20);
+		}
+		@media (max-width: 992px){
+			gap: toRem(10);
+		}
+	}
+	&__top-title {
+		font-family: $secondFont;
+		font-size: toRem(72);
+		line-height: 130%;
+		background: $goldTextGradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+		text-align: center;
+		@media (max-width: 1600px){
+			font-size: toRem(65);
+		}
+		@media (max-width: 1440px){
+			font-size: 3.819vw;
+		}
+		@media (max-width: 1200px){
+			font-size: toRem(50);
+		}
+	}
+	&__top-title-image {
+		@media (max-width: 1440px){
+			width: 5.042vw;
+			height: 5.042vw;
+		}
+	}
+	&__center-content-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__center-content-title {
+		text-align: center;
+		line-height: 150%;
+		font-size: toRem(48);
+		font-weight: bold;
+		font-family: $thirdFont;
+		@media (max-width: 1600px){
+			font-size: toRem(44);
+		}
+		@media (max-width: 1440px){
+			font-size: 2.431vw;
+		}
+	}
+	&__center-content-subtitle {
+		text-align: center;
+		background: $goldTextGradient;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+		line-height: 150%;
+		font-size: toRem(48);
+		font-weight: bold;
+		font-family: $thirdFont;
+		@media (max-width: 1600px){
+			font-size: toRem(44);
+		}
+		@media (max-width: 1440px){
+			font-size: 2.431vw;
+		}
+	}
+	&__button-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding-top: toRem(30);
+	}
+	&__play-button {
+		width: 100%;
+		max-width: toRem(227);
+		height: toRem(80);
+		position: relative;
+		@media (max-width:$pc){
+			max-width: 19.402vw;
+		}
+		@media (max-width: 1200px){
+			max-width: toRem(180);
+		}
+		@media (max-width: 992px){
+			max-width: toRem(160);
+		}
+		&>* {
+			cursor: pointer;
+		}
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+			max-width: toRem(227);
+			@media (max-width:$pc){
+				max-width: 19.402vw;
+			}
+			@media (max-width: 1200px){
+				max-width: toRem(180);
+			}
+			@media (max-width: 992px){
+				max-width: toRem(160);
+			}
+		}
+	}
+	&__button-default {
+	}
+	&__button-hover {
+	}
+	&__button-active {
+	}
+	&__button-text-container {
+		position: absolute;
+		top: toRem(-3);
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		font-weight: bold;
+		& div {
+			font-family: $thirdFont;
+			font-size: toRem(36);
+			color: #FFFFFF;
+			@media (max-width: 1200px){
+				font-size: toRem(30);
+			}
+			@media (max-width: 900px){
+				font-size: 3.5vw;
+			}
+			@media (max-width: 800px){
+				font-size: toRem(28);
+			}
+		}
+	}
+	&__bottom-text-container {
+		text-align: center;	
+		line-height: 150%;
+		font-size: toRem(24);
+		font-weight: bold;
+		font-family: $thirdFont;
+		@media (max-width: 1440px){
+			font-size: toRem(22);
+		}
+		@media (max-width: 1200px){
+			font-size: toRem(20);
+		}
+		@media (max-width: 1100px){
+			font-size: toRem(18);
+		}
+		@media (max-width: 992px){
+			font-size: toRem(17);
+		}
+	}
+
+}

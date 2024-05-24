@@ -1,0 +1,347 @@
+// Анімація руху листків
+@keyframes leafsMovingAnimation {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+// Анімація руху яєць
+@keyframes eggsMovingAnimation {
+	0% {
+		margin-bottom: toRem(0);
+	}
+	50% {
+		margin-bottom: toRem(5);
+	}
+	100% {
+		margin-bottom: toRem(0);
+	}
+}
+
+// Анімація появи блоку
+@keyframes showContentAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+// Анімація падіння доларів
+@keyframes slideDownDollarsAnimation1 {
+	0% {
+		top: -200%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation2 {
+	0% {
+		top: -170%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation3 {
+	0% {
+		top: -40%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation4 {
+	0% {
+		top: -290%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation5 {
+	0% {
+		top: -130%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation6 {
+	0% {
+		top: -60%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation7 {
+	0% {
+		top: -150%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation8 {
+	0% {
+		top: -40%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation9 {
+	0% {
+		top: -290%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation10 {
+	0% {
+		top: -130%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation11 {
+	0% {
+		top: -50%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownDollarsAnimation12 {
+	0% {
+		top: -60%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+
+@keyframes slideDownBottomDollarsAnimation1 {
+	0% {
+		top: -130%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation2 {
+	0% {
+		top: -40%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation3 {
+	0% {
+		top: -20%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation4 {
+	0% {
+		top: -190%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation5 {
+	0% {
+		top: -110%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation6 {
+	0% {
+		top: -30%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation7 {
+	0% {
+		top: -220%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation8 {
+	0% {
+		top: -40%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation9 {
+	0% {
+		top: -135%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation10 {
+	0% {
+		top: -15%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation11 {
+	0% {
+		top: -90%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation12 {
+	0% {
+		top: -237%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation13 {
+	0% {
+		top: -39%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation14 {
+	0% {
+		top: -194%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation15 {
+	0% {
+		top: -55%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation16 {
+	0% {
+		top: -88%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation17 {
+	0% {
+		top: -188%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+@keyframes slideDownBottomDollarsAnimation18 {
+	0% {
+		top: -255%;
+	}
+	100% {
+		top: 130%;
+	}
+}
+
+
+// Анімація погойдування доларів
+@keyframes swayTopDollarsAnimation {
+	0% {
+			margin-left: 0;
+	}
+	25% {
+			margin-left: -10px;
+	}
+	50% {
+			margin-left: 10px;
+	}
+	75% {
+			margin-left: -10px;
+	}
+	100% {
+			margin-left: 0;
+	}
+}
+
+@keyframes swayBottomDollarsAnimation {
+	0% {
+			margin-left: 0;
+	}
+	25% {
+			margin-left: -5px;
+	}
+	50% {
+			margin-left: 5px;
+	}
+	75% {
+			margin-left: -5px;
+	}
+	100% {
+			margin-left: 0;
+	}
+}
+
+@keyframes swayCenterDollarsAnimation {
+	0% {
+			margin-left: 0;
+	}
+	25% {
+			margin-left: -6px;
+	}
+	50% {
+			margin-left: 6px;
+	}
+	75% {
+			margin-left: -6px;
+	}
+	100% {
+			margin-left: 0;
+	}
+}
+
+// Анімація обертання доларів
+@keyframes rotateDollarsAnimation {
+	0% {
+		transform: rotate();
+	}
+	50% {
+		margin-left: toRem(100);
+	}
+	100% {
+		margin-left: toRem(0);
+	}
+}

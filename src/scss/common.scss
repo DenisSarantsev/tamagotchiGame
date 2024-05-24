@@ -13,6 +13,9 @@
 	width: 100%;
 	height: toRem(77);
 	position: relative;
+	@media (max-width: 1440px){
+		max-width: toRem(110);
+	}
 	&__text {
 		font-size: toRem(16);
 		font-weight: bold;
@@ -23,6 +26,10 @@
 		bottom: 0;
 		left: 0;
 		animation: scrollButtonAnimation 1.5s infinite;
+		@media (max-width: 1440px){
+			height: 100%;
+			width: 100%;
+		}
 	}
 }
 

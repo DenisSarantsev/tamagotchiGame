@@ -551,5 +551,26 @@
         };
         setTimerToApp(5);
     }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const blockContent = document.querySelector(".dollars-block__content");
+        const target = document.querySelector(".dollars-block__content");
+        const observer = new IntersectionObserver(onVisibilityChange, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 1
+        });
+        observer.observe(target);
+        function onVisibilityChange(entries, observer) {
+            entries.forEach((entry => {
+                if (entry.isIntersecting) {
+                    blockContent.classList.remove("_hidden");
+                    setTimeout((() => {
+                        blockContent.style.opacity = "1";
+                    }), 200);
+                    observer.disconnect();
+                }
+            }));
+        }
+    }));
     window["FLS"] = true;
 })();
