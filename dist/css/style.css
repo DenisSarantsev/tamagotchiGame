@@ -423,6 +423,9 @@ body ::-webkit-scrollbar {
   -webkit-transform: translateZ(0);
   transform: translateZ(0)
 }
+.loading__big-logo {
+  width: 100%
+}
 .loading__load-button-container {
   width: 100%;
   display: flex;
@@ -542,13 +545,20 @@ body ::-webkit-scrollbar {
   right: 0;
   padding: 1.5625rem 0 0 0;
   display: flex;
-  gap: .625rem
+  gap: .625rem;
+  border-radius: 50%
 }
 .timer__buttons-block > *:hover {
-  cursor: pointer
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 0 rgba(214,230,0,.75);
+  -webkit-box-shadow: 0 0 15px 0 rgba(214,230,0,.75);
+  -moz-box-shadow: 0 0 15px 0 rgba(214,230,0,.75)
 }
 .timer__button {
-  position: relative
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem
 }
 .timer__button img {
   width: 4.5rem;
@@ -722,14 +732,12 @@ body ::-webkit-scrollbar {
 .play-button__button-hover {
   position: absolute;
   top: 0;
-  left: 0;
-  display: none
+  left: 0
 }
 .play-button__button-active {
   position: absolute;
   top: 0;
-  left: 0;
-  display: none
+  left: 0
 }
 .play-button__button-text-container {
   position: absolute;
@@ -1099,48 +1107,116 @@ body ::-webkit-scrollbar {
     right: -9.375rem
   }
 }
-@-webkit-keyframes leafsAnimation {
+@-webkit-keyframes firstLeafAnimation {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0)
   }
-  20% {
+  40% {
     -webkit-transform: rotate(10deg);
     transform: rotate(10deg)
-  }
-  40% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0)
-  }
-  60% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg)
   }
   100% {
     -webkit-transform: rotate(0);
     transform: rotate(0)
   }
 }
-@keyframes leafsAnimation {
+@keyframes firstLeafAnimation {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0)
   }
-  20% {
+  40% {
     -webkit-transform: rotate(10deg);
     transform: rotate(10deg)
-  }
-  40% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0)
-  }
-  60% {
-    -webkit-transform: rotate(-10deg);
-    transform: rotate(-10deg)
   }
   100% {
     -webkit-transform: rotate(0);
     transform: rotate(0)
+  }
+}
+@-webkit-keyframes secondLeafAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@keyframes secondLeafAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@-webkit-keyframes thirdLeafAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@keyframes thirdLeafAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@-webkit-keyframes goblinAnimation {
+  0% {
+    bottom: -12.5rem;
+    left: -62.5rem;
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg)
+  }
+  100% {
+    bottom: -6.25rem;
+    left: -13.125rem;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg)
+  }
+}
+@keyframes goblinAnimation {
+  0% {
+    bottom: -12.5rem;
+    left: -62.5rem;
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg)
+  }
+  100% {
+    bottom: -6.25rem;
+    left: -13.125rem;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg)
   }
 }
 @media (max-width:1920px) {
@@ -1154,9 +1230,21 @@ body ::-webkit-scrollbar {
     gap: 1.4375rem
   }
 }
+@media (max-width:1600px) {
+  .loading {
+    max-width: 34.375rem
+  }
+}
 @media (max-width:1440px) {
+  .loading {
+    max-width: 31.25rem
+  }
   .timer__logo {
     max-width: 13.75rem
+  }
+  .timer__button {
+    width: 3.75rem;
+    height: 3.75rem
   }
   .timer__button img {
     width: 3.75rem;
@@ -1171,6 +1259,11 @@ body ::-webkit-scrollbar {
   }
   .timer-content__subtitle {
     padding-bottom: 0
+  }
+}
+@media (max-width:1230px) {
+  .loading {
+    max-width: 25rem
   }
 }
 @media (max-width:75em) {
@@ -1190,9 +1283,27 @@ body ::-webkit-scrollbar {
     max-width: 19.402vw
   }
 }
+@media (max-width:1200px) {
+  .loading__start-button {
+    max-width: 12.5rem
+  }
+  .loading__start-button img {
+    max-width: 12.5rem
+  }
+}
+@media (max-width:992px) {
+  .loading {
+    max-width: 21.875rem
+  }
+}
 @media (max-width:900px) {
   .loading__button-text-container div {
     font-size: 3.5vw
+  }
+}
+@media (max-width:800px) {
+  .loading__button-text-container div {
+    font-size: 1.75rem
   }
 }
 @media (max-width:600px) {

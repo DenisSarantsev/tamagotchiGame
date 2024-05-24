@@ -53,21 +53,52 @@
 }
 
 // Анімація руху листків
-@keyframes leafsAnimation {
+@keyframes firstLeafAnimation {
 	0% {
 		transform: rotate(0deg);
 	}
-	20% {
-		transform: rotate(10deg);
-	}
 	40% {
-		transform: rotate(0deg);
-	}
-	60% {
-		transform: rotate(-10deg);
+		transform: rotate(10deg);
 	}
 	100% {
 		transform: rotate(0deg);
 	}
 }
 
+@keyframes secondLeafAnimation {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes thirdLeafAnimation {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(15deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+// Анімація гобліна
+@keyframes goblinAnimation {
+	0% {
+		bottom: toRem(-200);
+		left: toRem(-1000);
+		transform: rotate(-30deg);
+	}
+	100% {
+		bottom: toRem(-100);
+		left: toRem(-210);
+		transform: rotate(30deg);
+	}
+}

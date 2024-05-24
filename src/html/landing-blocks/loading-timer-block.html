@@ -2,7 +2,7 @@
 	<!-- Шари з підкладками і фонами для екрану з таймером -->
 	<img src="@img/loading-timer/mountains-bg.svg" alt="mountains background image" class="loading-timer__mountains-bg _hidden">
 	<div class="loading-timer__bg-effects _hidden">
-		<img src="@img/loading-timer/goblin.png" alt="green goblin image" class="loading-timer__goblin">
+		<img src="@img/loading-timer/goblin.png" alt="green goblin image" class="loading-timer__goblin _hidden">
 		<img src="@img/loading-timer/leafs/leaf-one.png" alt="tropic leaf" class="loading-timer__first-leaf">
 		<img src="@img/loading-timer/leafs/leaf-two.png" alt="tropic leaf" class="loading-timer__second-leaf">
 		<img src="@img/loading-timer/leafs/leaf-three.png" alt="tropic leaf" class="loading-timer__third-leaf">
@@ -75,19 +75,19 @@
 							<div class="timer-counter__wrapper">
 								<img src="@img/loading-timer/counter-bg.png" alt="" class="timer-counter__bg">
 								<div class="timer-counter__section days-section">
-									<div class="timer-counter__numbers">04</div>
+									<div class="timer-counter__numbers days-timer-element">04</div>
 									<div class="timer-counter__subtitle">days</div>
 								</div>
 								<div class="timer-counter__section hours-section">
-									<div class="timer-counter__numbers">05</div>
+									<div class="timer-counter__numbers hours-timer-element">05</div>
 									<div class="timer-counter__subtitle">hours</div>
 								</div>
 								<div class="timer-counter__section minutes-section">
-									<div class="timer-counter__numbers">24</div>
+									<div class="timer-counter__numbers minutes-timer-element">24</div>
 									<div class="timer-counter__subtitle">minutes</div>
 								</div>
 								<div class="timer-counter__section seconds-section">
-									<div class="timer-counter__numbers">36</div>
+									<div class="timer-counter__numbers seconds-timer-element">36</div>
 									<div class="timer-counter__subtitle">seconds</div>
 								</div>
 							</div>
@@ -104,10 +104,10 @@
 							</div>
 						</div>
 						<div class="timer-content__play-button play-button">
-							<a class="play-button__wrapper">
+							<a target="_blank" href="https://game.tamagotchi.money/" class="play-button__wrapper">
 								<img src="@img/common/button-default.svg" alt="start button" class="play-button__button-default">
-								<img src="@img/common/button-hover.svg" alt="start button" class="play-button__button-hover">
-								<img src="@img/common/button-active.svg" alt="start button" class="play-button__button-active">
+								<img src="@img/common/button-hover.svg" alt="start button" class="play-button__button-hover _hidden">
+								<img src="@img/common/button-active.svg" alt="start button" class="play-button__button-active _hidden">
 								<div class="play-button__button-text-container">
 									<div>Играть</div>
 								</div>
@@ -115,7 +115,7 @@
 						</div>
 					</div>
 					<div class="timer__bottom timer-bottom">
-						<button class="scroll-down-element">
+						<button class="scroll-down-element timer-bottom-scroll-button">
 							<div class="scroll-down-element__text">
 								Scroll down
 							</div>

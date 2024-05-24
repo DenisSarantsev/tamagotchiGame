@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	hoverStartButton()
 
-	// Логіка після натискання кнопки "Старт"
+	// -------------------------------------------------------- Логіка після натискання кнопки "Старт"
 	const hiddenLoadPageAndShowTimerPage = () => {
 		startAndLoadingContainer.style.transform = "translateZ(1100px)";
 		topLeftEllipse.style.animation = "hiddenLeftTopEllipse 1s ease";
@@ -88,11 +88,17 @@ document.addEventListener("DOMContentLoaded", () => {
 			firstLeaf.style.animation = "showFirstLeaf 0.45s ease";
 			secondLeaf.style.animation = "showSecondLeaf 0.6s ease";
 			thirdLeaf.style.animation = "showThirdLeaf 0.55s ease";
-			firstLeaf.style.animation = "leafsAnimation 15s infinite";
-			secondLeaf.style.animation = "leafsAnimation 20s infinite";
-			thirdLeaf.style.animation = "leafsAnimation 25s infinite";
+			firstLeaf.style.animation = "firstLeafAnimation 15s infinite";
+			secondLeaf.style.animation = "secondLeafAnimation 10s infinite";
+			thirdLeaf.style.animation = "thirdLeafAnimation 25s infinite";
 
-			// Поява контенту таймера
+			setTimeout(() => {
+				goblinImage.classList.remove("_hidden");
+				goblinImage.style.animation = "goblinAnimation 0.7s ease";
+			}, 700)
+			
+
+	// Поява контенту таймера
 			setTimeout(() => {
 				timerBlock.style.animation = "showSmallLogoOpacity 1s ease";
 				setTimeout(() => {
@@ -101,4 +107,82 @@ document.addEventListener("DOMContentLoaded", () => {
 			}, 100)
 		}, 350)
 	}
+
+	// Анимація кнопки "Играть"
+	const hoverAndActivePlayButton = () => {
+		const defaultPlayButton = document.querySelector(".play-button__button-default");
+		const hoverPlayButton = document.querySelector(".play-button__button-hover");
+		const activePlayButton = document.querySelector(".play-button__button-active");
+		const playButtonBlock = document.querySelector(".play-button__wrapper");
+		
+		playButtonBlock.addEventListener("mouseenter", () => {
+			defaultPlayButton.classList.add("_hidden");
+			hoverPlayButton.classList.remove("_hidden");
+			activePlayButton.classList.add("_hidden");
+		})
+		playButtonBlock.addEventListener("mouseleave", () => {
+			defaultPlayButton.classList.remove("_hidden");
+			hoverPlayButton.classList.add("_hidden");
+			activePlayButton.classList.add("_hidden");
+		})
+		playButtonBlock.addEventListener("mousedown", () => {
+			defaultPlayButton.classList.add("_hidden");
+			hoverPlayButton.classList.add("_hidden");
+			activePlayButton.classList.remove("_hidden");
+		})
+		playButtonBlock.addEventListener("mouseup", () => {
+			defaultPlayButton.classList.add("_hidden");
+			hoverPlayButton.classList.remove("_hidden");
+			activePlayButton.classList.add("_hidden");
+		})
+	}
+	hoverAndActivePlayButton();
+
+	// Логика работы таймера
+	const setTimerToApp = (durationInDays) => {
+		const durationInMs = durationInDays * 24 * 60 * 60 * 1000;
+		let endTime = localStorage.getItem('timerEndTime');
+
+		if (!endTime || new Date().getTime() > endTime) {
+				endTime = new Date().getTime() + durationInMs;
+				localStorage.setItem('timerEndTime', endTime);
+		}
+
+		function updateTimer() {
+				const now = new Date().getTime();
+				const remainingTime = endTime - now;
+
+				if (remainingTime <= 0) {
+						endTime = new Date().getTime() + durationInMs;
+						localStorage.setItem('timerEndTime', endTime);
+				}
+
+				const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+				const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+				const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+				const daysElement = document.querySelector(".days-timer-element");
+				const hoursElement = document.querySelector(".hours-timer-element");
+				const minutesElement = document.querySelector(".minutes-timer-element");
+				const secondsElement = document.querySelector(".seconds-timer-element");
+
+				daysElement.innerHTML = `${days}`;
+				hoursElement.innerHTML = `${hours}`;
+				minutesElement.innerHtml = `${minutes}`;
+				secondsElement.innerHTML = `${seconds}`;
+		}
+
+		setInterval(updateTimer, 1000);
+		updateTimer(); // Initial call to display the timer immediately
+	}
+
+	setTimerToApp(5)
+
+	// Прокрутка сторінки при натисканні на кнопку
+	// document.querySelector(".timer-bottom-scroll-button").addEventListener('click', function() {
+	// 	document.querySelector(".loading-timer").scrollIntoView({ behavior: 'smooth' });
+	// 	console.log("SCROLL")
+	// });
+
 })

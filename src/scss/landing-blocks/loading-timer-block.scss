@@ -135,8 +135,20 @@
 	transition: transform 0.3s; /* Плавный переход */
 	transform: translateZ(0); /* Начальная позиция по оси Z */
 	//display: none; // Убираем содержимое блока с логотипом и загрузкой
+	@media (max-width: 1600px){
+		max-width: toRem(550);
+	}
+	@media (max-width: 1440px){
+		max-width: toRem(500);
+	}
+	@media (max-width: 1230px){
+		max-width: toRem(400);
+	}
+	@media (max-width: 992px){
+		max-width: toRem(350);
+	}
 	&__big-logo {
-
+		width: 100%;
 	}
 	&__load-button-container {
 		width: 100%;
@@ -186,6 +198,9 @@
 		@media (max-width:$pc){
 			max-width: 19.402vw;
 		}
+		@media (max-width: 1200px){
+			max-width: toRem(200);
+		}
 		&>* {
 			cursor: pointer;
 		}
@@ -199,6 +214,9 @@
 			max-width: toRem(227);
 			@media (max-width:$pc){
 				max-width: 19.402vw;
+			}
+			@media (max-width: 1200px){
+				max-width: toRem(200);
 			}
 		}
 	}
@@ -217,6 +235,9 @@
 			color: #FFFFFF;
 			@media (max-width: 900px){
 				font-size: 3.5vw;
+			}
+			@media (max-width: 800px){
+				font-size: toRem(28);
 			}
 		}
 	}
@@ -291,14 +312,25 @@
 		padding: toRem(25) 0 0 0;
 		display: flex;
 		gap: toRem(10);
+		border-radius: 50%;
 		&>* {
 			&:hover {
 				cursor: pointer;
+				border-radius: 50%;
+				box-shadow: 0px 0px 15px 0px rgba(214,230,0,0.75);
+				-webkit-box-shadow: 0px 0px 15px 0px rgba(214,230,0,0.75);
+				-moz-box-shadow: 0px 0px 15px 0px rgba(214,230,0,0.75);
 			}
 		}
 	}
 	&__button {
 		position: relative;
+		width: toRem(72);
+		height: toRem(72);
+		@media (max-width: 1440px){
+			width: toRem(60);
+			height: toRem(60);
+		}
 		& img {
 			width: toRem(72);
 			height: toRem(72);
@@ -529,13 +561,11 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		display: none;
 	}
 	&__button-active {
 		position: absolute;
 		top: 0;
 		left: 0;
-		display: none;
 	}
 	&__button-text-container {
 		position: absolute;
