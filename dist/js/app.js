@@ -463,13 +463,19 @@
         hoverStartButton();
         const hiddenLoadPageAndShowTimerPage = () => {
             startAndLoadingContainer.style.transform = "translateZ(1100px)";
-            topLeftEllipse.style.animation = "hiddenLeftTopEllipse 1s ease";
-            topRightEllipse.style.animation = "hiddenRightTopEllipse 1s ease";
-            bottomLeftEllipse.style.animation = "hiddenLeftBottomEllipse 1s ease";
-            bottomRightEllipse.style.animation = "hiddenRightBottomEllipse 1s ease";
+            startAndLoadingContainer.style.animation = "loadingLineHiddenAnimation 1.4s ease";
+            async function setOpacityEllipses() {
+                for (let i = 100; i > 0; i--) setTimeout((() => {
+                    topLeftEllipse.style.opacity = `${i / 100}`;
+                    topRightEllipse.style.opacity = `${i / 100}`;
+                    bottomLeftEllipse.style.opacity = `${i / 100}`;
+                    bottomRightEllipse.style.opacity = `${i / 100}`;
+                }), (100 - i) * 20);
+            }
+            setOpacityEllipses();
             setTimeout((() => {
-                ellipsesContainer.classList.add("_hidden");
                 blackBackground.style.opacity = "0.35";
+                ellipsesContainer.classList.add("_hidden");
                 startAndLoadingContainer.style.display = "none";
                 timerBlock.classList.remove("_hidden");
                 timerBgImage.classList.remove("_hidden");
@@ -483,14 +489,14 @@
                 setTimeout((() => {
                     goblinImage.classList.remove("_hidden");
                     goblinImage.style.animation = "goblinAnimation 0.7s ease";
-                }), 700);
+                }), 1e3);
                 setTimeout((() => {
                     timerBlock.style.animation = "showSmallLogoOpacity 1s ease";
                     setTimeout((() => {
                         timerBlock.style.opacity = "1";
                     }), 999);
                 }), 100);
-            }), 350);
+            }), 1500);
         };
         const hoverAndActivePlayButton = () => {
             const defaultPlayButton = document.querySelector(".play-button__button-default");
