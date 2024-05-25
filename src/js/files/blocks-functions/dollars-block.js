@@ -11,18 +11,48 @@ document.addEventListener("DOMContentLoaded", () => {
 	observer.observe(target);
 
 	// Виконуємо дії, коли об'єкт потрапляє у поле зору
-function onVisibilityChange(entries, observer) {
-	entries.forEach(entry => {
-			if (entry.isIntersecting) {
-					// Виконуємо функції:
-					blockContent.classList.remove("_hidden");
-					setTimeout(() => {
-						blockContent.style.opacity = "1";
-					}, 200)
-					observer.disconnect(); // Зупиняємо нагляд
-			}
-	});
-}
+	function onVisibilityChange(entries, observer) {
+		entries.forEach(entry => {
+				if (entry.isIntersecting) {
+						// Виконуємо функції:
+						blockContent.classList.remove("_hidden");
+						setTimeout(() => {
+							blockContent.style.opacity = "1";
+						}, 200)
+						observer.disconnect(); // Зупиняємо нагляд
+				}
+		});
+	}
+
+	// Функціонал кнопки
+	const hoverAndActivePlayButton = () => {
+		const defaultPlayButton = document.querySelector(".dollars-block__button-default");
+		const hoverPlayButton = document.querySelector(".dollars-block__button-hover");
+		const activePlayButton = document.querySelector(".dollars-block__button-active");
+		const playButtonBlock = document.querySelector(".dollars-block__play-button");
+		
+		playButtonBlock.addEventListener("mouseenter", () => {
+			defaultPlayButton.classList.add("_hidden");
+			hoverPlayButton.classList.remove("_hidden");
+			activePlayButton.classList.add("_hidden");
+		})
+		playButtonBlock.addEventListener("mouseleave", () => {
+			defaultPlayButton.classList.remove("_hidden");
+			hoverPlayButton.classList.add("_hidden");
+			activePlayButton.classList.add("_hidden");
+		})
+		playButtonBlock.addEventListener("mousedown", () => {
+			defaultPlayButton.classList.add("_hidden");
+			hoverPlayButton.classList.add("_hidden");
+			activePlayButton.classList.remove("_hidden");
+		})
+		playButtonBlock.addEventListener("mouseup", () => {
+			defaultPlayButton.classList.add("_hidden");
+			hoverPlayButton.classList.remove("_hidden");
+			activePlayButton.classList.add("_hidden");
+		})
+	}
+	hoverAndActivePlayButton();
 
 	// const effectBgImagesArray = document.querySelectorAll(".effect-bg-img");
 

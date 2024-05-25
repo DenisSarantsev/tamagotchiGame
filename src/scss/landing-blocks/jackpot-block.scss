@@ -1,0 +1,443 @@
+.jackpot-block {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	&__gradient-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $radialBackgroundGradient;
+		z-index: -10;
+	}
+	&__dark-background-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color: #011227, $alpha: 0.6);
+		z-index: -9;
+	}
+
+	// ------------------------------- Листки
+	&__bg-leafs {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: -8;
+	}
+	&__top-left-dark-leaf {
+		opacity: 0.3;
+		position: absolute;
+		top: toRem(-130);
+		left: toRem(-70);
+		animation: leafsJackpotMovingAnimation 7s infinite;
+		@media (max-width: 1920px){
+			width: 19vw;
+		}
+		@media (max-width: 1440px){
+			top: toRem(-100);
+			left: toRem(-40);
+		}
+		@media (max-width: 1200px){
+			width: toRem(270);
+		}
+	}
+	&__top-right-dark-leaf {
+		opacity: 0.3;
+		position: absolute;
+		top: toRem(-50);
+		right: toRem(-180);
+		animation: leafsJackpotMovingAnimation 8.5s infinite;
+		@media (max-width: 1920px){
+			width: 27vw;
+		}
+		@media (max-width: 1440px){
+			top: toRem(-20);
+			right: toRem(-100);
+		}
+		@media (max-width: 1200px){
+			width: toRem(370);
+		}
+	}
+	&__bottom-left-dark-leaf {
+		opacity: 0.3;
+		position: absolute;
+		bottom: toRem(100);
+		left: toRem(-30);
+		animation: leafsJackpotMovingAnimation 6.6s infinite;
+		@media (max-width: 1920px){
+			width: 26vw;
+		}
+		@media (max-width: 1200px){
+			width: toRem(350);
+		}
+	}
+	&__bottom-left-leaf {
+		position: absolute;
+		bottom: toRem(30);
+		left: toRem(-150);
+		animation: leafsJackpotMovingAnimation 7.5s infinite;
+		@media (max-width: 1920px){
+			width: 31vw;
+		}
+		@media (max-width: 1200px){
+			width: toRem(400);
+		}
+	}
+
+	&__sparks {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 100vh;
+		width: 100%;
+		overflow: hidden;
+		z-index: -7;
+
+		&>* {
+			position: absolute;
+			&:nth-child(1) {
+				position: absolute;
+				top: 30%;
+				left: 40%;
+				animation: moveSpark1 15s infinite;
+			}
+			&:nth-child(2) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: moveSpark2 12s infinite;
+			}
+			&:nth-child(3) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: moveSpark3 8s infinite;
+			}
+			&:nth-child(4) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: moveSpark4 16s infinite;
+			}
+			&:nth-child(5) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: moveSpark5 9s infinite;
+			}
+			&:nth-child(6) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: moveSpark6 13s infinite;
+			}
+			&:nth-child(7) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: moveSpark7 17s infinite;
+			}
+			&:nth-child(8) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: moveSpark8 7s infinite;
+			}
+			&:nth-child(9) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: moveSpark9 14s infinite;
+			}
+			&:nth-child(10) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				animation: moveSpark10 11s infinite;
+			}
+		}
+	}
+	&__shadow-sparks {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		z-index: -6;
+		&>* {
+			position: absolute;
+			&:nth-child(1) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark1 7s infinite;
+			}
+			&:nth-child(2) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark2 8s infinite;
+			}
+			&:nth-child(3) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark3 9s infinite;
+			}
+			&:nth-child(4) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark4 5s infinite;
+			}
+			&:nth-child(5) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark5 6s infinite;
+			}
+			&:nth-child(6) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark6 7s infinite;
+			}
+			&:nth-child(7) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark7 8s infinite;
+			}
+			&:nth-child(8) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark8 9s infinite;
+			}
+			&:nth-child(9) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark9 4s infinite;
+			}
+			&:nth-child(10) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark10 5s infinite;
+			}
+			&:nth-child(11) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark11 6s infinite;
+			}
+			&:nth-child(12) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark12 7s infinite;
+			}
+			&:nth-child(13) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark13 8s infinite;
+			}
+			&:nth-child(14) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark14 4.5s infinite;
+			}
+			&:nth-child(15) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark15 5.5s infinite;
+			}
+			&:nth-child(16) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark16 6.5s infinite;
+			}
+			&:nth-child(17) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark17 7.5s infinite;
+			}
+			&:nth-child(18) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark18 8.5s infinite;
+			}
+			&:nth-child(19) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark19 3.5s infinite;
+			}
+			&:nth-child(20) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark20 3.9s infinite;
+			}
+			&:nth-child(21) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark21 7s infinite;
+			}
+			&:nth-child(22) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark22 8.2s infinite;
+			}
+			&:nth-child(23) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark23 6.4s infinite;
+			}
+			&:nth-child(24) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark24 10s infinite;
+			}
+			&:nth-child(25) {
+				top: 50%;
+				left: 50%;
+				animation: moveShadowSpark25 4s infinite;
+			}
+		}
+	}
+	&__lights {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&>* {
+			position: absolute;
+		}
+	}
+	&__wheel-eggs-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__wheel-eggs-inner-container {
+		max-width: toRem(950);
+		max-height: toRem(950);
+		width: 100%;
+		height: 100%;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__wheel {
+	}
+	&__eggs {
+	}
+	&__bottom-arrow-block {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.spark {
+	width: toRem(73);
+	height: toRem(73);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&>* {
+		position: absolute;
+		&:nth-child(1) {
+			transform: rotate(75deg);
+			width: 80%;
+			animation: rotateSparkLine1 1s infinite;
+		}
+		&:nth-child(2) {
+			transform: rotate(0deg);
+			width: 90%;
+			animation: rotateSparkLine2 1s infinite;
+		}
+		&:nth-child(3) {
+			transform: rotate(120deg);
+			width: 100%;
+			animation: rotateSparkLine3 1s infinite;
+		}
+		&:nth-child(4) {
+			transform: rotate(150deg);
+			width: 70%;
+		}
+		&:nth-child(5) {
+			transform: rotate(45deg);
+			width: 100%;
+		}
+	}
+	&__line {
+	}
+	&__shadow {
+		position: absolute;
+		margin-left: -3px;
+		width: toRem(20);
+		height: toRem(20);
+		border-radius: 50%;
+		background: radial-gradient(circle, rgba(246, 255, 0, 0.923) 0%, rgba(0,5,18,0) 49%);
+		animation: blinkSparkMove 2s infinite;
+	}
+}
+
+.shadow-spark {
+	border-radius: 30%;
+	background: radial-gradient(ellipse at center, rgba(1,255,97,1) 0%, rgba(0,5,18,0) 53%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	& div {
+		width: toRem(15);
+		height: toRem(15);
+		background: radial-gradient(circle, rgba(255, 255, 255, 0.619) 0%, rgba(0,5,18,0) 53%);
+	}
+}
+
+.light-element {
+
+}
+
+.wheel {
+	max-width: toRem(480.34);
+	max-height: toRem(480.34);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__rotate-container {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& img {
+			position: absolute;
+		}
+	}
+	&__wheel-image {
+		animation: wheelRotateAnimation 20s ease;
+		max-width: toRem(480.34);
+		max-height: toRem(480.34);
+		width: 100%;
+		height: 100%;
+	}
+	&__wheel-pointer-image {
+
+	}
+}

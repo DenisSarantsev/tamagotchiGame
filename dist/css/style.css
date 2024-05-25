@@ -977,7 +977,7 @@ body ::-webkit-scrollbar {
   animation: slideDownDollarsAnimation11 linear 66s infinite,swayTopDollarsAnimation ease 7.9s infinite
 }
 .dollars-block__bottom-dollars-wrapper img {
-  z-index: -3;
+  z-index: -5;
   position: absolute
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(1) {
@@ -1188,6 +1188,446 @@ body ::-webkit-scrollbar {
   font-size: 1.5rem;
   font-weight: 700;
   font-family: Piazzolla,Arial,sans-serif
+}
+.jackpot-block {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+.jackpot-block__gradient-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle,#9bc439 0,#63a71f 41%,#006d20 73%,#272f1b 87%);
+  z-index: -10
+}
+.jackpot-block__dark-background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1,18,39,.6);
+  z-index: -9
+}
+.jackpot-block__bg-leafs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -8
+}
+.jackpot-block__top-left-dark-leaf {
+  opacity: .3;
+  position: absolute;
+  top: -8.125rem;
+  left: -4.375rem;
+  -webkit-animation: leafsJackpotMovingAnimation 7s infinite;
+  animation: leafsJackpotMovingAnimation 7s infinite
+}
+.jackpot-block__top-right-dark-leaf {
+  opacity: .3;
+  position: absolute;
+  top: -3.125rem;
+  right: -11.25rem;
+  -webkit-animation: leafsJackpotMovingAnimation 8.5s infinite;
+  animation: leafsJackpotMovingAnimation 8.5s infinite
+}
+.jackpot-block__bottom-left-dark-leaf {
+  opacity: .3;
+  position: absolute;
+  bottom: 6.25rem;
+  left: -1.875rem;
+  -webkit-animation: leafsJackpotMovingAnimation 6.6s infinite;
+  animation: leafsJackpotMovingAnimation 6.6s infinite
+}
+.jackpot-block__bottom-left-leaf {
+  position: absolute;
+  bottom: 1.875rem;
+  left: -9.375rem;
+  -webkit-animation: leafsJackpotMovingAnimation 7.5s infinite;
+  animation: leafsJackpotMovingAnimation 7.5s infinite
+}
+.jackpot-block__sparks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: -7
+}
+.jackpot-block__sparks > * {
+  position: absolute
+}
+.jackpot-block__sparks > *:nth-child(1) {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  -webkit-animation: moveSpark1 15s infinite;
+  animation: moveSpark1 15s infinite
+}
+.jackpot-block__sparks > *:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveSpark2 12s infinite;
+  animation: moveSpark2 12s infinite
+}
+.jackpot-block__sparks > *:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveSpark3 8s infinite;
+  animation: moveSpark3 8s infinite
+}
+.jackpot-block__sparks > *:nth-child(4) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveSpark4 16s infinite;
+  animation: moveSpark4 16s infinite
+}
+.jackpot-block__sparks > *:nth-child(5) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveSpark5 9s infinite;
+  animation: moveSpark5 9s infinite
+}
+.jackpot-block__sparks > *:nth-child(6) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveSpark6 13s infinite;
+  animation: moveSpark6 13s infinite
+}
+.jackpot-block__sparks > *:nth-child(7) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveSpark7 17s infinite;
+  animation: moveSpark7 17s infinite
+}
+.jackpot-block__sparks > *:nth-child(8) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveSpark8 7s infinite;
+  animation: moveSpark8 7s infinite
+}
+.jackpot-block__sparks > *:nth-child(9) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveSpark9 14s infinite;
+  animation: moveSpark9 14s infinite
+}
+.jackpot-block__sparks > *:nth-child(10) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveSpark10 11s infinite;
+  animation: moveSpark10 11s infinite
+}
+.jackpot-block__shadow-sparks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -6
+}
+.jackpot-block__shadow-sparks > * {
+  position: absolute
+}
+.jackpot-block__shadow-sparks > *:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark1 7s infinite;
+  animation: moveShadowSpark1 7s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark2 8s infinite;
+  animation: moveShadowSpark2 8s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark3 9s infinite;
+  animation: moveShadowSpark3 9s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(4) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark4 5s infinite;
+  animation: moveShadowSpark4 5s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark5 6s infinite;
+  animation: moveShadowSpark5 6s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(6) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark6 7s infinite;
+  animation: moveShadowSpark6 7s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(7) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark7 8s infinite;
+  animation: moveShadowSpark7 8s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(8) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark8 9s infinite;
+  animation: moveShadowSpark8 9s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(9) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark9 4s infinite;
+  animation: moveShadowSpark9 4s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(10) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark10 5s infinite;
+  animation: moveShadowSpark10 5s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(11) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark11 6s infinite;
+  animation: moveShadowSpark11 6s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(12) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark12 7s infinite;
+  animation: moveShadowSpark12 7s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(13) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark13 8s infinite;
+  animation: moveShadowSpark13 8s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(14) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark14 4.5s infinite;
+  animation: moveShadowSpark14 4.5s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(15) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark15 5.5s infinite;
+  animation: moveShadowSpark15 5.5s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(16) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark16 6.5s infinite;
+  animation: moveShadowSpark16 6.5s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(17) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark17 7.5s infinite;
+  animation: moveShadowSpark17 7.5s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(18) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark18 8.5s infinite;
+  animation: moveShadowSpark18 8.5s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(19) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark19 3.5s infinite;
+  animation: moveShadowSpark19 3.5s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(20) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark20 3.9s infinite;
+  animation: moveShadowSpark20 3.9s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(21) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark21 7s infinite;
+  animation: moveShadowSpark21 7s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(22) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark22 8.2s infinite;
+  animation: moveShadowSpark22 8.2s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(23) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark23 6.4s infinite;
+  animation: moveShadowSpark23 6.4s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(24) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark24 10s infinite;
+  animation: moveShadowSpark24 10s infinite
+}
+.jackpot-block__shadow-sparks > *:nth-child(25) {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: moveShadowSpark25 4s infinite;
+  animation: moveShadowSpark25 4s infinite
+}
+.jackpot-block__lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+.jackpot-block__lights > * {
+  position: absolute
+}
+.jackpot-block__wheel-eggs-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.jackpot-block__wheel-eggs-inner-container {
+  max-width: 59.375rem;
+  max-height: 59.375rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.jackpot-block__bottom-arrow-block {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center
+}
+.spark {
+  width: 4.5625rem;
+  height: 4.5625rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative
+}
+.spark > * {
+  position: absolute
+}
+.spark > *:nth-child(1) {
+  -webkit-transform: rotate(75deg);
+  transform: rotate(75deg);
+  width: 80%;
+  -webkit-animation: rotateSparkLine1 1s infinite;
+  animation: rotateSparkLine1 1s infinite
+}
+.spark > *:nth-child(2) {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  width: 90%;
+  -webkit-animation: rotateSparkLine2 1s infinite;
+  animation: rotateSparkLine2 1s infinite
+}
+.spark > *:nth-child(3) {
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+  width: 100%;
+  -webkit-animation: rotateSparkLine3 1s infinite;
+  animation: rotateSparkLine3 1s infinite
+}
+.spark > *:nth-child(4) {
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+  width: 70%
+}
+.spark > *:nth-child(5) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 100%
+}
+.spark__shadow {
+  position: absolute;
+  margin-left: -3px;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: radial-gradient(circle,rgba(246,255,0,.923) 0,rgba(0,5,18,0) 49%);
+  -webkit-animation: blinkSparkMove 2s infinite;
+  animation: blinkSparkMove 2s infinite
+}
+.shadow-spark {
+  border-radius: 30%;
+  background: radial-gradient(ellipse at center,#01ff61 0,rgba(0,5,18,0) 53%);
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.shadow-spark div {
+  width: .9375rem;
+  height: .9375rem;
+  background: radial-gradient(circle,rgba(255,255,255,.619) 0,rgba(0,5,18,0) 53%)
+}
+.wheel {
+  max-width: 30.02125rem;
+  max-height: 30.02125rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.wheel__rotate-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.wheel__rotate-container img {
+  position: absolute
+}
+.wheel__wheel-image {
+  -webkit-animation: wheelRotateAnimation 20s ease;
+  animation: wheelRotateAnimation 20s ease;
+  max-width: 30.02125rem;
+  max-height: 30.02125rem;
+  width: 100%;
+  height: 100%
 }
 @-webkit-keyframes firstEllipseAnimation {
   0% {
@@ -2257,10 +2697,1322 @@ body ::-webkit-scrollbar {
     margin-left: 0
   }
 }
+@-webkit-keyframes leafsJackpotMovingAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@keyframes leafsJackpotMovingAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@-webkit-keyframes wheelRotateAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  100% {
+    -webkit-transform: rotate(3600deg);
+    transform: rotate(3600deg)
+  }
+}
+@keyframes wheelRotateAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  100% {
+    -webkit-transform: rotate(3600deg);
+    transform: rotate(3600deg)
+  }
+}
+@-webkit-keyframes rotateSparkLine1 {
+  0% {
+    -webkit-transform: rotate(75deg);
+    transform: rotate(75deg)
+  }
+  50% {
+    -webkit-transform: rotate(83deg);
+    transform: rotate(83deg)
+  }
+  100% {
+    -webkit-transform: rotate(75deg);
+    transform: rotate(75deg)
+  }
+}
+@keyframes rotateSparkLine1 {
+  0% {
+    -webkit-transform: rotate(75deg);
+    transform: rotate(75deg)
+  }
+  50% {
+    -webkit-transform: rotate(83deg);
+    transform: rotate(83deg)
+  }
+  100% {
+    -webkit-transform: rotate(75deg);
+    transform: rotate(75deg)
+  }
+}
+@-webkit-keyframes rotateSparkLine2 {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@keyframes rotateSparkLine2 {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@-webkit-keyframes rotateSparkLine3 {
+  0% {
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg)
+  }
+  50% {
+    -webkit-transform: rotate(128deg);
+    transform: rotate(128deg)
+  }
+  100% {
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg)
+  }
+}
+@keyframes rotateSparkLine3 {
+  0% {
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg)
+  }
+  50% {
+    -webkit-transform: rotate(128deg);
+    transform: rotate(128deg)
+  }
+  100% {
+    -webkit-transform: rotate(120deg);
+    transform: rotate(120deg)
+  }
+}
+@-webkit-keyframes blinkSparkMove {
+  0% {
+    width: 1.25rem;
+    height: 1.25rem
+  }
+  50% {
+    width: 1.875rem;
+    height: 1.875rem
+  }
+  100% {
+    width: 1.25rem;
+    height: 1.25rem
+  }
+}
+@keyframes blinkSparkMove {
+  0% {
+    width: 1.25rem;
+    height: 1.25rem
+  }
+  50% {
+    width: 1.875rem;
+    height: 1.875rem
+  }
+  100% {
+    width: 1.25rem;
+    height: 1.25rem
+  }
+}
+@-webkit-keyframes moveSpark1 {
+  0% {
+    top: 30%;
+    left: 40%;
+    opacity: 1
+  }
+  70% {
+    top: 15%;
+    left: 25%;
+    opacity: .7
+  }
+  100% {
+    top: 10%;
+    left: 20%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark1 {
+  0% {
+    top: 30%;
+    left: 40%;
+    opacity: 1
+  }
+  70% {
+    top: 15%;
+    left: 25%;
+    opacity: .7
+  }
+  100% {
+    top: 10%;
+    left: 20%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveSpark2 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 17%;
+    left: 20%;
+    opacity: .7
+  }
+  100% {
+    top: 10%;
+    left: 15%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark2 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 17%;
+    left: 20%;
+    opacity: .7
+  }
+  100% {
+    top: 10%;
+    left: 15%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveSpark3 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 40%;
+    left: 70%;
+    opacity: .7
+  }
+  100% {
+    top: 10%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark3 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 40%;
+    left: 70%;
+    opacity: .7
+  }
+  100% {
+    top: 10%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveSpark4 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 70%;
+    left: 70%;
+    opacity: .7
+  }
+  100% {
+    top: 100%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark4 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 70%;
+    left: 70%;
+    opacity: .7
+  }
+  100% {
+    top: 100%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveSpark5 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 70%;
+    left: 30%;
+    opacity: .7
+  }
+  100% {
+    top: 100%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark5 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 70%;
+    left: 30%;
+    opacity: .7
+  }
+  100% {
+    top: 100%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveSpark6 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 70%;
+    left: 55%;
+    opacity: .7
+  }
+  100% {
+    top: 100%;
+    left: 45%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark6 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 70%;
+    left: 55%;
+    opacity: .7
+  }
+  100% {
+    top: 100%;
+    left: 45%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveSpark7 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 30%;
+    left: 45%;
+    opacity: .7
+  }
+  100% {
+    top: 0;
+    left: 49%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark7 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 30%;
+    left: 45%;
+    opacity: .7
+  }
+  100% {
+    top: 0;
+    left: 49%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveSpark8 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 55%;
+    left: 30%;
+    opacity: .7
+  }
+  100% {
+    top: 45%;
+    left: 5%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark8 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 55%;
+    left: 30%;
+    opacity: .7
+  }
+  100% {
+    top: 45%;
+    left: 5%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveSpark9 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 30%;
+    left: 60%;
+    opacity: .7
+  }
+  100% {
+    top: 0;
+    left: 65%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark9 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 30%;
+    left: 60%;
+    opacity: .7
+  }
+  100% {
+    top: 0;
+    left: 65%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveSpark10 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 70%;
+    left: 45%;
+    opacity: .7
+  }
+  100% {
+    top: 100%;
+    left: 40%;
+    opacity: 0
+  }
+}
+@keyframes moveSpark10 {
+  0% {
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  70% {
+    top: 70%;
+    left: 45%;
+    opacity: .7
+  }
+  100% {
+    top: 100%;
+    left: 40%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark1 {
+  0% {
+    width: 2.5rem;
+    height: 2.8125rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    top: 10%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark1 {
+  0% {
+    width: 2.5rem;
+    height: 2.8125rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    top: 10%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark2 {
+  0% {
+    width: 1.875rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 30%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark2 {
+  0% {
+    width: 1.875rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 30%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark3 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 45%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark3 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 45%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark4 {
+  0% {
+    width: 2.5rem;
+    height: 2.8125rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 65%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark4 {
+  0% {
+    width: 2.5rem;
+    height: 2.8125rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 65%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark5 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 75%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark5 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 75%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark6 {
+  0% {
+    width: 1.875rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark6 {
+  0% {
+    width: 1.875rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 10%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark7 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 40%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark7 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 40%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark8 {
+  0% {
+    width: 1.875rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 30%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark8 {
+  0% {
+    width: 1.875rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 30%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark9 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 20%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark9 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 20%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark10 {
+  0% {
+    width: 2.5rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 60%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark10 {
+  0% {
+    width: 2.5rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 60%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark11 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 70%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark11 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 70%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark12 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 80%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark12 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 80%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark13 {
+  0% {
+    width: 2.1875rem;
+    height: 1.875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark13 {
+  0% {
+    width: 2.1875rem;
+    height: 1.875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 10%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark14 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 20%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark14 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 20%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark15 {
+  0% {
+    width: 2.5rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 30%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark15 {
+  0% {
+    width: 2.5rem;
+    height: 2.1875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 30%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark16 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 40%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark16 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 40%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark17 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 50%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark17 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 50%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark18 {
+  0% {
+    width: 2.1875rem;
+    height: 1.875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 60%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark18 {
+  0% {
+    width: 2.1875rem;
+    height: 1.875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 60%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark19 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 70%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark19 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 70%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark20 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 80%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark20 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 80%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark21 {
+  0% {
+    width: 2.1875rem;
+    height: 1.875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark21 {
+  0% {
+    width: 2.1875rem;
+    height: 1.875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 90%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark22 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 80%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark22 {
+  0% {
+    width: 2.1875rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 80%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark23 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 70%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark23 {
+  0% {
+    width: 2.8125rem;
+    height: 2.5rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 70%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark24 {
+  0% {
+    width: 2.1875rem;
+    height: 1.875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 50%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark24 {
+  0% {
+    width: 2.1875rem;
+    height: 1.875rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 50%;
+    opacity: 0
+  }
+}
+@-webkit-keyframes moveShadowSpark25 {
+  0% {
+    width: 2.5rem;
+    height: 2.8125rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 40%;
+    opacity: 0
+  }
+}
+@keyframes moveShadowSpark25 {
+  0% {
+    width: 2.5rem;
+    height: 2.8125rem;
+    top: 50%;
+    left: 50%;
+    opacity: 1
+  }
+  100% {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    top: 90%;
+    left: 40%;
+    opacity: 0
+  }
+}
 @media (max-width:1920px) {
   .loading-timer__goblin {
     width: 55.729vw;
     height: 55.729vw
+  }
+  .jackpot-block__top-left-dark-leaf {
+    width: 19vw
+  }
+  .jackpot-block__top-right-dark-leaf {
+    width: 27vw
+  }
+  .jackpot-block__bottom-left-dark-leaf {
+    width: 26vw
+  }
+  .jackpot-block__bottom-left-leaf {
+    width: 31vw
   }
 }
 @media (max-width:1800px) {
@@ -2357,6 +4109,14 @@ body ::-webkit-scrollbar {
   .dollars-block__bottom-text-container {
     font-size: 1.375rem
   }
+  .jackpot-block__top-left-dark-leaf {
+    top: -6.25rem;
+    left: -2.5rem
+  }
+  .jackpot-block__top-right-dark-leaf {
+    top: -1.25rem;
+    right: -6.25rem
+  }
 }
 @media (max-width:1230px) {
   .loading {
@@ -2431,6 +4191,18 @@ body ::-webkit-scrollbar {
   }
   .dollars-block__bottom-text-container {
     font-size: 1.25rem
+  }
+  .jackpot-block__top-left-dark-leaf {
+    width: 16.875rem
+  }
+  .jackpot-block__top-right-dark-leaf {
+    width: 23.125rem
+  }
+  .jackpot-block__bottom-left-dark-leaf {
+    width: 21.875rem
+  }
+  .jackpot-block__bottom-left-leaf {
+    width: 25rem
   }
 }
 @media (max-width:1100px) {
