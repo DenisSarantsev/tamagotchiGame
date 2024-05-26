@@ -107,63 +107,53 @@
 			position: absolute;
 			&:nth-child(1) {
 				position: absolute;
-				top: 30%;
-				left: 40%;
-				animation: moveSpark1 15s infinite;
+				top: 50%;
+				left: 50%;
 			}
 			&:nth-child(2) {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				animation: moveSpark2 12s infinite;
 			}
 			&:nth-child(3) {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				animation: moveSpark3 8s infinite;
 			}
 			&:nth-child(4) {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				animation: moveSpark4 16s infinite;
 			}
 			&:nth-child(5) {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				animation: moveSpark5 9s infinite;
 			}
 			&:nth-child(6) {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				animation: moveSpark6 13s infinite;
 			}
 			&:nth-child(7) {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				animation: moveSpark7 17s infinite;
 			}
 			&:nth-child(8) {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				animation: moveSpark8 7s infinite;
 			}
 			&:nth-child(9) {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				animation: moveSpark9 14s infinite;
 			}
 			&:nth-child(10) {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-				animation: moveSpark10 11s infinite;
 			}
 		}
 	}
@@ -180,127 +170,102 @@
 			&:nth-child(1) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark1 7s infinite;
 			}
 			&:nth-child(2) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark2 8s infinite;
 			}
 			&:nth-child(3) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark3 9s infinite;
 			}
 			&:nth-child(4) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark4 5s infinite;
 			}
 			&:nth-child(5) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark5 6s infinite;
 			}
 			&:nth-child(6) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark6 7s infinite;
 			}
 			&:nth-child(7) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark7 8s infinite;
 			}
 			&:nth-child(8) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark8 9s infinite;
 			}
 			&:nth-child(9) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark9 4s infinite;
 			}
 			&:nth-child(10) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark10 5s infinite;
 			}
 			&:nth-child(11) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark11 6s infinite;
 			}
 			&:nth-child(12) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark12 7s infinite;
 			}
 			&:nth-child(13) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark13 8s infinite;
 			}
 			&:nth-child(14) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark14 4.5s infinite;
 			}
 			&:nth-child(15) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark15 5.5s infinite;
 			}
 			&:nth-child(16) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark16 6.5s infinite;
 			}
 			&:nth-child(17) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark17 7.5s infinite;
 			}
 			&:nth-child(18) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark18 8.5s infinite;
 			}
 			&:nth-child(19) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark19 3.5s infinite;
 			}
 			&:nth-child(20) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark20 3.9s infinite;
 			}
 			&:nth-child(21) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark21 7s infinite;
 			}
 			&:nth-child(22) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark22 8.2s infinite;
 			}
 			&:nth-child(23) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark23 6.4s infinite;
 			}
 			&:nth-child(24) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark24 10s infinite;
 			}
 			&:nth-child(25) {
 				top: 50%;
 				left: 50%;
-				animation: moveShadowSpark25 4s infinite;
 			}
 		}
 	}
@@ -431,7 +396,6 @@
 		}
 	}
 	&__wheel-image {
-		animation: wheelRotateAnimation 20s ease;
 		max-width: toRem(480.34);
 		max-height: toRem(480.34);
 		width: 100%;
@@ -439,5 +403,65 @@
 	}
 	&__wheel-pointer-image {
 
+	}
+}
+
+.eggs-rotate {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	max-width: toRem(480.34);
+	max-height: toRem(480.34);
+	animation: wheelRotateAnimation 10s ease-in-out;
+	&__egg {
+		position: absolute;
+		&:nth-child(1) {
+			top: 13%;
+			left: 51.5%;
+		}
+		&:nth-child(2) {
+			top: 20%;
+			left: 63.5%;
+		}
+		&:nth-child(3) {
+			top: 35%;
+			left: 72%;
+		}
+		&:nth-child(4) {
+			top: 51.5%;
+			left: 72.5%;
+		}
+		&:nth-child(5) {
+			top: 63%;
+			left: 64%;
+		}
+		&:nth-child(6) {
+			top: 72.5%;
+			left: 52%;
+		}
+		&:nth-child(7) {
+			top: 72.5%;
+			left: 36%;
+		}
+		&:nth-child(8) {
+			top: 64%;
+			left: 21%;
+		}
+		&:nth-child(9) {
+			top: 52%;
+			left: 13%;
+		}
+		&:nth-child(10) {
+			top: 35.5%;
+			left: 13%;
+		}
+		&:nth-child(11) {
+			top: 15%;
+			left: 15.5%;
+		}
+		&:nth-child(12) {
+			top: 13%;
+			left: 36%;
+		}
 	}
 }

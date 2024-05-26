@@ -2,13 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	const blockContent = document.querySelector(".dollars-block__content");
 
 	// Створюємо об'єкт спостереження
-	const target = document.querySelector(".dollars-block__content");
+	setTimeout(() => {
+		const target = document.querySelector(".dollars-block__content");
 		const observer = new IntersectionObserver(onVisibilityChange, {
 				root: null, 
 				rootMargin: '0px',
 				threshold: 1.0 // Виконуємо функцію, коли 100: елемента буде в зоні в'юпорту
 		});
-	observer.observe(target);
+		observer.observe(target);
+	}, 1000)
+
 
 	// Виконуємо дії, коли об'єкт потрапляє у поле зору
 	function onVisibilityChange(entries, observer) {
@@ -19,10 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
 						setTimeout(() => {
 							blockContent.style.opacity = "1";
 						}, 200)
+						console.log("watch")
 						observer.disconnect(); // Зупиняємо нагляд
 				}
 		});
 	}
+
+
+
 
 	// Функціонал кнопки
 	const hoverAndActivePlayButton = () => {

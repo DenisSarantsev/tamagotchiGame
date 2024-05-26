@@ -253,4 +253,6 @@ import * as flsScroll from "./files/scroll/scroll.js";
 import "./files/script.js";
 import "./files/blocks-functions/loading-block.js";
 import "./files/blocks-functions/dollars-block.js";
+import "./files/blocks-functions/jackpot-block.js";
+import "./files/common-scripts.js";
 //============================================================================================================================================================================================================================================

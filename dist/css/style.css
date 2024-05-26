@@ -1084,11 +1084,12 @@ body ::-webkit-scrollbar {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  max-width: 100%
 }
 .dollars-block__content {
   opacity: 0;
-  max-width: 46.5rem;
+  max-width: 100%;
   width: 100%;
   height: 70%;
   display: flex;
@@ -1098,13 +1099,18 @@ body ::-webkit-scrollbar {
   gap: 1.875rem;
   padding-bottom: 2.5rem;
   z-index: 10;
-  transition: all .7s ease 0s;
+  transition: all 2s ease 0s;
   -webkit-animation: showContentAnimation 2s ease;
   animation: showContentAnimation 2s ease
 }
 .dollars-block__top-title-container {
   display: flex;
-  gap: 1.875rem
+  flex-direction: column;
+  align-items: center;
+  gap: .9375rem
+}
+.dollars-block__top-title-container-title {
+  display: flex
 }
 .dollars-block__top-title {
   font-family: Caveat Brush,Arial,sans-serif;
@@ -1117,15 +1123,30 @@ body ::-webkit-scrollbar {
   color: transparent;
   text-align: center
 }
+.dollars-block__top-title-container-subtitle {
+  line-height: 130%;
+  background: linear-gradient(90deg,#a56c0b 0,#ad7816 1%,#c79f3a 6%,#dcbe57 10%,#ebd46c 14%,#f4e178 19%,#f8e67d 22%,#f4e077 27%,#e8d068 34%,#d6b64f 41%,#c9a33d 45%,#c38f1b 57%,#e6c95c 75%,#f8e67d 84%,#f4e077 86%,#e9d167 90%,#d8b94c 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-size: 2rem
+}
 .dollars-block__center-content-container {
   display: flex;
-  flex-direction: column;
-  align-items: center
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 2.5rem
+}
+.dollars-block__center-content-container-right {
+  max-width: 35.375rem;
+  width: 100%
 }
 .dollars-block__center-content-title {
   text-align: center;
   line-height: 150%;
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 700;
   font-family: Piazzolla,Arial,sans-serif
 }
@@ -1137,7 +1158,7 @@ body ::-webkit-scrollbar {
   background-clip: text;
   color: transparent;
   line-height: 150%;
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: 700;
   font-family: Piazzolla,Arial,sans-serif
 }
@@ -1182,12 +1203,47 @@ body ::-webkit-scrollbar {
   font-size: 2.25rem;
   color: #fff
 }
+.dollars-block__center-content-container-left {
+  max-width: 39.75rem;
+  width: 100%
+}
 .dollars-block__bottom-text-container {
   text-align: center;
   line-height: 150%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
-  font-family: Piazzolla,Arial,sans-serif
+  font-family: Piazzolla,Arial,sans-serif;
+  max-width: 33.3125rem
+}
+.dollars-eggs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem
+}
+.dollars-eggs-container__item {
+  display: flex;
+  gap: 2.5rem;
+  width: 100%;
+  align-items: center
+}
+.dollars-eggs-container__image {
+  max-width: 3.5625rem;
+  max-height: 4.875rem
+}
+.dollars-eggs-container__text {
+  font-size: 1.25rem;
+  font-family: Piazzolla,Arial,sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  width: 100%
+}
+.dollars-eggs-container__text span {
+  background: linear-gradient(90deg,#a56c0b 0,#ad7816 1%,#c79f3a 6%,#dcbe57 10%,#ebd46c 14%,#f4e178 19%,#f8e67d 22%,#f4e077 27%,#e8d068 34%,#d6b64f 41%,#c9a33d 45%,#c38f1b 57%,#e6c95c 75%,#f8e67d 84%,#f4e077 86%,#e9d167 90%,#d8b94c 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.375rem
 }
 .jackpot-block {
   position: absolute;
@@ -1269,73 +1325,53 @@ body ::-webkit-scrollbar {
 }
 .jackpot-block__sparks > *:nth-child(1) {
   position: absolute;
-  top: 30%;
-  left: 40%;
-  -webkit-animation: moveSpark1 15s infinite;
-  animation: moveSpark1 15s infinite
+  top: 50%;
+  left: 50%
 }
 .jackpot-block__sparks > *:nth-child(2) {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveSpark2 12s infinite;
-  animation: moveSpark2 12s infinite
+  left: 50%
 }
 .jackpot-block__sparks > *:nth-child(3) {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveSpark3 8s infinite;
-  animation: moveSpark3 8s infinite
+  left: 50%
 }
 .jackpot-block__sparks > *:nth-child(4) {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveSpark4 16s infinite;
-  animation: moveSpark4 16s infinite
+  left: 50%
 }
 .jackpot-block__sparks > *:nth-child(5) {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveSpark5 9s infinite;
-  animation: moveSpark5 9s infinite
+  left: 50%
 }
 .jackpot-block__sparks > *:nth-child(6) {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveSpark6 13s infinite;
-  animation: moveSpark6 13s infinite
+  left: 50%
 }
 .jackpot-block__sparks > *:nth-child(7) {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveSpark7 17s infinite;
-  animation: moveSpark7 17s infinite
+  left: 50%
 }
 .jackpot-block__sparks > *:nth-child(8) {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveSpark8 7s infinite;
-  animation: moveSpark8 7s infinite
+  left: 50%
 }
 .jackpot-block__sparks > *:nth-child(9) {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveSpark9 14s infinite;
-  animation: moveSpark9 14s infinite
+  left: 50%
 }
 .jackpot-block__sparks > *:nth-child(10) {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveSpark10 11s infinite;
-  animation: moveSpark10 11s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks {
   position: absolute;
@@ -1351,153 +1387,103 @@ body ::-webkit-scrollbar {
 }
 .jackpot-block__shadow-sparks > *:nth-child(1) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark1 7s infinite;
-  animation: moveShadowSpark1 7s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(2) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark2 8s infinite;
-  animation: moveShadowSpark2 8s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(3) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark3 9s infinite;
-  animation: moveShadowSpark3 9s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(4) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark4 5s infinite;
-  animation: moveShadowSpark4 5s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(5) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark5 6s infinite;
-  animation: moveShadowSpark5 6s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(6) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark6 7s infinite;
-  animation: moveShadowSpark6 7s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(7) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark7 8s infinite;
-  animation: moveShadowSpark7 8s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(8) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark8 9s infinite;
-  animation: moveShadowSpark8 9s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(9) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark9 4s infinite;
-  animation: moveShadowSpark9 4s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(10) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark10 5s infinite;
-  animation: moveShadowSpark10 5s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(11) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark11 6s infinite;
-  animation: moveShadowSpark11 6s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(12) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark12 7s infinite;
-  animation: moveShadowSpark12 7s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(13) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark13 8s infinite;
-  animation: moveShadowSpark13 8s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(14) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark14 4.5s infinite;
-  animation: moveShadowSpark14 4.5s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(15) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark15 5.5s infinite;
-  animation: moveShadowSpark15 5.5s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(16) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark16 6.5s infinite;
-  animation: moveShadowSpark16 6.5s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(17) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark17 7.5s infinite;
-  animation: moveShadowSpark17 7.5s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(18) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark18 8.5s infinite;
-  animation: moveShadowSpark18 8.5s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(19) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark19 3.5s infinite;
-  animation: moveShadowSpark19 3.5s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(20) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark20 3.9s infinite;
-  animation: moveShadowSpark20 3.9s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(21) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark21 7s infinite;
-  animation: moveShadowSpark21 7s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(22) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark22 8.2s infinite;
-  animation: moveShadowSpark22 8.2s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(23) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark23 6.4s infinite;
-  animation: moveShadowSpark23 6.4s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(24) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark24 10s infinite;
-  animation: moveShadowSpark24 10s infinite
+  left: 50%
 }
 .jackpot-block__shadow-sparks > *:nth-child(25) {
   top: 50%;
-  left: 50%;
-  -webkit-animation: moveShadowSpark25 4s infinite;
-  animation: moveShadowSpark25 4s infinite
+  left: 50%
 }
 .jackpot-block__lights {
   position: absolute;
@@ -1622,12 +1608,70 @@ body ::-webkit-scrollbar {
   position: absolute
 }
 .wheel__wheel-image {
-  -webkit-animation: wheelRotateAnimation 20s ease;
-  animation: wheelRotateAnimation 20s ease;
   max-width: 30.02125rem;
   max-height: 30.02125rem;
   width: 100%;
   height: 100%
+}
+.eggs-rotate {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  max-width: 30.02125rem;
+  max-height: 30.02125rem;
+  -webkit-animation: wheelRotateAnimation 10s ease-in-out;
+  animation: wheelRotateAnimation 10s ease-in-out
+}
+.eggs-rotate__egg {
+  position: absolute
+}
+.eggs-rotate__egg:nth-child(1) {
+  top: 13%;
+  left: 51.5%
+}
+.eggs-rotate__egg:nth-child(2) {
+  top: 20%;
+  left: 63.5%
+}
+.eggs-rotate__egg:nth-child(3) {
+  top: 35%;
+  left: 72%
+}
+.eggs-rotate__egg:nth-child(4) {
+  top: 51.5%;
+  left: 72.5%
+}
+.eggs-rotate__egg:nth-child(5) {
+  top: 63%;
+  left: 64%
+}
+.eggs-rotate__egg:nth-child(6) {
+  top: 72.5%;
+  left: 52%
+}
+.eggs-rotate__egg:nth-child(7) {
+  top: 72.5%;
+  left: 36%
+}
+.eggs-rotate__egg:nth-child(8) {
+  top: 64%;
+  left: 21%
+}
+.eggs-rotate__egg:nth-child(9) {
+  top: 52%;
+  left: 13%
+}
+.eggs-rotate__egg:nth-child(10) {
+  top: 35.5%;
+  left: 13%
+}
+.eggs-rotate__egg:nth-child(11) {
+  top: 15%;
+  left: 15.5%
+}
+.eggs-rotate__egg:nth-child(12) {
+  top: 13%;
+  left: 36%
 }
 @-webkit-keyframes firstEllipseAnimation {
   0% {
@@ -2736,6 +2780,26 @@ body ::-webkit-scrollbar {
   }
 }
 @keyframes wheelRotateAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  100% {
+    -webkit-transform: rotate(3600deg);
+    transform: rotate(3600deg)
+  }
+}
+@-webkit-keyframes eggsRotateAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  100% {
+    -webkit-transform: rotate(3600deg);
+    transform: rotate(3600deg)
+  }
+}
+@keyframes eggsRotateAnimation {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0)
@@ -4175,7 +4239,7 @@ body ::-webkit-scrollbar {
     max-width: 37.5rem
   }
   .dollars-block__top-title-container {
-    gap: 1.25rem
+    gap: .625rem
   }
   .dollars-block__top-title {
     font-size: 3.125rem
@@ -4231,9 +4295,6 @@ body ::-webkit-scrollbar {
     right: 13.125rem;
     width: 2.5rem;
     height: 2.5rem
-  }
-  .dollars-block__top-title-container {
-    gap: .625rem
   }
   .dollars-block__play-button {
     max-width: 10rem
