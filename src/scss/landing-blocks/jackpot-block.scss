@@ -102,7 +102,8 @@
 		width: 100%;
 		overflow: hidden;
 		z-index: -7;
-
+		opacity: 0;
+		transition: all 0.3s ease 2s;
 		&>* {
 			position: absolute;
 			&:nth-child(1) {
@@ -165,6 +166,8 @@
 		width: 100%;
 		overflow: hidden;
 		z-index: -6;
+		opacity: 0;
+		transition: all 0.3s ease 2s;
 		&>* {
 			position: absolute;
 			&:nth-child(1) {
@@ -286,27 +289,109 @@
 		width: 100%;
 		height: 100%;
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
+		flex-direction: column;
+		padding: toRem(90) 0 toRem(130) 0;
 	}
 	&__wheel-eggs-inner-container {
-		max-width: toRem(950);
-		max-height: toRem(950);
+		max-width: toRem(480.33);
+		max-height: toRem(480.33);
 		width: 100%;
 		height: 100%;
-		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		opacity: 0;
+		transition: all 2s ease 0s;
 	}
+
+	// --------------------------------------------- Блок з текстом зверху
+	&__top-text-block {
+		padding: toRem(25) toRem(45);
+		position: relative;
+		max-width: toRem(812);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		border: 2px solid #FFFFFF;
+		border-image: linear-gradient(90deg, rgba(165,108,11,1) 0%, rgba(173,120,22,1) 1%, rgba(199,159,58,1) 6%, rgba(220,190,87,1) 10%, rgba(235,212,108,1) 14%, rgba(244,225,120,1) 19%, rgba(248,230,125,1) 22%, rgba(244,224,119,1) 27%, rgba(232,208,104,1) 34%, rgba(214,182,79,1) 41%, rgba(201,163,61,1) 45%, rgba(195,143,27,1) 57%, rgba(230,201,92,1) 75%, rgba(248,230,125,1) 84%, rgba(244,224,119,1) 86%, rgba(233,209,103,1) 90%, rgba(216,185,76,1) 94%) 1;
+
+		& img {
+			width: toRem(24);
+			height: toRem(30);
+			z-index: 2;
+		}
+	}
+	&__top-text-block-bg {
+		border-radius: toRem(15);
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #011227;
+		opacity: 0.5;
+		z-index: 1;
+	}
+	&__top-text-block-egg-one {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	&__top-text-block-egg-two {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+	}
+	&__top-text-content {
+		font-size: toRem(32);
+		line-height: 140%;
+		font-family: $thirdFont;
+		font-weight: 700;
+		text-align: center;
+		z-index: 2;
+	}
+
+
 	&__wheel {
 	}
 	&__eggs {
 	}
+
+	// --------------------------------------------- Блок з текстом знизу
+	&__bottom-text-block {
+		max-width: toRem(742);
+		width: 100%;
+		position: relative;
+		padding: toRem(25);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}	
+	&__bottom-text-block-bg-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	&__bottom-text-block-content {
+		font-size: toRem(20);
+		line-height: 140%;
+		font-family: $thirdFont;
+		font-weight: 700;
+		text-align: center;
+		z-index: 2;
+	}
+
+
 	&__bottom-arrow-block {
 		position: absolute;
 		width: 100%;
-		bottom: 0;
+		bottom: toRem(20);
 		left: 0;
 		display: flex;
 		justify-content: center;
@@ -377,6 +462,8 @@
 
 }
 
+
+
 .wheel {
 	max-width: toRem(480.34);
 	max-height: toRem(480.34);
@@ -412,7 +499,6 @@
 	position: absolute;
 	max-width: toRem(480.34);
 	max-height: toRem(480.34);
-	animation: wheelRotateAnimation 10s ease-in-out;
 	&__egg {
 		position: absolute;
 		&:nth-child(1) {
@@ -456,8 +542,8 @@
 			left: 13%;
 		}
 		&:nth-child(11) {
-			top: 15%;
-			left: 15.5%;
+			top: 22.5%;
+			left: 22.5%;
 		}
 		&:nth-child(12) {
 			top: 13%;
