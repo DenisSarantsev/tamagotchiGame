@@ -720,6 +720,7 @@
             }
         }), 0);
         document.addEventListener("DOMContentLoaded", (() => {
+            const loadingAndTimerBlocksWrapper = document.querySelector(".loading-timer");
             const loadingLineBlock = document.querySelector(".loading__loading-container");
             const startButtonBlock = document.querySelector(".loading__start-button");
             const startAndLoadingContainer = document.querySelector(".loading");
@@ -775,6 +776,7 @@
                     loadingButtonHover.classList.remove("_hidden");
                     loadingButtonActive.classList.add("_hidden");
                     hiddenLoadPageAndShowTimerPage();
+                    loadingAndTimerBlocksWrapper.removeAttribute("data-no-event");
                 }));
             };
             hoverStartButton();
@@ -805,8 +807,8 @@
                     thirdLeaf.style.animation = "thirdLeafAnimation 25s infinite";
                     setTimeout((() => {
                         goblinImage.classList.remove("_hidden");
-                        goblinImage.style.animation = "goblinAnimation 0.7s ease";
-                    }), 1e3);
+                        goblinImage.style.animation = "goblinAnimation 0.8s ease";
+                    }), 4e3);
                     setTimeout((() => {
                         timerBlock.style.animation = "showSmallLogoOpacity 1s ease";
                         setTimeout((() => {

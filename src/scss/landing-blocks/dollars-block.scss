@@ -6,17 +6,8 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: $radialBackgroundGradient;
+		background: $darkRadialBGGradient;
 		z-index: -5;
-	}
-	&__dark-background-wrapper {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba($color: #011227, $alpha: 0.6);
-		z-index: -4;
 	}
 	&__bg-effects {
 		position: absolute;
@@ -60,17 +51,18 @@
 		top: toRem(-40);
 		left: toRem(-50);
 		z-index: -5;
+		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 	}
 
 	// -------- Листки зліва знизу
 	&__bottom-left-effects {
-
 	}
 	&__bottom-left-dark-leaf {
 		bottom: toRem(-70);
 		left: toRem(-120);
 		z-index: -5;
 		animation: leafsMovingAnimation 10s infinite;
+		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 	}
 	&__bottom-left-gold-egg {
 		bottom: toRem(100);
@@ -106,6 +98,7 @@
 		right: toRem(-120);
 		z-index: -5;
 		animation: leafsMovingAnimation 6s infinite;
+		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 	}
 
 	// -------- Листки справа знизу
@@ -147,6 +140,7 @@
 		right: toRem(-30);
 		opacity: 0.5;
 		z-index: -5;
+		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 	}
 	&__bottom-right-gold-egg-one {
 		bottom: toRem(450);

@@ -12,17 +12,8 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: $radialBackgroundGradient;
+		background: $darkRadialBGGradient;
 		z-index: -10;
-	}
-	&__dark-background-wrapper {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba($color: #011227, $alpha: 0.6);
-		z-index: -9;
 	}
 
 	// ------------------------------- Листки
@@ -35,11 +26,12 @@
 		z-index: -8;
 	}
 	&__top-left-dark-leaf {
-		opacity: 0.3;
+		opacity: 0.5;
 		position: absolute;
 		top: toRem(-130);
 		left: toRem(-70);
 		animation: leafsJackpotMovingAnimation 7s infinite;
+		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 		@media (max-width: 1920px){
 			width: 19vw;
 		}
@@ -52,11 +44,12 @@
 		}
 	}
 	&__top-right-dark-leaf {
-		opacity: 0.3;
+		opacity: 0.5;
 		position: absolute;
 		top: toRem(-50);
 		right: toRem(-180);
 		animation: leafsJackpotMovingAnimation 8.5s infinite;
+		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 		@media (max-width: 1920px){
 			width: 27vw;
 		}
@@ -69,11 +62,12 @@
 		}
 	}
 	&__bottom-left-dark-leaf {
-		opacity: 0.3;
+		opacity: 0.5;
 		position: absolute;
 		bottom: toRem(100);
 		left: toRem(-30);
 		animation: leafsJackpotMovingAnimation 6.6s infinite;
+		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 		@media (max-width: 1920px){
 			width: 26vw;
 		}
@@ -278,8 +272,17 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		&>* {
+
+		/* Frame */
+
+
+
+		& svg {
 			position: absolute;
+			top: toRem(0);
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 	}
 	&__wheel-eggs-container {

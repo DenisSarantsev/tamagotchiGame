@@ -8,6 +8,8 @@ body {
 	scrollbar-width: none;
 	// Прибираємо скролл на IE та старих версіях Edge
 	-ms-overflow-style: none;
+
+
 }
 
 .page {
@@ -32,20 +34,6 @@ body {
 		font-size: toRem(70);
 		color: #FFFFFF;
 		font-family: Arial, Helvetica, sans-serif;
-	}
-	&>* {
-		&:nth-child(3) {
-			background-color: rgb(255, 246, 189);
-		}
-		&:nth-child(4) {
-			background-color: rgb(201, 255, 205);
-		}
-		&:nth-child(5) {
-			background-color: rgb(183, 239, 255);
-		}
-		&:nth-child(6) {
-			background-color: rgb(246, 185, 255);
-		}
 	}
 	&__section {
 	}

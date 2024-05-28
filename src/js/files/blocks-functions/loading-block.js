@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+	// Контейнер сторінки завантаження і таймеру
+	const loadingAndTimerBlocksWrapper = document.querySelector(".loading-timer");
 	// Елементи сторінки завантаження
 	const loadingLineBlock = document.querySelector(".loading__loading-container");
 	const startButtonBlock = document.querySelector(".loading__start-button");
@@ -65,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			loadingButtonHover.classList.remove("_hidden");
 			loadingButtonActive.classList.add("_hidden");
 			hiddenLoadPageAndShowTimerPage();
+			loadingAndTimerBlocksWrapper.removeAttribute("data-no-event");
 		})
 	}
 	hoverStartButton()
@@ -104,8 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			// Поява гобліна
 			setTimeout(() => {
 				goblinImage.classList.remove("_hidden");
-				goblinImage.style.animation = "goblinAnimation 0.7s ease";
-			}, 1000)
+				goblinImage.style.animation = "goblinAnimation 0.8s ease";
+			}, 4000)
 			
 
 			// Поява контенту таймера
