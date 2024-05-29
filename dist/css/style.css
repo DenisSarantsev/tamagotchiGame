@@ -1765,6 +1765,81 @@ body ::-webkit-scrollbar {
   opacity: .2;
   z-index: -8
 }
+.reviews__leafs-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+.reviews__dark-leafs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  overflow: hidden
+}
+.reviews__dark-leafs > * {
+  position: absolute;
+  -webkit-filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
+  filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%)
+}
+.reviews__dark-leafs > *:nth-child(1) {
+  bottom: -4.375rem;
+  left: -11.875rem;
+  -webkit-animation: leafsReviewsAnimation 5s infinite;
+  animation: leafsReviewsAnimation 5s infinite
+}
+.reviews__dark-leafs > *:nth-child(2) {
+  right: 0;
+  bottom: -20.625rem;
+  -webkit-animation: bigDarkLeafsReviewsAnimation 4s infinite;
+  animation: bigDarkLeafsReviewsAnimation 4s infinite
+}
+.reviews__dark-leafs > *:nth-child(3) {
+  top: -1.875rem;
+  right: -9.375rem;
+  -webkit-animation: leafsReviewsAnimation 6s infinite;
+  animation: leafsReviewsAnimation 6s infinite
+}
+.reviews__top-leafs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -4;
+  overflow: hidden
+}
+.reviews__top-leafs > * {
+  position: absolute
+}
+.reviews__top-leafs > *:nth-child(1) {
+  right: -5.625rem;
+  bottom: -5.625rem;
+  -webkit-animation: leafsReviewsAnimation 6.5s infinite;
+  animation: leafsReviewsAnimation 6.5s infinite
+}
+.reviews__top-leafs > *:nth-child(2) {
+  right: -3.125rem;
+  bottom: -21.875rem;
+  -webkit-animation: leafsReviewsAnimation 5.5s infinite 1s;
+  animation: leafsReviewsAnimation 5.5s infinite 1s
+}
+.reviews__top-leafs > *:nth-child(3) {
+  right: 12.5rem;
+  bottom: -12.5rem;
+  -webkit-animation: leafsReviewsAnimation 4.7s infinite;
+  animation: leafsReviewsAnimation 4.7s infinite
+}
+.reviews__top-leafs > *:nth-child(4) {
+  top: -14.375rem;
+  left: -14.375rem;
+  -webkit-animation: leafsReviewsAnimation 5.3s infinite .5s;
+  animation: leafsReviewsAnimation 5.3s infinite .5s
+}
 .reviews__container {
   max-width: 80rem;
   width: 100%
@@ -1856,81 +1931,136 @@ body ::-webkit-scrollbar {
   display: flex;
   justify-content: center
 }
+.reviews-container__reviews-wrapper {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+.reviews-container__reviews-wrapper > * {
+  transition: all .7s ease 0s
+}
+.reviews-container__reviews-wrapper > *:hover {
+  cursor: pointer
+}
 .reviews-container__reviews-wrapper > *:nth-child(1) {
   top: 0;
-  left: 12.41%
+  left: 12.41%;
+  -webkit-animation: reviewAnimation1 5s infinite;
+  animation: reviewAnimation1 5s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(2) {
   top: 9.96%;
-  left: 7.35%
+  left: 7.35%;
+  -webkit-animation: reviewAnimation2 6s infinite;
+  animation: reviewAnimation2 6s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(3) {
   top: 6.36%;
-  left: 51.95%
+  left: 51.95%;
+  -webkit-animation: reviewAnimation3 7s infinite;
+  animation: reviewAnimation3 7s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(4) {
   top: 16.75%;
-  left: 61.37%
+  left: 61.37%;
+  -webkit-animation: reviewAnimation1 5.5s infinite;
+  animation: reviewAnimation1 5.5s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(5) {
   top: 15.48%;
-  left: 9.65%
+  left: 9.65%;
+  -webkit-animation: reviewAnimation2 4.5s infinite;
+  animation: reviewAnimation2 4.5s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(6) {
   top: 25.51%;
-  left: 1.37%
+  left: 1.37%;
+  -webkit-animation: reviewAnimation3 6.5s infinite;
+  animation: reviewAnimation3 6.5s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(7) {
   top: 24.39%;
-  left: 49.42%
+  left: 49.42%;
+  -webkit-animation: reviewAnimation1 7.5s infinite;
+  animation: reviewAnimation1 7.5s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(8) {
   top: 33.08%;
-  left: 12.41%
+  left: 12.41%;
+  -webkit-animation: reviewAnimation2 3.8s infinite;
+  animation: reviewAnimation2 3.8s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(9) {
   top: 38.17%;
-  left: 64.36%
+  left: 64.36%;
+  -webkit-animation: reviewAnimation3 5.9s infinite;
+  animation: reviewAnimation3 5.9s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(10) {
   top: 43.9%;
-  left: 0
+  left: 0;
+  -webkit-animation: reviewAnimation1 7.2s infinite;
+  animation: reviewAnimation1 7.2s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(11) {
   top: 50.26%;
-  left: 50.57%
+  left: 50.57%;
+  -webkit-animation: reviewAnimation2 8.4s infinite;
+  animation: reviewAnimation2 8.4s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(12) {
   top: 54.08%;
-  left: 5.97%
+  left: 5.97%;
+  -webkit-animation: reviewAnimation3 3.8s infinite;
+  animation: reviewAnimation3 3.8s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(13) {
   top: 60.23%;
-  left: 55.63%
+  left: 55.63%;
+  -webkit-animation: reviewAnimation1 5.8s infinite;
+  animation: reviewAnimation1 5.8s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(14) {
   top: 63.62%;
-  left: 12.41%
+  left: 12.41%;
+  -webkit-animation: reviewAnimation2 6.6s infinite;
+  animation: reviewAnimation2 6.6s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(15) {
   top: 66.28%;
-  left: 57.93%
+  left: 57.93%;
+  -webkit-animation: reviewAnimation3 7.2s infinite;
+  animation: reviewAnimation3 7.2s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(16) {
   top: 73.59%;
-  left: 3.9%
+  left: 3.9%;
+  -webkit-animation: reviewAnimation1 6.3s infinite;
+  animation: reviewAnimation1 6.3s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(17) {
   top: 76.99%;
-  left: 53.1%
+  left: 53.1%;
+  -webkit-animation: reviewAnimation2 4.1s infinite;
+  animation: reviewAnimation2 4.1s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(18) {
   top: 85.52%;
-  left: 6.2%
+  left: 6.2%;
+  -webkit-animation: reviewAnimation3 5.4s infinite;
+  animation: reviewAnimation3 5.4s infinite
 }
 .reviews-container__reviews-wrapper > *:nth-child(19) {
   top: 82.08%;
-  left: 42.29%
+  left: 42.29%;
+  -webkit-animation: reviewAnimation1 4.4s infinite;
+  animation: reviewAnimation1 4.4s infinite
 }
 .reviews-container__review-image {
   position: absolute;
@@ -2004,6 +2134,17 @@ body ::-webkit-scrollbar {
   font-size: 1.75rem;
   z-index: 2
 }
+.dance-animation-block__video-wrapper {
+  position: relative;
+  max-width: 90rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+.dance-animation-block__video-wrapper video {
+  width: 100%;
+  height: 100%
+}
 .dance-animation-block__animation-image {
   max-width: 100%
 }
@@ -2029,7 +2170,9 @@ body ::-webkit-scrollbar {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -9
+  z-index: -9;
+  -webkit-animation: darkLeafsAnimationsBlockAnimation 6s infinite;
+  animation: darkLeafsAnimationsBlockAnimation 6s infinite
 }
 .dance-leafs-container__dark-leafs > *:nth-child(2) {
   -webkit-filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
@@ -2037,7 +2180,9 @@ body ::-webkit-scrollbar {
   position: absolute;
   top: -1.25rem;
   right: -3.75rem;
-  z-index: -10
+  z-index: -10;
+  -webkit-animation: animationsBlockAnimation 4.6s infinite;
+  animation: animationsBlockAnimation 4.6s infinite
 }
 .dance-leafs-container__dark-leafs > *:nth-child(3) {
   -webkit-filter: invert(10%) sepia(10%) saturate(685%) hue-rotate(54deg) brightness(1%) contrast(200%);
@@ -2045,7 +2190,9 @@ body ::-webkit-scrollbar {
   position: absolute;
   bottom: -9.375rem;
   right: -15.625rem;
-  z-index: -10
+  z-index: -10;
+  -webkit-animation: animationsBlockAnimation 5.8s infinite;
+  animation: animationsBlockAnimation 5.8s infinite
 }
 .dance-leafs-container__dark-leafs > *:nth-child(4) {
   -webkit-filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
@@ -2053,7 +2200,9 @@ body ::-webkit-scrollbar {
   position: absolute;
   bottom: 0;
   right: -3.125rem;
-  z-index: -10
+  z-index: -10;
+  -webkit-animation: animationsBlockAnimation 5.2s infinite .5s;
+  animation: animationsBlockAnimation 5.2s infinite .5s
 }
 .dance-leafs-container__top-leafs {
   position: absolute;
@@ -2070,26 +2219,38 @@ body ::-webkit-scrollbar {
   top: 12.5rem;
   left: -6.875rem;
   -webkit-transform: rotate(-5deg);
-  transform: rotate(-5deg)
+  transform: rotate(-5deg);
+  -webkit-animation: animationsBlockAnimation 4.7s infinite;
+  animation: animationsBlockAnimation 4.7s infinite
 }
 .dance-leafs-container__top-leafs > *:nth-child(2) {
-  left: -7.5rem
+  left: -7.5rem;
+  -webkit-animation: animationsBlockAnimation 5.9s infinite 2s;
+  animation: animationsBlockAnimation 5.9s infinite 2s
 }
 .dance-leafs-container__top-leafs > *:nth-child(3) {
   left: 4.375rem;
-  top: 10rem
+  top: 10rem;
+  -webkit-animation: animationsBlockAnimation 8.2s infinite;
+  animation: animationsBlockAnimation 8.2s infinite
 }
 .dance-leafs-container__top-leafs > *:nth-child(4) {
   left: 0;
-  top: -3.75rem
+  top: -3.75rem;
+  -webkit-animation: animationsBlockAnimation 7.1s infinite 1.2s;
+  animation: animationsBlockAnimation 7.1s infinite 1.2s
 }
 .dance-leafs-container__top-leafs > *:nth-child(5) {
   top: -3.75rem;
-  left: 20rem
+  left: 20rem;
+  -webkit-animation: animationsBlockAnimation 10s infinite;
+  animation: animationsBlockAnimation 10s infinite
 }
 .dance-leafs-container__top-leafs > *:nth-child(6) {
   bottom: -18.75rem;
-  right: -21.875rem
+  right: -21.875rem;
+  -webkit-animation: animationsBlockAnimation 7.9s infinite;
+  animation: animationsBlockAnimation 7.9s infinite
 }
 .copyright-wrapper {
   position: absolute;
@@ -4506,6 +4667,202 @@ body ::-webkit-scrollbar {
     top: 90%;
     left: 40%;
     opacity: 0
+  }
+}
+@-webkit-keyframes leafsReviewsAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@keyframes leafsReviewsAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@-webkit-keyframes bigDarkLeafsReviewsAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@keyframes bigDarkLeafsReviewsAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@-webkit-keyframes reviewAnimation1 {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+  50% {
+    -webkit-transform: translateX(5px) translateY(7px);
+    transform: translateX(5px) translateY(7px)
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+}
+@keyframes reviewAnimation1 {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+  50% {
+    -webkit-transform: translateX(5px) translateY(7px);
+    transform: translateX(5px) translateY(7px)
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+}
+@-webkit-keyframes reviewAnimation2 {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+  50% {
+    -webkit-transform: translateX(-3px) translateY(5px);
+    transform: translateX(-3px) translateY(5px)
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+}
+@keyframes reviewAnimation2 {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+  50% {
+    -webkit-transform: translateX(-3px) translateY(5px);
+    transform: translateX(-3px) translateY(5px)
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+}
+@-webkit-keyframes reviewAnimation3 {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+  50% {
+    -webkit-transform: translateX(-6px) translateY(-8px);
+    transform: translateX(-6px) translateY(-8px)
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+}
+@keyframes reviewAnimation3 {
+  0% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+  50% {
+    -webkit-transform: translateX(-6px) translateY(-8px);
+    transform: translateX(-6px) translateY(-8px)
+  }
+  100% {
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0)
+  }
+}
+@-webkit-keyframes animationsBlockAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@keyframes animationsBlockAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@-webkit-keyframes darkLeafsAnimationsBlockAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+}
+@keyframes darkLeafsAnimationsBlockAnimation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg)
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
   }
 }
 @media (max-width:1920px) {

@@ -1,0 +1,24 @@
+@keyframes animationsBlockAnimation {
+	0% {
+		transform: rotate(0);
+	}
+	50%{
+		transform: rotate(5deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+
+@keyframes darkLeafsAnimationsBlockAnimation {
+	0% {
+		transform: rotate(0);
+	}
+	50%{
+		transform: rotate(2deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}

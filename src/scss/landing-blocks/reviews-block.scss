@@ -25,10 +25,71 @@
 		z-index: -8;
 	}
 	&__leafs-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 	&__dark-leafs {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -5;
+		overflow: hidden;
+		&>* {
+			position: absolute;
+			filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
+			&:nth-child(1) {
+				bottom: toRem(-70);
+				left: toRem(-190);
+				animation: leafsReviewsAnimation 5s infinite;
+			}
+			&:nth-child(2) {
+				right: toRem(0);
+				bottom: toRem(-330);
+				animation: bigDarkLeafsReviewsAnimation 4s infinite;
+			}
+			&:nth-child(3) {
+				top: toRem(-30);
+				right: toRem(-150);
+				animation: leafsReviewsAnimation 6s infinite;
+			}
+		}
 	}
 	&__top-leafs {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -4;
+		overflow: hidden;
+		&>* {
+			position: absolute;
+			&:nth-child(1) {
+				right: toRem(-90);
+				bottom: toRem(-90);
+				animation: leafsReviewsAnimation 6.5s infinite;
+			}
+			&:nth-child(2) {
+				right: toRem(-50);
+				bottom: toRem(-350);
+				animation: leafsReviewsAnimation 5.5s infinite 1s;
+			}
+			&:nth-child(3) {
+				right: toRem(200);
+				bottom: toRem(-200);
+				animation: leafsReviewsAnimation 4.7s infinite;
+			}
+			&:nth-child(4) {
+				top: toRem(-230);
+				left: toRem(-230);
+				animation: leafsReviewsAnimation 5.3s infinite 0.5s;
+			}
+		}
 	}
 	&__container {
 		max-width: toRem(1280);
@@ -138,82 +199,112 @@
 
 	}
 	&__reviews-wrapper {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 		&>* {
+			transition: all 0.7s ease 0s;
+			&:hover {
+				cursor: pointer;
+			}
 			&:nth-child(1) {
 				top: 0;
 				left: 12.41%;
+				animation: reviewAnimation1 5s infinite;
 			}
 			&:nth-child(2) {
 				top: 9.96%;
 				left: 7.35%;
+				animation: reviewAnimation2 6s infinite;
 			}
 			&:nth-child(3) {
 				top: 6.36%;
 				left: 51.95%;
+				animation: reviewAnimation3 7s infinite;
 			}
 			&:nth-child(4) {
 				top: 16.75%;
 				left: 61.37%;
+				animation: reviewAnimation1 5.5s infinite;
 			}
 			&:nth-child(5) {
 				top: 15.48%;
 				left: 9.65%;
+				animation: reviewAnimation2 4.5s infinite;
 			}
 			&:nth-child(6) {
 				top: 25.51%;
 				left: 1.37%;
+				animation: reviewAnimation3 6.5s infinite;
 			}
 			&:nth-child(7) {
 				top: 24.39%;
 				left: 49.42%;
+				animation: reviewAnimation1 7.5s infinite;
 			}
 			&:nth-child(8) {
 				top: 33.08%;
 				left: 12.41%;
+				animation: reviewAnimation2 3.8s infinite;
 			}
 			&:nth-child(9) {
 				top: 38.17%;
 				left: 64.36%;
+				animation: reviewAnimation3 5.9s infinite;
 			}
 			&:nth-child(10) {
 				top: 43.90%;
 				left: 0;
+				animation: reviewAnimation1 7.2s infinite;
 			}
 			&:nth-child(11) {
 				top: 50.26%;
 				left: 50.57%;
+				animation: reviewAnimation2 8.4s infinite;
 			}
 			&:nth-child(12) {
 				top: 54.08%;
 				left: 5.97%;
+				animation: reviewAnimation3 3.8s infinite;
 			}
 			&:nth-child(13) {
 				top: 60.23%;
 				left: 55.63%;
+				animation: reviewAnimation1 5.8s infinite;
 			}
 			&:nth-child(14) {
 				top: 63.62%;
 				left: 12.41%;
+				animation: reviewAnimation2 6.6s infinite;
 			}
 			&:nth-child(15) {
 				top: 66.28%;
 				left: 57.93%;
+				animation: reviewAnimation3 7.2s infinite;
 			}
 			&:nth-child(16) {
 				top: 73.59%;
 				left: 3.9%;
+				animation: reviewAnimation1 6.3s infinite;
 			}
 			&:nth-child(17) {
 				top: 76.99%;
 				left: 53.10%;
+				animation: reviewAnimation2 4.1s infinite;
 			}
 			&:nth-child(18) {
 				top: 85.52%;
 				left: 6.2%;
+				animation: reviewAnimation3 5.4s infinite;
 			}
 			&:nth-child(19) {
 				top: 82.08%;
 				left: 42.29%;
+				animation: reviewAnimation1 4.4s infinite;
 			}
 		}
 	}

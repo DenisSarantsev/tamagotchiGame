@@ -1,0 +1,66 @@
+
+// Анимація листків
+@keyframes leafsReviewsAnimation {
+	0% {
+		transform: rotate(0);
+	}
+	50%{
+		transform: rotate(5deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+
+@keyframes bigDarkLeafsReviewsAnimation {
+	0% {
+		transform: rotate(0);
+	}
+	50%{
+		transform: rotate(2deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+
+// Анімація відгуків
+
+@keyframes reviewAnimation1 {
+	0% {
+		transform: translateX(0) translateY(0);
+	}
+	50%{
+		transform: translateX(5px) translateY(7px);
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
+
+
+@keyframes reviewAnimation2 {
+	0% {
+		transform: translateX(0) translateY(0);
+	}
+	50%{
+		transform: translateX(-3px) translateY(5px);
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
+
+@keyframes reviewAnimation3 {
+	0% {
+		transform: translateX(0) translateY(0);
+	}
+	50%{
+		transform: translateX(-6px) translateY(-8px);
+	}
+	100% {
+		transform: translateX(0) translateY(0);
+	}
+}
