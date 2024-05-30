@@ -208,6 +208,7 @@
     left: 0;
 		&>* {
 			transition: all 0.7s ease 0s;
+			transform: translateY(0);
 			&:hover {
 				cursor: pointer;
 			}
