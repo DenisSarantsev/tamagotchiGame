@@ -16,6 +16,11 @@
 	@media (max-width: 1440px){
 		max-width: 11.111vw;
 	}
+	@media (max-width:$mobile){
+		max-width: toRem(100);
+		height: toRem(50);
+		padding-bottom: toRem(5);
+	}
 
 	&__text {
 		font-size: toRem(16);
@@ -33,6 +38,11 @@
 		@media (max-width: 1440px){
 			height: 100%;
 			width: 100%;
+		}
+		@media (max-width:$mobile){
+			width: 80%;
+			height: 80%;
+			position: relative;
 		}
 	}
 }

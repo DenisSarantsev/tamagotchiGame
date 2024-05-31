@@ -238,6 +238,13 @@ h6 {
     max-width: 11.111vw
   }
 }
+@media (max-width:47.99875em) {
+  .scroll-down-element {
+    max-width: 6.25rem;
+    height: 3.125rem;
+    padding-bottom: .3125rem
+  }
+}
 .scroll-down-element__text {
   font-size: 1rem;
   font-weight: 700;
@@ -259,6 +266,13 @@ h6 {
   .scroll-down-element img {
     height: 100%;
     width: 100%
+  }
+}
+@media (max-width:47.99875em) {
+  .scroll-down-element img {
+    width: 80%;
+    height: 80%;
+    position: relative
   }
 }
 @-webkit-keyframes scrollButtonAnimation {
@@ -789,6 +803,11 @@ body ::-webkit-scrollbar {
     align-items: center
   }
 }
+@media (max-width:600px) {
+  .timer__header {
+    padding: .3125rem 0
+  }
+}
 @media (max-width:1440px) {
   .timer__logo {
     max-width: 15.5vw
@@ -807,6 +826,16 @@ body ::-webkit-scrollbar {
 @media (max-width:47.99875em) {
   .timer__logo {
     max-width: 6.875rem
+  }
+}
+@media (max-width:600px) {
+  .timer__logo {
+    max-width: 5.625rem
+  }
+}
+@media (max-width:500px) {
+  .timer__logo {
+    max-width: 4.6875rem
   }
 }
 .timer__buttons-block {
@@ -853,6 +882,12 @@ body ::-webkit-scrollbar {
     height: 2.5rem
   }
 }
+@media (max-width:47.99875em) {
+  .timer__button {
+    width: 2.1875rem;
+    height: 2.1875rem
+  }
+}
 .timer__button img {
   width: 4.5rem;
   height: 4.5rem
@@ -867,6 +902,12 @@ body ::-webkit-scrollbar {
   .timer__button img {
     width: 2.5rem;
     height: 2.5rem
+  }
+}
+@media (max-width:47.99875em) {
+  .timer__button img {
+    width: 2.1875rem;
+    height: 2.1875rem
   }
 }
 .timer__content {
@@ -924,6 +965,16 @@ body ::-webkit-scrollbar {
     gap: .9375rem
   }
 }
+@media (max-width:992px) {
+  .timer-content {
+    gap: .625rem
+  }
+}
+@media (max-width:47.99875em) {
+  .timer-content {
+    gap: .3125rem
+  }
+}
 .timer-content__title {
   font-family: Caveat Brush,Arial,sans-serif;
   font-size: 4rem;
@@ -949,6 +1000,16 @@ body ::-webkit-scrollbar {
 @media (max-width:47.99875em) {
   .timer-content__title {
     font-size: 2.75rem
+  }
+}
+@media (max-width:600px) {
+  .timer-content__title {
+    font-size: 2.375rem
+  }
+}
+@media (max-width:500px) {
+  .timer-content__title {
+    font-size: 2.125rem
   }
 }
 .timer-content__subtitle {
@@ -978,6 +1039,16 @@ body ::-webkit-scrollbar {
 @media (max-width:47.99875em) {
   .timer-content__subtitle {
     font-size: 1.25rem
+  }
+}
+@media (max-width:600px) {
+  .timer-content__subtitle {
+    font-size: 1.125rem
+  }
+}
+@media (max-width:500px) {
+  .timer-content__subtitle {
+    font-size: 1rem
   }
 }
 .timer-counter {
@@ -1010,6 +1081,7 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .timer-counter__wrapper {
+    padding: .625rem .625rem;
     max-width: 37.5rem;
     width: 100%
   }
@@ -1059,6 +1131,11 @@ body ::-webkit-scrollbar {
     font-size: 1.875rem
   }
 }
+@media (max-width:47.99875em) {
+  .timer-counter__numbers {
+    font-size: 1.625rem
+  }
+}
 .timer-counter__subtitle {
   font-size: 1.75rem;
   font-family: Caveat Brush,Arial,sans-serif
@@ -1071,6 +1148,11 @@ body ::-webkit-scrollbar {
 @media (max-width:992px) {
   .timer-counter__subtitle {
     font-size: 1.375rem
+  }
+}
+@media (max-width:47.99875em) {
+  .timer-counter__subtitle {
+    font-size: 1.125rem
   }
 }
 .call-to-action {
@@ -1104,7 +1186,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .call-to-action__wrapper {
-    max-width: 37.5rem
+    max-width: 37.5rem;
+    padding: .3125rem .3125rem
   }
 }
 .call-to-action__top-egg {
@@ -1200,6 +1283,11 @@ body ::-webkit-scrollbar {
     line-height: 120%
   }
 }
+@media (max-width:47.99875em) {
+  .call-to-action__top-text {
+    font-size: 1rem
+  }
+}
 .call-to-action__bottom-text {
   line-height: 130%;
   font-size: 2.5rem;
@@ -1217,6 +1305,11 @@ body ::-webkit-scrollbar {
 @media (max-width:992px) {
   .call-to-action__bottom-text {
     font-size: 1.875rem
+  }
+}
+@media (max-width:47.99875em) {
+  .call-to-action__bottom-text {
+    font-size: 1.5rem
   }
 }
 .play-button {
@@ -1244,6 +1337,11 @@ body ::-webkit-scrollbar {
   .play-button__wrapper {
     max-width: 90%;
     height: 3.125rem
+  }
+}
+@media (max-width:47.99875em) {
+  .play-button__wrapper {
+    margin-top: .3125rem
   }
 }
 .play-button__button-default {
