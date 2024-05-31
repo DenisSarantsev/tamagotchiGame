@@ -29,6 +29,9 @@
 		@media (max-width: 992px){
 			font-size: toRem(14);
 		}
+		@media (max-width:$mobile){
+			display: none;
+		}
 	}
 	& img {
 		position: absolute;
