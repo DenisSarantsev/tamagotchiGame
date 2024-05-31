@@ -487,9 +487,6 @@
 		justify-content: center;
 		max-width: toRem(740);
 		margin-top: toRem(-50);
-		@media (max-width: 1920px){
-			max-width: 50vw;
-		}
 		@media (max-width: 1440px){
 			max-width: 60vw;
 			margin-top: toRem(-30);
@@ -546,7 +543,7 @@
 		gap: toRem(10);
 	}
 	@media (max-width:$mobile){
-		gap: toRem(5);
+		gap: 1.25vh;
 	}
 	&__title {
 		font-family: $secondFont;

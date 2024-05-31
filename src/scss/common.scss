@@ -67,3 +67,87 @@
 .dark-leafs-opacity {
 	opacity: 0.6;
 }
+
+// Хедер на мобільних телефонах
+.mobile-header {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	
+	&__logo {
+		@media (max-width: 1440px){
+			max-width: 15.5vw;
+		}
+		@media (max-width: 1100px){
+			max-width: toRem(170);
+		}
+		@media (max-width: 992px){
+			max-width: toRem(140);
+		}
+		@media (max-width:$mobile){
+			max-width: toRem(110);
+		}
+		@media (max-width: 600px){
+			max-width: toRem(90);
+		}
+		@media (max-width: 500px){
+			max-width: toRem(75);
+		}
+	}
+	&__buttons-block {
+		padding: toRem(25) 0 0 0;
+		display: flex;
+		gap: toRem(10);
+		border-radius: 50%;
+		@media (max-width:$mobile){
+			position: relative;
+			align-items: center;
+			padding: toRem(0);
+		}
+		&>* {
+			transition: all 0.3s ease 0s;
+			border-radius: 50%;
+			&:hover {
+				transition: all 0.3s ease 0s;
+				cursor: pointer;
+				box-shadow: 0px 0px 15px 0px rgba(214,230,0,0.75);
+				-webkit-box-shadow: 0px 0px 15px 0px rgba(214,230,0,0.75);
+				-moz-box-shadow: 0px 0px 15px 0px rgba(214,230,0,0.75);
+			}
+		}
+	}
+	&__button {
+		position: relative;
+		width: toRem(72);
+		height: toRem(72);
+		@media (max-width: 1440px){
+			width: 4.2vw;
+			height: 4.2vw;
+		}
+		@media (max-width: 992px){
+			width: toRem(40);
+			height: toRem(40);
+		}
+		@media (max-width:$mobile){
+			width: toRem(35);
+			height: toRem(35);
+		}
+
+		& img {
+			width: toRem(72);
+			height: toRem(72);
+			@media (max-width: 1440px){
+				width: 4.2vw;
+				height: 4.2vw;
+			}
+			@media (max-width: 992px){
+				width: toRem(40);
+				height: toRem(40);
+			}
+			@media (max-width:$mobile){
+				width: toRem(35);
+				height: toRem(35);
+			}
+		}
+	}
+}

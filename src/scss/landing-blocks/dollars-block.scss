@@ -27,31 +27,68 @@
 
 	// -------- Листки зліва зверху
 	&__top-left-effects {
-
+		@media (max-width:$mobile){
+			display: none;
+		}
 	}
 	&__top-left-leaf-one {
 		top: toRem(-60);
 		left: toRem(-50);
 		z-index: -4;
 		animation: leafsMovingAnimation 6s infinite 1s;
+		@media (max-width: 1920px){
+			height: 33.854vw;
+			width: 18.229vw;
+		}
+		@media (max-width: 1800px){
+			top: toRem(-180);
+			left: toRem(-70);
+		}
 	}
 	&__top-left-leaf-two {
 		top: toRem(-300);
 		left: toRem(-140);
 		z-index: -3;
 		animation: leafsMovingAnimation 8s infinite 0.5s;
+		@media (max-width: 1920px){
+			height: 28.5vw;
+			width: 23.5vw;
+			top: -15.6vw;
+			left: -7.2vw;
+		}
+		@media (max-width: 1440px){
+			top: -20vw;
+			left: -10vw;
+		}
+
 	}
 	&__top-left-leaf-three {
 		top: toRem(-190);
 		left: toRem(60);
 		z-index: -4;
 		animation: leafsMovingAnimation 10s infinite;
+		@media (max-width: 1920px){
+			width: 20vw;
+			height: 16.6vw;
+			top: -9.8vw;
+			left: 3.1vw;
+		}
 	}
 	&__top-left-dark-leaf {
 		top: toRem(-40);
 		left: toRem(-50);
 		z-index: -5;
 		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
+		@media (max-width: 1920px){
+			width: 41.458vw;
+			height: 26.7vw;
+			top: -2vw;
+			left: -2.6vw;
+		}
+		@media (max-width: 1200px){
+			top: -7vw;
+		}
+		
 	}
 
 	// -------- Листки зліва знизу
@@ -63,6 +100,12 @@
 		z-index: -5;
 		animation: leafsMovingAnimation 10s infinite;
 		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
+		@media (max-width: 1920px){
+			width: 27.083vw;
+			height: 12vw;
+			bottom: -3.6vw;
+			left: -6.25vw;
+		}
 	}
 	&__bottom-left-gold-egg {
 		bottom: toRem(100);
@@ -99,6 +142,12 @@
 		z-index: -5;
 		animation: leafsMovingAnimation 6s infinite;
 		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
+		@media (max-width: 1920px){
+			width: 27.083vw;
+			height: 12vw;
+			top: -3.125vw;
+			right: -6.25vw;
+		}
 	}
 
 	// -------- Листки справа знизу
@@ -110,30 +159,60 @@
 		right: toRem(160);
 		z-index: -4;
 		animation: leafsMovingAnimation 8s infinite;
+		@media (max-width: 1920px){
+			bottom: -2vw;
+			right: 8.3vw;
+			width: 20vw;
+			height: 10.5vw;
+		}
 	}
 	&__bottom-right-leaf-two {
 		bottom: toRem(-60);
 		right: toRem(50);
 		z-index: -2;
 		animation: leafsMovingAnimation 11s infinite;
+		@media (max-width: 1920px){
+			bottom: -3.1vw;
+			right: 2.6vw;
+			width: 13vw;
+			height: 13vw;
+		}
 	}
 	&__bottom-right-leaf-three {
 		bottom: toRem(20);
 		right: toRem(20);
 		z-index: -4;
 		animation: leafsMovingAnimation 13s infinite;
+		@media (max-width: 1920px){
+			bottom: 1vw;
+			right: 1vw;
+			width: 16.6vw;
+			height: 20.8vw;
+		}
 	}
 	&__bottom-right-leaf-four {
 		bottom: toRem(-30);
 		right: toRem(-60);
 		z-index: -3;
 		animation: leafsMovingAnimation 6s infinite;
+		@media (max-width: 1920px){
+			bottom: -1.5vw;
+			right: -3vw;
+			width: 13vw;
+			height: 16.6vw;
+		}
 	}
 	&__bottom-right-leaf-five {
 		bottom: toRem(170);
 		right: toRem(-30);
 		z-index: -4;
 		animation: leafsMovingAnimation 9s infinite;
+		@media (max-width: 1920px){
+			bottom: 8.9vw;
+			right: -1.56vw;
+			width: 11.5vw;
+			height: 24vw;
+		}
 	}
 	&__bottom-right-dark-leafs {
 		bottom: toRem(-30);
@@ -141,6 +220,12 @@
 		opacity: 0.5;
 		z-index: -5;
 		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
+		@media (max-width: 1920px){
+			bottom: -1.6vw;
+			right: -1.6vw;
+			width: 31.25vw;
+			height: 30.7vw;
+		}
 	}
 	&__bottom-right-gold-egg-one {
 		bottom: toRem(450);
@@ -398,6 +483,7 @@
 		justify-content: center;
 		align-items: center;
 		max-width: 100%;
+		flex-direction: column;
 	}
 	&__content {
 		opacity: 0;
@@ -417,7 +503,16 @@
 			gap: toRem(10);
 		}
 		@media (max-width: 1200px){
-			max-width: toRem(600);
+			max-width: 90%;
+			height: 90%;
+			justify-content: space-around;
+		}
+		@media (max-width: 992px){
+			max-width: 100%;
+			height: 95%;
+		}
+		@media (max-width:$mobile){
+			justify-content: center;
 		}
 	}
 	&__top-title-container {
@@ -442,14 +537,21 @@
 		background-clip: text;
 		color: transparent;
 		text-align: center;
-		@media (max-width: 1600px){
-			font-size: toRem(65);
-		}
 		@media (max-width: 1440px){
-			font-size: 3.819vw;
+			font-size: 4.2vw;
+			line-height: 100%;
 		}
-		@media (max-width: 1200px){
-			font-size: toRem(50);
+		@media (max-width: 992px){
+			font-size: toRem(40);
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(44);
+		}
+		@media (max-width: 600px){
+			font-size: toRem(38);
+		}
+		@media (max-width: 500px){
+			font-size: toRem(34);
 		}
 	}
 	&__top-title-image {
@@ -467,16 +569,48 @@
 		color: transparent;
 		text-align: center;
 		font-size: toRem(32);
+		@media (max-width: 1440px){
+			font-size: toRem(30);
+		}
+		@media (max-width: 992px){
+			font-size: toRem(24);
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(20);
+		}
+		@media (max-width: 600px){
+			font-size: toRem(18);
+		}
+		@media (max-width: 500px){
+			font-size: toRem(16);
+		}
 	}
 	&__center-content-container {
 		display: flex;
 		align-items: center;
 		flex-direction: row-reverse;
 		gap: toRem(40);
+		@media (max-width: 992px){
+			gap: toRem(15);
+		}
+		@media (max-width:$mobile){
+			flex-direction: column-reverse;
+		}
 	}
+
+	// --------------------------------------------------------------------------------> Правий контейнер
 	&__center-content-container-right {
 		max-width: toRem(566);
 		width: 100%;
+		@media (max-width: 1200px){
+			max-width: toRem(400);
+		}
+		@media (max-width: 992px){
+			max-width: toRem(350);
+		}
+		@media (max-width:$mobile){
+			margin-top: toRem(10);
+		}
 	}
 	&__center-content-title {
 		text-align: center;
@@ -489,6 +623,9 @@
 		}
 		@media (max-width: 1440px){
 			font-size: 2.431vw;
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(18);
 		}
 	}
 	&__center-content-subtitle {
@@ -508,12 +645,18 @@
 		@media (max-width: 1440px){
 			font-size: 2.431vw;
 		}
+		@media (max-width:$mobile){
+			font-size: toRem(20);
+		}
 	}
 	&__button-container {
 		width: 100%;
 		display: flex;
 		justify-content: center;
 		padding-top: toRem(30);
+		@media (max-width:$mobile){
+			padding-top: toRem(0);
+		}
 	}
 	&__play-button {
 		width: 100%;
@@ -582,9 +725,17 @@
 			}
 		}
 	}
+
+	// --------------------------------------------------------------------------------> Лівий контейнер
 	&__center-content-container-left {
 		max-width: toRem(636);
 		width: 100%;
+		@media (max-width: 1200px){
+			max-width: 100%;
+		}
+		@media (max-width:$mobile){
+			padding: toRem(0) toRem(15);
+		}
 	}
 
 	&__bottom-text-container {
@@ -613,15 +764,25 @@
 	display: flex;
 	flex-direction: column;
 	gap: toRem(20);
+	@media (max-width: em()){
+		  
+	}
 	&__item {
 		display: flex;
 		gap: toRem(40);
 		width: 100%;
 		align-items: center;
+		@media (max-width: 992px){
+			gap: toRem(20);
+		}
 	}
 	&__image {
 		max-width: toRem(57);
 		max-height: toRem(78);
+		@media (max-width: 992px){
+			max-width: toRem(37);
+			max-height: toRem(55);
+		}
 	}
 	&__text {
 		font-size: toRem(20);
@@ -629,6 +790,12 @@
 		font-weight: 500;
 		line-height: 150%;
 		width: 100%;
+		@media (max-width:$mobile){
+			font-size: toRem(18);
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(16);
+		}
 		& span {
 			background: $goldTextGradient;
 			-webkit-background-clip: text;
@@ -636,6 +803,12 @@
 			background-clip: text;
 			color: transparent;
 			font-size: toRem(22);
+			@media (max-width:$mobile){
+				font-size: toRem(20);
+			}
+			@media (max-width:$mobile){
+				font-size: toRem(18);
+			}
 		}
 	}
 }
