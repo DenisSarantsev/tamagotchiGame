@@ -142,11 +142,10 @@
 	@media (max-width: 1440px){
 		max-width: toRem(500);
 	}
-	@media (max-width: 1230px){
-		max-width: toRem(400);
-	}
-	@media (max-width: 992px){
-		max-width: toRem(350);
+	@media (max-width:$mobile){
+		max-width: 90%;
+		max-height: 70%;
+		justify-content: space-around;
 	}
 	&__big-logo {
 		width: 100%;
@@ -219,6 +218,7 @@
 			@media (max-width: 1200px){
 				max-width: toRem(200);
 			}
+	
 		}
 	}
 	&__button-text-container {
@@ -248,6 +248,9 @@
 	max-width: 50vw;
 	width: 100%;
 	height: auto;
+	@media (max-width:$mobile){
+		max-width: 90vw;
+	}
 	&__border {
 		width: 100%;
 		z-index: 10;
@@ -269,14 +272,29 @@
 		height: 4.7vw;
 		border-radius: toRem(22);
 		max-height: toRem(45);
+		@media (max-width:$mobile){
+			height: 8vw;
+			max-width: 98%;
+			top: toRem(3);
+		}
 	}
 	&__line-circle {
 		top: 0;
-		right: toRem(-15);
+		right: toRem(-8);
 		position: absolute;
 		z-index: 11;
 		max-width: toRem(60);
 		width: 6vw;
+		@media (max-width:$mobile){
+			width: 12vw;
+			right: toRem(-3);
+		}
+		@media (max-width: em(550)){
+			width: 11.2vw;
+		}
+		@media (max-width: em(450)){
+			width: 11vw;
+		}
 	}
 }
 
