@@ -82,24 +82,98 @@
 			width: 55.729vw;
 			height: 55.729vw;
 		}
+		@media (max-width:1500px){
+			width: 60vw;
+			height: 60vw;
+			bottom: toRem(-80);
+			left: toRem(-180);
+		}
+		@media (max-width: 1200px){
+			width: 64vw;
+			height: 64vw;
+		}
+		@media (max-width: 992px){
+			left: toRem(-150);
+		}
+		@media (max-width:$mobile){
+			display: none;
+		}
 	}
 	&__first-leaf {
 		position: absolute;
 		bottom: toRem(-110);
 		left: toRem(-50);
 		z-index: -2;
+		@media (max-width: 1920px){
+			left: -2vw;
+			bottom: -10vh;
+			width: 18vw;
+			height: 26vw;
+		}
+		@media (max-width: em(1440)){
+			left: -3vw;
+			bottom: -12vh;
+		}
+		@media (max-width:$mobile){
+			bottom: toRem(-50);
+			left: toRem(-10);
+		}
+		@media (max-width: 500px){
+			width: 28vw;
+			height: 40vw;
+		}
 	}
 	&__second-leaf {
 		position: absolute;
 		bottom: toRem(-335);
 		left: toRem(-290);
 		z-index: -3;
+		@media (max-width: 1920px){
+			left: -15vw;
+			bottom: -25vh;
+			width: 47vw;
+			height: 30vw;
+		}
+		@media (max-width: em(1440)){
+			left: -19vw;
+			bottom: -27vh;
+		}
+		@media (max-width:$mobile){
+			bottom: toRem(-70);
+			left: toRem(-10);
+		}
+		@media (max-width: 500px){
+			width: 57vw;
+			height: 37vw;
+		}
 	}
 	&__third-leaf {
 		position: absolute;
 		bottom: toRem(-50);
 		right: toRem(-150);
 		z-index: -3;
+		@media (max-width: 1920px){
+			bottom: -2.6vh;
+			right: -7.8vh;
+			width: 26vw;
+			height: 11vw;
+		}
+		@media (max-width: em(1600)){
+			bottom: -4vh;
+			right: -11vw;
+		}
+		@media (max-width: em(1440)){
+			bottom: -5vh;
+			right: -12vw;
+		}
+		@media (max-width:$mobile){
+			bottom: toRem(0);
+			right: toRem(-10);
+		}
+		@media (max-width: 500px){
+			width: 40vw;
+			height: 20vw;
+		}
 	}
 
 	// Контейнер для всього контенту
@@ -318,10 +392,23 @@
 		align-items: start;
 		justify-content: center;
 		width: 100%;
+		@media (max-width:$mobile){
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 	&__logo {
 		@media (max-width: 1440px){
-			max-width: toRem(220);
+			max-width: 15.5vw;
+		}
+		@media (max-width: 1100px){
+			max-width: toRem(170);
+		}
+		@media (max-width: 992px){
+			max-width: toRem(140);
+		}
+		@media (max-width:$mobile){
+			max-width: toRem(110);
 		}
 	}
 	&__buttons-block {
@@ -332,6 +419,11 @@
 		display: flex;
 		gap: toRem(10);
 		border-radius: 50%;
+		@media (max-width:$mobile){
+			position: relative;
+			align-items: center;
+			padding: toRem(0);
+		}
 		&>* {
 			transition: all 0.3s ease 0s;
 			border-radius: 50%;
@@ -349,17 +441,24 @@
 		width: toRem(72);
 		height: toRem(72);
 		@media (max-width: 1440px){
-			width: toRem(60);
-			height: toRem(60);
+			width: 4.2vw;
+			height: 4.2vw;
 		}
+		@media (max-width: 992px){
+			width: toRem(40);
+			height: toRem(40);
+		}
+
 		& img {
 			width: toRem(72);
 			height: toRem(72);
-		}
-		& img {
 			@media (max-width: 1440px){
-				width: toRem(60);
-				height: toRem(60);
+				width: 4.2vw;
+				height: 4.2vw;
+			}
+			@media (max-width: 992px){
+				width: toRem(40);
+				height: toRem(40);
 			}
 		}
 
@@ -371,6 +470,25 @@
 		justify-content: center;
 		max-width: toRem(740);
 		margin-top: toRem(-50);
+		@media (max-width: 1920px){
+			max-width: 50vw;
+		}
+		@media (max-width: 1440px){
+			max-width: 60vw;
+			margin-top: toRem(-30);
+		}
+		@media (max-width: 1200px){
+			margin-top: toRem(-20);
+		}
+		@media (max-width: 1100px){
+			margin-top: toRem(-10);
+		}
+		@media (max-width: 992px){
+			margin-top: toRem(0);
+		}
+		@media (max-width:$mobile){
+			max-width: 100%;
+		}
 	}
 }
 
@@ -417,8 +535,14 @@
 		color: transparent;
 		line-height: 130%;
 		@media (max-width: 1440px){
-			font-size: toRem(60);
+			font-size: 4.2vw;
 			line-height: 100%;
+		}
+		@media (max-width: 992px){
+			font-size: toRem(40);
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(44);
 		}
 	}
 	&__subtitle {
@@ -430,6 +554,16 @@
 		padding-bottom: toRem(10);
 		@media (max-width: 1440px){
 			padding-bottom: toRem(0);
+			font-size: toRem(22);
+		}
+		@media (max-width: 1100px){
+			font-size: toRem(20);
+		}
+		@media (max-width: 992px){
+			font-size: toRem(18);
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(20);
 		}
 	}
 	&__timer {
@@ -444,6 +578,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 	&__wrapper {
 		display: flex;
 		justify-content: space-around;
@@ -454,6 +589,16 @@
 		padding: toRem(15) toRem(40);
 		&>*:not(:first-child):not(:last-child) {
 			border-right: 2px solid #EBD46C;
+		}
+		@media (max-width: 1440px){
+			padding: 1vw 2.8vw;
+		}
+		@media (max-width: 992px){
+			padding: toRem(10) toRem(20);
+		}
+		@media (max-width:$mobile){
+			max-width: toRem(600);
+			width: 100%;
 		}
 	}
 	&__bg {
@@ -472,16 +617,38 @@
 		justify-content: center;
 		gap: toRem(5);
 		z-index: 10;
+		width: 100%;
 		padding: toRem(0) toRem(29) toRem(7) toRem(29);
+		@media (max-width: 1440px){
+			padding: 0 2vw 0.5vw 2vw;
+		}
+		@media (max-width: 992px){
+			padding: toRem(0) toRem(15) toRem(3) toRem(15);
+		}
+		@media (max-width:$mobile){
+			
+		}
 	}
 	&__numbers {
 		font-size: toRem(48);
 		font-family: $thirdFont;
 		font-weight: bold;
+		@media (max-width: 1440px){
+			font-size: 3.4vw;
+		}
+		@media (max-width: 992px){
+			font-size: toRem(30);
+		}
 	}
 	&__subtitle {
 		font-size: toRem(28);
 		font-family: $secondFont;
+		@media (max-width: 1440px){
+			font-size: toRem(24);
+		}
+		@media (max-width: 992px){
+			font-size: toRem(22);
+		}
 	}
 }
 .days-section {
@@ -505,18 +672,50 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@media (max-width: 1600px){
+			max-width: 37vw;
+		}
+		@media (max-width: 1440px){
+			padding: 1.05vw 1.05vw;
+		};
+		@media (max-width: 992px){
+			padding: toRem(10) toRem(10);
+		}
+		@media (max-width:$mobile){
+			max-width: toRem(600);
+		}
 	}
 	&__top-egg {
 		position: absolute;
 		z-index: 9;
 		top: toRem(15);
 		left: toRem(15);
+		@media (max-width: 1300px){
+			width: 2.6vw;
+			height: 2.6vw;
+			top: 1.15vw;
+			left: 1.15vw;
+		}
+		@media (max-width:$mobile){
+			width: toRem(23);
+			height: toRem(23);
+		}
 	}
 	&__bottom-egg {
 		position: absolute;
 		z-index: 9;
 		bottom: toRem(15);
 		right: toRem(15);
+		@media (max-width: 1300px){
+			width: 2.6vw;
+			height: 2.6vw;
+			bottom: 1.15vw;
+			right: 1.15vw;
+		}
+		@media (max-width:$mobile){
+			width: toRem(23);
+			height: toRem(23);
+		}
 	}
 	&__bg {
 		position: absolute;
@@ -537,6 +736,12 @@
 		text-align: center;
 		position: relative;
 		max-width: toRem(486);
+		@media (max-width: 1440px){
+			max-width: 33.75vw;
+		}
+		@media (max-width:	992px){
+			max-width: 80%;
+		}
 	}
 	&__top-text {
 		font-size: toRem(28);
@@ -548,6 +753,13 @@
 			background-clip: text;
 			color: transparent;
 		}
+		@media (max-width: 1440px){
+			font-size: 1.95vw;
+		}
+		@media (max-width: 992px){
+			font-size: toRem(20);
+			line-height: 120%;
+		}
 	}
 	&__bottom-text {
 		line-height: 130%;
@@ -557,6 +769,12 @@
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 		color: transparent;
+		@media (max-width: 1440px){
+			font-size: 2.8vw;
+		}
+		@media (max-width: 992px){
+			font-size: toRem(30);
+		}
 	}
 }
 .play-button {
@@ -572,21 +790,35 @@
 		max-width: toRem(228);
 		position: absolute;
 		height: toRem(80);
+		@media (max-width: 1440px){
+			max-width: 15.8vw;
+			height: 5.5vw;
+		}
+		@media (max-width: 992px){
+			max-width: 90%;
+			height: toRem(50);
+		}
 	}
 	&__button-default {
 		position: absolute;
 		top: 0;
 		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 	&__button-hover {
 		position: absolute;
 		top: 0;
 		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 	&__button-active {
 		position: absolute;
 		top: 0;
 		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 	&__button-text-container {
 		position: absolute;
@@ -600,6 +832,12 @@
 			font-size: toRem(36);
 			font-weight: bold;
 			padding-bottom: toRem(3);
+			@media (max-width: 1440px){
+				font-size: 2.5vw;
+			}
+			@media (max-width:$mobile){
+				font-size: toRem(22);
+			}
 		}
 	}
 }
@@ -614,4 +852,10 @@
 	justify-content: center;
 	width: 100%;
 	padding-bottom: toRem(15);
+	@media (max-width: 1440px){
+		padding-bottom: 1.05vw;
+	}
+	@media (max-width: 1200px){
+		padding-bottom: 0.2vw;
+	}
 }

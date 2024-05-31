@@ -14,12 +14,16 @@
 	height: toRem(77);
 	position: relative;
 	@media (max-width: 1440px){
-		max-width: toRem(110);
+		max-width: 11.111vw;
 	}
+
 	&__text {
 		font-size: toRem(16);
 		font-weight: bold;
 		color: #FFFFFF;
+		@media (max-width: 992px){
+			font-size: toRem(14);
+		}
 	}
 	& img {
 		position: absolute;
