@@ -309,6 +309,10 @@
 		align-items: center;
 		opacity: 0;
 		transition: all 2s ease 0s;
+		@media (max-width: 1920px){
+			max-width: 25.017vw;
+			max-height: 25.017vw;
+		}
 	}
 
 	// --------------------------------------------- Блок з текстом зверху
@@ -479,6 +483,10 @@
 	max-height: toRem(725);
 	height: 100%;
 	width: 100%;
+	@media (max-width: 1920px){
+		max-width: 37.76vw;
+		max-height: 37.76vw;
+	}
 	&__image {
 		width: 100%;
 		z-index: 11;
@@ -500,6 +508,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media (max-width: 1920px){
+		max-width: 25.017vw;
+		max-height: 25.017vw;
+	}
 	&__rotate-container {
 		width: 100%;
 		height: 100%;
@@ -516,9 +528,16 @@
 		width: 100%;
 		height: 100%;
 		margin-right: toRem(-1);
+		@media (max-width: 1920px){
+			max-width: 25.017vw;
+			max-height: 25.017vw;
+		}
 	}
 	&__wheel-pointer-image {
-
+		@media (max-width: 1920px){
+			max-width: 22.865vw;
+			max-height: 22.865vw;
+		}
 	}
 }
 
@@ -529,14 +548,27 @@
 	max-width: toRem(480.34);
 	max-height: toRem(480.34);
 	perspective: 1000px;
+	@media (max-width: 1920px){
+		max-width: 25.017vw;
+		max-height: 25.017vw;
+	}
 	&__egg-container {
 		position: absolute;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		transition: transform 1s cubic-bezier(0,1.03,.17,1);
 		& img {
 			width: 100%;
 			height: 100%;
+			@media (max-width: 1920px){
+				width: 3.542vw;
+				height: 3.021vw;
+			}
+			@media (max-width: 1600px){
+				width: toRem(47);
+				height: toRem(56);
+			}
 		}
 		& div {
 			position: absolute;

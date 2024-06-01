@@ -69,37 +69,43 @@ document.addEventListener("DOMContentLoaded", () => {
 						const egg11 = document.querySelector(".egg11");
 						const egg12 = document.querySelector(".egg12");
 
-						let indexFly = 1;
+
+						let	indexFly = 1;
 
 						const flyEggs = () => {
-							egg1.style.animation = "flyEgg1 1s cubic-bezier(0,1.03,.17,1)";
-							egg2.style.animation = `flyEgg2 1s cubic-bezier(0,1.03,.17,1)`;
-							egg3.style.animation = "flyEgg3 1s cubic-bezier(0,1.03,.17,1)";
-							egg4.style.animation = `flyEgg4 1s cubic-bezier(0,1.03,.17,1)`;
-							egg5.style.animation = "flyEgg5 1s cubic-bezier(0,1.03,.17,1)";
-							egg6.style.animation = `flyEgg6 1s cubic-bezier(0,1.03,.17,1)`;
-							egg7.style.animation = "flyEgg7 1s cubic-bezier(0,1.03,.17,1)";
-							egg8.style.animation = `flyEgg8 1s cubic-bezier(0,1.03,.17,1)`;
-							egg9.style.animation = "flyEgg9 1s cubic-bezier(0,1.03,.17,1)";
-							egg10.style.animation = "flyEgg10 1s cubic-bezier(0,1.03,.17,1)";
-							egg11.style.animation = `flyEgg11 1s cubic-bezier(0,1.03,.17,1)`;
-							egg12.style.animation = "flyEgg12 1s cubic-bezier(0,1.03,.17,1)";
-
 							showJackpotText()
 
-							setTimeout(() => {
-								egg1.style.transform = `translateX(${60 * indexFly}px) translateY(-${200 * indexFly}px)`;
-								egg2.style.transform = `translateX(${130 * indexFly}px) translateY(-${80 * indexFly}px) translateZ(300px)`;
-								egg3.style.transform = `translateX(${350 * indexFly}px) translateY(-${60 * indexFly}px)`;
-								egg4.style.transform = `translateX(${160 * indexFly}px) translateY(${25 * indexFly}px) translateZ(300px)`;
-								egg5.style.transform = `translateX(${190 * indexFly}px) translateY(${160 * indexFly}px)`;
-								egg6.style.transform = `translateX(${25 * indexFly}px) translateY(${95 * indexFly}px) translateZ(300px)`;
-								egg7.style.transform = `translateX(${-40 * indexFly}px) translateY(${170 * indexFly}px)`;
-								egg8.style.transform = `translateX(${-120 * indexFly}px) translateY(${110 * indexFly}px) translateZ(300px)`;
-								egg9.style.transform = `translateX(${-280 * indexFly}px) translateY(${80 * indexFly}px)`;
-								egg10.style.transform = `translateX(${-320 * indexFly}px) translateY(${-70 * indexFly}px)`;
-								egg11.style.transform = `translateX(${-130 * indexFly}px) translateY(${-100 * indexFly}px) translateZ(300px)`;
-								egg12.style.transform = `translateX(${-40 * indexFly}px) translateY(${-160 * indexFly}px)`;
+									rotateEggs.style.maxWidth = "480.34px";
+									rotateEggs.style.maxHeight = "480.34px";
+
+									if ( window.innerWidth >= 1920 ) {
+										egg1.style.transform = `translateX(${60 * indexFly}px) translateY(-${200 * indexFly}px)`;
+										egg2.style.transform = `translateX(${130 * indexFly}px) translateY(-${80 * indexFly}px) translateZ(300px)`;
+										egg3.style.transform = `translateX(${350 * indexFly}px) translateY(-${60 * indexFly}px)`;
+										egg4.style.transform = `translateX(${160 * indexFly}px) translateY(${25 * indexFly}px) translateZ(300px)`;
+										egg5.style.transform = `translateX(${190 * indexFly}px) translateY(${160 * indexFly}px)`;
+										egg6.style.transform = `translateX(${25 * indexFly}px) translateY(${95 * indexFly}px) translateZ(300px)`;
+										egg7.style.transform = `translateX(${-40 * indexFly}px) translateY(${170 * indexFly}px)`;
+										egg8.style.transform = `translateX(${-120 * indexFly}px) translateY(${110 * indexFly}px) translateZ(300px)`;
+										egg9.style.transform = `translateX(${-280 * indexFly}px) translateY(${80 * indexFly}px)`;
+										egg10.style.transform = `translateX(${-320 * indexFly}px) translateY(${-70 * indexFly}px)`;
+										egg11.style.transform = `translateX(${-130 * indexFly}px) translateY(${-100 * indexFly}px) translateZ(300px)`;
+										egg12.style.transform = `translateX(${-40 * indexFly}px) translateY(${-160 * indexFly}px)`;
+									} else {
+										egg1.style.transform = `translateX(3.125vw) translateY(-10.417vw)`;
+										egg2.style.transform = `translateX(6.771vw) translateY(-4.167vw) translateZ(15.625vw)`;
+										egg3.style.transform = `translateX(18.229vw) translateY(-3.125vw)`;
+										egg4.style.transform = `translateX(8.333vw) translateY(1.302vw) translateZ(15.625vw)`;
+										egg5.style.transform = `translateX(9.896vw) translateY(8.333vw)`;
+										egg6.style.transform = `translateX(1.302vw) translateY(4.948vw) translateZ(15.625vw)`;
+										egg7.style.transform = `translateX(-2.083vw) translateY(8.854vw)`;
+										egg8.style.transform = `translateX(-6.25vw) translateY(5.729vw) translateZ(15.625vw)`;
+										egg9.style.transform = `translateX(-14.583vw) translateY(4.167vw)`;
+										egg10.style.transform = `translateX(-16.667vw) translateY(-3.646vw)`;
+										egg11.style.transform = `translateX(-6.771vw) translateY(-5.208vw) translateZ(15.625vw)`;
+										egg12.style.transform = `translateX(-2.083vw) translateY(-8.333vw)`;
+									}
+
 
 								for ( let item of allEggsShadows ) {
 									item.style.animation = "allEggsShadows 2s linear";
@@ -109,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
 										item.classList.add("egg-shadow");
 									}
 								}, 2000)
-							}, 1000)
+			
 						}
 
 						// Поява блоку з написом "Jackpot"

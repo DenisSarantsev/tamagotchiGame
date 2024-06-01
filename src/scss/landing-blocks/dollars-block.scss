@@ -507,13 +507,12 @@
 	}
 
 	&__bottom-slide-arrow {
-		position: relative;
+		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		padding-bottom: toRem(10);
 	}
 	&__container {
 		position: relative;
@@ -536,7 +535,6 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: toRem(30);
-		padding-bottom: toRem(40);
 		z-index: 10;
 		transition: all 2s ease 0s;
 		animation: showContentAnimation 2s ease;
@@ -558,6 +556,8 @@
 			padding-bottom: toRem(0);
 			height: 100%;
 			opacity: 1;
+			padding-top: toRem(75);
+			padding-bottom: toRem(75);
 		}
 	}
 	&__top-title-container {

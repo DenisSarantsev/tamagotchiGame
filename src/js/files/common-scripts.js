@@ -30,5 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			activePlayButton.classList.add("_hidden");
 		})
 	}
-	hoverAndActivePlayButton();
+	if ( window.innerWidth < 768 ) {
+		hoverAndActivePlayButton();
+	}
+	
 })

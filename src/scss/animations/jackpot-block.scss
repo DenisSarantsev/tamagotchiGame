@@ -37,123 +37,132 @@
 	0% {
 		max-width: toRem(480.34);
 		max-height: toRem(480.34);
+		@media (max-width: 1920px){
+			max-width: 25.018vw;
+			max-height: 25.018vw;
+		}
 	}
 	100% {
 		max-width: toRem(480.34);
 		max-height: toRem(480.34);
+		@media (max-width: 1920px){
+			max-width: 25.018vw;
+			max-height: 25.018vw;
+		}
 	}
 }
 
 // ---------- Анімація руху (для кожного яйця окремо)
-$indexFly: 1; // Индекс, на который мы умножаем для изменения дальности разлета при адаптации
+ // Индекс, на который мы умножаем для изменения дальности разлета при адаптации
+// 	$indexFly: 1;
 
-@keyframes flyEgg1 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{60px * $indexFly}) translateY(#{-200px * $indexFly});
-	}
-}
+// @keyframes flyEgg1 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{60px * $indexFly}) translateY(#{-200px * $indexFly});
+// 	}
+// }
 
-@keyframes flyEgg2 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{130px * $indexFly}) translateY(#{-80px * $indexFly}) translateZ(300px);
-	}
-}
+// @keyframes flyEgg2 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{130px * $indexFly}) translateY(#{-80px * $indexFly}) translateZ(300px);
+// 	}
+// }
 
-@keyframes flyEgg3 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{350px * $indexFly}) translateY(#{-60px * $indexFly});
-	}
-}
+// @keyframes flyEgg3 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{350px * $indexFly}) translateY(#{-60px * $indexFly});
+// 	}
+// }
 
-@keyframes flyEgg4 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{160px * $indexFly}) translateY(#{25px * $indexFly}) translateZ(300px);
-	}
-}
+// @keyframes flyEgg4 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{160px * $indexFly}) translateY(#{25px * $indexFly}) translateZ(300px);
+// 	}
+// }
 
-@keyframes flyEgg5 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{190px * $indexFly}) translateY(#{160px * $indexFly});
-	}
-}
+// @keyframes flyEgg5 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{190px * $indexFly}) translateY(#{160px * $indexFly});
+// 	}
+// }
 
-@keyframes flyEgg6 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{25px * $indexFly}) translateY(#{95px * $indexFly}) translateZ(300px);
-	}
-}
+// @keyframes flyEgg6 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{25px * $indexFly}) translateY(#{95px * $indexFly}) translateZ(300px);
+// 	}
+// }
 
-@keyframes flyEgg7 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{-40px * $indexFly}) translateY(#{170px * $indexFly});
-	}
-}
+// @keyframes flyEgg7 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{-40px * $indexFly}) translateY(#{170px * $indexFly});
+// 	}
+// }
 
-@keyframes flyEgg8 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{-120px * $indexFly}) translateY(#{110px * $indexFly}) translateZ(300px);
-	}
-}
+// @keyframes flyEgg8 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{-120px * $indexFly}) translateY(#{110px * $indexFly}) translateZ(300px);
+// 	}
+// }
 
-@keyframes flyEgg9 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{-280px * $indexFly}) translateY(#{80px * $indexFly});
-	}
-}
+// @keyframes flyEgg9 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{-280px * $indexFly}) translateY(#{80px * $indexFly});
+// 	}
+// }
 
-@keyframes flyEgg10 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{-320px * $indexFly}) translateY(#{-70px * $indexFly});
-	}
-}
+// @keyframes flyEgg10 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{-320px * $indexFly}) translateY(#{-70px * $indexFly});
+// 	}
+// }
 
-@keyframes flyEgg11 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{-130px * $indexFly}) translateY(#{-100px * $indexFly}) translateZ(300px);
-	}
-}
+// @keyframes flyEgg11 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{-130px * $indexFly}) translateY(#{-100px * $indexFly}) translateZ(300px);
+// 	}
+// }
 
-@keyframes flyEgg12 {
-	0%{
-		transform: translateX(0) translateY(0);
-	}
-	100%{
-		transform: translateX(#{-40px * $indexFly}) translateY(#{-160px * $indexFly});
-	}
-}
+// @keyframes flyEgg12 {
+// 	0%{
+// 		transform: translateX(0) translateY(0);
+// 	}
+// 	100%{
+// 		transform: translateX(#{-40px * $indexFly}) translateY(#{-160px * $indexFly});
+// 	}
+// }
 
 // Поява світіння яйця 
 @keyframes shadowEggs {
