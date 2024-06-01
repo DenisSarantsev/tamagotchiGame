@@ -398,6 +398,7 @@
 		@media (max-width:$mobile){
 			justify-content: space-between;
 			align-items: center;
+			display: none;
 		}
 		@media (max-width: 600px){
 			padding: toRem(5) toRem(0);

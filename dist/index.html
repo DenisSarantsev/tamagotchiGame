@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240601124712">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240601131055">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +33,20 @@
 
 	<div class="wrapper">
 		<main class="page">
+			<div class="mobile-header">
+				<img src="img/common/small-logo.svg" alt="game logo" class="mobile-header__logo">
+				<div class="mobile-header__buttons-block">
+					<buttton class="mobile-header__button mobile-header-lang-button">
+						<img src="img/loading-timer/button-lang.svg" alt="language button" class="lang-button__image">
+					</buttton>
+					<buttton class="mobile-header__button mobile-header-menu-button">
+						<img src="img/loading-timer/button-menu.svg" alt="menu button" class="menu-button__image">
+					</buttton>
+					<buttton class="mobile-header__button mobile-header-volume-button">
+						<img src="img/loading-timer/button-volume.svg" alt="volume button" class="volume-button__image">
+					</buttton>
+				</div>
+			</div>
 			<div data-fp class="block">
 				<div data-fp-section data-no-event class="block__section loading-timer">
 					<!-- Шари з підкладками і фонами для екрану з таймером -->
@@ -748,7 +762,7 @@
 	<script>
 		document.querySelector(".pre-loader-bg").classList.add("_hidden");
 	</script>
-	<script src="js/app.min.js?_v=20240601124712"></script>
+	<script src="js/app.min.js?_v=20240601131055"></script>
 </body>
 
 </html>

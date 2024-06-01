@@ -79,9 +79,16 @@
 
 // Хедер на мобільних телефонах
 .mobile-header {
+	position: fixed;
+	top: 0;
+	left: 0;
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
+	padding: toRem(5) toRem(15) toRem(10) toRem(15);
+	z-index: 1000;
+	background: linear-gradient(180deg, rgba(31, 31, 30, 0.528) 0%, rgba(0,0,0,0) 100%);
+
 	@media (min-width: 768px){
 		display: none;
 	}
