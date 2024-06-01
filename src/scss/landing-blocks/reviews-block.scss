@@ -7,6 +7,9 @@
 	align-items: center;
 	overflow: hidden;
 	height: 100%;
+	@media (max-width:$mobile){
+		position: relative;
+	}
 	// ---------------------------------- Фонові елементи
 	&__bg-gradient {
 		position: absolute;

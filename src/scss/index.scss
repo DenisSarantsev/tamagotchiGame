@@ -9,11 +9,15 @@ body {
 	// Прибираємо скролл на IE та старих версіях Edge
 	-ms-overflow-style: none;
 
-
+	height: 100%;
+	background-color: rgb(6, 38, 6);
 }
 
 .page {
-	background-color: rgb(6, 38, 6);
+	height: 100%;
+	@media (min-width:$mobile){
+		background-color: rgb(6, 38, 6);
+	}
 }
 
 .pre-loader-bg {
@@ -28,6 +32,10 @@ body {
 
 .block {
 	&>* {
+		@media (max-width:$mobile){
+			min-height: 100vh;
+			height: 100%;
+		}
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -36,6 +44,7 @@ body {
 		font-family: Arial, Helvetica, sans-serif;
 	}
 	&__section {
+		height: 100%;
 	}
 }
 

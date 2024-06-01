@@ -1,5 +1,10 @@
 .dollars-block {
-	position: relative;
+	position: absolute;
+	height: 100%;
+	@media (max-width:$mobile){
+		position: relative;
+		height: 100%;
+	}
 	&__gradient-wrapper {
 		position: absolute;
 		top: 0;
@@ -468,7 +473,7 @@
 	}
 
 	&__bottom-slide-arrow {
-		position: absolute;
+		position: relative;
 		bottom: 0;
 		left: 0;
 		width: 100%;
@@ -477,6 +482,7 @@
 		padding-bottom: toRem(10);
 	}
 	&__container {
+		position: relative;
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -484,6 +490,7 @@
 		align-items: center;
 		max-width: 100%;
 		flex-direction: column;
+		gap: toRem(10);
 	}
 	&__content {
 		opacity: 0;
@@ -513,6 +520,9 @@
 		}
 		@media (max-width:$mobile){
 			justify-content: center;
+			gap: 1.25vh;
+			padding-bottom: toRem(0);
+			height: 100%;
 		}
 	}
 	&__top-title-container {

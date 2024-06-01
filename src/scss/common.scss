@@ -4,6 +4,15 @@
 	display: none;
 }
 
+.content {
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 100svh;
+	height: 100%;
+	width: 100%;
+}
+
 // Стрілка прокрутки вниз
 .scroll-down-element {
 	display: flex;
@@ -73,6 +82,9 @@
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
+	@media (min-width: 768px){
+		display: none;
+	}
 	
 	&__logo {
 		@media (max-width: 1440px){

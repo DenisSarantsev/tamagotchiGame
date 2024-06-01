@@ -709,7 +709,25 @@
                 }
             }
         }
-        if (document.querySelector("[data-fp]")) modules_flsModules.fullpage = new FullPage(document.querySelector("[data-fp]"), "");
+        if (window.innerWidth < 767.98) ; else if (document.querySelector("[data-fp]")) modules_flsModules.fullpage = new FullPage(document.querySelector("[data-fp]"), "");
+        let fullpageInstance = null;
+        window.addEventListener("resize", (function() {
+            const width = window.innerWidth;
+            if (width <= 767.98 && fullpageInstance) {
+                if (typeof fullpageInstance.destroy === "function") fullpageInstance.destroy();
+                fullpageInstance = null;
+            } else if (width > 767.98 && !fullpageInstance) {
+                const fpElement = document.querySelector("[data-fp]");
+                if (fpElement) fullpageInstance = new FullPage(fpElement, "");
+            }
+        }));
+        document.addEventListener("DOMContentLoaded", (() => {
+            const width = window.innerWidth;
+            if (width > 767.98) {
+                const fpElement = document.querySelector("[data-fp]");
+                if (fpElement) fullpageInstance = new FullPage(fpElement, "");
+            }
+        }));
         let addWindowScrollEvent = false;
         setTimeout((() => {
             if (addWindowScrollEvent) {

@@ -24,6 +24,9 @@ import { flsModules } from "../files/modules.js";
 	fpswitching
 */
 
+
+
+
 // Клас FullPage
 export class FullPage {
 	constructor(element, options) {
@@ -209,6 +212,11 @@ export class FullPage {
 			this.nextSection = false;
 		}
 	}
+
+
+
+
+
 	//===============================
 	// Присвоєння класів із різними ефектами
 	removeEffectsClasses() {
@@ -646,7 +654,45 @@ export class FullPage {
 		}
 	}
 }
-// Запускаємо та додаємо в об'єкт модулів
-if (document.querySelector('[data-fp]')) {
-	flsModules.fullpage = new FullPage(document.querySelector('[data-fp]'), '');
+
+if ( window.innerWidth < 767.98 ) {
+
+} else {
+	// Запускаємо та додаємо в об'єкт модулів
+	if (document.querySelector('[data-fp]')) {
+		flsModules.fullpage = new FullPage(document.querySelector('[data-fp]'), '');
+	}
 }
+
+
+let fullpageInstance = null;
+
+window.addEventListener('resize', function() {
+    // Получаем текущую ширину окна
+    const width = window.innerWidth;
+    if (width <= 767.98 && fullpageInstance) {
+        // Удаляем экземпляр FullPage, если он уже был создан
+        if (typeof fullpageInstance.destroy === 'function') {
+            fullpageInstance.destroy();
+        }
+        fullpageInstance = null;
+    } else if (width > 767.98 && !fullpageInstance) {
+        // Создаем экземпляр FullPage, если он еще не был создан
+        const fpElement = document.querySelector('[data-fp]');
+        if (fpElement) {
+            fullpageInstance = new FullPage(fpElement, '');
+        }
+    }
+});
+
+// Инициализируем FullPage при первой загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    const width = window.innerWidth;
+    if (width > 767.98) {
+        const fpElement = document.querySelector('[data-fp]');
+        if (fpElement) {
+            fullpageInstance = new FullPage(fpElement, '');
+        }
+    }
+});
+

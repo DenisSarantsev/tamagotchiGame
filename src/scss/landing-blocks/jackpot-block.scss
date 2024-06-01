@@ -6,6 +6,9 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	@media (max-width:$mobile){
+		position: relative;
+	}
 	&__gradient-wrapper {
 		position: absolute;
 		top: 0;

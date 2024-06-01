@@ -1,5 +1,8 @@
 .loading-timer {
-	position: relative;
+	position: absolute;
+	@media (max-width:$mobile){
+		position: relative;
+	}
 	// Фонові зображення та підкладки для сторінки завантаження
 	&__black-bg {
 		position: absolute;
