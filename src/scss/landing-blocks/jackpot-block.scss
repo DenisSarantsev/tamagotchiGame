@@ -36,14 +36,10 @@
 		animation: leafsJackpotMovingAnimation 7s infinite;
 		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 		@media (max-width: 1920px){
-			width: 19vw;
-		}
-		@media (max-width: 1440px){
-			top: toRem(-100);
-			left: toRem(-40);
-		}
-		@media (max-width: 1200px){
-			width: toRem(270);
+			width: 19.271vw;
+			height: 21.875vw;
+			top: -6.771vw;
+			left: -3.646vw;
 		}
 	}
 	&__top-right-dark-leaf {
@@ -54,14 +50,10 @@
 		animation: leafsJackpotMovingAnimation 8.5s infinite;
 		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 		@media (max-width: 1920px){
-			width: 27vw;
-		}
-		@media (max-width: 1440px){
-			top: toRem(-20);
-			right: toRem(-100);
-		}
-		@media (max-width: 1200px){
-			width: toRem(370);
+			width: 27.083vw;
+			height: 13.542vw;
+			top: -2.604vw;
+			right: -9.375vw;
 		}
 	}
 	&__bottom-left-dark-leaf {
@@ -72,10 +64,10 @@
 		animation: leafsJackpotMovingAnimation 6.6s infinite;
 		filter: invert(34%) sepia(67%) saturate(685%) hue-rotate(54deg) brightness(10%) contrast(122%);
 		@media (max-width: 1920px){
-			width: 26vw;
-		}
-		@media (max-width: 1200px){
-			width: toRem(350);
+			width: 27.604vw;
+			height: 13.021vw;
+			bottom: 5.208vw;
+			left: -1.563vw;
 		}
 	}
 	&__bottom-left-leaf {
@@ -84,10 +76,10 @@
 		left: toRem(-150);
 		animation: leafsJackpotMovingAnimation 7.5s infinite;
 		@media (max-width: 1920px){
-			width: 31vw;
-		}
-		@media (max-width: 1200px){
-			width: toRem(400);
+			width: 30.729vw;
+			height: 14.063vw;
+			bottom: 1.563vw;
+			left: -7.813vw;
 		}
 	}
 

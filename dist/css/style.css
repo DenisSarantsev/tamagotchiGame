@@ -2587,18 +2587,10 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:1920px) {
   .jackpot-block__top-left-dark-leaf {
-    width: 19vw
-  }
-}
-@media (max-width:1440px) {
-  .jackpot-block__top-left-dark-leaf {
-    top: -6.25rem;
-    left: -2.5rem
-  }
-}
-@media (max-width:1200px) {
-  .jackpot-block__top-left-dark-leaf {
-    width: 16.875rem
+    width: 19.271vw;
+    height: 21.875vw;
+    top: -6.771vw;
+    left: -3.646vw
   }
 }
 .jackpot-block__top-right-dark-leaf {
@@ -2613,18 +2605,10 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:1920px) {
   .jackpot-block__top-right-dark-leaf {
-    width: 27vw
-  }
-}
-@media (max-width:1440px) {
-  .jackpot-block__top-right-dark-leaf {
-    top: -1.25rem;
-    right: -6.25rem
-  }
-}
-@media (max-width:1200px) {
-  .jackpot-block__top-right-dark-leaf {
-    width: 23.125rem
+    width: 27.083vw;
+    height: 13.542vw;
+    top: -2.604vw;
+    right: -9.375vw
   }
 }
 .jackpot-block__bottom-left-dark-leaf {
@@ -2639,12 +2623,10 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:1920px) {
   .jackpot-block__bottom-left-dark-leaf {
-    width: 26vw
-  }
-}
-@media (max-width:1200px) {
-  .jackpot-block__bottom-left-dark-leaf {
-    width: 21.875rem
+    width: 27.604vw;
+    height: 13.021vw;
+    bottom: 5.208vw;
+    left: -1.563vw
   }
 }
 .jackpot-block__bottom-left-leaf {
@@ -2656,12 +2638,10 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:1920px) {
   .jackpot-block__bottom-left-leaf {
-    width: 31vw
-  }
-}
-@media (max-width:1200px) {
-  .jackpot-block__bottom-left-leaf {
-    width: 25rem
+    width: 30.729vw;
+    height: 14.063vw;
+    bottom: 1.563vw;
+    left: -7.813vw
   }
 }
 .jackpot-block__sparks {
