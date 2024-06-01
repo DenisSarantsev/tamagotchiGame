@@ -32,34 +32,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 	// Функціонал кнопки
-	const hoverAndActivePlayButton = () => {
-		const defaultPlayButton = document.querySelector(".dollars-block__button-default");
-		const hoverPlayButton = document.querySelector(".dollars-block__button-hover");
-		const activePlayButton = document.querySelector(".dollars-block__button-active");
-		const playButtonBlock = document.querySelector(".dollars-block__play-button");
+	// const hoverAndActivePlayButton = () => {
+	// 	const defaultPlayButton = document.querySelector(".dollars-block__button-default");
+	// 	const hoverPlayButton = document.querySelector(".dollars-block__button-hover");
+	// 	const activePlayButton = document.querySelector(".dollars-block__button-active");
+	// 	const playButtonBlock = document.querySelector(".dollars-block__play-button");
 		
-		playButtonBlock.addEventListener("mouseenter", () => {
-			defaultPlayButton.classList.add("_hidden");
-			hoverPlayButton.classList.remove("_hidden");
-			activePlayButton.classList.add("_hidden");
-		})
-		playButtonBlock.addEventListener("mouseleave", () => {
-			defaultPlayButton.classList.remove("_hidden");
-			hoverPlayButton.classList.add("_hidden");
-			activePlayButton.classList.add("_hidden");
-		})
-		playButtonBlock.addEventListener("mousedown", () => {
-			defaultPlayButton.classList.add("_hidden");
-			hoverPlayButton.classList.add("_hidden");
-			activePlayButton.classList.remove("_hidden");
-		})
-		playButtonBlock.addEventListener("mouseup", () => {
-			defaultPlayButton.classList.add("_hidden");
-			hoverPlayButton.classList.remove("_hidden");
-			activePlayButton.classList.add("_hidden");
-		})
-	}
-	hoverAndActivePlayButton();
+	// 	playButtonBlock.addEventListener("mouseenter", () => {
+	// 		defaultPlayButton.classList.add("_hidden");
+	// 		hoverPlayButton.classList.remove("_hidden");
+	// 		activePlayButton.classList.add("_hidden");
+	// 	})
+	// 	playButtonBlock.addEventListener("mouseleave", () => {
+	// 		defaultPlayButton.classList.remove("_hidden");
+	// 		hoverPlayButton.classList.add("_hidden");
+	// 		activePlayButton.classList.add("_hidden");
+	// 	})
+	// 	playButtonBlock.addEventListener("mousedown", () => {
+	// 		defaultPlayButton.classList.add("_hidden");
+	// 		hoverPlayButton.classList.add("_hidden");
+	// 		activePlayButton.classList.remove("_hidden");
+	// 	})
+	// 	playButtonBlock.addEventListener("mouseup", () => {
+	// 		defaultPlayButton.classList.add("_hidden");
+	// 		hoverPlayButton.classList.remove("_hidden");
+	// 		activePlayButton.classList.add("_hidden");
+	// 	})
+	// }
+	// hoverAndActivePlayButton();
 
 	// const effectBgImagesArray = document.querySelectorAll(".effect-bg-img");
 

@@ -835,33 +835,6 @@
                     }), 100);
                 }), 1500);
             };
-            const hoverAndActivePlayButton = () => {
-                const defaultPlayButton = document.querySelector(".play-button__button-default");
-                const hoverPlayButton = document.querySelector(".play-button__button-hover");
-                const activePlayButton = document.querySelector(".play-button__button-active");
-                const playButtonBlock = document.querySelector(".play-button__wrapper");
-                playButtonBlock.addEventListener("mouseenter", (() => {
-                    defaultPlayButton.classList.add("_hidden");
-                    hoverPlayButton.classList.remove("_hidden");
-                    activePlayButton.classList.add("_hidden");
-                }));
-                playButtonBlock.addEventListener("mouseleave", (() => {
-                    defaultPlayButton.classList.remove("_hidden");
-                    hoverPlayButton.classList.add("_hidden");
-                    activePlayButton.classList.add("_hidden");
-                }));
-                playButtonBlock.addEventListener("mousedown", (() => {
-                    defaultPlayButton.classList.add("_hidden");
-                    hoverPlayButton.classList.add("_hidden");
-                    activePlayButton.classList.remove("_hidden");
-                }));
-                playButtonBlock.addEventListener("mouseup", (() => {
-                    defaultPlayButton.classList.add("_hidden");
-                    hoverPlayButton.classList.remove("_hidden");
-                    activePlayButton.classList.add("_hidden");
-                }));
-            };
-            hoverAndActivePlayButton();
             const setTimerToApp = durationInDays => {
                 const durationInMs = durationInDays * 24 * 60 * 60 * 1e3;
                 let endTime = localStorage.getItem("timerEndTime");
@@ -917,11 +890,16 @@
                     }
                 }));
             }
+        }));
+        const showObjectAfterLazyLoading = object => {
+            object.style.opacity = "1";
+        };
+        document.addEventListener("DOMContentLoaded", (() => {
             const hoverAndActivePlayButton = () => {
-                const defaultPlayButton = document.querySelector(".dollars-block__button-default");
-                const hoverPlayButton = document.querySelector(".dollars-block__button-hover");
-                const activePlayButton = document.querySelector(".dollars-block__button-active");
-                const playButtonBlock = document.querySelector(".dollars-block__play-button");
+                const defaultPlayButton = document.querySelector(".main__button-default");
+                const hoverPlayButton = document.querySelector(".main__button-hover");
+                const activePlayButton = document.querySelector(".main__button-active");
+                const playButtonBlock = document.querySelector(".main-button");
                 playButtonBlock.addEventListener("mouseenter", (() => {
                     defaultPlayButton.classList.add("_hidden");
                     hoverPlayButton.classList.remove("_hidden");
@@ -945,9 +923,6 @@
             };
             hoverAndActivePlayButton();
         }));
-        const showObjectAfterLazyLoading = object => {
-            object.style.opacity = "1";
-        };
         document.addEventListener("DOMContentLoaded", (() => {
             document.querySelector(".jackpot-block");
             const rotateWheel = document.querySelector(".wheel__wheel-image");

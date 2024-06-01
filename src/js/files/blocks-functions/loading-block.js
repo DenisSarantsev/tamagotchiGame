@@ -124,34 +124,34 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// Анимація кнопки "Играть"
-	const hoverAndActivePlayButton = () => {
-		const defaultPlayButton = document.querySelector(".play-button__button-default");
-		const hoverPlayButton = document.querySelector(".play-button__button-hover");
-		const activePlayButton = document.querySelector(".play-button__button-active");
-		const playButtonBlock = document.querySelector(".play-button__wrapper");
+	// const hoverAndActivePlayButton = () => {
+	// 	const defaultPlayButton = document.querySelector(".play-button__button-default");
+	// 	const hoverPlayButton = document.querySelector(".play-button__button-hover");
+	// 	const activePlayButton = document.querySelector(".play-button__button-active");
+	// 	const playButtonBlock = document.querySelector(".play-button__wrapper");
 		
-		playButtonBlock.addEventListener("mouseenter", () => {
-			defaultPlayButton.classList.add("_hidden");
-			hoverPlayButton.classList.remove("_hidden");
-			activePlayButton.classList.add("_hidden");
-		})
-		playButtonBlock.addEventListener("mouseleave", () => {
-			defaultPlayButton.classList.remove("_hidden");
-			hoverPlayButton.classList.add("_hidden");
-			activePlayButton.classList.add("_hidden");
-		})
-		playButtonBlock.addEventListener("mousedown", () => {
-			defaultPlayButton.classList.add("_hidden");
-			hoverPlayButton.classList.add("_hidden");
-			activePlayButton.classList.remove("_hidden");
-		})
-		playButtonBlock.addEventListener("mouseup", () => {
-			defaultPlayButton.classList.add("_hidden");
-			hoverPlayButton.classList.remove("_hidden");
-			activePlayButton.classList.add("_hidden");
-		})
-	}
-	hoverAndActivePlayButton();
+	// 	playButtonBlock.addEventListener("mouseenter", () => {
+	// 		defaultPlayButton.classList.add("_hidden");
+	// 		hoverPlayButton.classList.remove("_hidden");
+	// 		activePlayButton.classList.add("_hidden");
+	// 	})
+	// 	playButtonBlock.addEventListener("mouseleave", () => {
+	// 		defaultPlayButton.classList.remove("_hidden");
+	// 		hoverPlayButton.classList.add("_hidden");
+	// 		activePlayButton.classList.add("_hidden");
+	// 	})
+	// 	playButtonBlock.addEventListener("mousedown", () => {
+	// 		defaultPlayButton.classList.add("_hidden");
+	// 		hoverPlayButton.classList.add("_hidden");
+	// 		activePlayButton.classList.remove("_hidden");
+	// 	})
+	// 	playButtonBlock.addEventListener("mouseup", () => {
+	// 		defaultPlayButton.classList.add("_hidden");
+	// 		hoverPlayButton.classList.remove("_hidden");
+	// 		activePlayButton.classList.add("_hidden");
+	// 	})
+	// }
+	// hoverAndActivePlayButton();
 
 	// Логика работы таймера
 	const setTimerToApp = (durationInDays) => {

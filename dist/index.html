@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240601131055">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240601161147">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -153,33 +153,36 @@
 												</div>
 											</div>
 										</div>
-										<div class="timer-content__play-button play-button">
-											<a target="_blank" href="https://game.tamagotchi.money/" class="play-button__wrapper">
-												<img src="img/common/button-default.svg" alt="start button" class="play-button__button-default">
-												<img src="img/common/button-hover.svg" alt="start button" class="play-button__button-hover _hidden">
-												<img src="img/common/button-active.svg" alt="start button" class="play-button__button-active _hidden">
-												<div class="play-button__button-text-container">
-													<div>Играть</div>
+										<div class="timer-content__play-button main-button">
+											<a target="_blank" href="https://game.tamagotchi.money/" class="main-button__link button-image-responsive">
+												<img src="img/common/button-default.svg" alt="start button" class="main-button__image main-button-default button-image-responsive">
+												<img src="img/common/button-hover.svg" alt="start button" class="main-button__image main-button-hover button-image-responsive _hidden">
+												<img src="img/common/button-active.svg" alt="start button" class="main-button__image main-button-active button-image-responsive _hidden">
+												<div class="main-button__text-container">
+													<div class="button-rext-responsive main-button__text">Играть</div>
 												</div>
 											</a>
 										</div>
 									</div>
-									<div class="timer__bottom timer-bottom">
-										<button class="scroll-down-element timer-bottom-scroll-button">
-											<div class="scroll-down-element__text">
-												Scroll down
-											</div>
-											<img src="img/common/scroll-down-arrow.svg" alt="scroll down arrow">
-										</button>
-									</div>
+
 								</div>
 							</div>
 						</div>
+					</div>
+
+					<div class="timer__bottom timer-bottom">
+						<button class="scroll-down-element timer-bottom-scroll-button">
+							<div class="scroll-down-element__text">
+								Scroll down
+							</div>
+							<img src="img/common/scroll-down-arrow.svg" alt="scroll down arrow">
+						</button>
 					</div>
 				</div>
 				<div data-fp-section class="block__section dollars-block">
 					<div class="content">
 						<div class="dollars-block__gradient-wrapper"></div>
+						<div class="dollars-block__mobile-gradient-wrapper"></div>
 						<div class="dollars-block__bg-effects">
 							<div class="dollars-block__top-left-effects">
 								<img src="img/dollars-block/top-left-bg-effects/leaf-one.png" alt="tropic leaf image" class="dollars-block__top-left-leaf-one effect-bg-img">
@@ -283,13 +286,13 @@
 										<div class="dollars-block__center-content-subtitle">
 											50 долларов?
 										</div>
-										<div class="dollars-block__button-container">
-											<a target="_blank" href="https://game.tamagotchi.money/" class="dollars-block__play-button">
-												<img src="img/common/button-default.svg" alt="start button" class="dollars-block__button-default">
-												<img src="img/common/button-hover.svg" alt="start button" class="dollars-block__button-hover _hidden">
-												<img src="img/common/button-active.svg" alt="start button" class="dollars-block__button-active _hidden">
-												<div class="dollars-block__button-text-container">
-													<div>Хочу</div>
+										<div class="dollars-block__button-container main-button">
+											<a target="_blank" href="https://game.tamagotchi.money/" class="main-button__link button-image-responsive">
+												<img src="img/common/button-default.svg" alt="start button" class="main-button__image main-button-default button-image-responsive">
+												<img src="img/common/button-hover.svg" alt="start button" class="main-button__image main-button-hover button-image-responsive _hidden">
+												<img src="img/common/button-active.svg" alt="start button" class="main-button__image main-button-active button-image-responsive _hidden">
+												<div class="main-button__text-container">
+													<div class="button-rext-responsive main-button__text">Хочу</div>
 												</div>
 											</a>
 										</div>
@@ -762,7 +765,7 @@
 	<script>
 		document.querySelector(".pre-loader-bg").classList.add("_hidden");
 	</script>
-	<script src="js/app.min.js?_v=20240601131055"></script>
+	<script src="js/app.min.js?_v=20240601161147"></script>
 </body>
 
 </html>

@@ -13,6 +13,21 @@
 		height: 100%;
 		background: $darkRadialBGGradient;
 		z-index: -5;
+		@media (max-width:$mobile){
+			display: none;
+		}
+	}
+	&__mobile-gradient-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: radial-gradient(circle, rgba(0,109,32,1) 0%, rgba(0,101,31,1) 10%, rgba(0,64,29,1) 60%, rgba(0,36,28,1) 80%, rgba(0,16,27,1) 95%, rgba(0,4,27,1) 100%);
+		z-index: -5;
+		@media (min-width:$mobile){
+			display: none;
+		}
 	}
 	&__bg-effects {
 		position: absolute;
@@ -135,6 +150,10 @@
 			width: toRem(40);
 			height: toRem(40);
 		}
+		@media (max-width:$mobile){
+			width: toRem(30);
+			height: toRem(30);
+		}
 	}
 
 	// -------- Листки справа зверху
@@ -256,6 +275,12 @@
 			width: toRem(40);
 			height: toRem(40);
 		}
+		@media (max-width:$mobile){
+			bottom: 25vw;
+			right: 11vw;
+			width: toRem(30);
+			height: toRem(30);
+		}
 	}
 	&__bottom-right-gold-egg-two {
 		bottom: toRem(190);
@@ -285,6 +310,12 @@
 			width: toRem(40);
 			height: toRem(40);
 		}
+		@media (max-width:$mobile){
+			bottom: 7vw;
+			right: 30vw;
+			width: toRem(30);
+			height: toRem(30);
+		}
 	}
 
 
@@ -299,6 +330,9 @@
 	}
 	// Верхній шар купюр
 	&__top-dollars-wrapper {
+		@media (max-width:$mobile){
+			display: none;
+		}
 		
 		& img {
 			z-index: -1;
@@ -613,6 +647,9 @@
 	&__center-content-container-right {
 		max-width: toRem(566);
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		@media (max-width: 1200px){
 			max-width: toRem(400);
 		}
@@ -666,74 +703,7 @@
 		justify-content: center;
 		padding-top: toRem(30);
 		@media (max-width:$mobile){
-			padding-top: toRem(0);
-		}
-	}
-	&__play-button {
-		width: 100%;
-		max-width: toRem(227);
-		height: toRem(80);
-		position: relative;
-		@media (max-width:$pc){
-			max-width: 19.402vw;
-		}
-		@media (max-width: 1200px){
-			max-width: toRem(180);
-		}
-		@media (max-width: 992px){
-			max-width: toRem(160);
-		}
-		&>* {
-			cursor: pointer;
-		}
-		& img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: fill;
-			max-width: toRem(227);
-			@media (max-width:$pc){
-				max-width: 19.402vw;
-			}
-			@media (max-width: 1200px){
-				max-width: toRem(180);
-			}
-			@media (max-width: 992px){
-				max-width: toRem(160);
-			}
-		}
-	}
-	&__button-default {
-	}
-	&__button-hover {
-	}
-	&__button-active {
-	}
-	&__button-text-container {
-		position: absolute;
-		top: toRem(-3);
-		left: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-		font-weight: bold;
-		& div {
-			font-family: $thirdFont;
-			font-size: toRem(36);
-			color: #FFFFFF;
-			@media (max-width: 1200px){
-				font-size: toRem(30);
-			}
-			@media (max-width: 900px){
-				font-size: 3.5vw;
-			}
-			@media (max-width: 800px){
-				font-size: toRem(28);
-			}
+			padding-top: toRem(10);
 		}
 	}
 
@@ -793,6 +763,10 @@
 		@media (max-width: 992px){
 			max-width: toRem(37);
 			max-height: toRem(55);
+		}
+		@media (max-width:$mobile){
+			max-width: toRem(32);
+			max-height: toRem(49);
 		}
 	}
 	&__text {

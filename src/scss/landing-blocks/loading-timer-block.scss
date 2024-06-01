@@ -829,80 +829,11 @@
 		}
 	}
 }
-.play-button {
-	position: relative;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	&:hover {
-		cursor: pointer;
-	}
-	&__wrapper {
-		width: 100%;
-		max-width: toRem(228);
-		position: absolute;
-		height: toRem(80);
-		@media (max-width: 1440px){
-			max-width: 15.8vw;
-			height: 5.5vw;
-		}
-		@media (max-width: 992px){
-			max-width: 90%;
-			height: toRem(50);
-		}
-		@media (max-width:$mobile){
-			margin-top: toRem(5);
-		}
-	}
-	&__button-default {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-	&__button-hover {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-	&__button-active {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-	&__button-text-container {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		& div {
-			font-family: $thirdFont;
-			font-size: toRem(36);
-			font-weight: bold;
-			padding-bottom: toRem(3);
-			@media (max-width: 1440px){
-				font-size: 2.5vw;
-			}
-			@media (max-width:$mobile){
-				font-size: toRem(22);
-			}
-		}
-	}
-}
-.loading {
-	&__button-text-container {
-	}
-}
 
 // ---------------------------------------------- Нижній блок
 .timer-bottom {
+	position: absolute;
+	bottom: 0;
 	display: flex;
 	justify-content: center;
 	width: 100%;

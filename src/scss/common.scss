@@ -11,6 +11,10 @@
 	min-height: 100svh;
 	height: 100%;
 	width: 100%;
+	@media (max-width:$mobile){
+		display: flex;
+		align-items: center;
+	}
 }
 
 // Стрілка прокрутки вниз
@@ -167,6 +171,112 @@
 				width: toRem(35);
 				height: toRem(35);
 			}
+		}
+	}
+}
+
+// Адаптація головної кнопки
+.main-button {
+	width: 100%;
+	max-width: toRem(228);
+	height: toRem(80);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	@media (max-width:$pc){
+		max-width: 19.402vw;
+	}
+	@media (max-width: 1200px){
+		max-width: toRem(180);
+	}
+	@media (max-width: 992px){
+		max-width: toRem(160);
+	}
+	@media (max-width:$mobile){
+		max-width: toRem(120);
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+		max-width: toRem(228);
+		@media (max-width:$pc){
+			max-width: 19.402vw;
+		}
+		@media (max-width: 1200px){
+			max-width: toRem(180);
+		}
+		@media (max-width: 992px){
+			max-width: toRem(160);
+		}
+		@media (max-width:$mobile){
+			max-width: toRem(120);
+		}
+	}
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+		max-width: toRem(228);
+		@media (max-width:$pc){
+			max-width: 19.402vw;
+		}
+		@media (max-width: 1200px){
+			max-width: toRem(180);
+		}
+		@media (max-width: 992px){
+			max-width: toRem(160);
+		}
+		@media (max-width:$mobile){
+			max-width: toRem(120);
+		}
+	}
+	&__text-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-family: $thirdFont;
+		font-size: toRem(36);
+		font-weight: bold;
+		padding-bottom: toRem(3);
+		@media (max-width: 1200px){
+			font-size: toRem(30);
+		}
+		@media (max-width: 900px){
+			font-size: 3.5vw;
+		}
+		@media (max-width: 800px){
+			font-size: toRem(24);
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(22);
+		}
+		@media (max-width: 600px){
+			font-size: toRem(20);
 		}
 	}
 }
