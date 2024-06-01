@@ -27,11 +27,17 @@
 	height: toRem(77);
 	position: relative;
 	@media (max-width: 1440px){
-		max-width: 11.111vw;
+		max-width: 8vw;
+	}
+	@media (max-width: 1250px){
+		height: toRem(30);
+	}
+	@media (max-width: 1200px){
+		max-width: 6vw;
 	}
 	@media (max-width:$mobile){
 		max-width: toRem(100);
-		height: toRem(50);
+		height: toRem(20);
 		padding-bottom: toRem(5);
 	}
 
@@ -39,10 +45,7 @@
 		font-size: toRem(16);
 		font-weight: bold;
 		color: #FFFFFF;
-		@media (max-width: 992px){
-			font-size: toRem(14);
-		}
-		@media (max-width:$mobile){
+		@media (max-width: 1250px){
 			display: none;
 		}
 	}

@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 										egg10.style.transform = `translateX(${-320 * indexFly}px) translateY(${-70 * indexFly}px)`;
 										egg11.style.transform = `translateX(${-130 * indexFly}px) translateY(${-100 * indexFly}px) translateZ(300px)`;
 										egg12.style.transform = `translateX(${-40 * indexFly}px) translateY(${-160 * indexFly}px)`;
-									} else {
+									} else if ( window.innerWidth < 1920 && window.innerWidth > 1500 ) {
 										egg1.style.transform = `translateX(3.125vw) translateY(-10.417vw)`;
 										egg2.style.transform = `translateX(6.771vw) translateY(-4.167vw) translateZ(15.625vw)`;
 										egg3.style.transform = `translateX(18.229vw) translateY(-3.125vw)`;
@@ -104,6 +104,45 @@ document.addEventListener("DOMContentLoaded", () => {
 										egg10.style.transform = `translateX(-16.667vw) translateY(-3.646vw)`;
 										egg11.style.transform = `translateX(-6.771vw) translateY(-5.208vw) translateZ(15.625vw)`;
 										egg12.style.transform = `translateX(-2.083vw) translateY(-8.333vw)`;
+									} else if ( window.innerWidth <= 1500 && window.innerWidth > 1200 ) {
+										egg1.style.transform = `translateX(1vw) translateY(-3vw)`;
+										egg2.style.transform = `translateX(3vw) translateY(-1.5vw) translateZ(15.625vw)`;
+										egg3.style.transform = `translateX(7vw) translateY(-1vw)`;
+										egg4.style.transform = `translateX(4vw) translateY(0.6vw) translateZ(15.625vw)`;
+										egg5.style.transform = `translateX(5vw) translateY(4vw)`;
+										egg6.style.transform = `translateX(0.8vw) translateY(2vw) translateZ(15.625vw)`;
+										egg7.style.transform = `translateX(-1.5vw) translateY(5vw)`;
+										egg8.style.transform = `translateX(-2vw) translateY(1.3vw) translateZ(15.625vw)`;
+										egg9.style.transform = `translateX(-6vw) translateY(2vw)`;
+										egg10.style.transform = `translateX(-7vw) translateY(-1vw)`;
+										egg11.style.transform = `translateX(-2vw) translateY(-1.5vw) translateZ(15.625vw)`;
+										egg12.style.transform = `translateX(-0.7vw) translateY(-3vw)`;
+									} else if ( window.innerWidth <= 1200 && window.innerWidth > 992 ) {
+										egg1.style.transform = `translateX(0.5vw) translateY(-0.5vw)`;
+										egg2.style.transform = `translateX(1vw) translateY(-0.5vw) translateZ(15.625vw)`;
+										egg3.style.transform = `translateX(7vw) translateY(-1vw)`;
+										egg4.style.transform = `translateX(4vw) translateY(0.6vw) translateZ(15.625vw)`;
+										egg5.style.transform = `translateX(5vw) translateY(4vw)`;
+										egg6.style.transform = `translateX(0.8vw) translateY(0.8vw) translateZ(15.625vw)`;
+										egg7.style.transform = `translateX(-0.8vw) translateY(3vw)`;
+										egg8.style.transform = `translateX(-1vw) translateY(1.3vw) translateZ(15.625vw)`;
+										egg9.style.transform = `translateX(-6vw) translateY(2vw)`;
+										egg10.style.transform = `translateX(-5vw) translateY(-1vw)`;
+										egg11.style.transform = `translateX(-0.3vw) translateY(-0.2vw) translateZ(15.625vw)`;
+										egg12.style.transform = `translateX(-0.3vw) translateY(-1vw)`;
+									} else if ( window.innerWidth <= 992 && window.innerWidth > 768 ) {
+										egg1.style.transform = `translateX(1.4vw) translateY(2vw)`;
+										egg2.style.transform = `translateX(1.5vw) translateY(3vw) translateZ(15.625vw)`;
+										egg3.style.transform = `translateX(7vw) translateY(-1vw)`;
+										egg4.style.transform = `translateX(4vw) translateY(0.6vw) translateZ(15.625vw)`;
+										egg5.style.transform = `translateX(3vw) translateY(2.5vw)`;
+										egg6.style.transform = `translateX(0.1vw) translateY(0.1vw) translateZ(15.625vw)`;
+										egg7.style.transform = `translateX(0.5vw) translateY(1.5vw)`;
+										egg8.style.transform = `translateX(2vw) translateY(0vw) translateZ(15.625vw)`;
+										egg9.style.transform = `translateX(-5vw) translateY(2vw)`;
+										egg10.style.transform = `translateX(-2vw) translateY(-1vw)`;
+										egg11.style.transform = `translateX(1.5vw) translateY(2vw) translateZ(15.625vw)`;
+										egg12.style.transform = `translateX(-0.3vw) translateY(-1vw)`;
 									}
 
 
