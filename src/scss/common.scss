@@ -187,6 +187,14 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
+	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none; /* Убирает выделение текста на iOS */
+	-moz-user-select: none; /* Убирает выделение текста на Firefox */
+	-ms-user-select: none; /* Убирает выделение текста на Internet Explorer */
+	user-select: none; /* Убирает выделение текста на современных браузерах */
+	outline: none;
+	box-shadow: none;
 	@media (max-width:$pc){
 		max-width: 19.402vw;
 	}

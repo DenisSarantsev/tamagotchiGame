@@ -267,11 +267,19 @@
 	&__loading-line {
 	}
 	&__start-button {
+    box-shadow: none;
 		width: 100%;
 		max-width: toRem(227);
 		height: toRem(80);
 		position: relative;
 		display: none;
+
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none; /* Убирает выделение текста на iOS */
+    -moz-user-select: none; /* Убирает выделение текста на Firefox */
+    -ms-user-select: none; /* Убирает выделение текста на Internet Explorer */
+    user-select: none; /* Убирает выделение текста на современных браузерах */
+    outline: none;
 		@media (max-width:$pc){
 			max-width: 19.402vw;
 		}
@@ -450,6 +458,14 @@
 		}
 	}
 	&__button {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none; /* Убирает выделение текста на iOS */
+    -moz-user-select: none; /* Убирает выделение текста на Firefox */
+    -ms-user-select: none; /* Убирает выделение текста на Internet Explorer */
+    user-select: none; /* Убирает выделение текста на современных браузерах */
+    outline: none;
+    box-shadow: none;
+
 		position: relative;
 		width: toRem(72);
 		height: toRem(72);

@@ -19,6 +19,9 @@
 		height: 100%;
 		background: $darkRadialBGGradient;
 		z-index: -10;
+		@media (max-width:$mobile){
+			background: $mobileGreenRadialBGGradient;
+		}
 	}
 	&__lines-bg {
 		position: absolute;
