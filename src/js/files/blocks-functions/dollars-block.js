@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		if ( targetElement.classList.contains("dollars-block") ) {
 			addAnimationToTopDollars();
 			addAnimationToCenterDollars();
+			addAnimationToBottomDollars();
 		}
 	});
 
@@ -61,7 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const addAnimationToBottomDollars = () => {
-
+		const bottomDollars = document.querySelector(".dollars-block__bottom-dollars-wrapper").children;
+		const animationSwaySpeed = [9, 9.5, 8.9, 5.7, 4.2, 6.3, 5.1, 7.6, 6.2, 8.4, 6.6, 5.9, 6.1, 4.5, 4.8, 6.0, 5.3, 4.2];
+		const animationDownDollars = [80, 94, 120, 87, 65, 77, 75, 89, 101, 94, 86, 89, 74, 120, 150, 69, 130, 77]
+		for ( let i = 1; i <= 18; i++ ) {
+			bottomDollars[i - 1].style.animation = `slideDownBottomDollarsAnimation${i} linear ${animationDownDollars[i - 1]}s infinite,
+																					swayBottomDollarsAnimation ease ${animationSwaySpeed[i - 1]}s infinite`;
+		}
 	}
 
 
