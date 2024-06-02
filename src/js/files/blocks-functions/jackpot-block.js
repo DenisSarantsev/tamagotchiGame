@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 							backgroundLights.style.opacity = "1";
 						})
 
+						console.log("Watch jackpot")
+
 						// --------------- Анімація обертання колеса
 						const rotateObject = (object) => {
 							object.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";

@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Зображення гобліна
 	const goblinImage = document.querySelector(".loading-timer__goblin");
 
+	// --------------- Наступні блоки сайту
+	const dollarsBlock = document.querySelector(".dollars-block");
+	const jackpotBlock = document.querySelector(".jackpot-block");
+	const reviewsBlock = document.querySelector(".reviews");
+	const animationBlock = document.querySelector(".dance-animation-block");
+
 	// Логіка появи/зникнення лінії завантаження
 	const hiddenLoadingLineShowStartButton = () => {
 		setTimeout(() => {
@@ -72,6 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
 				document.querySelector("body").style.overflow = "auto";
 				document.querySelector(".mobile-header").style.opacity = "1";
 				document.querySelector(".timer-bottom").style.opacity = "1";
+				dollarsBlock.style.display = "block";
+				setTimeout(() => {
+					jackpotBlock.style.display = "block";
+					reviewsBlock.style.display = "block";
+					animationBlock.style.display = "block";
+				}, 1000)
 			}, 1000)
 			
 		})
@@ -129,35 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}, 1500)
 	}
 
-	// Анимація кнопки "Играть"
-	// const hoverAndActivePlayButton = () => {
-	// 	const defaultPlayButton = document.querySelector(".play-button__button-default");
-	// 	const hoverPlayButton = document.querySelector(".play-button__button-hover");
-	// 	const activePlayButton = document.querySelector(".play-button__button-active");
-	// 	const playButtonBlock = document.querySelector(".play-button__wrapper");
-		
-	// 	playButtonBlock.addEventListener("mouseenter", () => {
-	// 		defaultPlayButton.classList.add("_hidden");
-	// 		hoverPlayButton.classList.remove("_hidden");
-	// 		activePlayButton.classList.add("_hidden");
-	// 	})
-	// 	playButtonBlock.addEventListener("mouseleave", () => {
-	// 		defaultPlayButton.classList.remove("_hidden");
-	// 		hoverPlayButton.classList.add("_hidden");
-	// 		activePlayButton.classList.add("_hidden");
-	// 	})
-	// 	playButtonBlock.addEventListener("mousedown", () => {
-	// 		defaultPlayButton.classList.add("_hidden");
-	// 		hoverPlayButton.classList.add("_hidden");
-	// 		activePlayButton.classList.remove("_hidden");
-	// 	})
-	// 	playButtonBlock.addEventListener("mouseup", () => {
-	// 		defaultPlayButton.classList.add("_hidden");
-	// 		hoverPlayButton.classList.remove("_hidden");
-	// 		activePlayButton.classList.add("_hidden");
-	// 	})
-	// }
-	// hoverAndActivePlayButton();
 
 	// Логика работы таймера
 	const setTimerToApp = (durationInDays) => {
@@ -199,11 +182,4 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	setTimerToApp(5)
-
-	// Прокрутка сторінки при натисканні на кнопку
-	// document.querySelector(".timer-bottom-scroll-button").addEventListener('click', function() {
-	// 	document.querySelector(".loading-timer").scrollIntoView({ behavior: 'smooth' });
-	// 	console.log("SCROLL")
-	// });
-
 })

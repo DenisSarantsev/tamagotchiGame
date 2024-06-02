@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				threshold: 1.0 // Виконуємо функцію, коли 100: елемента буде в зоні в'юпорту
 		});
 		observer.observe(target);
-	}, 1000)
+	}, 2000)
 
 
 	// Виконуємо дії, коли об'єкт потрапляє у поле зору
@@ -23,75 +23,33 @@ document.addEventListener("DOMContentLoaded", () => {
 							blockContent.style.opacity = "1";
 						}, 200)
 						console.log("watch")
+						addAnimationToTopDollars()
+						addAnimationToCenterDollars()
 						observer.disconnect(); // Зупиняємо нагляд
 				}
 		});
 	}
 
+	// Додаємо анімацію до доларів
+	const addAnimationToTopDollars = () => {
+		const dollarsWrapper = document.querySelector(".dollars-block__top-dollars-wrapper");
+		dollarsWrapper.firstElementChild.style.animation = "slideDownDollarsAnimation12 linear 60s infinite, swayTopDollarsAnimation ease 10s infinite";
+	}
 
+	const addAnimationToCenterDollars = () => {
+		const centerDollars = document.querySelector(".dollars-block__center-dollars-wrapper").children;
+		const animationSwaySpeed = [9.1, 6, 7, 8.2, 6.5, 5.5, 6.3, 7.2, 6.9, 8.7, 7.9];
+		const animationDownDollars = [60, 65, 53, 74, 45, 49, 63, 53, 78, 72, 66]
+		for ( let i = 1; i <= 11; i++ ) {
+			centerDollars[i - 1].style.animation = `slideDownDollarsAnimation${i} linear ${animationDownDollars[i - 1]}s infinite,
+																					swayTopDollarsAnimation ease ${animationSwaySpeed[i - 1]}s infinite`;
+		}
+	}
 
-
-	// Функціонал кнопки
-	// const hoverAndActivePlayButton = () => {
-	// 	const defaultPlayButton = document.querySelector(".dollars-block__button-default");
-	// 	const hoverPlayButton = document.querySelector(".dollars-block__button-hover");
-	// 	const activePlayButton = document.querySelector(".dollars-block__button-active");
-	// 	const playButtonBlock = document.querySelector(".dollars-block__play-button");
+	const addAnimationToBottomDollars = () => {
 		
-	// 	playButtonBlock.addEventListener("mouseenter", () => {
-	// 		defaultPlayButton.classList.add("_hidden");
-	// 		hoverPlayButton.classList.remove("_hidden");
-	// 		activePlayButton.classList.add("_hidden");
-	// 	})
-	// 	playButtonBlock.addEventListener("mouseleave", () => {
-	// 		defaultPlayButton.classList.remove("_hidden");
-	// 		hoverPlayButton.classList.add("_hidden");
-	// 		activePlayButton.classList.add("_hidden");
-	// 	})
-	// 	playButtonBlock.addEventListener("mousedown", () => {
-	// 		defaultPlayButton.classList.add("_hidden");
-	// 		hoverPlayButton.classList.add("_hidden");
-	// 		activePlayButton.classList.remove("_hidden");
-	// 	})
-	// 	playButtonBlock.addEventListener("mouseup", () => {
-	// 		defaultPlayButton.classList.add("_hidden");
-	// 		hoverPlayButton.classList.remove("_hidden");
-	// 		activePlayButton.classList.add("_hidden");
-	// 	})
-	// }
-	// hoverAndActivePlayButton();
+	}
 
-	// const effectBgImagesArray = document.querySelectorAll(".effect-bg-img");
-
-	// // Визначаємо розмір зображень
-	// const changeImagesSize = (sizeImg, viewportWidth, effectBgImagesArray) => {
-	// 	viewportWidth >= 1900 ? sizeImg = 1 : null;
-	// 	viewportWidth < 1900 && viewportWidth > 1440 ? sizeImg = 0.9 : null;
-	// 	viewportWidth <= 1440 && viewportWidth > 1200 ? sizeImg = 0.85 : null;
-	// 	viewportWidth <= 1200 && viewportWidth > 1100 ? sizeImg = 0.75 : null;
-	// 	viewportWidth <= 1100 && viewportWidth > 992 ? sizeImg = 0.65 : null;
-	// 	viewportWidth < 992 ? sizeImg = 0.55 : null;
-
-	// 	for ( let item of effectBgImagesArray ) {
-	// 		const originalWidth = item.naturalWidth; // Исходная ширина изображения
-	// 		const newWidth = originalWidth * sizeImg; // 90% от исходной ширины
-	// 		item.style.width = newWidth + 'px'; // Устанавливаем новую ширину
-	// 	}
-	// }
-
-	// // Зменшуємо фонові зображення при зменшенні екрану
-	// const bigToSmallBgImages = () => {
-		
-	// 	let viewportWidth = window.innerWidth;
-	// 	let sizeImg = 1;
-	// 	changeImagesSize(sizeImg, viewportWidth, effectBgImagesArray);
-		
-	// 	window.addEventListener("resize", () => {
-	// 		viewportWidth = window.innerWidth;
-	// 		changeImagesSize(sizeImg, viewportWidth, effectBgImagesArray)
-	// 	})
-	// }
-	// bigToSmallBgImages()
 
 })
 

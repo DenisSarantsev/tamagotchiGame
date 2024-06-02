@@ -755,6 +755,10 @@
             const thirdLeaf = document.querySelector(".loading-timer__third-leaf");
             const leafsContainer = document.querySelector(".loading-timer__bg-effects");
             const goblinImage = document.querySelector(".loading-timer__goblin");
+            const dollarsBlock = document.querySelector(".dollars-block");
+            const jackpotBlock = document.querySelector(".jackpot-block");
+            const reviewsBlock = document.querySelector(".reviews");
+            const animationBlock = document.querySelector(".dance-animation-block");
             const hiddenLoadingLineShowStartButton = () => {
                 setTimeout((() => {
                     loadingLineBlock.style.animation = "loadingLineHiddenAnimation 0.2s ease";
@@ -799,6 +803,12 @@
                         document.querySelector("body").style.overflow = "auto";
                         document.querySelector(".mobile-header").style.opacity = "1";
                         document.querySelector(".timer-bottom").style.opacity = "1";
+                        dollarsBlock.style.display = "block";
+                        setTimeout((() => {
+                            jackpotBlock.style.display = "block";
+                            reviewsBlock.style.display = "block";
+                            animationBlock.style.display = "block";
+                        }), 1e3);
                     }), 1e3);
                 }));
             };
@@ -882,7 +892,7 @@
                     threshold: 1
                 });
                 observer.observe(target);
-            }), 1e3);
+            }), 2e3);
             function onVisibilityChange(entries, observer) {
                 entries.forEach((entry => {
                     if (entry.isIntersecting) {
@@ -891,10 +901,22 @@
                             blockContent.style.opacity = "1";
                         }), 200);
                         console.log("watch");
+                        addAnimationToTopDollars();
+                        addAnimationToCenterDollars();
                         observer.disconnect();
                     }
                 }));
             }
+            const addAnimationToTopDollars = () => {
+                const dollarsWrapper = document.querySelector(".dollars-block__top-dollars-wrapper");
+                dollarsWrapper.firstElementChild.style.animation = "slideDownDollarsAnimation12 linear 60s infinite, swayTopDollarsAnimation ease 10s infinite";
+            };
+            const addAnimationToCenterDollars = () => {
+                const centerDollars = document.querySelector(".dollars-block__center-dollars-wrapper").children;
+                const animationSwaySpeed = [ 9.1, 6, 7, 8.2, 6.5, 5.5, 6.3, 7.2, 6.9, 8.7, 7.9 ];
+                const animationDownDollars = [ 60, 65, 53, 74, 45, 49, 63, 53, 78, 72, 66 ];
+                for (let i = 1; i <= 11; i++) centerDollars[i - 1].style.animation = `slideDownDollarsAnimation${i} linear ${animationDownDollars[i - 1]}s infinite,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tswayTopDollarsAnimation ease ${animationSwaySpeed[i - 1]}s infinite`;
+            };
         }));
         const showObjectAfterLazyLoading = object => {
             object.style.opacity = "1";
@@ -954,6 +976,7 @@
                         setTimeout((() => {
                             backgroundLights.style.opacity = "1";
                         }));
+                        console.log("Watch jackpot");
                         const rotateObject = object => {
                             object.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
                         };

@@ -626,6 +626,18 @@ body ::-webkit-scrollbar {
   color: #fff;
   font-family: Arial,Helvetica,sans-serif
 }
+.block > *:nth-child(2) {
+  display: none
+}
+.block > *:nth-child(3) {
+  display: none
+}
+.block > *:nth-child(4) {
+  display: none
+}
+.block > *:nth-child(5) {
+  display: none
+}
 @media (max-width:47.99875em) {
   .block > * {
     min-height: 100vh;
@@ -2033,17 +2045,27 @@ body ::-webkit-scrollbar {
   left: 0;
   overflow: hidden
 }
-@media (max-width:47.99875em) {
-  .dollars-block__top-dollars-wrapper {
-    display: none
-  }
-}
 .dollars-block__top-dollars-wrapper img {
   z-index: -1;
   position: absolute;
   left: 25%;
-  -webkit-animation: slideDownDollarsAnimation1 linear 60s infinite,swayTopDollarsAnimation ease 10s infinite;
-  animation: slideDownDollarsAnimation1 linear 60s infinite,swayTopDollarsAnimation ease 10s infinite
+  top: -27%
+}
+@media (max-width:1100px) {
+  .dollars-block__top-dollars-wrapper img {
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+    -webkit-transform-origin: top left;
+    transform-origin: top left
+  }
+}
+@media (max-width:47.99875em) {
+  .dollars-block__top-dollars-wrapper img {
+    -webkit-transform: scale(.4);
+    transform: scale(.4);
+    -webkit-transform-origin: top left;
+    transform-origin: top left
+  }
 }
 .dollars-block__center-dollars-wrapper img {
   z-index: -2;
@@ -2091,58 +2113,47 @@ body ::-webkit-scrollbar {
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(1) {
   left: 10%;
-  -webkit-animation: slideDownDollarsAnimation1 linear 60s infinite,swayTopDollarsAnimation ease 9.1s infinite;
-  animation: slideDownDollarsAnimation1 linear 60s infinite,swayTopDollarsAnimation ease 9.1s infinite
+  top: -30%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(2) {
   left: 57%;
-  -webkit-animation: slideDownDollarsAnimation2 linear 65s infinite,swayTopDollarsAnimation ease 6s infinite;
-  animation: slideDownDollarsAnimation2 linear 65s infinite,swayTopDollarsAnimation ease 6s infinite
+  top: -170%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(3) {
   left: 17%;
-  -webkit-animation: slideDownDollarsAnimation3 linear 53s infinite,swayTopDollarsAnimation ease 7s infinite;
-  animation: slideDownDollarsAnimation3 linear 53s infinite,swayTopDollarsAnimation ease 7s infinite
+  top: -80%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(4) {
   left: 28%;
-  -webkit-animation: slideDownDollarsAnimation4 linear 74s infinite,swayTopDollarsAnimation ease 8.2s infinite;
-  animation: slideDownDollarsAnimation4 linear 74s infinite,swayTopDollarsAnimation ease 8.2s infinite
+  top: -290%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(5) {
   left: 37%;
-  -webkit-animation: slideDownDollarsAnimation5 linear 45s infinite,swayTopDollarsAnimation ease 6.5s infinite;
-  animation: slideDownDollarsAnimation5 linear 45s infinite,swayTopDollarsAnimation ease 6.5s infinite
+  top: -130%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(6) {
   left: 45%;
-  -webkit-animation: slideDownDollarsAnimation6 linear 49s infinite,swayTopDollarsAnimation ease 5.5s infinite;
-  animation: slideDownDollarsAnimation6 linear 49s infinite,swayTopDollarsAnimation ease 5.5s infinite
+  top: -60%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(7) {
   left: 54%;
-  -webkit-animation: slideDownDollarsAnimation7 linear 63s infinite,swayTopDollarsAnimation ease 6.5s infinite;
-  animation: slideDownDollarsAnimation7 linear 63s infinite,swayTopDollarsAnimation ease 6.5s infinite
+  top: -150%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(8) {
   left: 69%;
-  -webkit-animation: slideDownDollarsAnimation8 linear 53s infinite,swayTopDollarsAnimation ease 7.2s infinite;
-  animation: slideDownDollarsAnimation8 linear 53s infinite,swayTopDollarsAnimation ease 7.2s infinite
+  top: -25%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(9) {
   left: 77%;
-  -webkit-animation: slideDownDollarsAnimation9 linear 78s infinite,swayTopDollarsAnimation ease 6.3s infinite;
-  animation: slideDownDollarsAnimation9 linear 78s infinite,swayTopDollarsAnimation ease 6.3s infinite
+  top: -290%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(10) {
   left: 84%;
-  -webkit-animation: slideDownDollarsAnimation10 linear 72s infinite,swayTopDollarsAnimation ease 5.7s infinite;
-  animation: slideDownDollarsAnimation10 linear 72s infinite,swayTopDollarsAnimation ease 5.7s infinite
+  top: -130%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(11) {
   left: 96%;
-  -webkit-animation: slideDownDollarsAnimation11 linear 66s infinite,swayTopDollarsAnimation ease 7.9s infinite;
-  animation: slideDownDollarsAnimation11 linear 66s infinite,swayTopDollarsAnimation ease 7.9s infinite
+  top: -50%
 }
 .dollars-block__bottom-dollars-wrapper img {
   z-index: -5;
@@ -4135,7 +4146,8 @@ body ::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   height: 100%;
-  justify-content: center
+  justify-content: center;
+  min-height: 100svh
 }
 .dance-animation-block__text-container {
   padding-top: 11.875rem;
@@ -4948,7 +4960,7 @@ body ::-webkit-scrollbar {
 }
 @-webkit-keyframes slideDownDollarsAnimation1 {
   0% {
-    top: -200%
+    top: -30%
   }
   100% {
     top: 130%
@@ -4956,7 +4968,7 @@ body ::-webkit-scrollbar {
 }
 @keyframes slideDownDollarsAnimation1 {
   0% {
-    top: -200%
+    top: -30%
   }
   100% {
     top: 130%
@@ -4980,7 +4992,7 @@ body ::-webkit-scrollbar {
 }
 @-webkit-keyframes slideDownDollarsAnimation3 {
   0% {
-    top: -40%
+    top: -80%
   }
   100% {
     top: 130%
@@ -4988,7 +5000,7 @@ body ::-webkit-scrollbar {
 }
 @keyframes slideDownDollarsAnimation3 {
   0% {
-    top: -40%
+    top: -80%
   }
   100% {
     top: 130%
@@ -5060,7 +5072,7 @@ body ::-webkit-scrollbar {
 }
 @-webkit-keyframes slideDownDollarsAnimation8 {
   0% {
-    top: -40%
+    top: -25%
   }
   100% {
     top: 130%
@@ -5068,7 +5080,7 @@ body ::-webkit-scrollbar {
 }
 @keyframes slideDownDollarsAnimation8 {
   0% {
-    top: -40%
+    top: -25%
   }
   100% {
     top: 130%
@@ -5124,7 +5136,7 @@ body ::-webkit-scrollbar {
 }
 @-webkit-keyframes slideDownDollarsAnimation12 {
   0% {
-    top: -60%
+    top: -27%
   }
   100% {
     top: 130%
@@ -5132,7 +5144,7 @@ body ::-webkit-scrollbar {
 }
 @keyframes slideDownDollarsAnimation12 {
   0% {
-    top: -60%
+    top: -27%
   }
   100% {
     top: 130%
@@ -5172,7 +5184,7 @@ body ::-webkit-scrollbar {
 }
 @-webkit-keyframes slideDownBottomDollarsAnimation3 {
   0% {
-    top: -20%
+    top: -30%
   }
   100% {
     top: 130%
@@ -5180,7 +5192,7 @@ body ::-webkit-scrollbar {
 }
 @keyframes slideDownBottomDollarsAnimation3 {
   0% {
-    top: -20%
+    top: -30%
   }
   100% {
     top: 130%
@@ -5252,7 +5264,7 @@ body ::-webkit-scrollbar {
 }
 @-webkit-keyframes slideDownBottomDollarsAnimation8 {
   0% {
-    top: -40%
+    top: -50%
   }
   100% {
     top: 130%
@@ -5260,7 +5272,7 @@ body ::-webkit-scrollbar {
 }
 @keyframes slideDownBottomDollarsAnimation8 {
   0% {
-    top: -40%
+    top: -50%
   }
   100% {
     top: 130%
@@ -5284,7 +5296,7 @@ body ::-webkit-scrollbar {
 }
 @-webkit-keyframes slideDownBottomDollarsAnimation10 {
   0% {
-    top: -15%
+    top: -25%
   }
   100% {
     top: 130%
@@ -5292,7 +5304,7 @@ body ::-webkit-scrollbar {
 }
 @keyframes slideDownBottomDollarsAnimation10 {
   0% {
-    top: -15%
+    top: -25%
   }
   100% {
     top: 130%
