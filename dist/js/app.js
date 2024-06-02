@@ -871,6 +871,7 @@
             const dollarsBlock = document.querySelector(".dollars-block");
             const reviewsBlock = document.querySelector(".reviews");
             const animationBlock = document.querySelector(".dance-animation-block");
+            const jackpotBlock = document.querySelector(".jackpot-block");
             const hiddenLoadingLineShowStartButton = () => {
                 setTimeout((() => {
                     loadingLineBlock.style.animation = "loadingLineHiddenAnimation 0.2s ease";
@@ -919,6 +920,7 @@
                         setTimeout((() => {
                             reviewsBlock.style.display = "block";
                             animationBlock.style.display = "block";
+                            jackpotBlock.style.display = "block";
                         }), 1e3);
                     }), 1e3);
                 }));
@@ -995,7 +997,6 @@
         }));
         document.addEventListener("DOMContentLoaded", (() => {
             const blockContent = document.querySelector(".dollars-block__content");
-            const jackpotBlock = document.querySelector(".jackpot-block");
             document.addEventListener("watcherCallback", (function(e) {
                 const entry = e.detail.entry;
                 const targetElement = entry.target;
@@ -1008,7 +1009,6 @@
                     addAnimationToTopDollars();
                     addAnimationToCenterDollars();
                     addAnimationToBottomDollars();
-                    jackpotBlock.style.display = "block";
                 }
             }));
             const addAnimationToTopDollars = () => {
@@ -1064,7 +1064,7 @@
             if (window.innerWidth < 768) hoverAndActivePlayButton();
         }));
         document.addEventListener("DOMContentLoaded", (() => {
-            document.querySelector(".jackpot-block");
+            const blockContent = document.querySelector(".jackpot-block");
             const rotateWheel = document.querySelector(".wheel__wheel-image");
             const rotateEggs = document.querySelector(".eggs-rotate");
             const bigSparks = document.querySelectorAll(".spark");
@@ -1072,50 +1072,60 @@
             const wheelAndEggsContainer = document.querySelector(".jackpot-block__wheel-eggs-inner-container");
             const sparksContainer = document.querySelector(".jackpot-block__sparks");
             const shadowSparksContainer = document.querySelector(".jackpot-block__shadow-sparks");
-            document.addEventListener("watcherCallback", (function(e) {
-                const entry = e.detail.entry;
-                const targetElement = entry.target;
-                console.log(targetElement);
-                if (targetElement.classList.contains("jackpot-block")) {
-                    console.log("Jackpot");
-                    const backgroundLights = document.querySelector(".jackpot-block__lights");
-                    backgroundLights.style.animation = "showObjectAfterLazyLoading 3s linear";
-                    setTimeout((() => {
-                        backgroundLights.style.opacity = "1";
-                    }));
-                    const rotateObject = object => {
-                        object.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
-                    };
-                    setTimeout((() => {
-                        rotateObject(rotateWheel);
-                    }), 2e3);
-                    const allEggsShadows = document.querySelectorAll(".eggs-rotate__egg-shadow");
-                    setTimeout((() => {
-                        rotateEggs.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
-                        setTimeout((() => {
-                            rotateEggs.style.animation = "eggsFlyAnimation 1s cubic-bezier(0,1.03,.17,1)";
-                            flyEggs();
-                            showJackpotText();
-                        }), 5100);
-                    }), 2e3);
-                    for (let item of allEggsShadows) item.style.animation = "allEggsShadows 2s linear";
-                    setTimeout((() => {
-                        for (let item of allEggsShadows) item.classList.add("egg-shadow");
-                    }), 2e3);
-                    const jackpotTextBlock = document.querySelector(".jackpot-text");
-                    const showJackpotText = () => {
-                        jackpotTextBlock.style.animation = "showJackpotText 2s linear";
-                        setTimeout((() => {
-                            jackpotTextBlock.style.opacity = "1";
-                        }), 2e3);
-                    };
-                    addAnimationToBigSparks();
-                    addAnimationToSmallSparks();
-                    showObjectAfterLazyLoading(wheelAndEggsContainer);
-                    showObjectAfterLazyLoading(sparksContainer);
-                    showObjectAfterLazyLoading(shadowSparksContainer);
+            let showAnimations = false;
+            window.addEventListener("scroll", (() => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                console.log(scrollTop);
+                console.log("Oblect", showElementPosition(blockContent));
+                if (scrollTop > showElementPosition(blockContent) && showAnimations === false) {
+                    showAnimations = true;
+                    animationFunctions();
+                    console.log("BINGO");
                 }
             }));
+            function showElementPosition(el) {
+                var rect = el.getBoundingClientRect(), scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                let topElem = rect.top + scrollTop - 100;
+                return topElem;
+            }
+            const animationFunctions = () => {
+                const backgroundLights = document.querySelector(".jackpot-block__lights");
+                backgroundLights.style.animation = "showObjectAfterLazyLoading 3s linear";
+                setTimeout((() => {
+                    backgroundLights.style.opacity = "1";
+                }));
+                const rotateObject = object => {
+                    object.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
+                };
+                setTimeout((() => {
+                    rotateObject(rotateWheel);
+                }), 2e3);
+                const allEggsShadows = document.querySelectorAll(".eggs-rotate__egg-shadow");
+                setTimeout((() => {
+                    rotateEggs.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
+                    setTimeout((() => {
+                        rotateEggs.style.animation = "eggsFlyAnimation 1s cubic-bezier(0,1.03,.17,1)";
+                        flyEggs();
+                        showJackpotText();
+                    }), 5100);
+                }), 2e3);
+                for (let item of allEggsShadows) item.style.animation = "allEggsShadows 2s linear";
+                setTimeout((() => {
+                    for (let item of allEggsShadows) item.classList.add("egg-shadow");
+                }), 2e3);
+                const jackpotTextBlock = document.querySelector(".jackpot-text");
+                const showJackpotText = () => {
+                    jackpotTextBlock.style.animation = "showJackpotText 2s linear";
+                    setTimeout((() => {
+                        jackpotTextBlock.style.opacity = "1";
+                    }), 2e3);
+                };
+                addAnimationToBigSparks();
+                addAnimationToSmallSparks();
+                showObjectAfterLazyLoading(wheelAndEggsContainer);
+                showObjectAfterLazyLoading(sparksContainer);
+                showObjectAfterLazyLoading(shadowSparksContainer);
+            };
             const addAnimationToBigSparks = () => {
                 for (let i = 1; i < bigSparks.length; i++) {
                     const random = Math.floor(Math.random() * 10);

@@ -9,73 +9,88 @@ document.addEventListener("DOMContentLoaded", () => {
 	const wheelAndEggsContainer = document.querySelector(".jackpot-block__wheel-eggs-inner-container");
 	const sparksContainer = document.querySelector(".jackpot-block__sparks");
 	const shadowSparksContainer = document.querySelector(".jackpot-block__shadow-sparks");
-	
 
-	document.addEventListener("watcherCallback", function (e) {
-		// Повна інформація від спостерігача
-		const entry = e.detail.entry;
-		// Спостерігаємий об'єкт
-		const targetElement = entry.target;
-		console.log(targetElement)
-		if ( targetElement.classList.contains("jackpot-block") ) {
-				console.log("Jackpot")
-				// Виконуємо функції:
-				// --------------- Поява променів на фоні
-				const backgroundLights = document.querySelector(".jackpot-block__lights");
-				backgroundLights.style.animation = "showObjectAfterLazyLoading 3s linear";
-				setTimeout(() => {
-					backgroundLights.style.opacity = "1";
-				})
+	let showAnimations = false; // Індикатор, який спрацьовує при показі анімацій для запобігання повторного відтворення
+	// Якщо вьюпорт прівнюється з елементом, запускаємо анімацію
+	window.addEventListener("scroll", () => {
+		let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		console.log(scrollTop)
+		console.log("Oblect", showElementPosition(blockContent));
+		
+		if ( scrollTop > showElementPosition(blockContent) && showAnimations === false ) {
+			showAnimations = true;
+			animationFunctions();
+			console.log("BINGO")
+		}
+	})
 
-				// --------------- Анімація обертання колеса
-				const rotateObject = (object) => {
-					object.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
-				}
-				setTimeout(() => {
-					rotateObject(rotateWheel)
-				}, 2000)
+	// Вираховуємо позицію елемента з колесом
+	function showElementPosition(el) {
+		var rect = el.getBoundingClientRect(),
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		let topElem = rect.top + scrollTop - 100
+    return topElem
+	}
 
-				// --------------- Анімація яєць
-				const allEggsShadows = document.querySelectorAll(".eggs-rotate__egg-shadow");
-				setTimeout(() => {
-					rotateEggs.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
-					setTimeout(() => {
-						rotateEggs.style.animation = "eggsFlyAnimation 1s cubic-bezier(0,1.03,.17,1)";
-						flyEggs();
-						showJackpotText()
-					}, 5100)
-				}, 2000)
-				
-				// --------------- Розліт яєць
-				for ( let item of allEggsShadows ) {
-					item.style.animation = "allEggsShadows 2s linear";
-				}
-				setTimeout(() => {
-					for ( let item of allEggsShadows ) {
-						item.classList.add("egg-shadow");
-					}
-				}, 2000)
+	// Всі функції для запуску анімацій в одній
+	const animationFunctions = () => {
+		// Виконуємо функції:
+		// --------------- Поява променів на фоні
+		const backgroundLights = document.querySelector(".jackpot-block__lights");
+		backgroundLights.style.animation = "showObjectAfterLazyLoading 3s linear";
+		setTimeout(() => {
+			backgroundLights.style.opacity = "1";
+		})
 
+		// --------------- Анімація обертання колеса
+		const rotateObject = (object) => {
+			object.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
+		}
+		setTimeout(() => {
+			rotateObject(rotateWheel)
+		}, 2000)
 
-				// ------------- Поява блоку з написом "Jackpot"
-				const jackpotTextBlock = document.querySelector(".jackpot-text");
-
-				const showJackpotText = () => {
-					jackpotTextBlock.style.animation = "showJackpotText 2s linear";
-					setTimeout(() => {
-						jackpotTextBlock.style.opacity = "1";
-					}, 2000)
-				}
-				
-				// --------------- Анімація іскр
-				addAnimationToBigSparks()
-				addAnimationToSmallSparks()
-				// ----------------------------------------------------------- Поява елементів, що підтягуються по LazyLoading 
-				showObjectAfterLazyLoading(wheelAndEggsContainer)
-				showObjectAfterLazyLoading(sparksContainer)
-				showObjectAfterLazyLoading(shadowSparksContainer)
+		// --------------- Анімація яєць
+		const allEggsShadows = document.querySelectorAll(".eggs-rotate__egg-shadow");
+		setTimeout(() => {
+			rotateEggs.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
+			setTimeout(() => {
+				rotateEggs.style.animation = "eggsFlyAnimation 1s cubic-bezier(0,1.03,.17,1)";
+				flyEggs();
+				showJackpotText()
+			}, 5100)
+		}, 2000)
+		
+		// --------------- Розліт яєць
+		for ( let item of allEggsShadows ) {
+			item.style.animation = "allEggsShadows 2s linear";
+		}
+		setTimeout(() => {
+			for ( let item of allEggsShadows ) {
+				item.classList.add("egg-shadow");
 			}
-	});
+		}, 2000)
+
+
+		// ------------- Поява блоку з написом "Jackpot"
+		const jackpotTextBlock = document.querySelector(".jackpot-text");
+
+		const showJackpotText = () => {
+			jackpotTextBlock.style.animation = "showJackpotText 2s linear";
+			setTimeout(() => {
+				jackpotTextBlock.style.opacity = "1";
+			}, 2000)
+		}
+		
+		// --------------- Анімація іскр
+		addAnimationToBigSparks()
+		addAnimationToSmallSparks()
+		// ----------------------------------------------------------- Поява елементів, що підтягуються по LazyLoading 
+		showObjectAfterLazyLoading(wheelAndEggsContainer)
+		showObjectAfterLazyLoading(sparksContainer)
+		showObjectAfterLazyLoading(shadowSparksContainer)
+	}
+
 
 
 

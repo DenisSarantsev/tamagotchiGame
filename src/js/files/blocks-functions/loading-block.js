@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const dollarsBlock = document.querySelector(".dollars-block");
 	const reviewsBlock = document.querySelector(".reviews");
 	const animationBlock = document.querySelector(".dance-animation-block");
+	const jackpotBlock = document.querySelector(".jackpot-block");
 
 	// Логіка появи/зникнення лінії завантаження
 	const hiddenLoadingLineShowStartButton = () => {
@@ -81,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				setTimeout(() => {
 					reviewsBlock.style.display = "block";
 					animationBlock.style.display = "block";
+					jackpotBlock.style.display = "block";
 				}, 1000)
 			}, 1000)
 			
