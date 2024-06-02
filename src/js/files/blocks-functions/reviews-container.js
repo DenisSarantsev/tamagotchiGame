@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function handleMouseEnter(event) {
 			const item = event.currentTarget;
-			item.style.animation = 'none';
-			item.style.transform = 'translateZ(300px)';
 			currentAnimation = window.getComputedStyle(item).getPropertyValue('animation');
-
+			item.style.animation = 'none';
+			item.style.transform = 'scale(2.2)';
+	
 			// Убираем обработчики mouseenter у всех элементов
 			reviews.forEach(review => {
 					if (review !== item) {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	function handleMouseLeave(event) {
 			const item = event.currentTarget;
 			item.style.animation = currentAnimation;
-			item.style.transform = 'translateZ(0px)';
+			item.style.transform = 'scale(1)';
 
 			// Возвращаем обработчики mouseenter ко всем элементам
 			reviews.forEach(review => {

@@ -4041,43 +4041,55 @@ body ::-webkit-scrollbar {
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: center
+  justify-content: center;
+  background-color: red
 }
 @media (max-width:47.99875em) {
   .reviews-container {
-    max-width: 70%;
+    max-width: 90%;
     max-height: 1000px;
-    height: 750px
+    height: 650px
   }
+}
+@media (max-width:29.99875em) {
+  .reviews-container {
+    height: 174.419vw
+  }
+}
+@media (max-width:47.99875em) {
   .reviews-container__iphone {
-    width: 100%;
-    height: auto
+    display: none
   }
 }
 .reviews-container__reviews-wrapper {
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0
+  left: 0;
+  transition: all .7s ease
 }
 .reviews-container__reviews-wrapper > * {
-  transition: all .7s ease 0s;
-  -webkit-transform: translateY(0);
-  transform: translateY(0)
+  transition: all .7s ease
 }
 .reviews-container__reviews-wrapper > *:hover {
-  cursor: pointer
+  transition: all .7s ease;
+  cursor: pointer;
+  z-index: 500
 }
 .reviews-container__reviews-wrapper > *:nth-child(1) {
+  transition: all .7s ease;
   top: 0;
   left: 12.41%;
   -webkit-animation: reviewAnimation1 5s infinite;
-  animation: reviewAnimation1 5s infinite
+  animation: reviewAnimation1 5s infinite;
+  -webkit-transform-origin: center center;
+  transform-origin: center center
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(1) {
+    left: 12.41%
+  }
 }
 .reviews-container__reviews-wrapper > *:nth-child(2) {
   top: 9.96%;
@@ -4098,7 +4110,7 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(3) {
-    left: 41%
+    right: 23%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(4) {
@@ -4109,7 +4121,7 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(4) {
-    left: 50%
+    right: 18%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(5) {
@@ -4120,7 +4132,7 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(5) {
-    left: 14%
+    left: 24%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(6) {
@@ -4142,7 +4154,7 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(7) {
-    left: 49.42%
+    right: 30%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(8) {
@@ -4275,7 +4287,14 @@ body ::-webkit-scrollbar {
 }
 .reviews-container__review-image {
   position: absolute;
-  border-radius: .625rem
+  border-radius: .625rem;
+  transition: -webkit-transform .7s ease;
+  transition: transform .7s ease;
+  transition: transform .7s ease,-webkit-transform .7s ease
+}
+.reviews-container__review-image:hover {
+  cursor: pointer;
+  z-index: 500
 }
 .dance-animation-block {
   position: absolute;

@@ -1244,9 +1244,9 @@
             let currentAnimation;
             function handleMouseEnter(event) {
                 const item = event.currentTarget;
-                item.style.animation = "none";
-                item.style.transform = "translateZ(300px)";
                 currentAnimation = window.getComputedStyle(item).getPropertyValue("animation");
+                item.style.animation = "none";
+                item.style.transform = "scale(2.2)";
                 reviews.forEach((review => {
                     if (review !== item) review.removeEventListener("mouseenter", handleMouseEnter);
                 }));
@@ -1254,7 +1254,7 @@
             function handleMouseLeave(event) {
                 const item = event.currentTarget;
                 item.style.animation = currentAnimation;
-                item.style.transform = "translateZ(0px)";
+                item.style.transform = "scale(1)";
                 reviews.forEach((review => {
                     review.addEventListener("mouseenter", handleMouseEnter);
                 }));
