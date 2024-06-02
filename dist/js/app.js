@@ -795,6 +795,11 @@
                     loadingButtonActive.classList.add("_hidden");
                     hiddenLoadPageAndShowTimerPage();
                     loadingAndTimerBlocksWrapper.removeAttribute("data-no-event");
+                    setTimeout((() => {
+                        document.querySelector("body").style.overflow = "auto";
+                        document.querySelector(".mobile-header").style.opacity = "1";
+                        document.querySelector(".timer-bottom").style.opacity = "1";
+                    }), 1e3);
                 }));
             };
             hoverStartButton();
