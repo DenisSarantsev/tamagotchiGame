@@ -1073,14 +1073,18 @@
             const sparksContainer = document.querySelector(".jackpot-block__sparks");
             const shadowSparksContainer = document.querySelector(".jackpot-block__shadow-sparks");
             let showAnimations = false;
-            window.addEventListener("scroll", (() => {
+            if (window.innerWidth > 768) document.addEventListener("watcherCallback", (function(e) {
+                const entry = e.detail.entry;
+                const targetElement = entry.target;
+                if (targetElement.classList.contains("jackpot-block") && showAnimations === false) {
+                    showAnimations = true;
+                    animationFunctions();
+                }
+            })); else window.addEventListener("scroll", (() => {
                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                console.log(scrollTop);
-                console.log("Oblect", showElementPosition(blockContent));
                 if (scrollTop > showElementPosition(blockContent) && showAnimations === false) {
                     showAnimations = true;
                     animationFunctions();
-                    console.log("BINGO");
                 }
             }));
             function showElementPosition(el) {

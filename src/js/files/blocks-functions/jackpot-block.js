@@ -12,17 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	let showAnimations = false; // Індикатор, який спрацьовує при показі анімацій для запобігання повторного відтворення
 	// Якщо вьюпорт прівнюється з елементом, запускаємо анімацію
-	window.addEventListener("scroll", () => {
-		let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		console.log(scrollTop)
-		console.log("Oblect", showElementPosition(blockContent));
-		
-		if ( scrollTop > showElementPosition(blockContent) && showAnimations === false ) {
-			showAnimations = true;
-			animationFunctions();
-			console.log("BINGO")
-		}
-	})
+	if ( window.innerWidth > 768 ) {
+		document.addEventListener("watcherCallback", function (e) {
+			const entry = e.detail.entry;
+			const targetElement = entry.target;
+			if ( targetElement.classList.contains("jackpot-block") && showAnimations === false ) {
+				showAnimations = true;
+				animationFunctions();
+			}
+		});
+	} else {
+		window.addEventListener("scroll", () => {
+			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+			if ( scrollTop > showElementPosition(blockContent) && showAnimations === false ) {
+				showAnimations = true;
+				animationFunctions();
+			}
+		})
+	}
 
 	// Вираховуємо позицію елемента з колесом
 	function showElementPosition(el) {

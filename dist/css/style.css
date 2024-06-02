@@ -4043,6 +4043,17 @@ body ::-webkit-scrollbar {
   display: flex;
   justify-content: center
 }
+@media (max-width:47.99875em) {
+  .reviews-container {
+    max-width: 70%;
+    max-height: 1000px;
+    height: 750px
+  }
+  .reviews-container__iphone {
+    width: 100%;
+    height: auto
+  }
+}
 .reviews-container__reviews-wrapper {
   -webkit-perspective: 1000px;
   perspective: 1000px;
@@ -4074,11 +4085,21 @@ body ::-webkit-scrollbar {
   -webkit-animation: reviewAnimation2 6s infinite;
   animation: reviewAnimation2 6s infinite
 }
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(2) {
+    left: 11%
+  }
+}
 .reviews-container__reviews-wrapper > *:nth-child(3) {
   top: 6.36%;
   left: 51.95%;
   -webkit-animation: reviewAnimation3 7s infinite;
   animation: reviewAnimation3 7s infinite
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(3) {
+    left: 41%
+  }
 }
 .reviews-container__reviews-wrapper > *:nth-child(4) {
   top: 16.75%;
@@ -4086,11 +4107,21 @@ body ::-webkit-scrollbar {
   -webkit-animation: reviewAnimation1 5.5s infinite;
   animation: reviewAnimation1 5.5s infinite
 }
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(4) {
+    left: 50%
+  }
+}
 .reviews-container__reviews-wrapper > *:nth-child(5) {
   top: 15.48%;
   left: 9.65%;
   -webkit-animation: reviewAnimation2 4.5s infinite;
   animation: reviewAnimation2 4.5s infinite
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(5) {
+    left: 14%
+  }
 }
 .reviews-container__reviews-wrapper > *:nth-child(6) {
   top: 25.51%;
@@ -4098,11 +4129,21 @@ body ::-webkit-scrollbar {
   -webkit-animation: reviewAnimation3 6.5s infinite;
   animation: reviewAnimation3 6.5s infinite
 }
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(6) {
+    left: 11%
+  }
+}
 .reviews-container__reviews-wrapper > *:nth-child(7) {
   top: 24.39%;
   left: 49.42%;
   -webkit-animation: reviewAnimation1 7.5s infinite;
   animation: reviewAnimation1 7.5s infinite
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(7) {
+    left: 49.42%
+  }
 }
 .reviews-container__reviews-wrapper > *:nth-child(8) {
   top: 33.08%;
@@ -4110,17 +4151,32 @@ body ::-webkit-scrollbar {
   -webkit-animation: reviewAnimation2 3.8s infinite;
   animation: reviewAnimation2 3.8s infinite
 }
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(8) {
+    left: 7%
+  }
+}
 .reviews-container__reviews-wrapper > *:nth-child(9) {
   top: 38.17%;
   left: 64.36%;
   -webkit-animation: reviewAnimation3 5.9s infinite;
   animation: reviewAnimation3 5.9s infinite
 }
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(9) {
+    left: 53%
+  }
+}
 .reviews-container__reviews-wrapper > *:nth-child(10) {
   top: 43.9%;
   left: 0;
   -webkit-animation: reviewAnimation1 7.2s infinite;
   animation: reviewAnimation1 7.2s infinite
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(10) {
+    left: 10%
+  }
 }
 .reviews-container__reviews-wrapper > *:nth-child(11) {
   top: 50.26%;
@@ -4134,11 +4190,21 @@ body ::-webkit-scrollbar {
   -webkit-animation: reviewAnimation3 3.8s infinite;
   animation: reviewAnimation3 3.8s infinite
 }
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(12) {
+    left: 16%
+  }
+}
 .reviews-container__reviews-wrapper > *:nth-child(13) {
   top: 60.23%;
   left: 55.63%;
   -webkit-animation: reviewAnimation1 5.8s infinite;
   animation: reviewAnimation1 5.8s infinite
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(13) {
+    left: 45%
+  }
 }
 .reviews-container__reviews-wrapper > *:nth-child(14) {
   top: 63.62%;
@@ -4146,11 +4212,21 @@ body ::-webkit-scrollbar {
   -webkit-animation: reviewAnimation2 6.6s infinite;
   animation: reviewAnimation2 6.6s infinite
 }
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(14) {
+    left: 12.41%
+  }
+}
 .reviews-container__reviews-wrapper > *:nth-child(15) {
   top: 66.28%;
   left: 57.93%;
   -webkit-animation: reviewAnimation3 7.2s infinite;
   animation: reviewAnimation3 7.2s infinite
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(15) {
+    left: 52%
+  }
 }
 .reviews-container__reviews-wrapper > *:nth-child(16) {
   top: 73.59%;
@@ -4158,11 +4234,21 @@ body ::-webkit-scrollbar {
   -webkit-animation: reviewAnimation1 6.3s infinite;
   animation: reviewAnimation1 6.3s infinite
 }
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(16) {
+    left: 17%
+  }
+}
 .reviews-container__reviews-wrapper > *:nth-child(17) {
   top: 76.99%;
   left: 53.1%;
   -webkit-animation: reviewAnimation2 4.1s infinite;
   animation: reviewAnimation2 4.1s infinite
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(17) {
+    left: 45%
+  }
 }
 .reviews-container__reviews-wrapper > *:nth-child(18) {
   top: 85.52%;
@@ -4170,11 +4256,22 @@ body ::-webkit-scrollbar {
   -webkit-animation: reviewAnimation3 5.4s infinite;
   animation: reviewAnimation3 5.4s infinite
 }
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(18) {
+    top: 81%;
+    left: 9%
+  }
+}
 .reviews-container__reviews-wrapper > *:nth-child(19) {
   top: 82.08%;
   left: 42.29%;
   -webkit-animation: reviewAnimation1 4.4s infinite;
   animation: reviewAnimation1 4.4s infinite
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(19) {
+    left: 52%
+  }
 }
 .reviews-container__review-image {
   position: absolute;
