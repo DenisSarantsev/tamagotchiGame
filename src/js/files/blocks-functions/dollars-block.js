@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const blockContent = document.querySelector(".dollars-block__content");
+	const jackpotBlock = document.querySelector(".jackpot-block");
 
 	document.addEventListener("watcherCallback", function (e) {
 		// Повна інформація від спостерігача
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			addAnimationToTopDollars();
 			addAnimationToCenterDollars();
 			addAnimationToBottomDollars();
+			jackpotBlock.style.display = "block";
 		}
 	});
 

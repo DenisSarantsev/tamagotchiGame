@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// --------------- Наступні блоки сайту
 	const dollarsBlock = document.querySelector(".dollars-block");
-	const jackpotBlock = document.querySelector(".jackpot-block");
 	const reviewsBlock = document.querySelector(".reviews");
 	const animationBlock = document.querySelector(".dance-animation-block");
 
@@ -80,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				document.querySelector(".timer-bottom").style.opacity = "1";
 				dollarsBlock.style.display = "block";
 				setTimeout(() => {
-					jackpotBlock.style.display = "block";
 					reviewsBlock.style.display = "block";
 					animationBlock.style.display = "block";
 				}, 1000)

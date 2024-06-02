@@ -869,7 +869,6 @@
             const leafsContainer = document.querySelector(".loading-timer__bg-effects");
             const goblinImage = document.querySelector(".loading-timer__goblin");
             const dollarsBlock = document.querySelector(".dollars-block");
-            const jackpotBlock = document.querySelector(".jackpot-block");
             const reviewsBlock = document.querySelector(".reviews");
             const animationBlock = document.querySelector(".dance-animation-block");
             const hiddenLoadingLineShowStartButton = () => {
@@ -918,7 +917,6 @@
                         document.querySelector(".timer-bottom").style.opacity = "1";
                         dollarsBlock.style.display = "block";
                         setTimeout((() => {
-                            jackpotBlock.style.display = "block";
                             reviewsBlock.style.display = "block";
                             animationBlock.style.display = "block";
                         }), 1e3);
@@ -997,6 +995,7 @@
         }));
         document.addEventListener("DOMContentLoaded", (() => {
             const blockContent = document.querySelector(".dollars-block__content");
+            const jackpotBlock = document.querySelector(".jackpot-block");
             document.addEventListener("watcherCallback", (function(e) {
                 const entry = e.detail.entry;
                 const targetElement = entry.target;
@@ -1009,6 +1008,7 @@
                     addAnimationToTopDollars();
                     addAnimationToCenterDollars();
                     addAnimationToBottomDollars();
+                    jackpotBlock.style.display = "block";
                 }
             }));
             const addAnimationToTopDollars = () => {
@@ -1198,6 +1198,19 @@
                     egg12.style.transform = `translateX(-0.3vw) translateY(-1vw)`;
                 } else if (window.innerWidth <= 992 && window.innerWidth > 768) {
                     egg1.style.transform = `translateX(1.4vw) translateY(2vw)`;
+                    egg2.style.transform = `translateX(1.5vw) translateY(3vw) translateZ(15.625vw)`;
+                    egg3.style.transform = `translateX(7vw) translateY(-1vw)`;
+                    egg4.style.transform = `translateX(4vw) translateY(0.6vw) translateZ(15.625vw)`;
+                    egg5.style.transform = `translateX(3vw) translateY(2.5vw)`;
+                    egg6.style.transform = `translateX(0.1vw) translateY(0.1vw) translateZ(15.625vw)`;
+                    egg7.style.transform = `translateX(0.5vw) translateY(1.5vw)`;
+                    egg8.style.transform = `translateX(2vw) translateY(0vw) translateZ(15.625vw)`;
+                    egg9.style.transform = `translateX(-5vw) translateY(2vw)`;
+                    egg10.style.transform = `translateX(-2vw) translateY(-1vw)`;
+                    egg11.style.transform = `translateX(1.5vw) translateY(2vw) translateZ(15.625vw)`;
+                    egg12.style.transform = `translateX(-0.3vw) translateY(-1vw)`;
+                } else if (window.innerWidth <= 768) {
+                    egg1.style.transform = `translateX(15px) translateY(-65px)`;
                     egg2.style.transform = `translateX(1.5vw) translateY(3vw) translateZ(15.625vw)`;
                     egg3.style.transform = `translateX(7vw) translateY(-1vw)`;
                     egg4.style.transform = `translateX(4vw) translateY(0.6vw) translateZ(15.625vw)`;
