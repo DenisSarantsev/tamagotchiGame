@@ -2051,6 +2051,11 @@ body ::-webkit-scrollbar {
   left: 25%;
   top: -27%
 }
+@media (min-width:1200px) {
+  .dollars-block__top-dollars-wrapper img {
+    display: none
+  }
+}
 @media (max-width:1100px) {
   .dollars-block__top-dollars-wrapper img {
     -webkit-transform: scale(.8);
@@ -2157,7 +2162,8 @@ body ::-webkit-scrollbar {
 }
 .dollars-block__bottom-dollars-wrapper img {
   z-index: -5;
-  position: absolute
+  position: absolute;
+  display: none
 }
 @media (max-width:1200px) {
   .dollars-block__bottom-dollars-wrapper img {
@@ -3243,8 +3249,7 @@ body ::-webkit-scrollbar {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: rgba(255,0,0,.402)
+  align-items: center
 }
 .wheel__rotate-container img {
   position: absolute
