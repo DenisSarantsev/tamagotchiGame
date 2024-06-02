@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const blockContent = document.querySelector(".dollars-block__content");
 
+	/*
 	// Створюємо об'єкт спостереження
 	setTimeout(() => {
 		const target = document.querySelector(".dollars-block__content");
@@ -29,6 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 		});
 	}
+	*/
+
+	document.addEventListener("watcherCallback", function (e) {
+		// Повна інформація від спостерігача
+		const entry = e.detail.entry;
+		// Спостерігаємий об'єкт
+		const targetElement = entry.target;
+		console.log(targetElement)
+		if ( targetElement.classList.contains("dollars-block") ) {
+			addAnimationToTopDollars();
+			addAnimationToCenterDollars();
+		}
+	});
 
 	// Додаємо анімацію до доларів
 	const addAnimationToTopDollars = () => {
@@ -47,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	const addAnimationToBottomDollars = () => {
-		
+
 	}
 
 
