@@ -2113,7 +2113,7 @@ body ::-webkit-scrollbar {
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(1) {
   left: 10%;
-  top: -30%
+  top: -130%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(2) {
   left: 57%;
@@ -2121,7 +2121,7 @@ body ::-webkit-scrollbar {
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(3) {
   left: 17%;
-  top: -80%
+  top: -100%
 }
 .dollars-block__center-dollars-wrapper > *:nth-child(4) {
   left: 28%;
@@ -2184,94 +2184,58 @@ body ::-webkit-scrollbar {
   }
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(1) {
-  left: 10%;
-  -webkit-animation: swayBottomDollarsAnimation ease 9s infinite,slideDownBottomDollarsAnimation1 linear 80s infinite;
-  animation: swayBottomDollarsAnimation ease 9s infinite,slideDownBottomDollarsAnimation1 linear 80s infinite
+  left: 10%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(2) {
-  left: 17%;
-  -webkit-animation: swayBottomDollarsAnimation ease 9.5s infinite,slideDownBottomDollarsAnimation1 linear 94s infinite;
-  animation: swayBottomDollarsAnimation ease 9.5s infinite,slideDownBottomDollarsAnimation1 linear 94s infinite
+  left: 17%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(3) {
-  left: 21%;
-  -webkit-animation: swayBottomDollarsAnimation ease 8.9s infinite,slideDownBottomDollarsAnimation1 linear 120s infinite;
-  animation: swayBottomDollarsAnimation ease 8.9s infinite,slideDownBottomDollarsAnimation1 linear 120s infinite
+  left: 21%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(4) {
-  left: 24%;
-  -webkit-animation: swayBottomDollarsAnimation ease 5.7s infinite,slideDownBottomDollarsAnimation1 linear 87s infinite;
-  animation: swayBottomDollarsAnimation ease 5.7s infinite,slideDownBottomDollarsAnimation1 linear 87s infinite
+  left: 24%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(5) {
-  left: 29%;
-  -webkit-animation: swayBottomDollarsAnimation ease 4.2s infinite,slideDownBottomDollarsAnimation1 linear 65s infinite;
-  animation: swayBottomDollarsAnimation ease 4.2s infinite,slideDownBottomDollarsAnimation1 linear 65s infinite
+  left: 29%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(6) {
-  left: 32%;
-  -webkit-animation: swayBottomDollarsAnimation ease 6.3s infinite,slideDownBottomDollarsAnimation1 linear 77s infinite;
-  animation: swayBottomDollarsAnimation ease 6.3s infinite,slideDownBottomDollarsAnimation1 linear 77s infinite
+  left: 32%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(7) {
-  left: 39%;
-  -webkit-animation: swayBottomDollarsAnimation ease 5.1s infinite,slideDownBottomDollarsAnimation1 linear 75s infinite;
-  animation: swayBottomDollarsAnimation ease 5.1s infinite,slideDownBottomDollarsAnimation1 linear 75s infinite
+  left: 39%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(8) {
-  left: 45%;
-  -webkit-animation: swayBottomDollarsAnimation ease 7.6s infinite,slideDownBottomDollarsAnimation1 linear 89s infinite;
-  animation: swayBottomDollarsAnimation ease 7.6s infinite,slideDownBottomDollarsAnimation1 linear 89s infinite
+  left: 45%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(9) {
-  left: 53%;
-  -webkit-animation: swayBottomDollarsAnimation ease 6.2s infinite,slideDownBottomDollarsAnimation1 linear 101s infinite;
-  animation: swayBottomDollarsAnimation ease 6.2s infinite,slideDownBottomDollarsAnimation1 linear 101s infinite
+  left: 53%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(10) {
-  left: 57%;
-  -webkit-animation: swayBottomDollarsAnimation ease 8.4s infinite,slideDownBottomDollarsAnimation1 linear 94s infinite;
-  animation: swayBottomDollarsAnimation ease 8.4s infinite,slideDownBottomDollarsAnimation1 linear 94s infinite
+  left: 57%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(11) {
-  left: 64%;
-  -webkit-animation: swayBottomDollarsAnimation ease 6.6s infinite,slideDownBottomDollarsAnimation1 linear 86s infinite;
-  animation: swayBottomDollarsAnimation ease 6.6s infinite,slideDownBottomDollarsAnimation1 linear 86s infinite
+  left: 64%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(12) {
-  left: 69%;
-  -webkit-animation: swayBottomDollarsAnimation ease 5.9s infinite,slideDownBottomDollarsAnimation1 linear 89s infinite;
-  animation: swayBottomDollarsAnimation ease 5.9s infinite,slideDownBottomDollarsAnimation1 linear 89s infinite
+  left: 69%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(13) {
-  left: 73%;
-  -webkit-animation: swayBottomDollarsAnimation ease 6.1s infinite,slideDownBottomDollarsAnimation1 linear 74s infinite;
-  animation: swayBottomDollarsAnimation ease 6.1s infinite,slideDownBottomDollarsAnimation1 linear 74s infinite
+  left: 73%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(14) {
-  left: 78%;
-  -webkit-animation: swayBottomDollarsAnimation ease 4.5s infinite,slideDownBottomDollarsAnimation1 linear 120s infinite;
-  animation: swayBottomDollarsAnimation ease 4.5s infinite,slideDownBottomDollarsAnimation1 linear 120s infinite
+  left: 78%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(15) {
-  left: 82%;
-  -webkit-animation: swayBottomDollarsAnimation ease 4.8s infinite,slideDownBottomDollarsAnimation1 linear 150s infinite;
-  animation: swayBottomDollarsAnimation ease 4.8s infinite,slideDownBottomDollarsAnimation1 linear 150s infinite
+  left: 82%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(16) {
-  left: 88%;
-  -webkit-animation: swayBottomDollarsAnimation ease 6s infinite,slideDownBottomDollarsAnimation1 linear 69s infinite;
-  animation: swayBottomDollarsAnimation ease 6s infinite,slideDownBottomDollarsAnimation1 linear 69s infinite
+  left: 88%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(17) {
-  left: 93%;
-  -webkit-animation: swayBottomDollarsAnimation ease 5.3s infinite,slideDownBottomDollarsAnimation1 linear 130s infinite;
-  animation: swayBottomDollarsAnimation ease 5.3s infinite,slideDownBottomDollarsAnimation1 linear 130s infinite
+  left: 93%
 }
 .dollars-block__bottom-dollars-wrapper > *:nth-child(18) {
-  left: 98%;
-  -webkit-animation: swayBottomDollarsAnimation ease 4.2s infinite,slideDownBottomDollarsAnimation1 linear 77s infinite;
-  animation: swayBottomDollarsAnimation ease 4.2s infinite,slideDownBottomDollarsAnimation1 linear 77s infinite
+  left: 98%
 }
 .dollars-block__bottom-slide-arrow {
   position: absolute;
@@ -4960,7 +4924,7 @@ body ::-webkit-scrollbar {
 }
 @-webkit-keyframes slideDownDollarsAnimation1 {
   0% {
-    top: -30%
+    top: -130%
   }
   100% {
     top: 130%
@@ -4968,7 +4932,7 @@ body ::-webkit-scrollbar {
 }
 @keyframes slideDownDollarsAnimation1 {
   0% {
-    top: -30%
+    top: -130%
   }
   100% {
     top: 130%
@@ -4992,7 +4956,7 @@ body ::-webkit-scrollbar {
 }
 @-webkit-keyframes slideDownDollarsAnimation3 {
   0% {
-    top: -80%
+    top: -100%
   }
   100% {
     top: 130%
@@ -5000,7 +4964,7 @@ body ::-webkit-scrollbar {
 }
 @keyframes slideDownDollarsAnimation3 {
   0% {
-    top: -80%
+    top: -100%
   }
   100% {
     top: 130%

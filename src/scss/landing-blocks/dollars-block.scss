@@ -375,7 +375,7 @@
 		&>* {
 			&:nth-child(1) {
 				left: 10%;
-				top: -30%;
+				top: -130%;
 			}
 			&:nth-child(2) {
 				left: 57%;
@@ -383,7 +383,7 @@
 			}
 			&:nth-child(3) {
 				left: 17%;
-				top: -80%;
+				top: -100%;
 			}
 			&:nth-child(4) {
 				left: 28%;
@@ -440,93 +440,57 @@
 		&>* {
 			&:nth-child(1) {
 				left: 10%;
-				animation: swayBottomDollarsAnimation ease 9s infinite,
-				slideDownBottomDollarsAnimation1 linear 80s infinite;
 			}
 			&:nth-child(2) {
 				left: 17%;
-				animation: swayBottomDollarsAnimation ease 9.5s infinite,
-				slideDownBottomDollarsAnimation1 linear 94s infinite;
 			}
 			&:nth-child(3) {
 				left: 21%;
-				animation: swayBottomDollarsAnimation ease 8.9s infinite,
-				slideDownBottomDollarsAnimation1 linear 120s infinite;
 			}
 			&:nth-child(4) {
 				left: 24%;
-				animation: swayBottomDollarsAnimation ease 5.7s infinite,
-				slideDownBottomDollarsAnimation1 linear 87s infinite;
 			}
 			&:nth-child(5) {
 				left: 29%;
-				animation: swayBottomDollarsAnimation ease 4.2s infinite,
-				slideDownBottomDollarsAnimation1 linear 65s infinite;
 			}
 			&:nth-child(6) {
 				left: 32%;
-				animation: swayBottomDollarsAnimation ease 6.3s infinite,
-				slideDownBottomDollarsAnimation1 linear 77s infinite;
 			}
 			&:nth-child(7) {
 				left: 39%;
-				animation: swayBottomDollarsAnimation ease 5.1s infinite,
-				slideDownBottomDollarsAnimation1 linear 75s infinite;
 			}
 			&:nth-child(8) {
 				left: 45%;
-				animation: swayBottomDollarsAnimation ease 7.6s infinite,
-				slideDownBottomDollarsAnimation1 linear 89s infinite;
 			}
 			&:nth-child(9) {
 				left: 53%;
-				animation: swayBottomDollarsAnimation ease 6.2s infinite,
-				slideDownBottomDollarsAnimation1 linear 101s infinite;
 			}
 			&:nth-child(10) {
 				left: 57%;
-				animation: swayBottomDollarsAnimation ease 8.4s infinite,
-				slideDownBottomDollarsAnimation1 linear 94s infinite;
 			}
 			&:nth-child(11) {
 				left: 64%;
-				animation: swayBottomDollarsAnimation ease 6.6s infinite,
-				slideDownBottomDollarsAnimation1 linear 86s infinite;
 			}
 			&:nth-child(12) {
 				left: 69%;
-				animation: swayBottomDollarsAnimation ease 5.9s infinite,
-				slideDownBottomDollarsAnimation1 linear 89s infinite;
 			}
 			&:nth-child(13) {
 				left: 73%;
-				animation: swayBottomDollarsAnimation ease 6.1s infinite,
-				slideDownBottomDollarsAnimation1 linear 74s infinite;
 			}
 			&:nth-child(14) {
 				left: 78%;
-				animation: swayBottomDollarsAnimation ease 4.5s infinite,
-				slideDownBottomDollarsAnimation1 linear 120s infinite;
 			}
 			&:nth-child(15) {
 				left: 82%;
-				animation: swayBottomDollarsAnimation ease 4.8s infinite,
-				slideDownBottomDollarsAnimation1 linear 150s infinite;
 			}
 			&:nth-child(16) {
 				left: 88%;
-				animation: swayBottomDollarsAnimation ease 6.0s infinite,
-				slideDownBottomDollarsAnimation1 linear 69s infinite;
 			}
 			&:nth-child(17) {
 				left: 93%;
-				animation: swayBottomDollarsAnimation ease 5.3s infinite,
-				slideDownBottomDollarsAnimation1 linear 130s infinite;
 			}
 			&:nth-child(18) {
 				left: 98%;
-				animation: swayBottomDollarsAnimation ease 4.2s infinite,
-				slideDownBottomDollarsAnimation1 linear 77s infinite;
 			}
 		}
 	}
