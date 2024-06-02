@@ -179,17 +179,17 @@ document.addEventListener("DOMContentLoaded", () => {
 					egg12.style.transform = `translateX(-0.3vw) translateY(-1vw)`;
 				} else if ( window.innerWidth <= 768 ) {
 					egg1.style.transform = `translateX(15px) translateY(-65px)`;
-					egg2.style.transform = `translateX(1.5vw) translateY(3vw) translateZ(15.625vw)`;
-					egg3.style.transform = `translateX(7vw) translateY(-1vw)`;
-					egg4.style.transform = `translateX(4vw) translateY(0.6vw) translateZ(15.625vw)`;
-					egg5.style.transform = `translateX(3vw) translateY(2.5vw)`;
-					egg6.style.transform = `translateX(0.1vw) translateY(0.1vw) translateZ(15.625vw)`;
-					egg7.style.transform = `translateX(0.5vw) translateY(1.5vw)`;
-					egg8.style.transform = `translateX(2vw) translateY(0vw) translateZ(15.625vw)`;
-					egg9.style.transform = `translateX(-5vw) translateY(2vw)`;
-					egg10.style.transform = `translateX(-2vw) translateY(-1vw)`;
-					egg11.style.transform = `translateX(1.5vw) translateY(2vw) translateZ(15.625vw)`;
-					egg12.style.transform = `translateX(-0.3vw) translateY(-1vw)`;
+					egg2.style.transform = `translateX(65px) translateY(-65px) translateZ(50px)`;
+					egg3.style.transform = `translateX(65px) translateY(6px)`;
+					egg4.style.transform = `translateX(55px) translateY(22px) translateZ(50px)`;
+					egg5.style.transform = `translateX(65px) translateY(65px)`;
+					egg6.style.transform = `translateX(14px) translateY(65px) translateZ(50px)`;
+					egg7.style.transform = `translateX(-14px) translateY(65px)`;
+					egg8.style.transform = `translateX(-65px) translateY(65px) translateZ(50px)`;
+					egg9.style.transform = `translateX(-65px) translateY(22px)`;
+					egg10.style.transform = `translateX(-65px) translateY(-20px)`;
+					egg11.style.transform = `translateX(-65px) translateY(-65px) translateZ(50px)`;
+					egg12.style.transform = `translateX(-12px) translateY(-69px)`;
 				}
 			}
 
