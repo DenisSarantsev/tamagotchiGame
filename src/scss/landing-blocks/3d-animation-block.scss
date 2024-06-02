@@ -44,7 +44,7 @@
 			padding-top: 9.896vw;
 		}
 		@media (max-width:$mobile){
-			padding: toRem(135) toRem(15) toRem(0) toRem(15);
+			padding: 17vw toRem(15) toRem(0) toRem(15);
 		}
 	}
 	&__text-wrapper {
@@ -113,7 +113,10 @@
 			font-size: toRem(24);
 		}
 		@media (max-width:$mobile){
-			font-size: toRem(20);
+			font-size: toRem(18);
+		}
+		@media (max-width: 600px){
+			font-size: toRem(16);
 		}
 	}
 
@@ -317,5 +320,12 @@
 	&__text {
 		font-family: Montserrat, sans-serif;
 		font-size: toRem(16);
+		text-align: center;
+		@media (max-width:$mobile){
+			font-size: toRem(14);
+		}
+		@media (max-width: 500px){
+			font-size: toRem(12);
+		}
 	}
 }

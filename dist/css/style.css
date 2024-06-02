@@ -4084,7 +4084,7 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .dance-animation-block__text-container {
-    padding: 8.4375rem .9375rem 0 .9375rem
+    padding: 17vw .9375rem 0 .9375rem
   }
 }
 .dance-animation-block__text-wrapper {
@@ -4168,7 +4168,12 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .dance-animation-block__text-wrapper-content {
-    font-size: 1.25rem
+    font-size: 1.125rem
+  }
+}
+@media (max-width:600px) {
+  .dance-animation-block__text-wrapper-content {
+    font-size: 1rem
   }
 }
 .dance-animation-block__video-wrapper {
@@ -4397,7 +4402,18 @@ body ::-webkit-scrollbar {
 }
 .copyright-wrapper__text {
   font-family: Montserrat,sans-serif;
-  font-size: 1rem
+  font-size: 1rem;
+  text-align: center
+}
+@media (max-width:47.99875em) {
+  .copyright-wrapper__text {
+    font-size: .875rem
+  }
+}
+@media (max-width:500px) {
+  .copyright-wrapper__text {
+    font-size: .75rem
+  }
 }
 @-webkit-keyframes firstEllipseAnimation {
   0% {
