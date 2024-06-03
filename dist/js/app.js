@@ -1132,10 +1132,8 @@
                 }), 2e3);
                 const jackpotTextBlock = document.querySelector(".jackpot-text");
                 const showJackpotText = () => {
-                    jackpotTextBlock.style.animation = "showJackpotText 2s linear";
-                    setTimeout((() => {
-                        jackpotTextBlock.style.opacity = "1";
-                    }), 2e3);
+                    jackpotTextBlock.style.opacity = "1";
+                    setTimeout((() => {}), 2e3);
                 };
                 addAnimationToBigSparks();
                 addAnimationToSmallSparks();

@@ -83,9 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		const jackpotTextBlock = document.querySelector(".jackpot-text");
 
 		const showJackpotText = () => {
-			jackpotTextBlock.style.animation = "showJackpotText 2s linear";
+			jackpotTextBlock.style.opacity = "1";
+		//	jackpotTextBlock.style.animation = "showJackpotText 2s linear";
 			setTimeout(() => {
-				jackpotTextBlock.style.opacity = "1";
+			//	jackpotTextBlock.style.opacity = "1";
 			}, 2000)
 		}
 		
