@@ -1107,10 +1107,8 @@
             }
             const animationFunctions = () => {
                 const backgroundLights = document.querySelector(".jackpot-block__lights");
-                backgroundLights.style.animation = "showObjectAfterLazyLoading 3s linear";
-                setTimeout((() => {
-                    backgroundLights.style.opacity = "1";
-                }));
+                backgroundLights.style.opacity = "1";
+                setTimeout((() => {}));
                 const rotateObject = object => {
                     object.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
                 };

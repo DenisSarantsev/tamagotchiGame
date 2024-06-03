@@ -44,9 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		// Виконуємо функції:
 		// --------------- Поява променів на фоні
 		const backgroundLights = document.querySelector(".jackpot-block__lights");
-		backgroundLights.style.animation = "showObjectAfterLazyLoading 3s linear";
+		backgroundLights.style.opacity = "1";
+		//backgroundLights.style.animation = "showObjectAfterLazyLoading 3s linear";
 		setTimeout(() => {
-			backgroundLights.style.opacity = "1";
+			//backgroundLights.style.opacity = "1";
 		})
 
 		// --------------- Анімація обертання колеса
