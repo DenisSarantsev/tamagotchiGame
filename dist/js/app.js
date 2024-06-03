@@ -881,6 +881,13 @@
                             startButtonBlock.style.animation = "startButtonShowAnimation 0.3s ease";
                             setTimeout((() => {
                                 startButtonBlock.style.display = "block";
+                                setTimeout((() => {
+                                    const loadingMainButton = document.querySelector(".loading__start-button");
+                                    const audio = document.querySelector(".bg-music");
+                                    loadingMainButton.addEventListener("click", (e => {
+                                        if (audio.paused) audio.play();
+                                    }));
+                                }), 200);
                             }), 300);
                         }), 200);
                     }), 200);
@@ -1065,7 +1072,6 @@
         }));
         document.addEventListener("DOMContentLoaded", (() => {
             const audio = document.querySelector(".bg-music");
-            if (audio.paused) audio.play();
             document.addEventListener("click", (e => {
                 if (e.target.classList.contains("volume-button__image") || e.target.classList.contains("volume-button__image")) if (audio.paused) audio.play(); else audio.pause();
             }));
