@@ -86,17 +86,18 @@
 			height: 55.729vw;
 		}
 		@media (max-width:1500px){
-			width: 60vw;
-			height: 60vw;
-			bottom: toRem(-80);
-			left: toRem(-180);
+			width: 55vw;
+			height: 55vw;
+			bottom: toRem(-100);
+			left: toRem(-210);
 		}
 		@media (max-width: 1200px){
 			width: 64vw;
 			height: 64vw;
 		}
 		@media (max-width: 992px){
-			left: toRem(-150);
+			width: 70vw;
+			height: 70vw;
 		}
 		@media (max-width:$mobile){
 			display: none;

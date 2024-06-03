@@ -513,7 +513,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: center;
 		gap: toRem(30);
 		z-index: 10;
 		transition: all 2s ease 0s;
@@ -545,8 +545,11 @@
 		flex-direction: column;
 		align-items: center;
 		gap: toRem(15);
-		@media (max-width: 1200px){
+		@media (max-width: 1440px){
 			gap: toRem(10);
+		}
+		@media (max-width: 1200px){
+			gap: toRem(5);
 		}
 	}
 	&__top-title-container-title {
@@ -565,6 +568,7 @@
 		@media (max-width: 1440px){
 			font-size: 4.2vw;
 			line-height: 100%;
+			font-size: 52px;
 		}
 		@media (max-width: 992px){
 			font-size: toRem(40);
@@ -707,19 +711,20 @@
 		font-family: $thirdFont;
 		max-width: toRem(533);
 		@media (max-width: 1440px){
-			font-size: toRem(22);
+			font-size: toRem(20);
+			line-height: 120%;
 		}
 		@media (max-width: 1200px){
-			font-size: toRem(20);
-		}
-		@media (max-width: 1100px){
 			font-size: toRem(18);
 		}
-		@media (max-width: 992px){
+		@media (max-width: 1100px){
 			font-size: toRem(17);
 		}
-		@media (max-width:$mobile){
+		@media (max-width: 992px){
 			font-size: toRem(16);
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(15);
 			line-height: 130%;
 		}
 	}
@@ -747,6 +752,10 @@
 	&__image {
 		max-width: toRem(57);
 		max-height: toRem(78);
+		@media (max-width: 1440px){
+			max-width: toRem(47);
+			max-height: toRem(68);
+		}
 		@media (max-width: 992px){
 			max-width: toRem(37);
 			max-height: toRem(55);
@@ -762,12 +771,16 @@
 		font-weight: 500;
 		line-height: 150%;
 		width: 100%;
-		@media (max-width: 992px){
+		@media (max-width: 1440px){
 			font-size: toRem(18);
+			line-height: 140%;
+		}
+		@media (max-width: 992px){
+			font-size: toRem(16);
 			line-height: 130%;
 		}
 		@media (max-width:$mobile){
-			font-size: toRem(16);
+			font-size: toRem(15);
 			line-height: 130%;
 		}
 		& span {

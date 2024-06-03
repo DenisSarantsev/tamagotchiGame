@@ -37,17 +37,14 @@
 
 	// Блок з текстом
 	&__text-container {
-		padding-top: toRem(190);
-		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		@media (max-width: 1920px){
-			padding-top: 9.896vw;
-		}
+		padding-top: toRem(50);
 		@media (max-width:$mobile){
+			position: absolute;
 			padding: 17vw toRem(15) toRem(0) toRem(15);
 		}
 	}
@@ -142,6 +139,7 @@
 		@media (max-width:$mobile){
 			max-width: 100%;
 			max-height: 100%;
+			margin-top: toRem(30);
 		}
 		& video {
 			width: 100%;

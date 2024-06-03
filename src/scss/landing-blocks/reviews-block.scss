@@ -186,19 +186,19 @@
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 		@media (max-width: 1440px){
-			font-size: toRem(55);
-		}
-		@media (max-width: 1200px){
-			font-size: toRem(50);
-		}
-		@media (max-width: 992px){
 			font-size: toRem(45);
 		}
-		@media (max-width: 800px){
+		@media (max-width: 1200px){
 			font-size: toRem(40);
 		}
+		@media (max-width: 992px){
+			font-size: toRem(35);
+		}
+		@media (max-width: 800px){
+			font-size: toRem(30);
+		}
 		@media (max-width: 768px){
-			font-size: toRem(37);
+			font-size: toRem(27);
 		}
 		@media (max-width: 600px){
 			font-size: toRem(33);
@@ -214,6 +214,9 @@
 		width: 100%;
 		@media (max-width: 1200px){
 			gap: toRem(15);
+		}
+		@media (max-width: 550px){
+			padding: toRem(0) toRem(15);
 		}
 		@media (max-width:$mobile){
 			grid-template-columns: repeat(2, 1fr);
@@ -266,6 +269,9 @@
 		@media (max-width:$mobile){
 			align-items: center;
 		}
+		@media (max-width: 550px){
+			flex-direction: row;
+		}
 		& img {
 			width: toRem(40);
 			height: toRem(40);
@@ -276,12 +282,18 @@
 			font-weight: medium;
 			line-height: 130%;
 			text-align: left;
+			@media (max-width: 1440px){
+				line-height: 120%;
+			}
 			@media (max-width: 1200px){
 				font-size: toRem(17);
-				line-height: 120%;
 			}
 			@media (max-width:$mobile){
 				text-align: center;
+				font-size: toRem(16);
+			}
+			@media (max-width: 550px){
+				text-align: left;
 			}
 			& span {
 				background: $goldTextGradient;
@@ -352,6 +364,9 @@
 .table-container {
 	max-width: toRem(478);
 	width: 100%;
+	@media (max-width: 1440px){
+		max-width: toRem(400);
+	}
 	& img {
 		width: 100%;
 		height: 100%;
@@ -367,6 +382,9 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
+	@media (max-width: 1440px){
+		max-height: 400px;
+	}
 	@media (max-width:$mobile){
 		max-width: 400px;
 		max-height: 500px;

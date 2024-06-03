@@ -355,7 +355,7 @@
 			padding: 1.389vw 10px;
 		}
 		@media (max-width: 1440px){
-			padding: 1vw 35px;
+			padding: 5px 35px;
 		}
 		& img {
 			width: toRem(24);
@@ -395,17 +395,21 @@
 			font-size: toRem(28);
 		}
 		@media (max-width: 1500px){
-			font-size: toRem(24);
+			font-size: toRem(22);
+			line-height: 130%;
 		}
 		@media (max-width: 1200px){
-			font-size: toRem(20);
+			font-size: toRem(18);
 		}
 		@media (max-width: 1100px){
-			font-size: toRem(18);
+			font-size: toRem(17);
 		}
 		@media (max-width: 992px){
 			font-size: toRem(16);
 			line-height: 120%;
+		}
+		@media (max-width:$mobile){
+			
 		}
 	}
 
