@@ -771,11 +771,6 @@ body ::-webkit-scrollbar {
     height: 70vw
   }
 }
-@media (max-width:47.99875em) {
-  .loading-timer__goblin {
-    display: none
-  }
-}
 .loading-timer__first-leaf {
   position: absolute;
   bottom: -6.875rem;
