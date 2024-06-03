@@ -10,26 +10,39 @@ document.addEventListener("DOMContentLoaded", () => {
 	const sparksContainer = document.querySelector(".jackpot-block__sparks");
 	const shadowSparksContainer = document.querySelector(".jackpot-block__shadow-sparks");
 
-	let showAnimations = false; // Індикатор, який спрацьовує при показі анімацій для запобігання повторного відтворення
-	// Якщо вьюпорт прівнюється з елементом, запускаємо анімацію
-	if ( window.innerWidth > 768 ) {
-		document.addEventListener("watcherCallback", function (e) {
-			const entry = e.detail.entry;
-			const targetElement = entry.target;
-			if ( targetElement.classList.contains("jackpot-block") && showAnimations === false ) {
-				showAnimations = true;
-				animationFunctions();
-			}
-		});
-	} else {
-		window.addEventListener("scroll", () => {
-			let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-			if ( scrollTop > showElementPosition(blockContent) && showAnimations === false ) {
-				showAnimations = true;
-				animationFunctions();
-			}
+	setTimeout(() => {
+		const loadingMainButton = document.querySelector(".loading__start-button");
+		loadingMainButton.addEventListener("click", () => {
+			setTimeout(() => {
+				addListenerToJackpotBlockAndShowAnimation()
+			}, 200)
 		})
+	}, 200)
+
+	const addListenerToJackpotBlockAndShowAnimation = () => {
+		let showAnimations = false; // Індикатор, який спрацьовує при показі анімацій для запобігання повторного відтворення
+		// Якщо вьюпорт прівнюється з елементом, запускаємо анімацію
+		if ( window.innerWidth > 768 ) {
+			document.addEventListener("watcherCallback", function (e) {
+				const entry = e.detail.entry;
+				const targetElement = entry.target;
+				if ( targetElement.classList.contains("jackpot-block") && showAnimations === false ) {
+					showAnimations = true;
+					animationFunctions();
+				}
+			});
+		} else {
+			window.addEventListener("scroll", () => {
+				let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+				if ( scrollTop > showElementPosition(blockContent) && showAnimations === false ) {
+					showAnimations = true;
+					animationFunctions();
+				}
+			})
+		}
 	}
+
+
 
 	// Вираховуємо позицію елемента з колесом
 	function showElementPosition(el) {

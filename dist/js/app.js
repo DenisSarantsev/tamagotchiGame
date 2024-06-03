@@ -1085,21 +1085,31 @@
             const wheelAndEggsContainer = document.querySelector(".jackpot-block__wheel-eggs-inner-container");
             const sparksContainer = document.querySelector(".jackpot-block__sparks");
             const shadowSparksContainer = document.querySelector(".jackpot-block__shadow-sparks");
-            let showAnimations = false;
-            if (window.innerWidth > 768) document.addEventListener("watcherCallback", (function(e) {
-                const entry = e.detail.entry;
-                const targetElement = entry.target;
-                if (targetElement.classList.contains("jackpot-block") && showAnimations === false) {
-                    showAnimations = true;
-                    animationFunctions();
-                }
-            })); else window.addEventListener("scroll", (() => {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                if (scrollTop > showElementPosition(blockContent) && showAnimations === false) {
-                    showAnimations = true;
-                    animationFunctions();
-                }
-            }));
+            setTimeout((() => {
+                const loadingMainButton = document.querySelector(".loading__start-button");
+                loadingMainButton.addEventListener("click", (() => {
+                    setTimeout((() => {
+                        addListenerToJackpotBlockAndShowAnimation();
+                    }), 200);
+                }));
+            }), 200);
+            const addListenerToJackpotBlockAndShowAnimation = () => {
+                let showAnimations = false;
+                if (window.innerWidth > 768) document.addEventListener("watcherCallback", (function(e) {
+                    const entry = e.detail.entry;
+                    const targetElement = entry.target;
+                    if (targetElement.classList.contains("jackpot-block") && showAnimations === false) {
+                        showAnimations = true;
+                        animationFunctions();
+                    }
+                })); else window.addEventListener("scroll", (() => {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    if (scrollTop > showElementPosition(blockContent) && showAnimations === false) {
+                        showAnimations = true;
+                        animationFunctions();
+                    }
+                }));
+            };
             function showElementPosition(el) {
                 var rect = el.getBoundingClientRect(), scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 let topElem = rect.top + scrollTop - 100;
