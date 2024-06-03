@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240603024107">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240603040719">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,15 +36,15 @@
 			<div class="mobile-header">
 				<img src="img/common/small-logo.svg" alt="game logo" class="mobile-header__logo">
 				<div class="mobile-header__buttons-block">
-					<buttton class="mobile-header__button mobile-header-lang-button">
+					<button class="mobile-header__button mobile-header-lang-button">
 						<img src="img/loading-timer/button-lang.svg" alt="language button" class="lang-button__image">
-					</buttton>
-					<buttton class="mobile-header__button mobile-header-menu-button">
+					</button>
+					<button class="mobile-header__button mobile-header-menu-button">
 						<img src="img/loading-timer/button-menu.svg" alt="menu button" class="menu-button__image">
-					</buttton>
-					<buttton class="mobile-header__button mobile-header-volume-button">
+					</button>
+					<button class="mobile-header__button mobile-header-volume-button" onclick="console.log('click')">
 						<img src="img/loading-timer/button-volume.svg" alt="volume button" class="volume-button__image">
-					</buttton>
+					</button>
 				</div>
 			</div>
 			<div data-fp class="block">
@@ -103,15 +103,15 @@
 									<div class="timer__header">
 										<img src="img/loading-timer/small-logo.svg" alt="" class="timer__logo">
 										<div class="timer__buttons-block">
-											<buttton class="timer__button lang-button">
+											<button class="timer__button lang-button">
 												<img src="img/loading-timer/button-lang.svg" alt="language button" class="lang-button__image">
-											</buttton>
-											<buttton class="timer__button menu-button">
+											</button>
+											<button class="timer__button menu-button">
 												<img src="img/loading-timer/button-menu.svg" alt="menu button" class="menu-button__image">
-											</buttton>
-											<buttton class="timer__button volume-button">
+											</button>
+											<button class="timer__button volume-button">
 												<img src="img/loading-timer/button-volume.svg" alt="volume button" class="volume-button__image">
-											</buttton>
+											</button>
 										</div>
 									</div>
 									<div class="timer__content timer-content">
@@ -764,10 +764,16 @@
 			</div>
 		</main>
 	</div>
+
+	<audio style="display: none" autoplay loop src="img/sounds/Drums30.mp3" class="bg-music"></audio>
+
+
+
+
 	<script>
 		document.querySelector(".pre-loader-bg").classList.add("_hidden");
 	</script>
-	<script src="js/app.min.js?_v=20240603024107"></script>
+	<script src="js/app.min.js?_v=20240603040719"></script>
 </body>
 
 </html>

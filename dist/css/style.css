@@ -341,7 +341,7 @@ h6 {
   width: 100%;
   justify-content: space-between;
   padding: .3125rem .9375rem .625rem .9375rem;
-  z-index: 1000;
+  z-index: 9999;
   background: linear-gradient(180deg,rgba(31,31,30,.528) 0,rgba(0,0,0,0) 100%);
   opacity: 0;
   transition: opacity 1s linear
@@ -4041,14 +4041,13 @@ body ::-webkit-scrollbar {
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: center;
-  background-color: red
+  justify-content: center
 }
 @media (max-width:47.99875em) {
   .reviews-container {
-    max-width: 90%;
-    max-height: 1000px;
-    height: 650px
+    max-width: 400px;
+    max-height: 500px;
+    height: 500px
   }
 }
 @media (max-width:29.99875em) {
@@ -4088,7 +4087,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(1) {
-    left: 12.41%
+    top: 2vw;
+    left: 7%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(2) {
@@ -4110,7 +4110,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(3) {
-    right: 23%
+    top: 7vw;
+    left: 46.95%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(4) {
@@ -4121,7 +4122,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(4) {
-    right: 18%
+    top: 16.75%;
+    left: 54%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(5) {
@@ -4132,7 +4134,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(5) {
-    left: 24%
+    top: 15.48%;
+    left: 9.65%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(6) {
@@ -4143,7 +4146,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(6) {
-    left: 11%
+    top: 25.51%;
+    left: 0
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(7) {
@@ -4154,7 +4158,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(7) {
-    right: 30%
+    top: 24.39%;
+    left: 49.42%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(8) {
@@ -4165,7 +4170,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(8) {
-    left: 7%
+    top: 33.08%;
+    left: 12.41%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(9) {
@@ -4176,7 +4182,13 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(9) {
-    left: 53%
+    top: 38.17%;
+    left: 62%
+  }
+}
+@media (max-width:450px) {
+  .reviews-container__reviews-wrapper > *:nth-child(9) {
+    left: 52%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(10) {
@@ -4187,7 +4199,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(10) {
-    left: 10%
+    top: 43.9%;
+    left: 0
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(11) {
@@ -4195,6 +4208,12 @@ body ::-webkit-scrollbar {
   left: 50.57%;
   -webkit-animation: reviewAnimation2 8.4s infinite;
   animation: reviewAnimation2 8.4s infinite
+}
+@media (max-width:47.99875em) {
+  .reviews-container__reviews-wrapper > *:nth-child(11) {
+    top: 50.26%;
+    left: 50.57%
+  }
 }
 .reviews-container__reviews-wrapper > *:nth-child(12) {
   top: 54.08%;
@@ -4204,7 +4223,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(12) {
-    left: 16%
+    top: 54.08%;
+    left: 5.97%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(13) {
@@ -4215,7 +4235,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(13) {
-    left: 45%
+    top: 60.23%;
+    left: 43.63%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(14) {
@@ -4226,6 +4247,7 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(14) {
+    top: 63.62%;
     left: 12.41%
   }
 }
@@ -4237,7 +4259,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(15) {
-    left: 52%
+    top: 66.28%;
+    left: 57.93%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(16) {
@@ -4248,7 +4271,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(16) {
-    left: 17%
+    top: 73.59%;
+    left: 3.9%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(17) {
@@ -4259,7 +4283,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(17) {
-    left: 45%
+    top: 76.99%;
+    left: 53.1%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(18) {
@@ -4270,8 +4295,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(18) {
-    top: 81%;
-    left: 9%
+    top: 85.52%;
+    left: 6.2%
   }
 }
 .reviews-container__reviews-wrapper > *:nth-child(19) {
@@ -4282,7 +4307,8 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .reviews-container__reviews-wrapper > *:nth-child(19) {
-    left: 52%
+    top: 82.08%;
+    left: 42.29%
   }
 }
 .reviews-container__review-image {

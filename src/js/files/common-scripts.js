@@ -35,3 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	
 })
+
+// Включаем и выключаем звук на сайте
+document.addEventListener("DOMContentLoaded", () => {
+	const audio = document.querySelector(".bg-music");
+
+	document.addEventListener("click", (e) => {
+		if ( e.target.classList.contains("volume-button__image") || e.target.classList.contains("volume-button__image") ) {
+			if (audio.paused) {
+				audio.play();
+		} else {
+				audio.pause();
+		}
+		}
+	})
+
+
+})

@@ -93,7 +93,7 @@
 	width: 100%;
 	justify-content: space-between;
 	padding: toRem(5) toRem(15) toRem(10) toRem(15);
-	z-index: 1000;
+	z-index: 9999;
 	background: linear-gradient(180deg, rgba(31, 31, 30, 0.528) 0%, rgba(0,0,0,0) 100%);
 	opacity: 0;
 	transition: opacity 1s linear;
