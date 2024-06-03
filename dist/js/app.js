@@ -1065,6 +1065,7 @@
         }));
         document.addEventListener("DOMContentLoaded", (() => {
             const audio = document.querySelector(".bg-music");
+            if (audio.paused) audio.play();
             document.addEventListener("click", (e => {
                 if (e.target.classList.contains("volume-button__image") || e.target.classList.contains("volume-button__image")) if (audio.paused) audio.play(); else audio.pause();
             }));
@@ -1252,7 +1253,7 @@
                 const item = event.currentTarget;
                 currentAnimation = window.getComputedStyle(item).getPropertyValue("animation");
                 item.style.animation = "none";
-                if (window.innerWidth > 768) item.style.transform = "scale(2.2)"; else if (window.innerWidth <= 768 && window.innerWidth > 500) item.style.transform = "scale(1.5)"; else item.style.transform = "scale(1.3)";
+                if (window.innerWidth > 768) item.style.transform = "scale(2.2)"; else item.style.transform = "scale(1.5)";
                 reviews.forEach((review => {
                     if (review !== item) review.removeEventListener("mouseenter", handleMouseEnter);
                 }));

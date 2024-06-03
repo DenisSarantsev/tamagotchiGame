@@ -11,11 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			if ( window.innerWidth > 768 ) {
 				item.style.transform = 'scale(2.2)';
-			} else if ( window.innerWidth <= 768 && window.innerWidth > 500 ) {
-				item.style.transform = 'scale(1.5)';
 			} else {
-				item.style.transform = 'scale(1.3)';
-			}
+				item.style.transform = 'scale(1.5)';
+			} 
 			
 			// Убираем обработчики mouseenter у всех элементов
 			reviews.forEach(review => {

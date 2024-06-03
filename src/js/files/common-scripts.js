@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // Включаем и выключаем звук на сайте
 document.addEventListener("DOMContentLoaded", () => {
 	const audio = document.querySelector(".bg-music");
+	if (audio.paused) {
+		audio.play();
+	}
 
 	document.addEventListener("click", (e) => {
 		if ( e.target.classList.contains("volume-button__image") || e.target.classList.contains("volume-button__image") ) {
