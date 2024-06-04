@@ -737,13 +737,14 @@ body ::-webkit-scrollbar {
 }
 .loading-timer__goblin {
   position: absolute;
-  bottom: -6.25rem;
-  left: -13.125rem;
+  bottom: -12.5rem;
+  left: -93.75rem;
   z-index: -3;
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
+  -webkit-transform: rotate(-40deg);
+  transform: rotate(-40deg);
   width: 66.875rem;
-  height: 66.875rem
+  height: 66.875rem;
+  transition: all 1.2s ease 0s
 }
 @media (max-width:1920px) {
   .loading-timer__goblin {
@@ -754,9 +755,7 @@ body ::-webkit-scrollbar {
 @media (max-width:1500px) {
   .loading-timer__goblin {
     width: 55vw;
-    height: 55vw;
-    bottom: -6.25rem;
-    left: -13.125rem
+    height: 55vw
   }
 }
 @media (max-width:1200px) {
@@ -767,8 +766,26 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:992px) {
   .loading-timer__goblin {
-    width: 70vw;
-    height: 70vw
+    width: 60vw;
+    height: 60vw;
+    left: -43.75rem
+  }
+}
+@media (max-width:47.99875em) {
+  .loading-timer__goblin {
+    width: 100%;
+    height: auto;
+    left: -62.5rem
+  }
+}
+@media (max-width:700px) {
+  .loading-timer__goblin {
+    width: 110%
+  }
+}
+@media (max-width:500px) {
+  .loading-timer__goblin {
+    width: 130%
   }
 }
 .loading-timer__first-leaf {
@@ -1111,7 +1128,8 @@ body ::-webkit-scrollbar {
 .timer {
   opacity: 0;
   height: 100%;
-  width: 100%
+  width: 100%;
+  transition: all .9s ease 0s
 }
 .timer__container {
   height: 100%;
@@ -5115,34 +5133,6 @@ body ::-webkit-scrollbar {
   100% {
     -webkit-transform: rotate(0);
     transform: rotate(0)
-  }
-}
-@-webkit-keyframes goblinAnimation {
-  0% {
-    bottom: -12.5rem;
-    left: -62.5rem;
-    -webkit-transform: rotate(-30deg);
-    transform: rotate(-30deg)
-  }
-  100% {
-    bottom: -6.25rem;
-    left: -13.125rem;
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg)
-  }
-}
-@keyframes goblinAnimation {
-  0% {
-    bottom: -12.5rem;
-    left: -62.5rem;
-    -webkit-transform: rotate(-30deg);
-    transform: rotate(-30deg)
-  }
-  100% {
-    bottom: -6.25rem;
-    left: -13.125rem;
-    -webkit-transform: rotate(30deg);
-    transform: rotate(30deg)
   }
 }
 @-webkit-keyframes leafsMovingAnimation {

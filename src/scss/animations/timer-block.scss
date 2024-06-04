@@ -90,15 +90,28 @@
 }
 
 // Анімація гобліна
-@keyframes goblinAnimation {
-	0% {
-		bottom: toRem(-200);
-		left: toRem(-1000);
-		transform: rotate(-30deg);
-	}
-	100% {
-		bottom: toRem(-100);
-		left: toRem(-210);
-		transform: rotate(30deg);
-	}
-}
+// @keyframes goblinAnimation {
+// 	0% {
+// 		bottom: toRem(-200);
+// 		left: toRem(-1200);
+// 		transform: rotate(-30deg);
+// 	}
+// 	100% {
+// 		bottom: toRem(-100);
+// 		left: toRem(-210);
+// 		transform: rotate(30deg);
+// 	}
+// }
+
+// @keyframes goblinMobileAnimation {
+// 	0% {
+// 		bottom: toRem(-200);
+// 		left: toRem(-1000);
+// 		transform: rotate(-30deg);
+// 	}
+// 	100% {
+// 		bottom: 0;
+// 		left: 0;
+// 		transform: rotate(30deg);
+// 	}
+// }

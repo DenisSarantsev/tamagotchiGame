@@ -920,7 +920,7 @@
                     hiddenLoadPageAndShowTimerPage();
                     loadingAndTimerBlocksWrapper.removeAttribute("data-no-event");
                     setTimeout((() => {
-                        document.querySelector("body").style.overflow = "auto";
+                        if (window.innerWidth > 768) document.querySelector("body").style.overflow = "auto"; else showGoblinOnMobileScreens();
                         document.querySelector(".mobile-header").style.opacity = "1";
                         document.querySelector(".timer-bottom").style.opacity = "1";
                         dollarsBlock.style.display = "block";
@@ -933,6 +933,21 @@
                 }));
             };
             hoverStartButton();
+            const showGoblinOnMobileScreens = () => {
+                document.addEventListener("touchmove", (event => {
+                    console.log(event);
+                    timerBlock.style.opacity = "0";
+                    setTimeout((() => {
+                        goblinImage.classList.remove("_hidden");
+                        setTimeout((() => {
+                            goblinImage.style.transform = "rotate(30deg)";
+                            goblinImage.style.left = "-130px";
+                            goblinImage.style.bottom = "-50px";
+                            document.querySelector("body").style.overflow = "auto";
+                        }), 1e3);
+                    }), 500);
+                }));
+            };
             const hiddenLoadPageAndShowTimerPage = () => {
                 startAndLoadingContainer.style.transform = "translateZ(1100px)";
                 startAndLoadingContainer.style.animation = "loadingLineHiddenAnimation 1.4s ease";
@@ -958,10 +973,16 @@
                     firstLeaf.style.animation = "firstLeafAnimation 15s infinite";
                     secondLeaf.style.animation = "secondLeafAnimation 10s infinite";
                     thirdLeaf.style.animation = "thirdLeafAnimation 25s infinite";
-                    setTimeout((() => {
-                        goblinImage.classList.remove("_hidden");
-                        goblinImage.style.animation = "goblinAnimation 0.8s ease";
-                    }), 4e3);
+                    goblinImage.classList.remove("_hidden");
+                    if (window.innerWidth > 992) setTimeout((() => {
+                        goblinImage.style.transform = "rotate(30deg)";
+                        goblinImage.style.left = "-210px";
+                        goblinImage.style.bottom = "-100px";
+                    }), 3500); else if (window.innerWidth <= 992 && window.innerWidth > 768) setTimeout((() => {
+                        goblinImage.style.transform = "rotate(30deg)";
+                        goblinImage.style.left = "-110px";
+                        goblinImage.style.bottom = "-80px";
+                    }), 3500);
                     setTimeout((() => {
                         timerBlock.style.animation = "showSmallLogoOpacity 1s ease";
                         setTimeout((() => {

@@ -78,15 +78,22 @@ document.addEventListener("DOMContentLoaded", () => {
 			loadingButtonActive.classList.remove("_hidden");
 		})
 		startButtonBlock.addEventListener("mouseup", () => {
+			// --------------------------------------------------- Логіка, що виконується у разі натискання кнопки
 			loadingButtonDefault.classList.add("_hidden");
 			loadingButtonHover.classList.remove("_hidden");
 			loadingButtonActive.classList.add("_hidden");
 			hiddenLoadPageAndShowTimerPage();
 			loadingAndTimerBlocksWrapper.removeAttribute("data-no-event");
 			setTimeout(() => {
-				document.querySelector("body").style.overflow = "auto";
+				if ( window.innerWidth > 768 ) {
+					document.querySelector("body").style.overflow = "auto";
+				} else {
+					// Запускаємо функціонал включення/відключення скролу на мобільних телефонах
+					showGoblinOnMobileScreens()
+				}
 				document.querySelector(".mobile-header").style.opacity = "1";
 				document.querySelector(".timer-bottom").style.opacity = "1";
+				// Робимо видимими наступні блоки 
 				dollarsBlock.style.display = "block";
 				setTimeout(() => {
 					reviewsBlock.style.display = "block";
@@ -98,6 +105,23 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 	}
 	hoverStartButton()
+
+	// Логіка появи персонажу на мобльному екрані
+	const showGoblinOnMobileScreens = () => {
+		document.addEventListener("touchmove", (event) => {
+			console.log(event)
+			timerBlock.style.opacity = "0";
+			setTimeout(() => {
+				goblinImage.classList.remove("_hidden");
+				setTimeout(() => {
+					goblinImage.style.transform = "rotate(30deg)";
+					goblinImage.style.left = "-130px";
+					goblinImage.style.bottom = "-50px";
+					document.querySelector("body").style.overflow = "auto";
+				}, 1000)
+			}, 500)
+		})
+	}
 
 	// -------------------------------------------------------- Логіка після натискання кнопки "Старт"
 	const hiddenLoadPageAndShowTimerPage = () => {
@@ -132,11 +156,20 @@ document.addEventListener("DOMContentLoaded", () => {
 			thirdLeaf.style.animation = "thirdLeafAnimation 25s infinite";
 
 			// Поява гобліна
-			setTimeout(() => {
-				goblinImage.classList.remove("_hidden");
-				goblinImage.style.animation = "goblinAnimation 0.8s ease";
-			}, 4000)
-			
+			goblinImage.classList.remove("_hidden");
+			if ( window.innerWidth > 992  ) {
+				setTimeout(() => {
+					goblinImage.style.transform = "rotate(30deg)";
+					goblinImage.style.left = "-210px";
+					goblinImage.style.bottom = "-100px";
+				}, 3500)
+			} else if ( window.innerWidth <= 992 && window.innerWidth > 768 ) {
+				setTimeout(() => {
+					goblinImage.style.transform = "rotate(30deg)";
+					goblinImage.style.left = "-110px";
+					goblinImage.style.bottom = "-80px";
+				}, 3500)
+			}
 
 			// Поява контенту таймера
 			setTimeout(() => {
