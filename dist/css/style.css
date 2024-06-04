@@ -3085,34 +3085,59 @@ body ::-webkit-scrollbar {
   font-family: Piazzolla,Arial,sans-serif;
   font-weight: 700;
   text-align: center;
-  z-index: 2
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 @media (max-width:1700px) {
   .jackpot-block__top-text-content {
-    font-size: 1.75rem
+    font-size: 1.625rem
   }
 }
 @media (max-width:1500px) {
   .jackpot-block__top-text-content {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
     line-height: 130%
   }
 }
 @media (max-width:1200px) {
   .jackpot-block__top-text-content {
-    font-size: 1.125rem
+    font-size: 1.0625rem
   }
 }
 @media (max-width:1100px) {
   .jackpot-block__top-text-content {
-    font-size: 1.0625rem
+    font-size: 1rem
   }
 }
 @media (max-width:992px) {
   .jackpot-block__top-text-content {
-    font-size: 1rem;
+    font-size: .9375rem;
     line-height: 120%
   }
+}
+.jackpot-block__before-top-text {
+  opacity: 1;
+  text-align: center;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  padding: 2.1875rem
+}
+.jackpot-block__after-top-text {
+  opacity: 0;
+  transition: all 2.3s ease 0s;
+  text-align: center;
+  height: auto;
+  overflow: hidden
+}
+.jackpot-block__after-top-text span {
+  background: linear-gradient(90deg,#a56c0b 0,#ad7816 1%,#c79f3a 6%,#dcbe57 10%,#ebd46c 14%,#f4e178 19%,#f8e67d 22%,#f4e077 27%,#e8d068 34%,#d6b64f 41%,#c9a33d 45%,#c38f1b 57%,#e6c95c 75%,#f8e67d 84%,#f4e077 86%,#e9d167 90%,#d8b94c 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent
 }
 .jackpot-block__bottom-text-block {
   max-width: 46.375rem;
@@ -3148,7 +3173,10 @@ body ::-webkit-scrollbar {
   font-family: Piazzolla,Arial,sans-serif;
   font-weight: 700;
   text-align: center;
-  z-index: 2
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 @media (max-width:1440px) {
   .jackpot-block__bottom-text-block-content {
@@ -3159,6 +3187,26 @@ body ::-webkit-scrollbar {
   .jackpot-block__bottom-text-block-content {
     font-size: 1rem;
     line-height: 120%
+  }
+}
+.jackpot-block__before-bottom-text {
+  text-align: center;
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  padding: .9375rem
+}
+.jackpot-block__after-bottom-text {
+  opacity: 0;
+  transition: all 2.3s ease 0s;
+  text-align: center;
+  height: auto;
+  overflow: hidden
+}
+@media (max-width:47.99875em) {
+  .jackpot-block__after-bottom-text {
+    padding-bottom: .3125rem
   }
 }
 .jackpot-block__bottom-arrow-block {

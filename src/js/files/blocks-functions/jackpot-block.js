@@ -78,7 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			setTimeout(() => {
 				rotateEggs.style.animation = "eggsFlyAnimation 1s cubic-bezier(0,1.03,.17,1)";
 				flyEggs();
-				showJackpotText()
+				showJackpotText();
+				hiddenAndShowText();
 			}, 5100)
 		}, 2000)
 		
@@ -98,10 +99,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		const showJackpotText = () => {
 			jackpotTextBlock.style.opacity = "1";
-		//	jackpotTextBlock.style.animation = "showJackpotText 2s linear";
-			setTimeout(() => {
-			//	jackpotTextBlock.style.opacity = "1";
-			}, 2000)
+		}
+
+		// ------------- Заміна тексту зверху і знизу
+		const topBeforeText = document.querySelector(".jackpot-block__before-top-text")
+		const topAfterText = document.querySelector(".jackpot-block__after-top-text")
+		const bottomBeforeText = document.querySelector(".jackpot-block__before-bottom-text")
+		const bottomAfterText = document.querySelector(".jackpot-block__after-bottom-text")
+
+		const hiddenAndShowText = () => {
+			topBeforeText.style.opacity = "0";
+			topBeforeText.style.height = "0px";
+			topAfterText.style.opacity = "1";
+			topAfterText.style.height = "auto";
+
+			bottomBeforeText.style.opacity = "0";
+			bottomBeforeText.style.height = "0px";
+			bottomAfterText.style.opacity = "1";
+			bottomAfterText.style.height = "auto";
 		}
 		
 		// --------------- Анімація іскр
