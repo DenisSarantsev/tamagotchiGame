@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240604175852">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240604190325">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -761,38 +761,40 @@
 							</div>
 						</div>
 						<div class="dance-animation-block__video-wrapper desktop-video">
-							<img src="img/3d-video-block/dance-animation.webp" alt="">
-							<script>
-								// function supportsWebMAlpha() {
-								//     const video = document.createElement('video');
-								//     // Проверяем поддержку WebM с VP8 и альфа-каналом
-								//     return video.canPlayType('video/webm; codecs="vp8, vorbis"') === 'probably' || 
-								//            video.canPlayType('video/webm; codecs="vp9, opus"') === 'probably';
-								// 		}
+							<video autoplay muted loop playsinline>
+								<source src="img/3d-video-block/dance-animation.webm" type="video/webm">
+								Ваш браузер не поддерживает формат видео WebM.
+							</video>
 
-								// window.onload = function() {
-								// 	const container = document.querySelector('.desktop-video');
-								// 	if (supportsWebMAlpha()) {
-								// 			const videoElement = document.createElement('video');
-								// 			videoElement.src = 'img/3d-video-block/dance-animation.webm';
-								// 			videoElement.autoplay = true;
-								// 			videoElement.loop = true;
-								// 			videoElement.muted = true;
-								// 			videoElement.playsinline = true;
-								// 			container.appendChild(videoElement);
-								// 	} else {
-								// 			const imgElement = document.createElement('img');
-								// 			imgElement.src = 'img/3d-video-block/dance-animation.webp';
-								// 			container.appendChild(imgElement);
-								// 	}
-								// };
-							</script>
+							// function supportsWebMAlpha() {
+							// const video = document.createElement('video');
+							// // Проверяем поддержку WebM с VP8 и альфа-каналом
+							// return video.canPlayType('video/webm; codecs="vp8, vorbis"') === 'probably' ||
+							// video.canPlayType('video/webm; codecs="vp9, opus"') === 'probably';
+							// }
+
+							// window.onload = function() {
+							// const container = document.querySelector('.desktop-video');
+							// if (supportsWebMAlpha()) {
+							// const videoElement = document.createElement('video');
+							// videoElement.src = 'img/3d-video-block/dance-animation.webm';
+							// videoElement.autoplay = true;
+							// videoElement.loop = true;
+							// videoElement.muted = true;
+							// videoElement.playsinline = true;
+							// container.appendChild(videoElement);
+							// } else {
+							// const imgElement = document.createElement('img');
+							// imgElement.src = 'img/3d-video-block/dance-animation.webp';
+							// container.appendChild(imgElement);
+							// }
+							// };
 
 
-							<!-- <video autoplay muted loop playsinline>
-        <source src="img/3d-video-block/dance-animation.webm" type="video/webm">
-        Ваш браузер не поддерживает формат видео WebM.
-    	</video> -->
+
+
+
+
 						</div>
 					</div>
 					<div class="dance-animation-block__copyright-wrapper copyright-wrapper">
@@ -813,7 +815,7 @@
 	<script>
 		document.querySelector(".pre-loader-bg").classList.add("_hidden");
 	</script>
-	<script src="js/app.min.js?_v=20240604175852"></script>
+	<script src="js/app.min.js?_v=20240604190325"></script>
 </body>
 
 </html>
