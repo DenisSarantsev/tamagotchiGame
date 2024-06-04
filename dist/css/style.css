@@ -3922,7 +3922,11 @@ body ::-webkit-scrollbar {
 }
 .reviews__container {
   max-width: 80rem;
-  width: 100%
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
 }
 .reviews__bottom-arrow-container {
   position: absolute;
@@ -4659,6 +4663,10 @@ body ::-webkit-scrollbar {
 .dance-animation-block__video-wrapper video {
   width: 100%;
   height: 100%
+}
+.dance-animation-block__video-wrapper img {
+  width: 100%;
+  height: auto
 }
 .dance-animation-block__animation-image {
   max-width: 100%
