@@ -31,30 +31,31 @@
 			</div>
 		</div>
 		<div class="dance-animation-block__video-wrapper desktop-video">
+			<img src="img/3d-video-block/dance-animation.webp" alt="">
 			<script>
-				function supportsWebMAlpha() {
-					const video = document.createElement('video');
-					// Проверяем поддержку WebM с VP8 и альфа-каналом
-					return video.canPlayType('video/webm; codecs="vp8, vorbis"') === 'probably' ||
-						video.canPlayType('video/webm; codecs="vp9, opus"') === 'probably';
-				}
+				// function supportsWebMAlpha() {
+				//     const video = document.createElement('video');
+				//     // Проверяем поддержку WebM с VP8 и альфа-каналом
+				//     return video.canPlayType('video/webm; codecs="vp8, vorbis"') === 'probably' || 
+				//            video.canPlayType('video/webm; codecs="vp9, opus"') === 'probably';
+				// 		}
 
-				window.onload = function() {
-					const container = document.querySelector('.desktop-video');
-					if (supportsWebMAlpha()) {
-						const videoElement = document.createElement('video');
-						videoElement.src = '../img/3d-video-block/dance-animation.webm';
-						videoElement.autoplay = true;
-						videoElement.loop = true;
-						videoElement.muted = true;
-						videoElement.playsinline = true;
-						container.appendChild(videoElement);
-					} else {
-						const imgElement = document.createElement('img');
-						imgElement.src = '../img/3d-video-block/dance-animation.webp';
-						container.appendChild(imgElement);
-					}
-				};
+				// window.onload = function() {
+				// 	const container = document.querySelector('.desktop-video');
+				// 	if (supportsWebMAlpha()) {
+				// 			const videoElement = document.createElement('video');
+				// 			videoElement.src = '../img/3d-video-block/dance-animation.webm';
+				// 			videoElement.autoplay = true;
+				// 			videoElement.loop = true;
+				// 			videoElement.muted = true;
+				// 			videoElement.playsinline = true;
+				// 			container.appendChild(videoElement);
+				// 	} else {
+				// 			const imgElement = document.createElement('img');
+				// 			imgElement.src = '../img/3d-video-block/dance-animation.webp';
+				// 			container.appendChild(imgElement);
+				// 	}
+				// };
 			</script>
 
 
