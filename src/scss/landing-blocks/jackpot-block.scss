@@ -6,6 +6,9 @@
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	@media (max-height: 570px){
+		min-height: 110svh;
+	}
 	@media (max-width:$mobile){
 		position: relative;
 	}
@@ -358,10 +361,23 @@
 		@media (max-width: 1440px){
 			padding: 5px 35px;
 		}
+		@media (max-width:$mobile){
+			padding: 5px 25px;
+		}
+		@media (max-width: 500px){
+			padding: 5px 5px;
+		}
 		& img {
 			width: toRem(24);
 			height: toRem(30);
 			z-index: 2;
+			@media (max-width:$mobile){
+				width: toRem(18);
+				height: toRem(26);
+			}
+			@media (max-width: 500px){
+				display: none;
+			}
 		}
 	}
 	&__top-text-block-bg {
@@ -379,11 +395,19 @@
 		position: absolute;
 		top: 10px;
 		left: 10px;
+		@media (max-width:$mobile){
+			top: toRem(3);
+			left: toRem(5);
+		}
 	}
 	&__top-text-block-egg-two {
 		position: absolute;
 		bottom: 10px;
 		right: 10px;
+		@media (max-width:$mobile){
+			bottom: toRem(3);
+			right: toRem(5);
+		}
 	}
 	&__top-text-content {
 		font-size: toRem(32);
@@ -411,6 +435,10 @@
 		@media (max-width: 992px){
 			font-size: toRem(15);
 			line-height: 120%;
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(14);
+			line-height: 110%;
 		}
 	}
 	&__before-top-text {
@@ -462,6 +490,9 @@
 		@media (max-width:$mobile){
 			padding: toRem(10) toRem(15);
 		}
+		@media (max-width: 550px){
+			padding: toRem(5) toRem(5);
+		}
 	}	
 	&__bottom-text-block-bg-image {
 		position: absolute;
@@ -487,6 +518,10 @@
 		@media (max-width:	992px){
 			font-size: toRem(16);
 			line-height: 120%;
+		}
+		@media (max-width:$mobile){
+			font-size: toRem(14);
+			line-height: 110%;
 		}
 	}
 	&__before-bottom-text {

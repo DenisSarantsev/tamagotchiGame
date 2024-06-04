@@ -2663,6 +2663,11 @@ body ::-webkit-scrollbar {
   align-items: center;
   overflow: hidden
 }
+@media (max-height:570px) {
+  .jackpot-block {
+    min-height: 110svh
+  }
+}
 @media (max-width:47.99875em) {
   .jackpot-block {
     position: relative
@@ -3053,10 +3058,31 @@ body ::-webkit-scrollbar {
     padding: 5px 35px
   }
 }
+@media (max-width:47.99875em) {
+  .jackpot-block__top-text-block {
+    padding: 5px 25px
+  }
+}
+@media (max-width:500px) {
+  .jackpot-block__top-text-block {
+    padding: 5px 5px
+  }
+}
 .jackpot-block__top-text-block img {
   width: 1.5rem;
   height: 1.875rem;
   z-index: 2
+}
+@media (max-width:47.99875em) {
+  .jackpot-block__top-text-block img {
+    width: 1.125rem;
+    height: 1.625rem
+  }
+}
+@media (max-width:500px) {
+  .jackpot-block__top-text-block img {
+    display: none
+  }
 }
 .jackpot-block__top-text-block-bg {
   border-radius: .9375rem;
@@ -3074,10 +3100,22 @@ body ::-webkit-scrollbar {
   top: 10px;
   left: 10px
 }
+@media (max-width:47.99875em) {
+  .jackpot-block__top-text-block-egg-one {
+    top: .1875rem;
+    left: .3125rem
+  }
+}
 .jackpot-block__top-text-block-egg-two {
   position: absolute;
   bottom: 10px;
   right: 10px
+}
+@media (max-width:47.99875em) {
+  .jackpot-block__top-text-block-egg-two {
+    bottom: .1875rem;
+    right: .3125rem
+  }
 }
 .jackpot-block__top-text-content {
   font-size: 2rem;
@@ -3115,6 +3153,12 @@ body ::-webkit-scrollbar {
   .jackpot-block__top-text-content {
     font-size: .9375rem;
     line-height: 120%
+  }
+}
+@media (max-width:47.99875em) {
+  .jackpot-block__top-text-content {
+    font-size: .875rem;
+    line-height: 110%
   }
 }
 .jackpot-block__before-top-text {
@@ -3159,6 +3203,11 @@ body ::-webkit-scrollbar {
     padding: .625rem .9375rem
   }
 }
+@media (max-width:550px) {
+  .jackpot-block__bottom-text-block {
+    padding: .3125rem .3125rem
+  }
+}
 .jackpot-block__bottom-text-block-bg-image {
   position: absolute;
   top: 0;
@@ -3187,6 +3236,12 @@ body ::-webkit-scrollbar {
   .jackpot-block__bottom-text-block-content {
     font-size: 1rem;
     line-height: 120%
+  }
+}
+@media (max-width:47.99875em) {
+  .jackpot-block__bottom-text-block-content {
+    font-size: .875rem;
+    line-height: 110%
   }
 }
 .jackpot-block__before-bottom-text {
