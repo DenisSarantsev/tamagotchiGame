@@ -100,6 +100,9 @@
 	@media (min-width: 768px){
 		display: none;
 	}
+	@media (max-height: 560px){
+		padding: toRem(2) toRem(10) toRem(5) toRem(10);
+	}
 	
 	&__logo {
 		@media (max-width: 1440px){
@@ -119,6 +122,9 @@
 		}
 		@media (max-width: 500px){
 			max-width: toRem(75);
+		}
+		@media (max-height: 560px){
+			max-width: toRem(70);
 		}
 	}
 	&__buttons-block {
@@ -207,6 +213,10 @@
 	@media (max-width:$mobile){
 		max-width: toRem(120);
 	}
+	@media (max-height: 560px){
+		max-width: toRem(120);
+		height: toRem(50);
+	}
 	&:hover {
 		cursor: pointer;
 	}
@@ -288,6 +298,9 @@
 			font-size: toRem(22);
 		}
 		@media (max-width: 600px){
+			font-size: toRem(20);
+		}
+		@media (max-height: 560px){
 			font-size: toRem(20);
 		}
 	}

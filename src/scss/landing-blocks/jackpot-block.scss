@@ -320,6 +320,9 @@
 			padding: toRem(60) toRem(10) toRem(60) toRem(10);
 			gap: toRem(40);
 		}
+		@media (max-height: 560px){
+			padding: toRem(60) toRem(10) toRem(60) toRem(10);
+		}
 	}
 	&__wheel-eggs-inner-container {
 		max-width: toRem(480.33);
@@ -348,7 +351,7 @@
 	&__top-text-block {
 		padding: toRem(25) toRem(45);
 		position: relative;
-		max-width: toRem(812);
+		max-width: toRem(1000);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -360,6 +363,9 @@
 		}
 		@media (max-width: 1440px){
 			padding: 5px 35px;
+		}
+		@media (max-width: 1000px){
+			max-width: 90%;
 		}
 		@media (max-width:$mobile){
 			padding: 5px 25px;
@@ -410,7 +416,7 @@
 		}
 	}
 	&__top-text-content {
-		font-size: toRem(32);
+		font-size: toRem(22);
 		line-height: 140%;
 		font-family: $thirdFont;
 		font-weight: 700;
@@ -419,21 +425,18 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		@media (max-width: 1700px){
-			font-size: toRem(26);
-		}
-		@media (max-width: 1500px){
+		@media (max-width: 1920px){
 			font-size: toRem(20);
+		}
+		@media (max-width: 1440px){
+			font-size: toRem(18);
 			line-height: 130%;
 		}
 		@media (max-width: 1200px){
 			font-size: toRem(17);
 		}
-		@media (max-width: 1100px){
-			font-size: toRem(16);
-		}
 		@media (max-width: 992px){
-			font-size: toRem(15);
+			font-size: toRem(16);
 			line-height: 120%;
 		}
 		@media (max-width:$mobile){
@@ -476,7 +479,7 @@
 
 	// --------------------------------------------- Блок з текстом знизу
 	&__bottom-text-block {
-		max-width: toRem(742);
+		max-width: toRem(1000);
 		width: 100%;
 		position: relative;
 		padding: toRem(25);
@@ -486,6 +489,9 @@
 		z-index: 0;
 		@media (max-width: 1800px){
 			padding: 1.389vw;
+		}
+		@media (max-width: 1000px){
+			max-width: 90%;
 		}
 		@media (max-width:$mobile){
 			padding: toRem(10) toRem(15);

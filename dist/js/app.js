@@ -1212,7 +1212,7 @@
                 let indexFly = 1;
                 rotateEggs.style.maxWidth = "480.34px";
                 rotateEggs.style.maxHeight = "480.34px";
-                if (window.innerWidth >= 1920) {
+                if (window.innerWidth > 1920) {
                     egg1.style.transform = `translateX(${60 * indexFly}px) translateY(-${200 * indexFly}px)`;
                     egg2.style.transform = `translateX(${130 * indexFly}px) translateY(-${80 * indexFly}px) translateZ(300px)`;
                     egg3.style.transform = `translateX(${350 * indexFly}px) translateY(-${60 * indexFly}px)`;
@@ -1225,19 +1225,19 @@
                     egg10.style.transform = `translateX(${-320 * indexFly}px) translateY(${-70 * indexFly}px)`;
                     egg11.style.transform = `translateX(${-130 * indexFly}px) translateY(${-100 * indexFly}px) translateZ(300px)`;
                     egg12.style.transform = `translateX(${-40 * indexFly}px) translateY(${-160 * indexFly}px)`;
-                } else if (window.innerWidth < 1920 && window.innerWidth > 1500) {
-                    egg1.style.transform = `translateX(3.125vw) translateY(-10.417vw)`;
-                    egg2.style.transform = `translateX(6.771vw) translateY(-4.167vw) translateZ(15.625vw)`;
-                    egg3.style.transform = `translateX(18.229vw) translateY(-3.125vw)`;
-                    egg4.style.transform = `translateX(8.333vw) translateY(1.302vw) translateZ(15.625vw)`;
-                    egg5.style.transform = `translateX(9.896vw) translateY(8.333vw)`;
-                    egg6.style.transform = `translateX(1.302vw) translateY(4.948vw) translateZ(15.625vw)`;
-                    egg7.style.transform = `translateX(-2.083vw) translateY(8.854vw)`;
-                    egg8.style.transform = `translateX(-6.25vw) translateY(5.729vw) translateZ(15.625vw)`;
-                    egg9.style.transform = `translateX(-14.583vw) translateY(4.167vw)`;
-                    egg10.style.transform = `translateX(-16.667vw) translateY(-3.646vw)`;
-                    egg11.style.transform = `translateX(-6.771vw) translateY(-5.208vw) translateZ(15.625vw)`;
-                    egg12.style.transform = `translateX(-2.083vw) translateY(-8.333vw)`;
+                } else if (window.innerWidth <= 1920 && window.innerWidth > 1500) {
+                    egg1.style.transform = `translateX(1.8vw) translateY(-6vw)`;
+                    egg2.style.transform = `translateX(3vw) translateY(-1.5vw) translateZ(15.625vw)`;
+                    egg3.style.transform = `translateX(10vw) translateY(-2vw)`;
+                    egg4.style.transform = `translateX(6vw) translateY(1vw) translateZ(15.625vw)`;
+                    egg5.style.transform = `translateX(5vw) translateY(4vw)`;
+                    egg6.style.transform = `translateX(0.8vw) translateY(2vw) translateZ(15.625vw)`;
+                    egg7.style.transform = `translateX(-1.8vw) translateY(6.5vw)`;
+                    egg8.style.transform = `translateX(-3.5vw) translateY(3vw) translateZ(15.625vw)`;
+                    egg9.style.transform = `translateX(-12vw) translateY(3vw)`;
+                    egg10.style.transform = `translateX(-10vw) translateY(-2.5vw)`;
+                    egg11.style.transform = `translateX(-2.5vw) translateY(-1.85vw) translateZ(15.625vw)`;
+                    egg12.style.transform = `translateX(-1.85vw) translateY(-6vw)`;
                 } else if (window.innerWidth <= 1500 && window.innerWidth > 1200) {
                     egg1.style.transform = `translateX(1vw) translateY(-3vw)`;
                     egg2.style.transform = `translateX(3vw) translateY(-1.5vw) translateZ(15.625vw)`;

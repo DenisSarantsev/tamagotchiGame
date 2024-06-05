@@ -210,6 +210,9 @@
 		@media (max-width: 500px){
 			font-size: toRem(28);
 		}
+		@media (max-height: 560px){
+			font-size: toRem(24);
+		}
 	}
 	&__advantages {
 		display: grid;
@@ -221,6 +224,9 @@
 		}
 		@media (max-width: 550px){
 			padding: toRem(0) toRem(15);
+		}
+		@media (max-height: 560px){
+			padding: toRem(0) toRem(5);
 		}
 		@media (max-width:$mobile){
 			grid-template-columns: repeat(2, 1fr);
@@ -276,6 +282,10 @@
 		@media (max-width: 550px){
 			flex-direction: row;
 		}
+		@media (max-height: 560px){
+			flex-direction: column;
+			align-items: center;
+		}
 		& img {
 			width: toRem(40);
 			height: toRem(40);
@@ -299,6 +309,11 @@
 			@media (max-width: 550px){
 				text-align: left;
 			}
+			@media (max-height: 560px){
+				text-align: center;
+				font-size: toRem(16);
+				line-height: 100%;
+			}
 			& span {
 				background: $goldTextGradient;
 				-webkit-background-clip: text;
@@ -308,6 +323,11 @@
 				@media (max-width: 1200px){
 					font-size: toRem(20);
 					line-height: 120%;
+				}
+				@media (max-height: 560px){
+					text-align: center;
+					font-size: toRem(16);
+					line-height: 100%;
 				}
 			}
 		}
@@ -338,6 +358,9 @@
 		@media (max-width: 550px){
 			margin-top: toRem(0);
 			gap: toRem(25);
+		}
+		@media (max-height: 560px){
+			display: none;
 		}
 	}
 	&__table-container {
@@ -396,6 +419,9 @@
 	}
 	@media (max-width:$mobileSmall){
 		height: 174.419vw;
+	}
+	@media (max-height: 560px){
+		display: none;
 	}
 	&__iphone {
 		@media (max-width:$mobile){

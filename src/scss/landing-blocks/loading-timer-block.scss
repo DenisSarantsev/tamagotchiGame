@@ -110,6 +110,11 @@
 		@media (max-width: 500px){
 			width: 130%;
 		}
+		@media (max-height: 560px){
+			width: 100vh;
+			height: 100vh;
+			left: toRem(-700);
+		}
 		// @media (max-width: 350px){
 		// 	width: 140vw;
 		// 	height: 140vw;
@@ -139,6 +144,10 @@
 			width: 28vw;
 			height: 40vw;
 		}
+		@media (max-height: 560px){
+			width: 30vh;
+			height: 40vh;
+		}
 	}
 	&__second-leaf {
 		position: absolute;
@@ -162,6 +171,10 @@
 		@media (max-width: 500px){
 			width: 57vw;
 			height: 37vw;
+		}
+		@media (max-height: 560px){
+			width: 100vh;
+			height: 45vh;
 		}
 	}
 	&__third-leaf {
@@ -190,6 +203,10 @@
 		@media (max-width: 500px){
 			width: 40vw;
 			height: 20vw;
+		}
+		@media (max-height: 560px){
+			width: 65vh;
+			height: 20vh;
 		}
 	}
 
@@ -240,6 +257,10 @@
 	}
 	&__big-logo {
 		width: 100%;
+		@media (max-height: 560px){
+			width: 80vh;
+			height: 60vh;
+		}
 	}
 	&__load-button-container {
 		width: 100%;
@@ -426,6 +447,7 @@
 		@media (max-width: 600px){
 			padding: toRem(5) toRem(0);
 		}
+
 	}
 	&__logo {
 		@media (max-width: 1440px){
@@ -446,6 +468,9 @@
 		@media (max-width: 500px){
 			max-width: toRem(75);
 		}
+		@media (max-height: 560px){
+			max-width: toRem(80);
+		}
 	}
 	&__buttons-block {
 		position: absolute;
@@ -459,6 +484,9 @@
 			position: relative;
 			align-items: center;
 			padding: toRem(0);
+		}
+		@media (max-height: 560px){
+			padding: toRem(5) 0 0 0;
 		}
 		&>* {
 			transition: all 0.3s ease 0s;
@@ -568,6 +596,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	gap: toRem(30);
 	@media (max-width: 1800px){
 		gap: toRem(23);
@@ -580,6 +609,9 @@
 	}
 	@media (max-width:$mobile){
 		gap: 1.25vh;
+	}
+	@media (max-height: 560){
+		gap: toRem(5);
 	}
 	&__title {
 		font-family: $secondFont;
@@ -607,6 +639,9 @@
 		@media (max-width: 500px){
 			font-size: toRem(34);
 		}
+		@media (max-height: 460px){
+			font-size: toRem(34);
+		}
 	}
 	&__subtitle {
 		font-family: $thirdFont;
@@ -632,6 +667,9 @@
 			font-size: toRem(18);
 		}
 		@media (max-width: 500px){
+			font-size: toRem(16);
+		}
+		@media (max-height: 460px){
 			font-size: toRem(16);
 		}
 	}
@@ -695,8 +733,8 @@
 		@media (max-width: 992px){
 			padding: toRem(0) toRem(15) toRem(3) toRem(15);
 		}
-		@media (max-width:$mobile){
-			
+		@media (max-height: 530px){
+			gap: toRem(0);
 		}
 	}
 	&__numbers {
@@ -712,6 +750,9 @@
 		@media (max-width:$mobile){
 			font-size: toRem(26);
 		}
+		@media (max-height: 530px){
+			font-size: toRem(20);
+		}
 	}
 	&__subtitle {
 		font-size: toRem(28);
@@ -724,6 +765,9 @@
 		}
 		@media (max-width:$mobile){
 			font-size: toRem(18);
+		}
+		@media (max-height: 530px){
+			font-size: toRem(16);
 		}
 	}
 }
@@ -761,7 +805,10 @@
 			max-width: toRem(600);
 			padding: toRem(5) toRem(5);
 		}
-
+		@media (max-height: 530px){
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 	&__top-egg {
 		position: absolute;
@@ -841,6 +888,9 @@
 		@media (max-width:$mobile){
 			font-size: toRem(16);
 		}
+		@media (max-height: 530px){
+			font-size: toRem(16);
+		}
 	}
 	&__bottom-text {
 		line-height: 130%;
@@ -858,6 +908,9 @@
 		}
 		@media (max-width:$mobile){
 			font-size: toRem(24);
+		}
+		@media (max-height: 530px){
+			font-size: toRem(18);
 		}
 	}
 }
