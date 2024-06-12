@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	function showElementPosition(el) {
 		var rect = el.getBoundingClientRect(),
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		let topElem = rect.top + scrollTop
+		let topElem = rect.top + scrollTop - 100
     return topElem
 	}
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 		setTimeout(() => {
 			rotateObject(rotateWheel)
-		}, 2000)
+		}, 500)
 
 		// --------------- Анімація яєць
 		const allEggsShadows = document.querySelectorAll(".eggs-rotate__egg-shadow");
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				showJackpotText();
 				hiddenAndShowText();
 			}, 5100)
-		}, 2000)
+		}, 500)
 		
 		// --------------- Розліт яєць
 		for ( let item of allEggsShadows ) {

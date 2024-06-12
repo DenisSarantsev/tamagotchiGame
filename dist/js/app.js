@@ -1133,7 +1133,7 @@
             };
             function showElementPosition(el) {
                 var rect = el.getBoundingClientRect(), scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                let topElem = rect.top + scrollTop;
+                let topElem = rect.top + scrollTop - 100;
                 return topElem;
             }
             const animationFunctions = () => {
@@ -1145,7 +1145,7 @@
                 };
                 setTimeout((() => {
                     rotateObject(rotateWheel);
-                }), 2e3);
+                }), 500);
                 const allEggsShadows = document.querySelectorAll(".eggs-rotate__egg-shadow");
                 setTimeout((() => {
                     rotateEggs.style.animation = "wheelRotateAnimation 10s cubic-bezier(.39,.01,.49,.99)";
@@ -1155,7 +1155,7 @@
                         showJackpotText();
                         hiddenAndShowText();
                     }), 5100);
-                }), 2e3);
+                }), 500);
                 for (let item of allEggsShadows) item.style.animation = "allEggsShadows 2s linear";
                 setTimeout((() => {
                     for (let item of allEggsShadows) item.classList.add("egg-shadow");
