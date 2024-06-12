@@ -913,7 +913,7 @@
                     loadingButtonHover.classList.add("_hidden");
                     loadingButtonActive.classList.remove("_hidden");
                 }));
-                startButtonBlock.addEventListener("mouseup", (() => {
+                startButtonBlock.addEventListener("click", (() => {
                     loadingButtonDefault.classList.add("_hidden");
                     loadingButtonHover.classList.remove("_hidden");
                     loadingButtonActive.classList.add("_hidden");
@@ -1133,7 +1133,7 @@
             };
             function showElementPosition(el) {
                 var rect = el.getBoundingClientRect(), scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                let topElem = rect.top + scrollTop - 100;
+                let topElem = rect.top + scrollTop;
                 return topElem;
             }
             const animationFunctions = () => {
@@ -1317,6 +1317,35 @@
                 item.addEventListener("mouseenter", handleMouseEnter);
                 item.addEventListener("mouseleave", handleMouseLeave);
             }));
+        }));
+        document.addEventListener("DOMContentLoaded", (() => {
+            const hoverAndActiveVideoPlayButton = () => {
+                const defaultPlayButton = document.querySelector(".video__button-default");
+                const hoverPlayButton = document.querySelector(".video__button-hover");
+                const activePlayButton = document.querySelector(".video__button-active");
+                const playButtonBlock = document.querySelector(".video-button");
+                playButtonBlock.addEventListener("mouseenter", (() => {
+                    defaultPlayButton.classList.add("_hidden");
+                    hoverPlayButton.classList.remove("_hidden");
+                    activePlayButton.classList.add("_hidden");
+                }));
+                playButtonBlock.addEventListener("mouseleave", (() => {
+                    defaultPlayButton.classList.remove("_hidden");
+                    hoverPlayButton.classList.add("_hidden");
+                    activePlayButton.classList.add("_hidden");
+                }));
+                playButtonBlock.addEventListener("mousedown", (() => {
+                    defaultPlayButton.classList.add("_hidden");
+                    hoverPlayButton.classList.add("_hidden");
+                    activePlayButton.classList.remove("_hidden");
+                }));
+                playButtonBlock.addEventListener("mouseup", (() => {
+                    defaultPlayButton.classList.add("_hidden");
+                    hoverPlayButton.classList.remove("_hidden");
+                    activePlayButton.classList.add("_hidden");
+                }));
+            };
+            hoverAndActiveVideoPlayButton();
         }));
         window["FLS"] = true;
     })();

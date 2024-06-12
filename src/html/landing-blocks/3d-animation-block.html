@@ -20,6 +20,7 @@
 
 	<!--------------------------------------------------- Елементи контенту -->
 	<div class="dance-animation-block__container">
+		
 		<div class="dance-animation-block__text-container">
 			<div class="dance-animation-block__text-wrapper">
 				<div class="dance-animation-block__black-bg"></div>
@@ -30,6 +31,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="dance-animation-block__video-wrapper desktop-video">
 			<script>
         // Функция для определения операционной системы
@@ -52,7 +54,6 @@
             } else if (!os && /Linux/.test(platform)) {
                 os = 'Linux';
             }
-
             return os;
         }
 
@@ -98,6 +99,18 @@
 			</script>
 
 		</div>
+
+		<div class="dance-animation-block__play-button main-button video-button">
+			<a target="_blank" href="https://game.tamagotchi.money/" class="main-button__link button-image-responsive">
+				<img src="@img/common/button-default.svg" alt="start button" class="main-button__image video__button-default button-image-responsive">
+				<img src="@img/common/button-hover.svg" alt="start button" class="main-button__image video__button-hover button-image-responsive _hidden">
+				<img src="@img/common/button-active.svg" alt="start button" class="main-button__image video__button-active button-image-responsive _hidden">
+				<div class="main-button__text-container">
+					<div class="button-rext-responsive main-button__text">Играть</div>
+				</div>
+			</a>
+		</div>
+
 	</div>
 	<div class="dance-animation-block__copyright-wrapper copyright-wrapper">
 		<div class="copyright-wrapper__text">

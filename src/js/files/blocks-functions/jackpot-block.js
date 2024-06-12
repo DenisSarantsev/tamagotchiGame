@@ -42,13 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
-
-
 	// Вираховуємо позицію елемента з колесом
 	function showElementPosition(el) {
 		var rect = el.getBoundingClientRect(),
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		let topElem = rect.top + scrollTop - 100
+		let topElem = rect.top + scrollTop
     return topElem
 	}
 

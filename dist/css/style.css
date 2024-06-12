@@ -395,7 +395,8 @@ h6 {
   padding: 1.5625rem 0 0 0;
   display: flex;
   gap: .625rem;
-  border-radius: 50%
+  border-radius: 50%;
+  display: none
 }
 @media (max-width:47.99875em) {
   .mobile-header__buttons-block {
@@ -1253,7 +1254,8 @@ body ::-webkit-scrollbar {
   padding: 1.5625rem 0 0 0;
   display: flex;
   gap: .625rem;
-  border-radius: 50%
+  border-radius: 50%;
+  display: none
 }
 @media (max-width:47.99875em) {
   .timer__buttons-block {
@@ -3187,7 +3189,7 @@ body ::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: all 2s ease 0s
+  transition: all .5s ease 0s
 }
 @media (max-width:1920px) {
   .jackpot-block__wheel-eggs-inner-container {
@@ -4419,7 +4421,8 @@ body ::-webkit-scrollbar {
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: center
+  justify-content: center;
+  display: none
 }
 @media (max-width:1440px) {
   .reviews-container {
@@ -4744,15 +4747,15 @@ body ::-webkit-scrollbar {
   align-items: center;
   height: 100%;
   justify-content: center;
-  min-height: 100svh
+  min-height: 100svh;
+  padding: 3.75rem 0 4.375rem 0
 }
 .dance-animation-block__text-container {
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding-top: 3.125rem
+  justify-content: center
 }
 @media (max-width:47.99875em) {
   .dance-animation-block__text-container {
@@ -4868,14 +4871,14 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:1920px) {
   .dance-animation-block__video-wrapper {
-    max-width: 60.938vw;
-    max-height: 63.281vw
+    max-width: 57vw;
+    max-height: 60vw
   }
 }
 @media (max-width:1440px) {
   .dance-animation-block__video-wrapper {
-    max-width: 70vw;
-    max-height: 80vw
+    max-width: 55vw;
+    max-height: 65vw
   }
 }
 @media (max-width:47.99875em) {

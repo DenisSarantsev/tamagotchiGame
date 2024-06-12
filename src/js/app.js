@@ -256,4 +256,5 @@ import "./files/blocks-functions/dollars-block.js";
 import "./files/blocks-functions/jackpot-block.js";
 import "./files/common-scripts.js";
 import "./files/blocks-functions/reviews-container.js";
+import "./files/blocks-functions/video-block.js";
 //============================================================================================================================================================================================================================================

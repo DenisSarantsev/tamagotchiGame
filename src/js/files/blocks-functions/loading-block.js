@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			loadingButtonHover.classList.add("_hidden");
 			loadingButtonActive.classList.remove("_hidden");
 		})
-		startButtonBlock.addEventListener("mouseup", () => {
+		startButtonBlock.addEventListener("click", () => {
 			// --------------------------------------------------- Логіка, що виконується у разі натискання кнопки
 			loadingButtonDefault.classList.add("_hidden");
 			loadingButtonHover.classList.remove("_hidden");

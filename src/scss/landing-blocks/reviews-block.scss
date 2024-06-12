@@ -409,6 +409,7 @@
 	position: relative;
 	display: flex;
 	justify-content: center;
+	display: none; // Отзывы отключены в рамках правок от 12.06.2024
 	@media (max-width: 1440px){
 		max-height: 400px;
 	}

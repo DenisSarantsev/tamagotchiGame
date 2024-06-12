@@ -480,6 +480,7 @@
 		display: flex;
 		gap: toRem(10);
 		border-radius: 50%;
+		display: none; // Кнопки отключены в рамках правок от 12.06.2024
 		@media (max-width:$mobile){
 			position: relative;
 			align-items: center;
