@@ -537,7 +537,7 @@ h6 {
 }
 .main-button {
   width: 100%;
-  max-width: 14.375rem;
+  max-width: 15.625rem;
   height: 8.125rem;
   position: relative;
   display: flex;
@@ -566,12 +566,13 @@ h6 {
 }
 @media (max-width:47.99875em) {
   .main-button {
+    margin-bottom: 10px;
     max-width: 11.25rem
   }
 }
 @media (max-height:560px) {
   .main-button {
-    max-width: 7.5rem;
+    max-width: 9.375rem;
     height: 3.125rem
   }
 }
@@ -605,7 +606,7 @@ h6 {
 }
 @media (max-width:47.99875em) {
   .main-button__link {
-    max-width: 11.25rem
+    max-width: 12.5rem
   }
 }
 .main-button__image {
@@ -635,7 +636,7 @@ h6 {
 }
 @media (max-width:47.99875em) {
   .main-button__image {
-    max-width: 11.25rem
+    max-width: 12.5rem
   }
 }
 .main-button__text-container {
@@ -684,19 +685,20 @@ h6 {
 }
 @media (max-width:600px) {
   .main-button__text {
-    font-size: 1.25rem
+    font-size: 1.125rem
   }
 }
 @media (max-height:560px) {
   .main-button__text {
-    font-size: 1.25rem
+    font-size: 1rem
   }
 }
 body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   height: 100%;
-  background-color: #062606
+  background-color: #062606;
+  overflow: hidden
 }
 body ::-webkit-scrollbar {
   width: 0;
@@ -1058,12 +1060,6 @@ body ::-webkit-scrollbar {
 }
 .loading__big-logo {
   width: 100%
-}
-@media (max-height:560px) {
-  .loading__big-logo {
-    width: 80vh;
-    height: 60vh
-  }
 }
 .loading__load-button-container {
   width: 100%;
@@ -2878,6 +2874,7 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .dollars-block__bottom-text-container {
+    margin-top: 15px;
     font-size: .9375rem;
     line-height: 130%
   }
@@ -2968,6 +2965,7 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .dollars-eggs-container__text {
+    margin-top: 7px;
     font-size: .9375rem;
     line-height: 130%
   }
@@ -3346,13 +3344,13 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:47.99875em) {
   .jackpot-block__wheel-eggs-container {
-    padding: 3.75rem .625rem 3.75rem .625rem;
-    gap: 2.5rem
+    padding: 3.125rem .625rem 3.125rem .625rem;
+    gap: 3.75rem
   }
 }
 @media (max-height:560px) {
   .jackpot-block__wheel-eggs-container {
-    padding: 3.75rem .625rem 3.75rem .625rem
+    padding: 2.1875rem .625rem 2.1875rem .625rem
   }
 }
 .jackpot-block__wheel-eggs-inner-container {
@@ -5096,7 +5094,13 @@ body ::-webkit-scrollbar {
 }
 @media (max-width:992px) {
   .dance-animation-block__bottom-subtitle {
-    margin-top: 0
+    margin-top: 0;
+    font-size: 18px
+  }
+}
+@media (max-width:768px) {
+  .dance-animation-block__bottom-subtitle {
+    font-size: 16px
   }
 }
 .dance-leafs-container {

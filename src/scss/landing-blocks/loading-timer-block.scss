@@ -257,10 +257,10 @@
 	}
 	&__big-logo {
 		width: 100%;
-		@media (max-height: 560px){
-			width: 80vh;
-			height: 60vh;
-		}
+		// @media (max-height: 560px){
+		// 	width: 80vh;
+		// 	height: 60vh;
+		// }
 	}
 	&__load-button-container {
 		width: 100%;

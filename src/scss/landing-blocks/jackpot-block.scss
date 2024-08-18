@@ -317,11 +317,11 @@
 			padding: 2.5vw 0 3vw 0;
 		}
 		@media (max-width:$mobile){
-			padding: toRem(60) toRem(10) toRem(60) toRem(10);
-			gap: toRem(40);
+			padding: toRem(50) toRem(10) toRem(50) toRem(10);
+			gap: toRem(60);
 		}
 		@media (max-height: 560px){
-			padding: toRem(60) toRem(10) toRem(60) toRem(10);
+			padding: toRem(35) toRem(10) toRem(35) toRem(10);
 		}
 	}
 	&__wheel-eggs-inner-container {
