@@ -22,36 +22,67 @@
 }
 
 // Анімація обертання яєць
-// @keyframes eggsRotateAnimation {
-// 	0% {
-// 		transform: rotate(0deg);
-
-// 	}
-// 	100% {
-// 		transform: rotate(2160deg);
-// 	}
-// }
-
-// Анімація розлітання яєць
-@keyframes eggsFlyAnimation {
+@keyframes eggsRotateAnimation {
 	0% {
-		max-width: toRem(480.34);
-		max-height: toRem(480.34);
-		@media (max-width: 1920px){
-			max-width: 25.018vw;
-			max-height: 25.018vw;
-		}
+		transform: rotate(0deg);
+
 	}
 	100% {
-		max-width: toRem(480.34);
-		max-height: toRem(480.34);
-		@media (max-width: 1920px){
-			max-width: 25.018vw;
-			max-height: 25.018vw;
-		}
+		transform: rotate(2160deg);
 	}
 }
 
+
+
+
+// ------------------------------------------------------------
+// Анімація розлітання яєць
+// @keyframes eggsFlyAnimation {
+// 	0% {
+// 		max-width: toRem(480.34);
+// 		max-height: toRem(480.34);
+// 		@media (max-width: 1920px){
+// 			max-width: 25.018vw;
+// 			max-height: 25.018vw;
+// 		}
+// 	}
+// 	100% {
+// 		max-width: toRem(480.34);
+// 		max-height: toRem(480.34);
+// 		@media (max-width: 1920px){
+// 			max-width: 25.018vw;
+// 			max-height: 25.018vw;
+// 		}
+// 	}
+// }
+
+
+
+
+// ----------------------------------------------
+@keyframes eggsFlyAnimation {
+	0% {
+			max-width: toRem(480.34);
+			max-height: toRem(480.34);
+	}
+	100% {
+			max-width: toRem(480.34);
+			max-height: toRem(480.34);
+	}
+}
+// .animated-element {
+// 	animation: eggsFlyAnimation 2s infinite;
+// }
+
+// @media (max-width: 1920px) {
+// 	.animated-element {
+// 			max-width: 25.018vw;
+// 			max-height: 25.018vw;
+// 	}
+// }
+
+
+// ----------------------------------------------
 // ---------- Анімація руху (для кожного яйця окремо)
  // Индекс, на который мы умножаем для изменения дальности разлета при адаптации
 // 	$indexFly: 1;
@@ -164,7 +195,7 @@
 // 	}
 // }
 
-// Поява світіння яйця 
+// ----------------------------------------------------------------------------------- Поява світіння яйця 
 @keyframes shadowEggs {
 	0% {
 		box-shadow: 0px 5px 63px 10px rgba(0, 255, 34, 0);

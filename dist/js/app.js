@@ -881,6 +881,13 @@
                             startButtonBlock.style.animation = "startButtonShowAnimation 0.3s ease";
                             setTimeout((() => {
                                 startButtonBlock.style.display = "block";
+                                setTimeout((() => {
+                                    const loadingMainButton = document.querySelector(".loading__start-button");
+                                    const audio = document.querySelector(".bg-music");
+                                    loadingMainButton.addEventListener("click", (e => {
+                                        if (audio.paused) audio.play();
+                                    }));
+                                }), 200);
                             }), 300);
                         }), 200);
                     }), 200);
