@@ -95,7 +95,7 @@
 	padding: toRem(5) toRem(15) toRem(10) toRem(15);
 	z-index: 9999;
 	background: linear-gradient(180deg, rgba(31, 31, 30, 0.528) 0%, rgba(0,0,0,0) 100%);
-	opacity: 0;
+	opacity: 1;
 	transition: opacity 1s linear;
 	@media (min-width: 768px){
 		display: none;
@@ -103,7 +103,6 @@
 	@media (max-height: 560px){
 		padding: toRem(2) toRem(10) toRem(5) toRem(10);
 	}
-	
 	&__logo {
 		@media (max-width: 1440px){
 			max-width: 15.5vw;
@@ -132,7 +131,7 @@
 		display: flex;
 		gap: toRem(10);
 		border-radius: 50%;
-		display: none; // Кнопки отключены в рамках правок от 12.06.2024
+		//display: none; // Кнопки отключены в рамках правок от 12.06.2024
 		@media (max-width:$mobile){
 			position: relative;
 			align-items: center;
@@ -166,31 +165,97 @@
 			width: toRem(35);
 			height: toRem(35);
 		}
+	}
+}
 
-		& img {
-			width: toRem(72);
-			height: toRem(72);
-			@media (max-width: 1440px){
-				width: 4.2vw;
-				height: 4.2vw;
-			}
-			@media (max-width: 992px){
-				width: toRem(40);
-				height: toRem(40);
-			}
-			@media (max-width:$mobile){
-				width: toRem(35);
-				height: toRem(35);
-			}
+.mobile-header-lang-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&__image {
+		width: toRem(72);
+		height: toRem(72);
+		@media (max-width: 1440px){
+			width: 4.2vw;
+			height: 4.2vw;
+		}
+		@media (max-width: 992px){
+			width: toRem(40);
+			height: toRem(40);
+		}
+		@media (max-width:$mobile){
+			width: toRem(35);
+			height: toRem(35);
+		}
+	}
+	&__ru-flag {
+		position: absolute;
+		width: 18px;
+		height: 13px;
+		margin-top: -1px;
+		margin-left: -1px;
+		border-radius: 2px;
+		box-shadow: 0px 0px 5px 0px rgba(82,82,82,0.75);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(82,82,82,0.75);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(82,82,82,0.75);
+	}
+	&__ua-flag {
+		position: absolute;
+		width: 18px;
+		height: 13px;
+		margin-top: -1px;
+		margin-left: -1px;
+		border-radius: 2px;
+		box-shadow: 0px 0px 5px 0px rgba(82,82,82,0.75);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(82,82,82,0.75);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(82,82,82,0.75);
+	}
+}
+.mobile-header-menu-button {
+	display: none;
+	&__image {
+		width: toRem(72);
+		height: toRem(72);
+		@media (max-width: 1440px){
+			width: 4.2vw;
+			height: 4.2vw;
+		}
+		@media (max-width: 992px){
+			width: toRem(40);
+			height: toRem(40);
+		}
+		@media (max-width:$mobile){
+			width: toRem(35);
+			height: toRem(35);
+		}
+	}
+}
+.mobile-header-volume-button {
+	&__image {
+		width: toRem(72);
+		height: toRem(72);
+		@media (max-width: 1440px){
+			width: 4.2vw;
+			height: 4.2vw;
+		}
+		@media (max-width: 992px){
+			width: toRem(40);
+			height: toRem(40);
+		}
+		@media (max-width:$mobile){
+			width: toRem(35);
+			height: toRem(35);
 		}
 	}
 }
 
-// Адаптація головної кнопки
+
+// -------------------------------------- Адаптація головної кнопки
 .main-button {
 	width: 100%;
-	max-width: toRem(228);
-	height: toRem(80);
+	max-width: toRem(230);
+	height: toRem(130);
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -212,7 +277,7 @@
 		max-width: toRem(160);
 	}
 	@media (max-width:$mobile){
-		max-width: toRem(120);
+		max-width: toRem(180);
 	}
 	@media (max-height: 560px){
 		max-width: toRem(120);
@@ -227,10 +292,10 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		object-fit: fill;
-		max-width: toRem(228);
+		object-fit: cover;
+		max-width: toRem(600);
 		@media (max-width:$pc){
-			max-width: 19.402vw;
+			max-width: toRem(600);
 		}
 		@media (max-width: 1200px){
 			max-width: toRem(180);
@@ -239,7 +304,7 @@
 			max-width: toRem(160);
 		}
 		@media (max-width:$mobile){
-			max-width: toRem(120);
+			max-width: toRem(180);
 		}
 	}
 	&__image {
@@ -248,10 +313,10 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		object-fit: fill;
-		max-width: toRem(228);
+		object-fit: contain;
+		max-width: toRem(600);
 		@media (max-width:$pc){
-			max-width: 19.402vw;
+			max-width: toRem(600);
 		}
 		@media (max-width: 1200px){
 			max-width: toRem(180);
@@ -260,7 +325,7 @@
 			max-width: toRem(160);
 		}
 		@media (max-width:$mobile){
-			max-width: toRem(120);
+			max-width: toRem(180);
 		}
 	}
 	&__text-container {
@@ -283,20 +348,20 @@
 		width: 100%;
 		height: 100%;
 		font-family: $thirdFont;
-		font-size: toRem(36);
+		font-size: toRem(24);
 		font-weight: bold;
 		padding-bottom: toRem(3);
 		@media (max-width: 1200px){
-			font-size: toRem(30);
+			font-size: toRem(18);
 		}
 		@media (max-width: 900px){
-			font-size: 3.5vw;
+			font-size: 2vw;
 		}
 		@media (max-width: 800px){
-			font-size: toRem(24);
+			font-size: toRem(18);
 		}
 		@media (max-width:$mobile){
-			font-size: toRem(22);
+			font-size: toRem(20);
 		}
 		@media (max-width: 600px){
 			font-size: toRem(20);

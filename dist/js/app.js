@@ -881,13 +881,6 @@
                             startButtonBlock.style.animation = "startButtonShowAnimation 0.3s ease";
                             setTimeout((() => {
                                 startButtonBlock.style.display = "block";
-                                setTimeout((() => {
-                                    const loadingMainButton = document.querySelector(".loading__start-button");
-                                    const audio = document.querySelector(".bg-music");
-                                    loadingMainButton.addEventListener("click", (e => {
-                                        if (audio.paused) audio.play();
-                                    }));
-                                }), 200);
                             }), 300);
                         }), 200);
                     }), 200);
@@ -991,18 +984,19 @@
                     }), 100);
                 }), 1500);
             };
-            const setTimerToApp = durationInDays => {
-                const durationInMs = durationInDays * 24 * 60 * 60 * 1e3;
+            const setTimerToApp = () => {
+                localStorage.removeItem("timerEndTime");
+                const targetDate = new Date("2024-09-17T12:00:00+03:00");
                 let endTime = localStorage.getItem("timerEndTime");
                 if (!endTime || (new Date).getTime() > endTime) {
-                    endTime = (new Date).getTime() + durationInMs;
+                    endTime = targetDate.getTime();
                     localStorage.setItem("timerEndTime", endTime);
                 }
                 function updateTimer() {
                     const now = (new Date).getTime();
                     const remainingTime = endTime - now;
                     if (remainingTime <= 0) {
-                        endTime = (new Date).getTime() + durationInMs;
+                        endTime = targetDate.getTime();
                         localStorage.setItem("timerEndTime", endTime);
                     }
                     const days = Math.floor(remainingTime / (1e3 * 60 * 60 * 24));
@@ -1015,13 +1009,13 @@
                     const secondsElement = document.querySelector(".seconds-timer-element");
                     daysElement.innerHTML = `${days}`;
                     hoursElement.innerHTML = `${hours}`;
-                    minutesElement.innerHtml = `${minutes}`;
+                    minutesElement.innerHTML = `${minutes}`;
                     secondsElement.innerHTML = `${seconds}`;
                 }
                 setInterval(updateTimer, 1e3);
                 updateTimer();
             };
-            setTimerToApp(5);
+            setTimerToApp();
         }));
         document.addEventListener("DOMContentLoaded", (() => {
             const blockContent = document.querySelector(".dollars-block__content");
@@ -1094,7 +1088,10 @@
         document.addEventListener("DOMContentLoaded", (() => {
             const audio = document.querySelector(".bg-music");
             document.addEventListener("click", (e => {
-                if (e.target.classList.contains("volume-button__image") || e.target.classList.contains("volume-button__image")) if (audio.paused) audio.play(); else audio.pause();
+                if (e.target.classList.contains("volume-button__image") || e.target.classList.contains("volume-button__image")) {
+                    console.log("common click volume");
+                    if (audio.paused) audio.play(); else audio.pause();
+                }
             }));
         }));
         document.addEventListener("DOMContentLoaded", (() => {
@@ -1153,7 +1150,6 @@
                         rotateEggs.style.animation = "eggsFlyAnimation 1s cubic-bezier(0,1.03,.17,1)";
                         flyEggs();
                         showJackpotText();
-                        hiddenAndShowText();
                     }), 5100);
                 }), 500);
                 for (let item of allEggsShadows) item.style.animation = "allEggsShadows 2s linear";
@@ -1163,20 +1159,6 @@
                 const jackpotTextBlock = document.querySelector(".jackpot-text");
                 const showJackpotText = () => {
                     jackpotTextBlock.style.opacity = "1";
-                };
-                const topBeforeText = document.querySelector(".jackpot-block__before-top-text");
-                const topAfterText = document.querySelector(".jackpot-block__after-top-text");
-                const bottomBeforeText = document.querySelector(".jackpot-block__before-bottom-text");
-                const bottomAfterText = document.querySelector(".jackpot-block__after-bottom-text");
-                const hiddenAndShowText = () => {
-                    topBeforeText.style.opacity = "0";
-                    topBeforeText.style.height = "0px";
-                    topAfterText.style.opacity = "1";
-                    topAfterText.style.height = "auto";
-                    bottomBeforeText.style.opacity = "0";
-                    bottomBeforeText.style.height = "0px";
-                    bottomAfterText.style.opacity = "1";
-                    bottomAfterText.style.height = "auto";
                 };
                 addAnimationToBigSparks();
                 addAnimationToSmallSparks();
@@ -1346,6 +1328,119 @@
                 }));
             };
             hoverAndActiveVideoPlayButton();
+        }));
+        document.addEventListener("DOMContentLoaded", (() => {
+            console.log(localStorage.getItem("lang"));
+            let currentLanguage = "ua";
+            if (localStorage.getItem("lang") === null) localStorage.setItem("lang", `${currentLanguage}`);
+            if (localStorage.getItem("lang") === "ru") currentLanguage = "ru"; else if (localStorage.getItem("lang") === "ua") currentLanguage = "ua";
+            console.log(localStorage.getItem("lang"));
+            console.log(currentLanguage);
+            const goblinTitle = document.querySelector(".timer-content__title");
+            const goblinSubtitle = document.querySelector(".timer-content__subtitle");
+            const dollarsSubtitle = document.querySelector(".dollars-block__top-title-container-subtitle");
+            const dollarsListItemOne = document.querySelector(".dollars-list-item-one");
+            const dollarsListItemTwo = document.querySelector(".dollars-list-item-two");
+            const dollarsListItemThree = document.querySelector(".dollars-list-item-three");
+            const dollarsListItemFour = document.querySelector(".dollars-list-item-four");
+            const dollarsBottomSubtitle = document.querySelector(".dollars-block__bottom-text-container");
+            const jackpotTopText = document.querySelector(".jackpot-block__after-top-text");
+            const jackpotBottomText = document.querySelector(".jackpot-block__after-bottom-text");
+            const refTitle = document.querySelector(".reviews-content__title");
+            const refListItemOne = document.querySelector(".ref-list-item-one");
+            const refListItemTwo = document.querySelector(".ref-list-item-two");
+            const refListItemThree = document.querySelector(".ref-list-item-three");
+            const refListItemFour = document.querySelector(".ref-list-item-four");
+            const refListItemFive = document.querySelector(".ref-list-item-five");
+            const refCallToAction = document.querySelector(".reviews-content__call-to-action");
+            const videoBlockTopText = document.querySelector(".dance-animation-block__text-wrapper-content");
+            const videoBlockButtonText = document.querySelector(".video-block-button-text");
+            const videoBlockBottomText = document.querySelector(".dance-animation-block__bottom-subtitle");
+            const switchLanguage = () => {
+                console.log(localStorage.getItem("lang"));
+                if (localStorage.getItem("lang") === "ru") {
+                    console.log("ru sd");
+                    goblinTitle.innerText = "Приглашаем вас в увлекательный мир игры Tamagotchi Money!";
+                    goblinSubtitle.innerText = "Начните свое приключение в мире экономических стратегий прямо сейчас! Не упустите возможность стать успешным!";
+                    dollarsSubtitle.innerText = "Это увлекательная игра о деньгах!";
+                    dollarsListItemOne.innerHTML = "Здесь вы сможете легко <span>заработать</span> всего одним нажатием кнопки раз в сутки.";
+                    dollarsListItemTwo.innerHTML = "Испытайте удачу, вращая <span>'Колесо фортуны'</span>, и получите шанс сорвать <span>Джекпот</span>.";
+                    dollarsListItemThree.innerHTML = "Постройте свою карьеру, <span>приглашая друзей</span> и знакомых в игру и получая за это <spanv>щедрые бонусы</span>.";
+                    dollarsListItemFour.innerHTML = "<span>Ваш заработок в игре</span> зависит только от ваших усилий и настойчивости.";
+                    dollarsBottomSubtitle.innerText = "Это не просто игра, это уникальная возможность погрузиться в захватывающий мир финансов и инвестиций.";
+                    jackpotTopText.innerHTML = "Для того чтоб его прокрутить нужно иметь на балансе <span>100$</span>. После прокрутка вам выпадет одно из этих 12 яиц. Каждое яйцо имеет срок действия <span>от 10 дней до 90 дней</span> и <span>от 105$ до 145$</span> к выплате.";
+                    jackpotBottomText.innerText = "Когда на барабане выпадает одно из особенных яиц, оно остается в накопительной джекпотной ячейке. Собрав коллекцию джекпотных яиц ты выигрываешь соответствующий джекпот.";
+                    refTitle.innerText = "Реферальная программа";
+                    refListItemOne.innerHTML = "Реферальная бонусы составляет <span>от 10% и до 20%</span> за каждую покупку вашего приглашенного.";
+                    refListItemTwo.innerText = "Процент меняется от количества приглашенных вами людей.";
+                    refListItemThree.innerText = "Чем больше вы приглашаете людей тем больше процент к выплатам вы получаете.";
+                    refListItemFour.innerHTML = "Выплаты за реферальную программу начисляются на баланс <span> 3 раза в месяц 7 -17- 27 </span> числа каждого месяца.";
+                    refListItemFive.innerText = "Для получения выплат необходимо иметь активный рацион питания";
+                    refCallToAction.innerText = "Приглашайте друзей и получайте дополнительные бонусы!";
+                    videoBlockTopText.innerText = "Не упустите свой шанс изменить свою финансовую жизнь к лучшему!";
+                    videoBlockButtonText.innerText = "Присоединяйся";
+                    videoBlockBottomText.innerText = "Присоединяйся к нашему Telegram-каналу и будь в курсе всех новостей!";
+                } else if (localStorage.getItem("lang") === "ua") {
+                    console.log("ua sd");
+                    goblinTitle.innerText = "Запрошуємо вас у захоплюючий світ гри Tamagotchi Money!";
+                    goblinSubtitle.innerText = "Почніть свою пригоду у світі економічних стратегій прямо зараз! Не пропустіть можливість стати успішним!";
+                    dollarsSubtitle.innerText = "Це захоплююча гра про гроші!";
+                    dollarsListItemOne.innerHTML = "Тут ви зможете легко <span>заробити</span> лише одним натисканням кнопки щодня.";
+                    dollarsListItemTwo.innerHTML = "Випробуйте удачу, обертаючи <span>'Колесо фортуни'</span>, і отримайте шанс зірвати <span>Джекпот</span>.";
+                    dollarsListItemThree.innerHTML = "Побудуйте свою кар'єру, <span>запрошуючи друзів</span> та знайомих у гру і отримуючи за це<spanv> щедрі бонуси/span>.";
+                    dollarsListItemFour.innerHTML = "<span>Ваш заробіток у грі</span> залежить тільки від ваших зусиль та наполегливості.";
+                    dollarsBottomSubtitle.innerText = "Це не просто гра, це унікальна можливість поринути у захоплюючий світ фінансів та інвестицій.";
+                    jackpotTopText.innerHTML = "Щоб прокрутити колесо, необхідно мати на балансі <span>100$</span>. Після прокручування вам випаде одне з цих 12 яєць. Кожне яйце має термін дії <span>від 10 днів до 90 днів</span> та <span>від 105$ до 145$</span> до виплати.";
+                    jackpotBottomText.innerText = "Коли на барабані випадає одне з особливих яєць, воно залишається в накопичувальному джекпотному сховищі. Зібравши колекцію джекпотних яєць ти виграєш відповідний джекпот.";
+                    refTitle.innerText = "Реферальна програма";
+                    refListItemOne.innerHTML = "Реферальні бонуси становлять <span>від 10% до 20%</span> за кожну покупку вашого запрошеного гравця";
+                    refListItemTwo.innerText = "Відсоток змінюється від кількості запрошених вами людей.";
+                    refListItemThree.innerText = "Чим більше ви запрошуєте людей, тим більший відсоток до виплат ви отримуєте.";
+                    refListItemFour.innerHTML = "Виплати за реферальну програму нараховуються на баланс <span> 3 рази в місяць: 7-17-27 </span> числа кожного місяця.";
+                    refListItemFive.innerText = "Для отримання виплат необхідно мати активний раціон харчування";
+                    refCallToAction.innerText = "Запрошуйте друзів та отримуйте додаткові бонуси!";
+                    videoBlockTopText.innerText = "Не пропустіть свій шанс змінити своє фінансове життя на краще!";
+                    videoBlockButtonText.innerText = "Приєднатись";
+                    videoBlockBottomText.innerText = "Приєднуйся до нашого Telegram-каналу та будь в курсі всіх новин!";
+                }
+            };
+            switchLanguage();
+            if (document.querySelector(".lang-button")) {
+                const langButton = document.querySelector(".lang-button");
+                const ruFlagImage = document.querySelector(".lang-button__ru-flag");
+                const uaFlagImage = document.querySelector(".lang-button__ua-flag");
+                if (currentLanguage === "ru") {
+                    ruFlagImage.classList.add("_hidden");
+                    uaFlagImage.classList.remove("_hidden");
+                } else if (currentLanguage === "ua") {
+                    ruFlagImage.classList.remove("_hidden");
+                    uaFlagImage.classList.add("_hidden");
+                }
+                langButton.addEventListener("click", (() => {
+                    ruFlagImage.classList.toggle("_hidden");
+                    uaFlagImage.classList.toggle("_hidden");
+                    localStorage.getItem("lang") === "ru" ? localStorage.setItem("lang", "ua") : localStorage.setItem("lang", "ru");
+                    switchLanguage();
+                }));
+            }
+            if (document.querySelector(".mobile-header-lang-button")) {
+                const langMobileButton = document.querySelector(".mobile-header-lang-button");
+                const ruFlagMobileImage = document.querySelector(".mobile-header-lang-button__ru-flag");
+                const uaFlagMobileImage = document.querySelector(".mobile-header-lang-button__ua-flag");
+                if (currentLanguage === "ru") {
+                    ruFlagMobileImage.classList.add("_hidden");
+                    uaFlagMobileImage.classList.remove("_hidden");
+                } else if (currentLanguage === "ua") {
+                    ruFlagMobileImage.classList.remove("_hidden");
+                    uaFlagMobileImage.classList.add("_hidden");
+                }
+                langMobileButton.addEventListener("click", (() => {
+                    ruFlagMobileImage.classList.toggle("_hidden");
+                    uaFlagMobileImage.classList.toggle("_hidden");
+                    localStorage.getItem("lang") === "ru" ? localStorage.setItem("lang", "ua") : localStorage.setItem("lang", "ru");
+                    switchLanguage();
+                }));
+            }
         }));
         window["FLS"] = true;
     })();

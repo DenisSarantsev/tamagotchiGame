@@ -43,15 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.addEventListener("click", (e) => {
 		if ( e.target.classList.contains("volume-button__image") || 
 				 e.target.classList.contains("volume-button__image") ) {
-			
+					console.log("common click volume")
 			if (audio.paused) {
 				audio.play();
 			} else {
-					audio.pause();
+				audio.pause();
 			}
-
 		} 
 	})
-	
-
 })

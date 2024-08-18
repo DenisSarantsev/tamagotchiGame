@@ -445,6 +445,7 @@
 		}
 	}
 	&__before-top-text {
+		display: none;
 		opacity: 1;
 		text-align: center;
 		height: auto;
@@ -453,7 +454,7 @@
 		padding: toRem(35);
 	}
 	&__after-top-text {
-		opacity: 0;
+		opacity: 1;
 		transition: all 2.3s ease 0s;
 		text-align: center;
 		height: auto;
@@ -531,6 +532,7 @@
 		}
 	}
 	&__before-bottom-text {
+		display: none;
 		text-align: center;
 		opacity: 1;
 		height: auto;
@@ -539,7 +541,7 @@
 		padding: toRem(15);
 	}
 	&__after-bottom-text {
-		opacity: 0;
+		opacity: 1;
 		transition: all 2.3s ease 0s;
 		text-align: center;
 		height: auto;

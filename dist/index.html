@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<title>Tamagotchi</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240612215252">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240818145651">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,9 @@
 				<img src="img/common/small-logo.svg" alt="game logo" class="mobile-header__logo">
 				<div class="mobile-header__buttons-block">
 					<button class="mobile-header__button mobile-header-lang-button">
-						<img src="img/loading-timer/button-lang.svg" alt="language button" class="lang-button__image">
+						<img src="img/loading-timer/button-lang.svg" alt="language button" class="mobile-header-lang-button__image">
+						<img src="img/loading-timer/ru-flag.png" alt="russian flag icon" class="mobile-header-lang-button__ru-flag _hidden">
+						<img src="img/loading-timer/ua-flag.png" alt="ukrainian flag icon" class="mobile-header-lang-button__ua-flag">
 					</button>
 					<button class="mobile-header__button mobile-header-menu-button">
 						<img src="img/loading-timer/button-menu.svg" alt="menu button" class="menu-button__image">
@@ -105,6 +107,8 @@
 										<div class="timer__buttons-block">
 											<button class="timer__button lang-button">
 												<img src="img/loading-timer/button-lang.svg" alt="language button" class="lang-button__image">
+												<img src="img/loading-timer/ru-flag.png" alt="russian flag icon" class="lang-button__ru-flag  _hidden">
+												<img src="img/loading-timer/ua-flag.png" alt="ukrainian flag icon" class="lang-button__ua-flag">
 											</button>
 											<button class="timer__button menu-button">
 												<img src="img/loading-timer/button-menu.svg" alt="menu button" class="menu-button__image">
@@ -116,10 +120,10 @@
 									</div>
 									<div class="timer__content timer-content">
 										<div class="timer-content__title">
-											Welcome to Tamagotchi Money!
+											Приглашаем вас в увлекательный мир игры Tamagotchi Money!
 										</div>
 										<div class="timer-content__subtitle">
-											Успейте получить ваш стартовый капитал прямо сейчас и отправьтесь в увлекательное путешествие по миру экономических стратегий!
+											Начните свое приключение в мире экономических стратегий прямо сейчас! Не упустите возможность стать успешным!
 										</div>
 										<div class="timer-content__timer timer-counter">
 											<div class="timer-counter__wrapper">
@@ -249,22 +253,6 @@
 
 
 						<div class="dollars-block__container">
-
-							<div class="mobile-header">
-								<img src="img/common/small-logo.svg" alt="game logo" class="mobile-header__logo">
-								<div class="mobile-header__buttons-block">
-									<buttton class="mobile-header__button mobile-header-lang-button">
-										<img src="img/loading-timer/button-lang.svg" alt="language button" class="lang-button__image">
-									</buttton>
-									<buttton class="mobile-header__button mobile-header-menu-button">
-										<img src="img/loading-timer/button-menu.svg" alt="menu button" class="menu-button__image">
-									</buttton>
-									<buttton class="mobile-header__button mobile-header-volume-button">
-										<img src="img/loading-timer/button-volume.svg" alt="volume button" class="volume-button__image">
-									</buttton>
-								</div>
-							</div>
-
 							<div class="dollars-block__content _hidden">
 								<div class="dollars-block__top-title-container">
 									<div class="dollars-block__top-title-container-title">
@@ -278,46 +266,46 @@
 									</div>
 								</div>
 								<div class="dollars-block__center-content-container">
-									<div class="dollars-block__center-content-container-right">
-										<div class="dollars-block__center-content-title">
-											Хотите получить подарок
-										</div>
-										<div class="dollars-block__center-content-subtitle">
-											50 долларов?
-										</div>
-										<div class="dollars-block__button-container main-button">
-											<a target="_blank" href="https://game.tamagotchi.money/" class="main-button__link button-image-responsive">
-												<img src="img/common/button-default.svg" alt="start button" class="main-button__image main__button-default button-image-responsive">
-												<img src="img/common/button-hover.svg" alt="start button" class="main-button__image main__button-hover button-image-responsive _hidden">
-												<img src="img/common/button-active.svg" alt="start button" class="main-button__image main__button-active button-image-responsive _hidden">
-												<div class="main-button__text-container">
-													<div class="button-rext-responsive main-button__text">Хочу</div>
-												</div>
-											</a>
-										</div>
-									</div>
+									<!-- <div class="dollars-block__center-content-container-right">
+						<div class="dollars-block__center-content-title">
+							Хотите получить подарок
+						</div>
+						<div class="dollars-block__center-content-subtitle">
+							50 долларов?
+						</div>
+						<div class="dollars-block__button-container main-button">
+							<a target="_blank" href="https://game.tamagotchi.money/" class="main-button__link button-image-responsive">
+								<img src="img/common/button-default.svg" alt="start button" class="main-button__image main__button-default button-image-responsive">
+								<img src="img/common/button-hover.svg" alt="start button" class="main-button__image main__button-hover button-image-responsive _hidden">
+								<img src="img/common/button-active.svg" alt="start button" class="main-button__image main__button-active button-image-responsive _hidden">
+								<div class="main-button__text-container">
+									<div class="button-rext-responsive main-button__text">Хочу</div>
+								</div>
+							</a>
+						</div>
+					</div> -->
 									<div class="dollars-block__center-content-container-left dollars-eggs-container">
 										<div class="dollars-eggs-container__item">
 											<img src="img/dollars-block/eggs/egg1.svg" alt="blue yellow egg" class="dollars-eggs-container__image">
-											<div class="dollars-eggs-container__text">
-												Здесь вы сможете легко <span>заработать +20%</span> всего одним нажатием кнопки раз в сутки.
+											<div class="dollars-eggs-container__text dollars-list-item-one">
+												Здесь вы сможете легко <span>заработать</span> всего одним нажатием кнопки раз в сутки.
 											</div>
 										</div>
 										<div class="dollars-eggs-container__item">
 											<img src="img/dollars-block/eggs/egg2.svg" alt="green egg" class="dollars-eggs-container__image">
-											<div class="dollars-eggs-container__text">
+											<div class="dollars-eggs-container__text dollars-list-item-two">
 												Испытайте удачу, вращая <span>"Колесо фортуны"</span>, и получите шанс сорвать <span>Джекпот</span>.
 											</div>
 										</div>
 										<div class="dollars-eggs-container__item">
 											<img src="img/dollars-block/eggs/egg3.svg" alt="red egg" class="dollars-eggs-container__image">
-											<div class="dollars-eggs-container__text">
+											<div class="dollars-eggs-container__text dollars-list-item-three">
 												Постройте свою карьеру, <span>приглашая друзей</span> и знакомых в игру и получая за это <spanv>щедрые бонусы</span>.
 											</div>
 										</div>
 										<div class="dollars-eggs-container__item">
 											<img src="img/dollars-block/eggs/egg4.svg" alt="blue egg" class="dollars-eggs-container__image">
-											<div class="dollars-eggs-container__text">
+											<div class="dollars-eggs-container__text dollars-list-item-four">
 												<span>Ваш заработок в игре</span> зависит только от ваших усилий и настойчивости.
 											</div>
 										</div>
@@ -536,7 +524,7 @@
 									Участвуйте в регулярных розыгрышах джекпотов и выигрывайте крупные призы!
 								</div>
 								<div class="jackpot-block__after-top-text">
-									Для того чтоб его прокрутить нужно иметь на балансе <span>100$</span>. После прокрутка вам выпадет одно из этих 12 яиц. Каждое яйцо имеет срок действия <span>от 10 дней до 90 дней</span> и <span>от 105 до 130%</span> к выплате.
+									Для того чтоб его прокрутить нужно иметь на балансе <span>100$</span>. После прокрутка вам выпадет одно из этих 12 яиц. Каждое яйцо имеет срок действия <span>от 10 дней до 90 дней</span> и <span>от 105$ до 145$</span> к выплате.
 								</div>
 							</div>
 						</div>
@@ -663,23 +651,23 @@
 							<div class="reviews-content__advantages">
 								<div class="reviews-content__advantage">
 									<img src="img/reviews-block/advantages-icons/mdi_people-group.svg" alt="peoples icon">
-									<div>Реферальная бонусы составляет <span>от 10% и до 20%</span> за каждую покупку вашего приглашенного.</div>
+									<div class="ref-list-item-one">Реферальная бонусы составляет <span>от 10% и до 20%</span> за каждую покупку вашего приглашенного.</div>
 								</div>
 								<div class="reviews-content__advantage">
 									<img src="img/reviews-block/advantages-icons/tabler_circle-percentage-filled.svg" alt="percent icon">
-									<div>Процент меняется от количества приглашенных вами людей.</div>
+									<div class="ref-list-item-two">Процент меняется от количества приглашенных вами людей.</div>
 								</div>
 								<div class="reviews-content__advantage">
 									<img src="img/reviews-block/advantages-icons/fluent_people-money-20-filled.svg" alt="peoples with money icon">
-									<div>Чем больше вы приглашаете людей тем больше процент к выплатам вы получаете.</div>
+									<div class="ref-list-item-three">Чем больше вы приглашаете людей тем больше процент к выплатам вы получаете.</div>
 								</div>
 								<div class="reviews-content__advantage">
 									<img src="img/reviews-block/advantages-icons/healthicons_money-bag.svg" alt="money-bag-icon">
-									<div>Выплаты за реферальную программу начисляются на баланс <span> 3 раза в месяц 7 -17- 27 </span> числа каждого месяца.</div>
+									<div class="ref-list-item-four">Выплаты за реферальную программу начисляются на баланс <span> 3 раза в месяц 7 -17- 27 </span> числа каждого месяца.</div>
 								</div>
 								<div class="reviews-content__advantage">
 									<img src="img/reviews-block/advantages-icons/icon-park-solid_painted-eggshell.svg" alt="gold egg icon">
-									<div>Для получения выплат необходимо иметь активный рацион питания</div>
+									<div class="ref-list-item-five">Для получения выплат необходимо иметь активный рацион питания</div>
 								</div>
 							</div>
 							<div class="reviews-content__table-and-reviews-container">
@@ -831,14 +819,17 @@
 						</div>
 
 						<div class="dance-animation-block__play-button main-button video-button">
-							<a target="_blank" href="https://game.tamagotchi.money/" class="main-button__link button-image-responsive">
+							<a target="_blank" href="https://t.me/Tamagothi_money" class="main-button__link button-image-responsive">
 								<img src="img/common/button-default.svg" alt="start button" class="main-button__image video__button-default button-image-responsive">
 								<img src="img/common/button-hover.svg" alt="start button" class="main-button__image video__button-hover button-image-responsive _hidden">
 								<img src="img/common/button-active.svg" alt="start button" class="main-button__image video__button-active button-image-responsive _hidden">
 								<div class="main-button__text-container">
-									<div class="button-rext-responsive main-button__text">Играть</div>
+									<div class="button-rext-responsive main-button__text video-block-button-text">Присоединяйся</div>
 								</div>
 							</a>
+						</div>
+						<div class="dance-animation-block__bottom-subtitle">
+							Присоединяйся к нашему Telegram-каналу и будь в курсе всех новостей!
 						</div>
 
 					</div>
@@ -857,7 +848,7 @@
 	<script>
 		document.querySelector(".pre-loader-bg").classList.add("_hidden");
 	</script>
-	<script src="js/app.min.js?_v=20240612215252"></script>
+	<script src="js/app.min.js?_v=20240818145651"></script>
 </body>
 
 </html>

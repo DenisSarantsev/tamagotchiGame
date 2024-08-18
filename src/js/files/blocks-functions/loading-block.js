@@ -40,15 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
 					startButtonBlock.style.animation = "startButtonShowAnimation 0.3s ease";
 					setTimeout(() => {
 						startButtonBlock.style.display = "block";
-						setTimeout(() => {
-							const loadingMainButton = document.querySelector(".loading__start-button");
-							const audio = document.querySelector(".bg-music");
-							loadingMainButton.addEventListener("click", (e) => {
-								if (audio.paused) {
-									audio.play();
-								} 
-							})
-						}, 200)
+						// setTimeout(() => {
+						// 	const loadingMainButton = document.querySelector(".loading__start-button");
+						// 	const audio = document.querySelector(".bg-music");
+						// 	loadingMainButton.addEventListener("click", (e) => {
+						// 		if (audio.paused) {
+						// 			audio.play();
+						// 		} 
+						// 	})
+						// }, 200)
 					}, 300)
 				}, 200)
 			}, 200)
@@ -184,44 +184,89 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 
-	// Логика работы таймера
-	const setTimerToApp = (durationInDays) => {
-		const durationInMs = durationInDays * 24 * 60 * 60 * 1000;
-		let endTime = localStorage.getItem('timerEndTime');
+	// ------------------------------------------------ Логика работы таймера
+	// Функция для отсчета 5 дней (работает бесконечно)
+	// const setTimerToApp = (durationInDays) => {
+	// 	const durationInMs = durationInDays * 24 * 60 * 60 * 1000;
+	// 	let endTime = localStorage.getItem('timerEndTime');
 
-		if (!endTime || new Date().getTime() > endTime) {
-				endTime = new Date().getTime() + durationInMs;
-				localStorage.setItem('timerEndTime', endTime);
-		}
+	// 	if (!endTime || new Date().getTime() > endTime) {
+	// 			endTime = new Date().getTime() + durationInMs;
+	// 			localStorage.setItem('timerEndTime', endTime);
+	// 	}
 
-		function updateTimer() {
-				const now = new Date().getTime();
-				const remainingTime = endTime - now;
+	// 	function updateTimer() {
+	// 			const now = new Date().getTime();
+	// 			const remainingTime = endTime - now;
 
-				if (remainingTime <= 0) {
-						endTime = new Date().getTime() + durationInMs;
-						localStorage.setItem('timerEndTime', endTime);
-				}
+	// 			if (remainingTime <= 0) {
+	// 					endTime = new Date().getTime() + durationInMs;
+	// 					localStorage.setItem('timerEndTime', endTime);
+	// 			}
 
-				const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-				const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-				const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+	// 			const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+	// 			const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	// 			const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+	// 			const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-				const daysElement = document.querySelector(".days-timer-element");
-				const hoursElement = document.querySelector(".hours-timer-element");
-				const minutesElement = document.querySelector(".minutes-timer-element");
-				const secondsElement = document.querySelector(".seconds-timer-element");
+	// 			const daysElement = document.querySelector(".days-timer-element");
+	// 			const hoursElement = document.querySelector(".hours-timer-element");
+	// 			const minutesElement = document.querySelector(".minutes-timer-element");
+	// 			const secondsElement = document.querySelector(".seconds-timer-element");
 
-				daysElement.innerHTML = `${days}`;
-				hoursElement.innerHTML = `${hours}`;
-				minutesElement.innerHtml = `${minutes}`;
-				secondsElement.innerHTML = `${seconds}`;
-		}
+	// 			daysElement.innerHTML = `${days}`;
+	// 			hoursElement.innerHTML = `${hours}`;
+	// 			minutesElement.innerHtml = `${minutes}`;
+	// 			secondsElement.innerHTML = `${seconds}`;
+	// 	}
 
-		setInterval(updateTimer, 1000);
-		updateTimer(); // Initial call to display the timer immediately
-	}
+	// 	setInterval(updateTimer, 1000);
+	// 	updateTimer(); // Initial call to display the timer immediately
+	// }
 
-	setTimerToApp(5)
+	// setTimerToApp(5)
+
+	// Функция отсчета времени до 12:00 17 сентября 2024 года
+	const setTimerToApp = () => {
+    // Указываем дату и время с учетом киевского времени (UTC+3)
+		localStorage.removeItem('timerEndTime');
+    const targetDate = new Date('2024-09-17T12:00:00+03:00');
+    let endTime = localStorage.getItem('timerEndTime');
+
+    if (!endTime || new Date().getTime() > endTime) {
+        endTime = targetDate.getTime();
+        localStorage.setItem('timerEndTime', endTime);
+    }
+
+    function updateTimer() {
+        const now = new Date().getTime();
+        const remainingTime = endTime - now;
+
+        if (remainingTime <= 0) {
+            endTime = targetDate.getTime();
+            localStorage.setItem('timerEndTime', endTime);
+        }
+
+        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+        const daysElement = document.querySelector(".days-timer-element");
+        const hoursElement = document.querySelector(".hours-timer-element");
+        const minutesElement = document.querySelector(".minutes-timer-element");
+        const secondsElement = document.querySelector(".seconds-timer-element");
+
+        daysElement.innerHTML = `${days}`;
+        hoursElement.innerHTML = `${hours}`;
+        minutesElement.innerHTML = `${minutes}`;
+        secondsElement.innerHTML = `${seconds}`;
+    }
+
+    setInterval(updateTimer, 1000);
+    updateTimer(); // Initial call to display the timer immediately
+}
+
+setTimerToApp();
+
 })
