@@ -392,11 +392,6 @@
 
 // -------------------------------------- Таблиця
 .table-container {
-	max-width: toRem(478);
-	width: 100%;
-	@media (max-width: 1440px){
-		max-width: toRem(400);
-	}
 	& img {
 		width: 100%;
 		height: 100%;
@@ -630,6 +625,64 @@
 		&:hover {
 			cursor: pointer;
 			z-index: 500;
+		}
+	}
+}
+
+.ref-table {
+	border-radius: 15px;
+	border: 2px solid #d6a000;
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(42,42,42,1) 30%, rgba(55,55,55,1) 40%, rgba(55,55,55,1) 50%, rgba(55,55,55,1) 60%, rgba(42,42,42,1) 70%, rgba(0,0,0,1) 100%);
+	&__container {
+		padding: 20px 30px;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(1fr, 12);
+		font-size: 18px;
+		@media (max-width: 1100px){
+			font-size: 16px;
+			padding: 10px 15px;
+		}
+		@media (max-width: 992px){
+			font-size: 15px;
+			padding: 4px 10px;
+		}
+		@media (max-width: 768px){
+			font-size: 14px;
+			padding: 4px 0px;
+		}
+		&>*:not(:last-child) {
+			border-bottom: 1px solid rgba(240, 188, 0, 0.6);
+		}
+	}
+	&__row {
+		display: grid;
+		grid-template-columns: 200px 200px 200px 200px;
+		padding: 3px 0px;
+		@media (max-width: 992px){
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+		&>*{
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+.first-row {
+	&>* {
+		font-weight: 600;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-radius: 10px;
+		font-size: 16px;
+		padding: 0 10px;
+		@media (max-width: 768px){
+			font-size: 14px;
+		}
+		@media (max-width: 500px){
+			font-size: 12px;
 		}
 	}
 }

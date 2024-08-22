@@ -109,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Логіка появи персонажу на мобльному екрані
 	const showGoblinOnMobileScreens = () => {
 		document.addEventListener("touchmove", (event) => {
-			console.log(event)
 			timerBlock.style.opacity = "0";
 			setTimeout(() => {
 				goblinImage.classList.remove("_hidden");

@@ -39,14 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
 // Включаем и выключаем звук на сайте
 document.addEventListener("DOMContentLoaded", () => {
 	const audio = document.querySelector(".bg-music");
+	const onButtonImage = document.querySelector(".volume-on");
+	const offButtonImage = document.querySelector(".volume-off");
 
 	document.addEventListener("click", (e) => {
 		if ( e.target.classList.contains("volume-button__image") || 
 				 e.target.classList.contains("volume-button__image") ) {
-					console.log("common click volume")
 			if (audio.paused) {
+				onButtonImage.classList.remove("_hidden");
+				offButtonImage.classList.add("_hidden");
 				audio.play();
 			} else {
+				onButtonImage.classList.add("_hidden");
+				offButtonImage.classList.remove("_hidden");
 				audio.pause();
 			}
 		} 

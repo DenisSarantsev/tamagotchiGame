@@ -935,7 +935,6 @@
             hoverStartButton();
             const showGoblinOnMobileScreens = () => {
                 document.addEventListener("touchmove", (event => {
-                    console.log(event);
                     timerBlock.style.opacity = "0";
                     setTimeout((() => {
                         goblinImage.classList.remove("_hidden");
@@ -1029,7 +1028,6 @@
             document.addEventListener("watcherCallback", (function(e) {
                 const entry = e.detail.entry;
                 const targetElement = entry.target;
-                console.log(targetElement);
                 if (targetElement.classList.contains("dollars-block")) {
                     blockContent.classList.remove("_hidden");
                     setTimeout((() => {
@@ -1094,10 +1092,17 @@
         }));
         document.addEventListener("DOMContentLoaded", (() => {
             const audio = document.querySelector(".bg-music");
+            const onButtonImage = document.querySelector(".volume-on");
+            const offButtonImage = document.querySelector(".volume-off");
             document.addEventListener("click", (e => {
-                if (e.target.classList.contains("volume-button__image") || e.target.classList.contains("volume-button__image")) {
-                    console.log("common click volume");
-                    if (audio.paused) audio.play(); else audio.pause();
+                if (e.target.classList.contains("volume-button__image") || e.target.classList.contains("volume-button__image")) if (audio.paused) {
+                    onButtonImage.classList.remove("_hidden");
+                    offButtonImage.classList.add("_hidden");
+                    audio.play();
+                } else {
+                    onButtonImage.classList.add("_hidden");
+                    offButtonImage.classList.remove("_hidden");
+                    audio.pause();
                 }
             }));
         }));
@@ -1337,12 +1342,9 @@
             hoverAndActiveVideoPlayButton();
         }));
         document.addEventListener("DOMContentLoaded", (() => {
-            console.log(localStorage.getItem("lang"));
             let currentLanguage = "ua";
             if (localStorage.getItem("lang") === null) localStorage.setItem("lang", `${currentLanguage}`);
             if (localStorage.getItem("lang") === "ru") currentLanguage = "ru"; else if (localStorage.getItem("lang") === "ua") currentLanguage = "ua";
-            console.log(localStorage.getItem("lang"));
-            console.log(currentLanguage);
             const goblinTitle = document.querySelector(".timer-content__title");
             const goblinSubtitle = document.querySelector(".timer-content__subtitle");
             const dollarsSubtitle = document.querySelector(".dollars-block__top-title-container-subtitle");
@@ -1360,13 +1362,14 @@
             const refListItemFour = document.querySelector(".ref-list-item-four");
             const refListItemFive = document.querySelector(".ref-list-item-five");
             const refCallToAction = document.querySelector(".reviews-content__call-to-action");
+            const tableColumnTitleOne = document.querySelector(".ref-table-column-title-one");
+            const tableColumnTitleTwo = document.querySelector(".ref-table-column-title-two");
+            const tableColumnTitleThree = document.querySelector(".ref-table-column-title-three");
             const videoBlockTopText = document.querySelector(".dance-animation-block__text-wrapper-content");
             const videoBlockButtonText = document.querySelector(".video-block-button-text");
             const videoBlockBottomText = document.querySelector(".dance-animation-block__bottom-subtitle");
             const switchLanguage = () => {
-                console.log(localStorage.getItem("lang"));
                 if (localStorage.getItem("lang") === "ru") {
-                    console.log("ru sd");
                     goblinTitle.innerText = "Приглашаем вас в увлекательный мир игры Tamagotchi Money!";
                     goblinSubtitle.innerText = "Начните свое приключение в мире экономических стратегий прямо сейчас! Не упустите возможность стать успешным!";
                     dollarsSubtitle.innerText = "Это увлекательная игра о деньгах!";
@@ -1384,17 +1387,19 @@
                     refListItemFour.innerHTML = "Выплаты за реферальную программу начисляются на баланс <span> 3 раза в месяц 7 -17- 27 </span> числа каждого месяца.";
                     refListItemFive.innerText = "Для получения выплат необходимо иметь активный рацион питания";
                     refCallToAction.innerText = "Приглашайте друзей и получайте дополнительные бонусы!";
+                    tableColumnTitleOne.innerText = "Уровень";
+                    tableColumnTitleTwo.innerText = "Количество людей";
+                    tableColumnTitleThree.innerText = "Общее количество людей";
                     videoBlockTopText.innerText = "Не упустите свой шанс изменить свою финансовую жизнь к лучшему!";
                     videoBlockButtonText.innerText = "Присоединяйся";
                     videoBlockBottomText.innerText = "Присоединяйся к нашему Telegram-каналу и будь в курсе всех новостей!";
                 } else if (localStorage.getItem("lang") === "ua") {
-                    console.log("ua sd");
                     goblinTitle.innerText = "Запрошуємо вас у захоплюючий світ гри Tamagotchi Money!";
                     goblinSubtitle.innerText = "Почніть свою пригоду у світі економічних стратегій прямо зараз! Не пропустіть можливість стати успішним!";
                     dollarsSubtitle.innerText = "Це захоплююча гра про гроші!";
                     dollarsListItemOne.innerHTML = "Тут ви зможете легко <span>заробити</span> лише одним натисканням кнопки щодня.";
                     dollarsListItemTwo.innerHTML = "Випробуйте удачу, обертаючи <span>'Колесо фортуни'</span>, і отримайте шанс зірвати <span>Джекпот</span>.";
-                    dollarsListItemThree.innerHTML = "Побудуйте свою кар'єру, <span>запрошуючи друзів</span> та знайомих у гру і отримуючи за це<spanv> щедрі бонуси/span>.";
+                    dollarsListItemThree.innerHTML = "Побудуйте свою кар'єру, <span>запрошуючи друзів</span> та знайомих у гру і отримуючи за це<span> щедрі бонуси</span>.";
                     dollarsListItemFour.innerHTML = "<span>Ваш заробіток у грі</span> залежить тільки від ваших зусиль та наполегливості.";
                     dollarsBottomSubtitle.innerText = "Це не просто гра, це унікальна можливість поринути у захоплюючий світ фінансів та інвестицій.";
                     jackpotTopText.innerHTML = "Щоб прокрутити колесо, необхідно мати на балансі <span>100$</span>. Після прокручування вам випаде одне з цих 12 яєць. Кожне яйце має термін дії <span>від 10 днів до 90 днів</span> та <span>від 105$ до 145$</span> до виплати.";
@@ -1406,6 +1411,9 @@
                     refListItemFour.innerHTML = "Виплати за реферальну програму нараховуються на баланс <span> 3 рази в місяць: 7-17-27 </span> числа кожного місяця.";
                     refListItemFive.innerText = "Для отримання виплат необхідно мати активний раціон харчування";
                     refCallToAction.innerText = "Запрошуйте друзів та отримуйте додаткові бонуси!";
+                    tableColumnTitleOne.innerText = "Рівень";
+                    tableColumnTitleTwo.innerText = "Кількість людей";
+                    tableColumnTitleThree.innerText = "Загальна кількість людей";
                     videoBlockTopText.innerText = "Не пропустіть свій шанс змінити своє фінансове життя на краще!";
                     videoBlockButtonText.innerText = "Приєднатись";
                     videoBlockBottomText.innerText = "Приєднуйся до нашого Telegram-каналу та будь в курсі всіх новин!";
@@ -1417,11 +1425,11 @@
                 const ruFlagImage = document.querySelector(".lang-button__ru-flag");
                 const uaFlagImage = document.querySelector(".lang-button__ua-flag");
                 if (currentLanguage === "ru") {
-                    ruFlagImage.classList.add("_hidden");
-                    uaFlagImage.classList.remove("_hidden");
-                } else if (currentLanguage === "ua") {
                     ruFlagImage.classList.remove("_hidden");
                     uaFlagImage.classList.add("_hidden");
+                } else if (currentLanguage === "ua") {
+                    ruFlagImage.classList.add("_hidden");
+                    uaFlagImage.classList.remove("_hidden");
                 }
                 langButton.addEventListener("click", (() => {
                     ruFlagImage.classList.toggle("_hidden");
@@ -1435,11 +1443,11 @@
                 const ruFlagMobileImage = document.querySelector(".mobile-header-lang-button__ru-flag");
                 const uaFlagMobileImage = document.querySelector(".mobile-header-lang-button__ua-flag");
                 if (currentLanguage === "ru") {
-                    ruFlagMobileImage.classList.add("_hidden");
-                    uaFlagMobileImage.classList.remove("_hidden");
-                } else if (currentLanguage === "ua") {
                     ruFlagMobileImage.classList.remove("_hidden");
                     uaFlagMobileImage.classList.add("_hidden");
+                } else if (currentLanguage === "ua") {
+                    ruFlagMobileImage.classList.add("_hidden");
+                    uaFlagMobileImage.classList.remove("_hidden");
                 }
                 langMobileButton.addEventListener("click", (() => {
                     ruFlagMobileImage.classList.toggle("_hidden");

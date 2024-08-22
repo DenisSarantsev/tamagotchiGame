@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		const entry = e.detail.entry;
 		// Спостерігаємий об'єкт
 		const targetElement = entry.target;
-		console.log(targetElement)
 		if ( targetElement.classList.contains("dollars-block") ) {
 			blockContent.classList.remove("_hidden");
 			setTimeout(() => {

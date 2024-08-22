@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240818171356">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240823004844">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,7 +114,8 @@
 												<img src="img/loading-timer/button-menu.svg" alt="menu button" class="menu-button__image">
 											</button>
 											<button class="timer__button volume-button">
-												<img src="img/loading-timer/button-volume.svg" alt="volume button" class="volume-button__image">
+												<img src="img/loading-timer/volume-on.svg" alt="volume button" class="volume-button__image volume-on">
+												<img src="img/loading-timer/volume-off.svg" alt="volume button" class="volume-button__image volume-off _hidden">
 											</button>
 										</div>
 									</div>
@@ -145,6 +146,19 @@
 													<div class="timer-counter__subtitle">seconds</div>
 												</div>
 											</div>
+										</div>
+										<div class="timer__text-open-date">
+											Відкриття 17 вересня о 12:00
+										</div>
+										<div class="dance-animation-block__play-button main-button video-button">
+											<a target="_blank" href="https://t.me/Tamagothi_money" class="main-button__link button-image-responsive">
+												<img src="img/common/button-default.svg" alt="start button" class="main-button__image video__button-default button-image-responsive">
+												<img src="img/common/button-hover.svg" alt="start button" class="main-button__image video__button-hover button-image-responsive _hidden">
+												<img src="img/common/button-active.svg" alt="start button" class="main-button__image video__button-active button-image-responsive _hidden">
+												<div class="main-button__text-container">
+													<div class="button-rext-responsive main-button__text">Telegram</div>
+												</div>
+											</a>
 										</div>
 										<div class="timer-content__call-to-action call-to-action">
 											<div class="call-to-action__wrapper">
@@ -673,7 +687,93 @@
 							<div class="reviews-content__table-and-reviews-container">
 								<!-- Таблиця -->
 								<div class="reviews-content__table-container table-container">
-									<img src="img/reviews-block/table-image.svg" alt="table image">
+									<div class="ref-table">
+										<div class="ref-table__container">
+											<div class="ref-table__row first-row">
+												<div class="ref-table-column-title-one">Уровень</div>
+												<div class="ref-table-column-title-two">Количество людей</div>
+												<div class="ref-table-column-title-three">Общее количество людей</div>
+												<div>Ставка %</div>
+											</div>
+											<!-- 1 строчка -->
+											<div class="ref-table__row">
+												<div>1</div>
+												<div>1</div>
+												<div>1</div>
+												<div>10%</div>
+											</div>
+											<!-- 2 строчка -->
+											<div class="ref-table__row">
+												<div>2</div>
+												<div>2</div>
+												<div>3</div>
+												<div>11%</div>
+											</div>
+											<!-- 3 строчка -->
+											<div class="ref-table__row">
+												<div>3</div>
+												<div>2</div>
+												<div>5</div>
+												<div>12%</div>
+											</div>
+											<!-- 4 строчка -->
+											<div class="ref-table__row">
+												<div>4</div>
+												<div>2</div>
+												<div>7</div>
+												<div>13%</div>
+											</div>
+											<!-- 5 строчка -->
+											<div class="ref-table__row">
+												<div>5</div>
+												<div>2</div>
+												<div>9</div>
+												<div>14%</div>
+											</div>
+											<!-- 6 строчка -->
+											<div class="ref-table__row">
+												<div>6</div>
+												<div>3</div>
+												<div>12</div>
+												<div>15%</div>
+											</div>
+											<!-- 7 строчка -->
+											<div class="ref-table__row">
+												<div>7</div>
+												<div>3</div>
+												<div>15</div>
+												<div>16%</div>
+											</div>
+											<!-- 8 строчка -->
+											<div class="ref-table__row">
+												<div>8</div>
+												<div>3</div>
+												<div>18</div>
+												<div>17%</div>
+											</div>
+											<!-- 9 строчка -->
+											<div class="ref-table__row">
+												<div>9</div>
+												<div>3</div>
+												<div>21</div>
+												<div>18%</div>
+											</div>
+											<!-- 10 строчка -->
+											<div class="ref-table__row">
+												<div>10</div>
+												<div>3</div>
+												<div>24</div>
+												<div>19%</div>
+											</div>
+											<!-- 11 строчка -->
+											<div class="ref-table__row">
+												<div>11</div>
+												<div>-</div>
+												<div>27</div>
+												<div>20%</div>
+											</div>
+										</div>
+									</div>
 								</div>
 								<!-- Відгуки -->
 								<div class="reviews-content__reviews-container reviews-container">
@@ -848,7 +948,7 @@
 	<script>
 		document.querySelector(".pre-loader-bg").classList.add("_hidden");
 	</script>
-	<script src="js/app.min.js?_v=20240818171356"></script>
+	<script src="js/app.min.js?_v=20240823004844"></script>
 </body>
 
 </html>

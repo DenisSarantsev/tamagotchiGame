@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-	console.log(localStorage.getItem("lang"))
 // Определяем текущий язык и если он не определялся ранее, устанавливаем его как русский по умолчанию
 let currentLanguage = "ua";
 if ( localStorage.getItem("lang") === null ) {
@@ -11,8 +10,6 @@ if ( localStorage.getItem("lang") === "ru" ) {
 	currentLanguage = "ua";
 }
 
-console.log(localStorage.getItem("lang"))
-console.log(currentLanguage)
 // --------------------------------------------------------------------- Элементы, в которых нам нужно отображать текст
 // Блок 1 - Стартовый блок с гоблином)
 const goblinTitle = document.querySelector(".timer-content__title"); // Заголовок (без тегов)
@@ -38,6 +35,9 @@ const refListItemThree = document.querySelector(".ref-list-item-three"); // Эл
 const refListItemFour = document.querySelector(".ref-list-item-four"); // Элемент списка 4 (с тегами)
 const refListItemFive = document.querySelector(".ref-list-item-five"); // Элемент списка 5 (без тегов)
 const refCallToAction = document.querySelector(".reviews-content__call-to-action"); // Призыв к действию внизу страницы (Без тегов)
+const tableColumnTitleOne = document.querySelector(".ref-table-column-title-one"); // Заголовок колонки 1
+const tableColumnTitleTwo = document.querySelector(".ref-table-column-title-two"); // Заголовок колонки 2
+const tableColumnTitleThree = document.querySelector(".ref-table-column-title-three"); // Заголовок колонки 3
 
 // Блок 5 - Последний блок с видео
 const videoBlockTopText = document.querySelector(".dance-animation-block__text-wrapper-content"); // Текст (без тегов)
@@ -47,9 +47,7 @@ const videoBlockBottomText = document.querySelector(".dance-animation-block__bot
 
 // --------------------------------------------------------------------- Логика переключения языка
 const switchLanguage = () => {
-	console.log(localStorage.getItem("lang"))
 	if ( localStorage.getItem("lang") === "ru" ) {
-		console.log("ru sd")
 		// Блок 1
 		goblinTitle.innerText = "Приглашаем вас в увлекательный мир игры Tamagotchi Money!";
 		goblinSubtitle.innerText = "Начните свое приключение в мире экономических стратегий прямо сейчас! Не упустите возможность стать успешным!";
@@ -71,12 +69,14 @@ const switchLanguage = () => {
 		refListItemFour.innerHTML = "Выплаты за реферальную программу начисляются на баланс <span> 3 раза в месяц 7 -17- 27 </span> числа каждого месяца.";
 		refListItemFive.innerText = "Для получения выплат необходимо иметь активный рацион питания";
 		refCallToAction.innerText = "Приглашайте друзей и получайте дополнительные бонусы!";
+		tableColumnTitleOne.innerText = "Уровень";
+		tableColumnTitleTwo.innerText = "Количество людей";
+		tableColumnTitleThree.innerText = "Общее количество людей";
 		// Блок 5
 		videoBlockTopText.innerText = "Не упустите свой шанс изменить свою финансовую жизнь к лучшему!"
 		videoBlockButtonText.innerText = "Присоединяйся";
 		videoBlockBottomText.innerText = "Присоединяйся к нашему Telegram-каналу и будь в курсе всех новостей!";
 	} else if ( localStorage.getItem("lang") === "ua" ) {
-		console.log("ua sd")
 		// Блок 1
 		goblinTitle.innerText = "Запрошуємо вас у захоплюючий світ гри Tamagotchi Money!";
 		goblinSubtitle.innerText = "Почніть свою пригоду у світі економічних стратегій прямо зараз! Не пропустіть можливість стати успішним!";
@@ -84,7 +84,7 @@ const switchLanguage = () => {
 		dollarsSubtitle.innerText = "Це захоплююча гра про гроші!";
 		dollarsListItemOne.innerHTML = "Тут ви зможете легко <span>заробити</span> лише одним натисканням кнопки щодня.";
 		dollarsListItemTwo.innerHTML = "Випробуйте удачу, обертаючи <span>'Колесо фортуни'</span>, і отримайте шанс зірвати <span>Джекпот</span>.";
-		dollarsListItemThree.innerHTML = "Побудуйте свою кар'єру, <span>запрошуючи друзів</span> та знайомих у гру і отримуючи за це<spanv> щедрі бонуси/span>.";
+		dollarsListItemThree.innerHTML = "Побудуйте свою кар'єру, <span>запрошуючи друзів</span> та знайомих у гру і отримуючи за це<span> щедрі бонуси</span>.";
 		dollarsListItemFour.innerHTML = "<span>Ваш заробіток у грі</span> залежить тільки від ваших зусиль та наполегливості.";
 		dollarsBottomSubtitle.innerText = "Це не просто гра, це унікальна можливість поринути у захоплюючий світ фінансів та інвестицій.";
 		// Блок 3
@@ -98,6 +98,9 @@ const switchLanguage = () => {
 		refListItemFour.innerHTML = "Виплати за реферальну програму нараховуються на баланс <span> 3 рази в місяць: 7-17-27 </span> числа кожного місяця.";
 		refListItemFive.innerText = "Для отримання виплат необхідно мати активний раціон харчування";
 		refCallToAction.innerText = "Запрошуйте друзів та отримуйте додаткові бонуси!";
+		tableColumnTitleOne.innerText = "Рівень";
+		tableColumnTitleTwo.innerText = "Кількість людей";
+		tableColumnTitleThree.innerText = "Загальна кількість людей";
 		// Блок 5
 		videoBlockTopText.innerText = "Не пропустіть свій шанс змінити своє фінансове життя на краще!"
 		videoBlockButtonText.innerText = "Приєднатись";
@@ -111,11 +114,11 @@ if ( document.querySelector(".lang-button") ) {
 	const ruFlagImage = document.querySelector(".lang-button__ru-flag");
 	const uaFlagImage = document.querySelector(".lang-button__ua-flag");
 	if ( currentLanguage === "ru" ) {
-		ruFlagImage.classList.add("_hidden");
-		uaFlagImage.classList.remove("_hidden");
-	} else if ( currentLanguage === "ua" ) {
 		ruFlagImage.classList.remove("_hidden");
 		uaFlagImage.classList.add("_hidden");
+	} else if ( currentLanguage === "ua" ) {
+		ruFlagImage.classList.add("_hidden");
+		uaFlagImage.classList.remove("_hidden");
 	}
 	langButton.addEventListener("click", () => {
 		ruFlagImage.classList.toggle("_hidden");
@@ -129,11 +132,11 @@ if ( document.querySelector(".mobile-header-lang-button") ) {
 	const ruFlagMobileImage = document.querySelector(".mobile-header-lang-button__ru-flag");
 	const uaFlagMobileImage = document.querySelector(".mobile-header-lang-button__ua-flag");
 	if ( currentLanguage === "ru" ) {
-		ruFlagMobileImage.classList.add("_hidden");
-		uaFlagMobileImage.classList.remove("_hidden");
-	} else if ( currentLanguage === "ua" ) {
 		ruFlagMobileImage.classList.remove("_hidden");
 		uaFlagMobileImage.classList.add("_hidden");
+	} else if ( currentLanguage === "ua" ) {
+		ruFlagMobileImage.classList.add("_hidden");
+		uaFlagMobileImage.classList.remove("_hidden");
 	}
 	langMobileButton.addEventListener("click", () => {
 		ruFlagMobileImage.classList.toggle("_hidden");

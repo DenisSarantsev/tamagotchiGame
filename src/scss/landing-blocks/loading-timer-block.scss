@@ -553,6 +553,22 @@
 			padding-top: toRem(75);
 		}
 	}
+	&__text-open-date {
+		margin-top: 5px;
+		font-weight: 600;
+		font-size: 24px;
+		font-family: Piazzolla, Arial, sans-serif;
+		margin-bottom: -10px;
+		@media (max-width: 1440px){
+			font-size: 22px;
+		}
+		@media (max-width: 1200px){
+			margin-bottom: -30px;
+		}
+		@media (max-width: 1110px){
+			font-size: 20px;
+		}
+	}
 }
 
 .lang-button {
@@ -685,7 +701,7 @@
 	&__title {
 		max-width: 850px; // Добавлено 17.08.2024 после того, как были убраны кнопки (чтобы текст не расползался)
 		font-family: Piazzolla, Arial, sans-serif;
-		font-size: toRem(50);
+		font-size: toRem(40);
 		font-weight: 700;
 		margin-top: -50px;
 		//font-family: $secondFont;
@@ -698,23 +714,23 @@
 		color: transparent;
 		line-height: 120%;
 		@media (max-width: 1440px){
-			font-size: 3.7vw;
+			font-size: 3.2vw;
 			line-height: 120%;
 		}
 		@media (max-width: 992px){
-			font-size: toRem(40);
+			font-size: toRem(37);
 		}
 		@media (max-width:$mobile){
-			font-size: toRem(44);
+			font-size: toRem(42);
 		}
 		@media (max-width: 600px){
-			font-size: toRem(38);
+			font-size: toRem(36);
 		}
 		@media (max-width: 500px){
-			font-size: toRem(34);
+			font-size: toRem(32);
 		}
 		@media (max-height: 460px){
-			font-size: toRem(34);
+			font-size: toRem(30);
 		}
 	}
 	&__subtitle {
